@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -30,7 +30,13 @@ SOURCES += \
 
 HEADERS += \
         sumeborrower.h \
-    customqtui.h
+    customqtui.h \
+    laboratorylib.h
 
 FORMS += \
         sumeborrower.ui
+
+win32: LIBS += -L$$PWD/./ -lLaboratoryLib
+
+INCLUDEPATH += $$PWD/.
+DEPENDPATH += $$PWD/.
