@@ -2,6 +2,7 @@
 #define SUMEBORROWER_H
 
 #include <QMainWindow>
+#include "laboratorylib.h"
 
 namespace Ui {
 class SUMEBorrower;
