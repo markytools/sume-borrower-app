@@ -6,6 +6,7 @@
 #include <QStackedWidget>
 #include "borrowers.h"
 #include "confirmations.h"
+#include "laboratorylib.h"
 
 namespace Ui {
 class SUMEBorrower;
