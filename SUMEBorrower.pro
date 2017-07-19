@@ -31,8 +31,8 @@ SOURCES += \
     borrowingd.cpp \
     confirmations.cpp \
     conflictschedule.cpp \
-    equipmentl.cpp \
-    listborrowers.cpp
+    listborrowers.cpp \
+    listequipments.cpp
 
 HEADERS += \
         sumeborrower.h \
@@ -42,8 +42,8 @@ HEADERS += \
     borrowingd.h \
     confirmations.h \
     conflictschedule.h \
-    equipmentl.h \
-    listborrowers.h
+    listborrowers.h \
+    listequipments.h
 
 FORMS += \
         sumeborrower.ui \
@@ -51,8 +51,8 @@ FORMS += \
     borrowingd.ui \
     confirmations.ui \
     conflictschedule.ui \
-    equipmentl.ui \
-    listborrowers.ui
+    listborrowers.ui \
+    listequipments.ui
 
 win32: LIBS += -L$$PWD/./ -lLaboratoryLib
 
