@@ -23,6 +23,8 @@ SUMEBorrower::SUMEBorrower(QWidget *parent) :
 
     stackWidget->setCurrentIndex(0);
 
+    LaboratoryLib *lLib = new LaboratoryLib();
+    lLib->initDatabase();
 }
 
 SUMEBorrower::~SUMEBorrower()
