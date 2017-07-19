@@ -3,6 +3,9 @@
 
 #include <QMainWindow>
 #include "laboratorylib.h"
+#include <QStackedWidget>
+#include "borrowers.h"
+#include "confirmations.h"
 
 namespace Ui {
 class SUMEBorrower;
@@ -18,6 +21,7 @@ public:
 
 private:
     Ui::SUMEBorrower *ui;
+    QStackedWidget *stackWidget;
 };
 
 #endif // SUMEBORROWER_H
