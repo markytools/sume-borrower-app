@@ -26,15 +26,33 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         sumeborrower.cpp \
-    customqtui.cpp
+    customqtui.cpp \
+    borrowers.cpp \
+    borrowingd.cpp \
+    confirmations.cpp \
+    conflictschedule.cpp \
+    equipmentl.cpp \
+    listborrowers.cpp
 
 HEADERS += \
         sumeborrower.h \
     customqtui.h \
-    laboratorylib.h
+    laboratorylib.h \
+    borrowers.h \
+    borrowingd.h \
+    confirmations.h \
+    conflictschedule.h \
+    equipmentl.h \
+    listborrowers.h
 
 FORMS += \
-        sumeborrower.ui
+        sumeborrower.ui \
+    borrowers.ui \
+    borrowingd.ui \
+    confirmations.ui \
+    conflictschedule.ui \
+    equipmentl.ui \
+    listborrowers.ui
 
 win32: LIBS += -L$$PWD/./ -lLaboratoryLib
 
