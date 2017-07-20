@@ -32,7 +32,8 @@ SOURCES += \
     confirmations.cpp \
     conflictschedule.cpp \
     listborrowers.cpp \
-    listequipments.cpp
+    listequipments.cpp \
+    utils.cpp
 
 HEADERS += \
         sumeborrower.h \
@@ -43,7 +44,8 @@ HEADERS += \
     confirmations.h \
     conflictschedule.h \
     listborrowers.h \
-    listequipments.h
+    listequipments.h \
+    utils.h
 
 FORMS += \
         sumeborrower.ui \

@@ -7,6 +7,7 @@
 #include <QSqlQuery>
 #include <iostream>
 #include <QVariant>
+#include "utils.h"
 using namespace std;
 
 class LaboratoryLib
