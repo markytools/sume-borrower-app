@@ -8,6 +8,7 @@ INPUT(
 ./debug\conflictschedule.o
 ./debug\listborrowers.o
 ./debug\listequipments.o
+./debug\utils.o
 ./debug\moc_sumeborrower.o
 ./debug\moc_borrowers.o
 ./debug\moc_borrowingd.o

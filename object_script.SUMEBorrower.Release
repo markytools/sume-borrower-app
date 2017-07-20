@@ -8,6 +8,7 @@ INPUT(
 ./release\conflictschedule.o
 ./release\listborrowers.o
 ./release\listequipments.o
+./release\utils.o
 ./release\moc_sumeborrower.o
 ./release\moc_borrowers.o
 ./release\moc_borrowingd.o
