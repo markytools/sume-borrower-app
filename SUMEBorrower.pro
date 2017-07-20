@@ -30,7 +30,6 @@ SOURCES += \
     borrowers.cpp \
     borrowingd.cpp \
     confirmations.cpp \
-    conflictschedule.cpp \
     listborrowers.cpp \
     listequipments.cpp \
     utils.cpp
@@ -42,7 +41,6 @@ HEADERS += \
     borrowers.h \
     borrowingd.h \
     confirmations.h \
-    conflictschedule.h \
     listborrowers.h \
     listequipments.h \
     utils.h
@@ -52,7 +50,6 @@ FORMS += \
     borrowers.ui \
     borrowingd.ui \
     confirmations.ui \
-    conflictschedule.ui \
     listborrowers.ui \
     listequipments.ui
 

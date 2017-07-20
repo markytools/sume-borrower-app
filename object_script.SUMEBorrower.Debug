@@ -5,7 +5,6 @@ INPUT(
 ./debug\borrowers.o
 ./debug\borrowingd.o
 ./debug\confirmations.o
-./debug\conflictschedule.o
 ./debug\listborrowers.o
 ./debug\listequipments.o
 ./debug\utils.o
@@ -13,7 +12,6 @@ INPUT(
 ./debug\moc_borrowers.o
 ./debug\moc_borrowingd.o
 ./debug\moc_confirmations.o
-./debug\moc_conflictschedule.o
 ./debug\moc_listborrowers.o
 ./debug\moc_listequipments.o
 );

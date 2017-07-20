@@ -5,7 +5,6 @@ INPUT(
 ./release\borrowers.o
 ./release\borrowingd.o
 ./release\confirmations.o
-./release\conflictschedule.o
 ./release\listborrowers.o
 ./release\listequipments.o
 ./release\utils.o
@@ -13,7 +12,6 @@ INPUT(
 ./release\moc_borrowers.o
 ./release\moc_borrowingd.o
 ./release\moc_confirmations.o
-./release\moc_conflictschedule.o
 ./release\moc_listborrowers.o
 ./release\moc_listequipments.o
 );
