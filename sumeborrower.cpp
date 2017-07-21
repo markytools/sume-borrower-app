@@ -8,8 +8,9 @@ SUMEBorrower::SUMEBorrower(QWidget *parent) :
     ui->setupUi(this);
 
     //initialize database
-//    LaboratoryLib *labLib = new LaboratoryLib();
-//    labLib->initDatabase();
+    LaboratoryLib *labLib = new LaboratoryLib();
+    labLib->initDatabase();
+
     stackWidget = new QStackedWidget();
     Borrowers *borrowers = new Borrowers(this);
     borrowers->stackWidget = stackWidget;
@@ -23,8 +24,11 @@ SUMEBorrower::SUMEBorrower(QWidget *parent) :
 
     stackWidget->setCurrentIndex(0);
 
-    LaboratoryLib *lLib = new LaboratoryLib();
-    lLib->initDatabase();
+    QVector<Equipment*> *equipments = labLib->getEquipments();
+    for (int i = 0; i < equipments->size(); i++) {
+        Equipment* equipment = equipments->at(i);
+        cout << equipment->toString().toStdString() << endl;
+    }
 }
 
 SUMEBorrower::~SUMEBorrower()
