@@ -8,7 +8,7 @@ namespace Ui {
 class Borrowers;
 }
 
-class Borrowers : public QWidget,public CustomQtUI
+class Borrowers : public QWidget, public CustomQtUI
 {
     Q_OBJECT
 
