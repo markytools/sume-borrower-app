@@ -5,7 +5,6 @@
 #-------------------------------------------------
 
 QT       += core gui sql
-CONFIG      += c++11
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -34,7 +33,9 @@ SOURCES += \
     listborrowers.cpp \
     listequipments.cpp \
     utils.cpp \
-    homedisplay.cpp
+    homedisplay.cpp \
+    information.cpp \
+    infopopup.cpp
 
 HEADERS += \
         sumeborrower.h \
@@ -46,7 +47,9 @@ HEADERS += \
     listborrowers.h \
     listequipments.h \
     utils.h \
-    homedisplay.h
+    homedisplay.h \
+    information.h \
+    infopopup.h
 
 FORMS += \
         sumeborrower.ui \
@@ -55,7 +58,9 @@ FORMS += \
     confirmations.ui \
     listborrowers.ui \
     listequipments.ui \
-    homedisplay.ui
+    homedisplay.ui \
+    information.ui \
+    infopopup.ui
 
 win32: LIBS += -L$$PWD/./ -lLaboratoryLib
 

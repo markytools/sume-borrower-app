@@ -14,12 +14,14 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QCalendarWidget>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QTableWidget>
 #include <QtWidgets/QTimeEdit>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -42,13 +44,25 @@ public:
     QLabel *label_8;
     QPushButton *pushButton_3;
     QPushButton *pushButton_4;
+    QWidget *widget;
+    QVBoxLayout *verticalLayout;
+    QHBoxLayout *horizontalLayout;
+    QLabel *label_9;
+    QLineEdit *lineEdit_4;
+    QHBoxLayout *horizontalLayout_2;
+    QLabel *label_10;
+    QLineEdit *lineEdit_2;
+    QHBoxLayout *horizontalLayout_3;
+    QLabel *label_11;
+    QLineEdit *lineEdit_3;
 
     void setupUi(QWidget *BorrowingD)
     {
         if (BorrowingD->objectName().isEmpty())
             BorrowingD->setObjectName(QStringLiteral("BorrowingD"));
-        BorrowingD->resize(686, 438);
-        BorrowingD->setMinimumSize(QSize(686, 438));
+        BorrowingD->resize(686, 478);
+        BorrowingD->setMinimumSize(QSize(686, 478));
+        BorrowingD->setMaximumSize(QSize(686, 478));
         label_2 = new QLabel(BorrowingD);
         label_2->setObjectName(QStringLiteral("label_2"));
         label_2->setGeometry(QRect(30, 90, 156, 16));
@@ -119,6 +133,60 @@ public:
         pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
         pushButton_4->setGeometry(QRect(100, 320, 75, 25));
         pushButton_4->setFont(font2);
+        widget = new QWidget(BorrowingD);
+        widget->setObjectName(QStringLiteral("widget"));
+        widget->setGeometry(QRect(50, 370, 223, 80));
+        verticalLayout = new QVBoxLayout(widget);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        label_9 = new QLabel(widget);
+        label_9->setObjectName(QStringLiteral("label_9"));
+        label_9->setFont(font);
+
+        horizontalLayout->addWidget(label_9);
+
+        lineEdit_4 = new QLineEdit(widget);
+        lineEdit_4->setObjectName(QStringLiteral("lineEdit_4"));
+
+        horizontalLayout->addWidget(lineEdit_4);
+
+
+        verticalLayout->addLayout(horizontalLayout);
+
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        label_10 = new QLabel(widget);
+        label_10->setObjectName(QStringLiteral("label_10"));
+        label_10->setFont(font);
+
+        horizontalLayout_2->addWidget(label_10);
+
+        lineEdit_2 = new QLineEdit(widget);
+        lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
+
+        horizontalLayout_2->addWidget(lineEdit_2);
+
+
+        verticalLayout->addLayout(horizontalLayout_2);
+
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
+        label_11 = new QLabel(widget);
+        label_11->setObjectName(QStringLiteral("label_11"));
+        label_11->setFont(font);
+
+        horizontalLayout_3->addWidget(label_11);
+
+        lineEdit_3 = new QLineEdit(widget);
+        lineEdit_3->setObjectName(QStringLiteral("lineEdit_3"));
+
+        horizontalLayout_3->addWidget(lineEdit_3);
+
+
+        verticalLayout->addLayout(horizontalLayout_3);
+
 
         retranslateUi(BorrowingD);
 
@@ -138,6 +206,9 @@ public:
         label_8->setText(QApplication::translate("BorrowingD", "START:", Q_NULLPTR));
         pushButton_3->setText(QApplication::translate("BorrowingD", "ADD", Q_NULLPTR));
         pushButton_4->setText(QApplication::translate("BorrowingD", "DELETE", Q_NULLPTR));
+        label_9->setText(QApplication::translate("BorrowingD", "GROUP NAME:", Q_NULLPTR));
+        label_10->setText(QApplication::translate("BorrowingD", "SUBJECT:", Q_NULLPTR));
+        label_11->setText(QApplication::translate("BorrowingD", "SECTION:", Q_NULLPTR));
     } // retranslateUi
 
 };

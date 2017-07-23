@@ -1,13 +1,12 @@
 #ifndef CUSTOMQTUI_H
 #define CUSTOMQTUI_H
 
-#include <QWidget>
 #include <QStackedWidget>
 #include <QGridLayout>
-#include "laboratorylib.h"
 
 class CustomQtUI
-{   
+{
+
 protected:
     void remove(QGridLayout *layout, int row, int column, bool deleteWidgets);
     void deleteChildWidgets(QLayoutItem *item);
@@ -16,9 +15,7 @@ protected:
 
 public:
     CustomQtUI();
-    CustomQtUI(QWidget *parent, QStackedWidget *stackWidget, LaboratoryLib *labLib);
     QStackedWidget *stackWidget;
-    LaboratoryLib *labLib;
 };
 
 #endif // CUSTOMQTUI_H
