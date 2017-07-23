@@ -12,6 +12,10 @@
 using namespace std;
 
 class Equipment {
+
+private:
+
+
 public:
     Equipment();
     int borrowed;
@@ -34,6 +38,7 @@ private:
     QString sqlError;
     Equipment equipment;
     QVector<Equipment*> *sa;
+    Equipment* equip;
 
 public:
     LaboratoryLib();
@@ -45,7 +50,7 @@ public:
     void deleteAllEquipments();
     void borrowEquipment(QString name); //Should only be called once
     void returnEquipment(QString name); //Should only be called once
-    Equipment getEquipment(QString name) const;
+    Equipment *getEquipment(QString name) const;
     QVector<Equipment *> *getEquipments() const;
 
     QSqlDatabase getDb() const;

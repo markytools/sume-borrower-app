@@ -5,6 +5,14 @@ CustomQtUI::CustomQtUI()
 
 }
 
+CustomQtUI::CustomQtUI(QWidget *parent, QStackedWidget *stackWidget, LaboratoryLib *labLib)
+{
+    this->stackWidget = stackWidget;
+    this->labLib = labLib;
+
+    this->stackWidget->addWidget(parent);
+}
+
 
 
 /**
