@@ -64,7 +64,7 @@ public:
     void retranslateUi(QWidget *HomeDisplay)
     {
         HomeDisplay->setWindowTitle(QApplication::translate("HomeDisplay", "Form", Q_NULLPTR));
-        label_2->setText(QApplication::translate("HomeDisplay", "**LAB BARROWER**", Q_NULLPTR));
+        label_2->setText(QApplication::translate("HomeDisplay", "**LAB BORROWER**", Q_NULLPTR));
         AddButton->setText(QApplication::translate("HomeDisplay", "BORROWING", Q_NULLPTR));
         AddButton_2->setText(QApplication::translate("HomeDisplay", "EQUIPMENTS", Q_NULLPTR));
     } // retranslateUi

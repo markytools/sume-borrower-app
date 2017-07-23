@@ -9,6 +9,8 @@ INPUT(
 ./debug\listequipments.o
 ./debug\utils.o
 ./debug\homedisplay.o
+./debug\information.o
+./debug\infopopup.o
 ./debug\moc_sumeborrower.o
 ./debug\moc_borrowers.o
 ./debug\moc_borrowingd.o
@@ -16,4 +18,6 @@ INPUT(
 ./debug\moc_listborrowers.o
 ./debug\moc_listequipments.o
 ./debug\moc_homedisplay.o
+./debug\moc_information.o
+./debug\moc_infopopup.o
 );

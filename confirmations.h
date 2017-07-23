@@ -8,7 +8,7 @@ namespace Ui {
 class Confirmations;
 }
 
-class Confirmations : public QWidget, public CustomQtUI
+class Confirmations : public QWidget,public CustomQtUI
 {
     Q_OBJECT
 

@@ -9,6 +9,8 @@ INPUT(
 ./release\listequipments.o
 ./release\utils.o
 ./release\homedisplay.o
+./release\information.o
+./release\infopopup.o
 ./release\moc_sumeborrower.o
 ./release\moc_borrowers.o
 ./release\moc_borrowingd.o
@@ -16,4 +18,6 @@ INPUT(
 ./release\moc_listborrowers.o
 ./release\moc_listequipments.o
 ./release\moc_homedisplay.o
+./release\moc_information.o
+./release\moc_infopopup.o
 );
