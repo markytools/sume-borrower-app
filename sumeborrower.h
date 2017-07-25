@@ -7,7 +7,9 @@
 #include "borrowers.h"
 #include "confirmations.h"
 #include "laboratorylib.h"
-
+#include "listequipments.h"
+#include "information.h"
+#include <QVector>
 namespace Ui {
 class SUMEBorrower;
 }
