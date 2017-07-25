@@ -31,7 +31,7 @@
      <x>10</x>
      <y>50</y>
      <width>381</width>
-     <height>194</height>
+     <height>214</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -55,7 +55,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_5"/>
+         <widget class="QLineEdit" name="nameLine"/>
         </item>
        </layout>
       </item>
@@ -77,7 +77,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_7"/>
+         <widget class="QLineEdit" name="serialLine"/>
         </item>
        </layout>
       </item>
@@ -99,7 +99,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_4"/>
+         <widget class="QLineEdit" name="propertyLine"/>
         </item>
        </layout>
       </item>
@@ -121,7 +121,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_2"/>
+         <widget class="QLineEdit" name="locationLine"/>
         </item>
        </layout>
       </item>
@@ -143,7 +143,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_3"/>
+         <widget class="QLineEdit" name="statusLine"/>
         </item>
        </layout>
       </item>
@@ -165,7 +165,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_6"/>
+         <widget class="QLineEdit" name="remarksLine"/>
         </item>
        </layout>
       </item>
@@ -189,17 +189,17 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit"/>
+       <widget class="QLineEdit" name="quantityLine"/>
       </item>
      </layout>
     </item>
    </layout>
   </widget>
-  <widget class="QPushButton" name="AddButton">
+  <widget class="QPushButton" name="BackButton">
    <property name="geometry">
     <rect>
      <x>200</x>
-     <y>260</y>
+     <y>270</y>
      <width>75</width>
      <height>25</height>
     </rect>
@@ -216,11 +216,11 @@
     <string>BACK</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="AddButton_2">
+  <widget class="QPushButton" name="OKButton">
    <property name="geometry">
     <rect>
      <x>290</x>
-     <y>260</y>
+     <y>270</y>
      <width>75</width>
      <height>25</height>
     </rect>
@@ -240,10 +240,10 @@
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>140</x>
      <y>20</y>
-     <width>111</width>
-     <height>17</height>
+     <width>151</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="font">

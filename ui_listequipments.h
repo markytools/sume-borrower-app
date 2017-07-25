@@ -13,6 +13,7 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
@@ -24,61 +25,80 @@ QT_BEGIN_NAMESPACE
 class Ui_ListEquipments
 {
 public:
+    QGridLayout *gridLayout_2;
     QLabel *label;
-    QTableWidget *tableWidget;
-    QPushButton *AddButton_3;
-    QPushButton *AddButton_6;
-    QPushButton *AddButton_4;
-    QPushButton *AddButton_5;
+    QTableWidget *equipmentTable;
+    QGridLayout *gridLayout;
+    QPushButton *AddButton;
+    QPushButton *RemoveButton;
+    QPushButton *EditButton;
     QPushButton *AddButton_2;
-    QPushButton *AddButton_7;
+    QPushButton *RemoveAllButton;
 
     void setupUi(QWidget *ListEquipments)
     {
         if (ListEquipments->objectName().isEmpty())
             ListEquipments->setObjectName(QStringLiteral("ListEquipments"));
         ListEquipments->resize(733, 490);
+        gridLayout_2 = new QGridLayout(ListEquipments);
+        gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
         label = new QLabel(ListEquipments);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(210, 10, 271, 30));
         QFont font;
         font.setFamily(QStringLiteral("Segoe UI Black"));
         font.setPointSize(16);
         font.setBold(true);
         font.setWeight(75);
         label->setFont(font);
-        tableWidget = new QTableWidget(ListEquipments);
-        tableWidget->setObjectName(QStringLiteral("tableWidget"));
-        tableWidget->setGeometry(QRect(9, 45, 711, 391));
-        AddButton_3 = new QPushButton(ListEquipments);
-        AddButton_3->setObjectName(QStringLiteral("AddButton_3"));
-        AddButton_3->setGeometry(QRect(100, 450, 131, 25));
+        label->setAlignment(Qt::AlignCenter);
+
+        gridLayout_2->addWidget(label, 0, 0, 1, 1);
+
+        equipmentTable = new QTableWidget(ListEquipments);
+        equipmentTable->setObjectName(QStringLiteral("equipmentTable"));
+
+        gridLayout_2->addWidget(equipmentTable, 1, 0, 1, 1);
+
+        gridLayout = new QGridLayout();
+        gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        AddButton = new QPushButton(ListEquipments);
+        AddButton->setObjectName(QStringLiteral("AddButton"));
         QFont font1;
         font1.setFamily(QStringLiteral("Segoe UI Black"));
         font1.setPointSize(10);
         font1.setBold(true);
         font1.setWeight(75);
-        AddButton_3->setFont(font1);
-        AddButton_6 = new QPushButton(ListEquipments);
-        AddButton_6->setObjectName(QStringLiteral("AddButton_6"));
-        AddButton_6->setGeometry(QRect(470, 450, 101, 25));
-        AddButton_6->setFont(font1);
-        AddButton_4 = new QPushButton(ListEquipments);
-        AddButton_4->setObjectName(QStringLiteral("AddButton_4"));
-        AddButton_4->setGeometry(QRect(320, 450, 141, 25));
-        AddButton_4->setFont(font1);
-        AddButton_5 = new QPushButton(ListEquipments);
-        AddButton_5->setObjectName(QStringLiteral("AddButton_5"));
-        AddButton_5->setGeometry(QRect(20, 450, 71, 25));
-        AddButton_5->setFont(font1);
+        AddButton->setFont(font1);
+
+        gridLayout->addWidget(AddButton, 0, 0, 1, 1);
+
+        RemoveButton = new QPushButton(ListEquipments);
+        RemoveButton->setObjectName(QStringLiteral("RemoveButton"));
+        RemoveButton->setFont(font1);
+
+        gridLayout->addWidget(RemoveButton, 0, 2, 1, 1);
+
+        EditButton = new QPushButton(ListEquipments);
+        EditButton->setObjectName(QStringLiteral("EditButton"));
+        EditButton->setFont(font1);
+
+        gridLayout->addWidget(EditButton, 0, 1, 1, 1);
+
         AddButton_2 = new QPushButton(ListEquipments);
         AddButton_2->setObjectName(QStringLiteral("AddButton_2"));
-        AddButton_2->setGeometry(QRect(580, 450, 61, 25));
         AddButton_2->setFont(font1);
-        AddButton_7 = new QPushButton(ListEquipments);
-        AddButton_7->setObjectName(QStringLiteral("AddButton_7"));
-        AddButton_7->setGeometry(QRect(240, 450, 71, 25));
-        AddButton_7->setFont(font1);
+
+        gridLayout->addWidget(AddButton_2, 0, 5, 1, 1);
+
+        RemoveAllButton = new QPushButton(ListEquipments);
+        RemoveAllButton->setObjectName(QStringLiteral("RemoveAllButton"));
+        RemoveAllButton->setFont(font1);
+
+        gridLayout->addWidget(RemoveAllButton, 0, 4, 1, 1);
+
+
+        gridLayout_2->addLayout(gridLayout, 2, 0, 1, 1);
+
 
         retranslateUi(ListEquipments);
 
@@ -89,12 +109,11 @@ public:
     {
         ListEquipments->setWindowTitle(QApplication::translate("ListEquipments", "Form", Q_NULLPTR));
         label->setText(QApplication::translate("ListEquipments", "**LIST OF EQUIPMENTS**", Q_NULLPTR));
-        AddButton_3->setText(QApplication::translate("ListEquipments", "CLEAR FIELDS", Q_NULLPTR));
-        AddButton_6->setText(QApplication::translate("ListEquipments", "REMOVE ALL", Q_NULLPTR));
-        AddButton_4->setText(QApplication::translate("ListEquipments", "REMOVE SELECTION", Q_NULLPTR));
-        AddButton_5->setText(QApplication::translate("ListEquipments", "ADD", Q_NULLPTR));
+        AddButton->setText(QApplication::translate("ListEquipments", "ADD", Q_NULLPTR));
+        RemoveButton->setText(QApplication::translate("ListEquipments", "REMOVE SELECTION", Q_NULLPTR));
+        EditButton->setText(QApplication::translate("ListEquipments", "EDIT", Q_NULLPTR));
         AddButton_2->setText(QApplication::translate("ListEquipments", "BACK", Q_NULLPTR));
-        AddButton_7->setText(QApplication::translate("ListEquipments", "EDIT", Q_NULLPTR));
+        RemoveAllButton->setText(QApplication::translate("ListEquipments", "REMOVE ALL", Q_NULLPTR));
     } // retranslateUi
 
 };

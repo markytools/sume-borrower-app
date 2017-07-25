@@ -3,6 +3,7 @@
 
 #include <QStackedWidget>
 #include <QGridLayout>
+#include "laboratorylib.h"
 
 class CustomQtUI
 {
@@ -16,6 +17,7 @@ protected:
 public:
     CustomQtUI();
     QStackedWidget *stackWidget;
+    LaboratoryLib *labLib;
 };
 
 #endif // CUSTOMQTUI_H

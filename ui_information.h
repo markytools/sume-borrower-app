@@ -31,27 +31,27 @@ public:
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_10;
-    QLineEdit *lineEdit_5;
+    QLineEdit *nameLine;
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_9;
-    QLineEdit *lineEdit_7;
+    QLineEdit *serialLine;
     QHBoxLayout *horizontalLayout_4;
     QLabel *label_8;
-    QLineEdit *lineEdit_4;
+    QLineEdit *propertyLine;
     QHBoxLayout *horizontalLayout_6;
     QLabel *label_6;
-    QLineEdit *lineEdit_2;
+    QLineEdit *locationLine;
     QHBoxLayout *horizontalLayout_5;
     QLabel *label_7;
-    QLineEdit *lineEdit_3;
+    QLineEdit *statusLine;
     QHBoxLayout *horizontalLayout_7;
     QLabel *label_5;
-    QLineEdit *lineEdit_6;
+    QLineEdit *remarksLine;
     QHBoxLayout *horizontalLayout;
     QLabel *label_4;
-    QLineEdit *lineEdit;
-    QPushButton *AddButton;
-    QPushButton *AddButton_2;
+    QLineEdit *quantityLine;
+    QPushButton *BackButton;
+    QPushButton *OKButton;
     QLabel *label_3;
 
     void setupUi(QWidget *Information)
@@ -63,7 +63,7 @@ public:
         Information->setMaximumSize(QSize(400, 300));
         layoutWidget = new QWidget(Information);
         layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 50, 381, 194));
+        layoutWidget->setGeometry(QRect(10, 50, 381, 214));
         verticalLayout_2 = new QVBoxLayout(layoutWidget);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
@@ -82,10 +82,10 @@ public:
 
         horizontalLayout_2->addWidget(label_10);
 
-        lineEdit_5 = new QLineEdit(layoutWidget);
-        lineEdit_5->setObjectName(QStringLiteral("lineEdit_5"));
+        nameLine = new QLineEdit(layoutWidget);
+        nameLine->setObjectName(QStringLiteral("nameLine"));
 
-        horizontalLayout_2->addWidget(lineEdit_5);
+        horizontalLayout_2->addWidget(nameLine);
 
 
         verticalLayout->addLayout(horizontalLayout_2);
@@ -98,10 +98,10 @@ public:
 
         horizontalLayout_3->addWidget(label_9);
 
-        lineEdit_7 = new QLineEdit(layoutWidget);
-        lineEdit_7->setObjectName(QStringLiteral("lineEdit_7"));
+        serialLine = new QLineEdit(layoutWidget);
+        serialLine->setObjectName(QStringLiteral("serialLine"));
 
-        horizontalLayout_3->addWidget(lineEdit_7);
+        horizontalLayout_3->addWidget(serialLine);
 
 
         verticalLayout->addLayout(horizontalLayout_3);
@@ -114,10 +114,10 @@ public:
 
         horizontalLayout_4->addWidget(label_8);
 
-        lineEdit_4 = new QLineEdit(layoutWidget);
-        lineEdit_4->setObjectName(QStringLiteral("lineEdit_4"));
+        propertyLine = new QLineEdit(layoutWidget);
+        propertyLine->setObjectName(QStringLiteral("propertyLine"));
 
-        horizontalLayout_4->addWidget(lineEdit_4);
+        horizontalLayout_4->addWidget(propertyLine);
 
 
         verticalLayout->addLayout(horizontalLayout_4);
@@ -130,10 +130,10 @@ public:
 
         horizontalLayout_6->addWidget(label_6);
 
-        lineEdit_2 = new QLineEdit(layoutWidget);
-        lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
+        locationLine = new QLineEdit(layoutWidget);
+        locationLine->setObjectName(QStringLiteral("locationLine"));
 
-        horizontalLayout_6->addWidget(lineEdit_2);
+        horizontalLayout_6->addWidget(locationLine);
 
 
         verticalLayout->addLayout(horizontalLayout_6);
@@ -146,10 +146,10 @@ public:
 
         horizontalLayout_5->addWidget(label_7);
 
-        lineEdit_3 = new QLineEdit(layoutWidget);
-        lineEdit_3->setObjectName(QStringLiteral("lineEdit_3"));
+        statusLine = new QLineEdit(layoutWidget);
+        statusLine->setObjectName(QStringLiteral("statusLine"));
 
-        horizontalLayout_5->addWidget(lineEdit_3);
+        horizontalLayout_5->addWidget(statusLine);
 
 
         verticalLayout->addLayout(horizontalLayout_5);
@@ -162,10 +162,10 @@ public:
 
         horizontalLayout_7->addWidget(label_5);
 
-        lineEdit_6 = new QLineEdit(layoutWidget);
-        lineEdit_6->setObjectName(QStringLiteral("lineEdit_6"));
+        remarksLine = new QLineEdit(layoutWidget);
+        remarksLine->setObjectName(QStringLiteral("remarksLine"));
 
-        horizontalLayout_7->addWidget(lineEdit_6);
+        horizontalLayout_7->addWidget(remarksLine);
 
 
         verticalLayout->addLayout(horizontalLayout_7);
@@ -181,30 +181,30 @@ public:
 
         horizontalLayout->addWidget(label_4);
 
-        lineEdit = new QLineEdit(layoutWidget);
-        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+        quantityLine = new QLineEdit(layoutWidget);
+        quantityLine->setObjectName(QStringLiteral("quantityLine"));
 
-        horizontalLayout->addWidget(lineEdit);
+        horizontalLayout->addWidget(quantityLine);
 
 
         verticalLayout_2->addLayout(horizontalLayout);
 
-        AddButton = new QPushButton(Information);
-        AddButton->setObjectName(QStringLiteral("AddButton"));
-        AddButton->setGeometry(QRect(200, 260, 75, 25));
+        BackButton = new QPushButton(Information);
+        BackButton->setObjectName(QStringLiteral("BackButton"));
+        BackButton->setGeometry(QRect(200, 270, 75, 25));
         QFont font1;
         font1.setFamily(QStringLiteral("Segoe UI Black"));
         font1.setPointSize(10);
         font1.setBold(true);
         font1.setWeight(75);
-        AddButton->setFont(font1);
-        AddButton_2 = new QPushButton(Information);
-        AddButton_2->setObjectName(QStringLiteral("AddButton_2"));
-        AddButton_2->setGeometry(QRect(290, 260, 75, 25));
-        AddButton_2->setFont(font1);
+        BackButton->setFont(font1);
+        OKButton = new QPushButton(Information);
+        OKButton->setObjectName(QStringLiteral("OKButton"));
+        OKButton->setGeometry(QRect(290, 270, 75, 25));
+        OKButton->setFont(font1);
         label_3 = new QLabel(Information);
         label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setGeometry(QRect(150, 20, 111, 17));
+        label_3->setGeometry(QRect(140, 20, 151, 20));
         label_3->setFont(font1);
 
         retranslateUi(Information);
@@ -222,8 +222,8 @@ public:
         label_7->setText(QApplication::translate("Information", "OP_STATUS", Q_NULLPTR));
         label_5->setText(QApplication::translate("Information", "REMARKS", Q_NULLPTR));
         label_4->setText(QApplication::translate("Information", "Quantity", Q_NULLPTR));
-        AddButton->setText(QApplication::translate("Information", "BACK", Q_NULLPTR));
-        AddButton_2->setText(QApplication::translate("Information", "OK", Q_NULLPTR));
+        BackButton->setText(QApplication::translate("Information", "BACK", Q_NULLPTR));
+        OKButton->setText(QApplication::translate("Information", "OK", Q_NULLPTR));
         label_3->setText(QApplication::translate("Information", "INFORMATION:", Q_NULLPTR));
     } // retranslateUi
 

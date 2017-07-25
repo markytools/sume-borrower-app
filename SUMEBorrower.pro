@@ -62,6 +62,9 @@ FORMS += \
     information.ui \
     infopopup.ui
 
+INCLUDEPATH += $$PWD/.
+DEPENDPATH += $$PWD/.
+
 win32: LIBS += -L$$PWD/./ -lLaboratoryLib
 
 INCLUDEPATH += $$PWD/.
