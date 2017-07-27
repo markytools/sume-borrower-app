@@ -48,6 +48,7 @@ void Information::on_OKButton_clicked()
         ui->serialLine->clear();
         ui->propertyLine->clear();
         ui->statusLine->clear();
+        ui->locationLine->clear();
         ui->remarksLine->clear();
         stackWidget->setCurrentIndex(0);
         updateEquipments();
@@ -59,6 +60,7 @@ void Information::on_OKButton_clicked()
         ui->quantityLine->clear();
         ui->serialLine->clear();
         ui->propertyLine->clear();
+        ui->locationLine->clear();
         ui->statusLine->clear();
         ui->remarksLine->clear();
         stackWidget->setCurrentIndex(0);

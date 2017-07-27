@@ -8,9 +8,20 @@
 #include <iostream>
 #include <QVariant>
 #include <QVector>
+#include <QDebug>
 #include <QDateTime>
 #include "utils.h"
 using namespace std;
+
+const QString DATETIMEFORMAT = "yyyy-MM-dd HH:mm:ss";
+
+class BorrowedEquipment {
+
+public:
+    BorrowedEquipment();
+    QString equipmentName;
+    int quantity;
+};
 
 class Equipment {
 
@@ -70,7 +81,8 @@ public:
     Equipment *getEquipment(QString name) const;
     QVector<Equipment*> *getEquipments() const;
 
-    void addBorrower(QString name, QString subject, QString section, QDateTime start, QDateTime end, QVector<Student*> *students);
+    void addBorrower(QString name, QString subject, QString section, QDateTime start, QDateTime end,
+                     QVector<Student*> *students, QVector<BorrowedEquipment *> *borrowed_equip);
 
     QSqlDatabase getDb() const;
     QString getResult() const;
