@@ -18,7 +18,7 @@ const QString DATETIMEFORMAT = "yyyy-MM-dd HH:mm:ss";
 class BorrowedEquipment {
 
 public:
-    BorrowedEquipment();
+    BorrowedEquipment(QString equipmentName, int quantity);
     QString equipmentName;
     int quantity;
 };
@@ -45,6 +45,7 @@ public:
 class Borrower {
 
 public:
+    Borrower(QString name, QString subject, QString section, QDateTime start, QDateTime end);
     QString name;
     QString subject;
     QString section;
@@ -55,6 +56,7 @@ public:
 class Student {
 
 public:
+    Student(QString name);
     QString name;
 };
 
@@ -71,6 +73,7 @@ private:
 public:
     LaboratoryLib();
     void initDatabase();
+    //Equipments must be valid!
     void addEquipment(QString name, int qty, QString serial, QString property, QString status, QString location, QString remarks);
     //Edit equipment with name 'name'
     void editEquipment(QString name, int qty, QString serial, QString property, QString status, QString location, QString remarks);
@@ -83,6 +86,10 @@ public:
 
     void addBorrower(QString name, QString subject, QString section, QDateTime start, QDateTime end,
                      QVector<Student*> *students, QVector<BorrowedEquipment *> *borrowed_equip);
+    QVector<BorrowedEquipment *> *getBorrowedEquipments(QString borrowerName, QString subject, QString section);
+    QVector<Borrower *> *getBorrowers();
+    QVector<Student *> *getStudents(QString borrowerName, QString subject, QString section);
+
 
     QSqlDatabase getDb() const;
     QString getResult() const;
