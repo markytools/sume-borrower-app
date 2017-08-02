@@ -88,7 +88,7 @@ public:
     {
         ListBorrowers->setWindowTitle(QApplication::translate("ListBorrowers", "Form", Q_NULLPTR));
         label->setText(QApplication::translate("ListBorrowers", "                        LIST OF BORROWERS:", Q_NULLPTR));
-        AddButton->setText(QApplication::translate("ListBorrowers", "Add", Q_NULLPTR));
+        AddButton->setText(QApplication::translate("ListBorrowers", "ADD", Q_NULLPTR));
         AddButton_2->setText(QApplication::translate("ListBorrowers", "DELETE", Q_NULLPTR));
         AddButton_3->setText(QApplication::translate("ListBorrowers", "BACK", Q_NULLPTR));
     } // retranslateUi
