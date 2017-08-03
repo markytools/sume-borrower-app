@@ -20,14 +20,23 @@ SUMEBorrower::SUMEBorrower(QWidget *parent) :
     listequipments->labLib = labLib;
     Information *information = new Information(this);
     information->stackWidget = stackWidget;
+    HomeDisplay *homedisplay = new HomeDisplay(this);
+    homedisplay->stackWidget = stackWidget;
+    ListBorrowers *listborrowers = new ListBorrowers(this);
+    listborrowers->stackWidget = stackWidget;
 //    stackWidget->addWidget(borrowers);
 //    stackWidget->addWidget(confirmations);
+
     stackWidget->addWidget(listequipments); // Index 0
     stackWidget->addWidget(information); // Index 1
+    stackWidget->addWidget(homedisplay); // Index 2
+    stackWidget->addWidget(listborrowers); //Index 3
 
     setCentralWidget(stackWidget);
 
-    stackWidget->setCurrentIndex(0);
+
+    stackWidget->setCurrentIndex(2);
+
 
 
 

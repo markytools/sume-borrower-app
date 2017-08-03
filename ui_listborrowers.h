@@ -27,16 +27,16 @@ class Ui_ListBorrowers
 public:
     QGridLayout *gridLayout;
     QLabel *label;
-    QTableWidget *tableWidget;
+    QTableWidget *borrowersTable;
     QPushButton *AddButton;
     QPushButton *AddButton_2;
-    QPushButton *AddButton_3;
+    QPushButton *Back;
 
     void setupUi(QWidget *ListBorrowers)
     {
         if (ListBorrowers->objectName().isEmpty())
             ListBorrowers->setObjectName(QStringLiteral("ListBorrowers"));
-        ListBorrowers->resize(528, 367);
+        ListBorrowers->resize(707, 491);
         gridLayout = new QGridLayout(ListBorrowers);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         label = new QLabel(ListBorrowers);
@@ -50,10 +50,10 @@ public:
 
         gridLayout->addWidget(label, 0, 0, 1, 3);
 
-        tableWidget = new QTableWidget(ListBorrowers);
-        tableWidget->setObjectName(QStringLiteral("tableWidget"));
+        borrowersTable = new QTableWidget(ListBorrowers);
+        borrowersTable->setObjectName(QStringLiteral("borrowersTable"));
 
-        gridLayout->addWidget(tableWidget, 1, 0, 1, 3);
+        gridLayout->addWidget(borrowersTable, 1, 0, 1, 3);
 
         AddButton = new QPushButton(ListBorrowers);
         AddButton->setObjectName(QStringLiteral("AddButton"));
@@ -72,11 +72,11 @@ public:
 
         gridLayout->addWidget(AddButton_2, 2, 1, 1, 1);
 
-        AddButton_3 = new QPushButton(ListBorrowers);
-        AddButton_3->setObjectName(QStringLiteral("AddButton_3"));
-        AddButton_3->setFont(font1);
+        Back = new QPushButton(ListBorrowers);
+        Back->setObjectName(QStringLiteral("Back"));
+        Back->setFont(font1);
 
-        gridLayout->addWidget(AddButton_3, 2, 2, 1, 1);
+        gridLayout->addWidget(Back, 2, 2, 1, 1);
 
 
         retranslateUi(ListBorrowers);
@@ -90,7 +90,7 @@ public:
         label->setText(QApplication::translate("ListBorrowers", "                        LIST OF BORROWERS:", Q_NULLPTR));
         AddButton->setText(QApplication::translate("ListBorrowers", "ADD", Q_NULLPTR));
         AddButton_2->setText(QApplication::translate("ListBorrowers", "DELETE", Q_NULLPTR));
-        AddButton_3->setText(QApplication::translate("ListBorrowers", "BACK", Q_NULLPTR));
+        Back->setText(QApplication::translate("ListBorrowers", "BACK", Q_NULLPTR));
     } // retranslateUi
 
 };

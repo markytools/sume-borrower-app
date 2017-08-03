@@ -12,3 +12,13 @@ HomeDisplay::~HomeDisplay()
 {
     delete ui;
 }
+
+void HomeDisplay::on_Borrowing_clicked()
+{
+    stackWidget->setCurrentIndex(3);
+}
+
+void HomeDisplay::on_Equipments_clicked()
+{
+    stackWidget->setCurrentIndex(0);
+}

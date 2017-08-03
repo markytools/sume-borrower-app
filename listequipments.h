@@ -28,6 +28,8 @@ private slots:
     void on_RemoveAllButton_clicked();
 
 
+    void on_Back_clicked();
+
 private:
     Ui::ListEquipments *ui;
 };

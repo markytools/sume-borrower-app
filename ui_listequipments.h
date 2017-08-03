@@ -32,7 +32,7 @@ public:
     QPushButton *AddButton;
     QPushButton *RemoveButton;
     QPushButton *EditButton;
-    QPushButton *AddButton_2;
+    QPushButton *Back;
     QPushButton *RemoveAllButton;
 
     void setupUi(QWidget *ListEquipments)
@@ -84,11 +84,11 @@ public:
 
         gridLayout->addWidget(EditButton, 0, 1, 1, 1);
 
-        AddButton_2 = new QPushButton(ListEquipments);
-        AddButton_2->setObjectName(QStringLiteral("AddButton_2"));
-        AddButton_2->setFont(font1);
+        Back = new QPushButton(ListEquipments);
+        Back->setObjectName(QStringLiteral("Back"));
+        Back->setFont(font1);
 
-        gridLayout->addWidget(AddButton_2, 0, 5, 1, 1);
+        gridLayout->addWidget(Back, 0, 5, 1, 1);
 
         RemoveAllButton = new QPushButton(ListEquipments);
         RemoveAllButton->setObjectName(QStringLiteral("RemoveAllButton"));
@@ -112,7 +112,7 @@ public:
         AddButton->setText(QApplication::translate("ListEquipments", "ADD", Q_NULLPTR));
         RemoveButton->setText(QApplication::translate("ListEquipments", "REMOVE SELECTION", Q_NULLPTR));
         EditButton->setText(QApplication::translate("ListEquipments", "EDIT", Q_NULLPTR));
-        AddButton_2->setText(QApplication::translate("ListEquipments", "BACK", Q_NULLPTR));
+        Back->setText(QApplication::translate("ListEquipments", "BACK", Q_NULLPTR));
         RemoveAllButton->setText(QApplication::translate("ListEquipments", "REMOVE ALL", Q_NULLPTR));
     } // retranslateUi
 
