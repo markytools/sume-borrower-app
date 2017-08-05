@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout_2">
+  <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
     <widget class="QLabel" name="label">
      <property name="font">
@@ -36,8 +36,8 @@
     <widget class="QTableWidget" name="equipmentTable"/>
    </item>
    <item row="2" column="0">
-    <layout class="QGridLayout" name="gridLayout">
-     <item row="0" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
       <widget class="QPushButton" name="AddButton">
        <property name="font">
         <font>
@@ -52,22 +52,7 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="2">
-      <widget class="QPushButton" name="RemoveButton">
-       <property name="font">
-        <font>
-         <family>Segoe UI Black</family>
-         <pointsize>10</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>REMOVE SELECTION</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
+     <item>
       <widget class="QPushButton" name="EditButton">
        <property name="font">
         <font>
@@ -82,7 +67,37 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="5">
+     <item>
+      <widget class="QPushButton" name="RemoveButton">
+       <property name="font">
+        <font>
+         <family>Segoe UI Black</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>REMOVE SELECTION</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="RemoveAllButton">
+       <property name="font">
+        <font>
+         <family>Segoe UI Black</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>REMOVE ALL</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QPushButton" name="AddButton_2">
        <property name="font">
         <font>
@@ -97,8 +112,8 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="4">
-      <widget class="QPushButton" name="RemoveAllButton">
+     <item>
+      <widget class="QPushButton" name="AddButton_3">
        <property name="font">
         <font>
          <family>Segoe UI Black</family>
@@ -108,7 +123,7 @@
         </font>
        </property>
        <property name="text">
-        <string>REMOVE ALL</string>
+        <string>MORE INFO</string>
        </property>
       </widget>
      </item>
