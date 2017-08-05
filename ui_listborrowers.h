@@ -14,6 +14,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
@@ -28,8 +29,10 @@ public:
     QGridLayout *gridLayout;
     QLabel *label;
     QTableWidget *tableWidget;
+    QHBoxLayout *horizontalLayout;
     QPushButton *AddButton;
     QPushButton *AddButton_2;
+    QPushButton *AddButton_4;
     QPushButton *AddButton_3;
 
     void setupUi(QWidget *ListBorrowers)
@@ -48,13 +51,15 @@ public:
         font.setWeight(75);
         label->setFont(font);
 
-        gridLayout->addWidget(label, 0, 0, 1, 3);
+        gridLayout->addWidget(label, 0, 0, 1, 1);
 
         tableWidget = new QTableWidget(ListBorrowers);
         tableWidget->setObjectName(QStringLiteral("tableWidget"));
 
-        gridLayout->addWidget(tableWidget, 1, 0, 1, 3);
+        gridLayout->addWidget(tableWidget, 1, 0, 1, 1);
 
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         AddButton = new QPushButton(ListBorrowers);
         AddButton->setObjectName(QStringLiteral("AddButton"));
         QFont font1;
@@ -64,19 +69,28 @@ public:
         font1.setWeight(75);
         AddButton->setFont(font1);
 
-        gridLayout->addWidget(AddButton, 2, 0, 1, 1);
+        horizontalLayout->addWidget(AddButton);
 
         AddButton_2 = new QPushButton(ListBorrowers);
         AddButton_2->setObjectName(QStringLiteral("AddButton_2"));
         AddButton_2->setFont(font1);
 
-        gridLayout->addWidget(AddButton_2, 2, 1, 1, 1);
+        horizontalLayout->addWidget(AddButton_2);
+
+        AddButton_4 = new QPushButton(ListBorrowers);
+        AddButton_4->setObjectName(QStringLiteral("AddButton_4"));
+        AddButton_4->setFont(font1);
+
+        horizontalLayout->addWidget(AddButton_4);
 
         AddButton_3 = new QPushButton(ListBorrowers);
         AddButton_3->setObjectName(QStringLiteral("AddButton_3"));
         AddButton_3->setFont(font1);
 
-        gridLayout->addWidget(AddButton_3, 2, 2, 1, 1);
+        horizontalLayout->addWidget(AddButton_3);
+
+
+        gridLayout->addLayout(horizontalLayout, 2, 0, 1, 1);
 
 
         retranslateUi(ListBorrowers);
@@ -90,6 +104,7 @@ public:
         label->setText(QApplication::translate("ListBorrowers", "                        LIST OF BORROWERS:", Q_NULLPTR));
         AddButton->setText(QApplication::translate("ListBorrowers", "ADD", Q_NULLPTR));
         AddButton_2->setText(QApplication::translate("ListBorrowers", "DELETE", Q_NULLPTR));
+        AddButton_4->setText(QApplication::translate("ListBorrowers", "INFO", Q_NULLPTR));
         AddButton_3->setText(QApplication::translate("ListBorrowers", "BACK", Q_NULLPTR));
     } // retranslateUi
 
