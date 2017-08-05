@@ -211,3 +211,8 @@ void ListEquipments::updateEquipments()
         ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 6, remarksItem);
     }
 }
+
+void ListEquipments::on_Back_clicked()
+{
+    stackWidget->setCurrentIndex(2);
+}

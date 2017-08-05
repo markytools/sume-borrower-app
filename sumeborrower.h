@@ -9,6 +9,8 @@
 #include "laboratorylib.h"
 #include "listequipments.h"
 #include "information.h"
+#include "homedisplay.h"
+#include "listborrowers.h"
 #include <QVector>
 namespace Ui {
 class SUMEBorrower;

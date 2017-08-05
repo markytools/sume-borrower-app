@@ -24,8 +24,8 @@ class Ui_HomeDisplay
 {
 public:
     QLabel *label_2;
-    QPushButton *AddButton;
-    QPushButton *AddButton_2;
+    QPushButton *Borrowing;
+    QPushButton *Equipments;
 
     void setupUi(QWidget *HomeDisplay)
     {
@@ -42,19 +42,19 @@ public:
         font.setBold(true);
         font.setWeight(75);
         label_2->setFont(font);
-        AddButton = new QPushButton(HomeDisplay);
-        AddButton->setObjectName(QStringLiteral("AddButton"));
-        AddButton->setGeometry(QRect(20, 140, 151, 121));
+        Borrowing = new QPushButton(HomeDisplay);
+        Borrowing->setObjectName(QStringLiteral("Borrowing"));
+        Borrowing->setGeometry(QRect(20, 140, 151, 121));
         QFont font1;
         font1.setFamily(QStringLiteral("Segoe UI Black"));
         font1.setPointSize(10);
         font1.setBold(true);
         font1.setWeight(75);
-        AddButton->setFont(font1);
-        AddButton_2 = new QPushButton(HomeDisplay);
-        AddButton_2->setObjectName(QStringLiteral("AddButton_2"));
-        AddButton_2->setGeometry(QRect(210, 140, 151, 121));
-        AddButton_2->setFont(font1);
+        Borrowing->setFont(font1);
+        Equipments = new QPushButton(HomeDisplay);
+        Equipments->setObjectName(QStringLiteral("Equipments"));
+        Equipments->setGeometry(QRect(210, 140, 151, 121));
+        Equipments->setFont(font1);
 
         retranslateUi(HomeDisplay);
 
@@ -65,8 +65,8 @@ public:
     {
         HomeDisplay->setWindowTitle(QApplication::translate("HomeDisplay", "Form", Q_NULLPTR));
         label_2->setText(QApplication::translate("HomeDisplay", "**LAB BORROWER**", Q_NULLPTR));
-        AddButton->setText(QApplication::translate("HomeDisplay", "BORROWING", Q_NULLPTR));
-        AddButton_2->setText(QApplication::translate("HomeDisplay", "EQUIPMENTS", Q_NULLPTR));
+        Borrowing->setText(QApplication::translate("HomeDisplay", "BORROWING", Q_NULLPTR));
+        Equipments->setText(QApplication::translate("HomeDisplay", "EQUIPMENTS", Q_NULLPTR));
     } // retranslateUi
 
 };

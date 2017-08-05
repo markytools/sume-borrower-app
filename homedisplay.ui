@@ -40,7 +40,7 @@
     <string>**LAB BORROWER**</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="AddButton">
+  <widget class="QPushButton" name="Borrowing">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -61,7 +61,7 @@
     <string>BORROWING</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="AddButton_2">
+  <widget class="QPushButton" name="Equipments">
    <property name="geometry">
     <rect>
      <x>210</x>
