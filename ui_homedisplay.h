@@ -33,6 +33,7 @@ public:
             HomeDisplay->setObjectName(QStringLiteral("HomeDisplay"));
         HomeDisplay->resize(400, 300);
         HomeDisplay->setMinimumSize(QSize(400, 300));
+        HomeDisplay->setMaximumSize(QSize(16777215, 16777215));
         label_2 = new QLabel(HomeDisplay);
         label_2->setObjectName(QStringLiteral("label_2"));
         label_2->setGeometry(QRect(50, 30, 301, 81));

@@ -14,6 +14,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
@@ -25,23 +26,24 @@ QT_BEGIN_NAMESPACE
 class Ui_ListEquipments
 {
 public:
-    QGridLayout *gridLayout_2;
+    QGridLayout *gridLayout;
     QLabel *label;
     QTableWidget *equipmentTable;
-    QGridLayout *gridLayout;
+    QHBoxLayout *horizontalLayout;
     QPushButton *AddButton;
-    QPushButton *RemoveButton;
     QPushButton *EditButton;
-    QPushButton *Back;
+    QPushButton *RemoveButton;
     QPushButton *RemoveAllButton;
+    QPushButton *RemoveAllButton_2;
+    QPushButton *Back;
 
     void setupUi(QWidget *ListEquipments)
     {
         if (ListEquipments->objectName().isEmpty())
             ListEquipments->setObjectName(QStringLiteral("ListEquipments"));
         ListEquipments->resize(733, 490);
-        gridLayout_2 = new QGridLayout(ListEquipments);
-        gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
+        gridLayout = new QGridLayout(ListEquipments);
+        gridLayout->setObjectName(QStringLiteral("gridLayout"));
         label = new QLabel(ListEquipments);
         label->setObjectName(QStringLiteral("label"));
         QFont font;
@@ -52,15 +54,15 @@ public:
         label->setFont(font);
         label->setAlignment(Qt::AlignCenter);
 
-        gridLayout_2->addWidget(label, 0, 0, 1, 1);
+        gridLayout->addWidget(label, 0, 0, 1, 1);
 
         equipmentTable = new QTableWidget(ListEquipments);
         equipmentTable->setObjectName(QStringLiteral("equipmentTable"));
 
-        gridLayout_2->addWidget(equipmentTable, 1, 0, 1, 1);
+        gridLayout->addWidget(equipmentTable, 1, 0, 1, 1);
 
-        gridLayout = new QGridLayout();
-        gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         AddButton = new QPushButton(ListEquipments);
         AddButton->setObjectName(QStringLiteral("AddButton"));
         QFont font1;
@@ -70,34 +72,40 @@ public:
         font1.setWeight(75);
         AddButton->setFont(font1);
 
-        gridLayout->addWidget(AddButton, 0, 0, 1, 1);
-
-        RemoveButton = new QPushButton(ListEquipments);
-        RemoveButton->setObjectName(QStringLiteral("RemoveButton"));
-        RemoveButton->setFont(font1);
-
-        gridLayout->addWidget(RemoveButton, 0, 2, 1, 1);
+        horizontalLayout->addWidget(AddButton);
 
         EditButton = new QPushButton(ListEquipments);
         EditButton->setObjectName(QStringLiteral("EditButton"));
         EditButton->setFont(font1);
 
-        gridLayout->addWidget(EditButton, 0, 1, 1, 1);
+        horizontalLayout->addWidget(EditButton);
 
-        Back = new QPushButton(ListEquipments);
-        Back->setObjectName(QStringLiteral("Back"));
-        Back->setFont(font1);
+        RemoveButton = new QPushButton(ListEquipments);
+        RemoveButton->setObjectName(QStringLiteral("RemoveButton"));
+        RemoveButton->setFont(font1);
 
-        gridLayout->addWidget(Back, 0, 5, 1, 1);
+        horizontalLayout->addWidget(RemoveButton);
 
         RemoveAllButton = new QPushButton(ListEquipments);
         RemoveAllButton->setObjectName(QStringLiteral("RemoveAllButton"));
         RemoveAllButton->setFont(font1);
 
-        gridLayout->addWidget(RemoveAllButton, 0, 4, 1, 1);
+        horizontalLayout->addWidget(RemoveAllButton);
+
+        RemoveAllButton_2 = new QPushButton(ListEquipments);
+        RemoveAllButton_2->setObjectName(QStringLiteral("RemoveAllButton_2"));
+        RemoveAllButton_2->setFont(font1);
+
+        horizontalLayout->addWidget(RemoveAllButton_2);
+
+        Back = new QPushButton(ListEquipments);
+        Back->setObjectName(QStringLiteral("Back"));
+        Back->setFont(font1);
+
+        horizontalLayout->addWidget(Back);
 
 
-        gridLayout_2->addLayout(gridLayout, 2, 0, 1, 1);
+        gridLayout->addLayout(horizontalLayout, 2, 0, 1, 1);
 
 
         retranslateUi(ListEquipments);
@@ -110,10 +118,11 @@ public:
         ListEquipments->setWindowTitle(QApplication::translate("ListEquipments", "Form", Q_NULLPTR));
         label->setText(QApplication::translate("ListEquipments", "**LIST OF EQUIPMENTS**", Q_NULLPTR));
         AddButton->setText(QApplication::translate("ListEquipments", "ADD", Q_NULLPTR));
-        RemoveButton->setText(QApplication::translate("ListEquipments", "REMOVE SELECTION", Q_NULLPTR));
         EditButton->setText(QApplication::translate("ListEquipments", "EDIT", Q_NULLPTR));
-        Back->setText(QApplication::translate("ListEquipments", "BACK", Q_NULLPTR));
+        RemoveButton->setText(QApplication::translate("ListEquipments", "REMOVE SELECTION", Q_NULLPTR));
         RemoveAllButton->setText(QApplication::translate("ListEquipments", "REMOVE ALL", Q_NULLPTR));
+        RemoveAllButton_2->setText(QApplication::translate("ListEquipments", "MORE INFO", Q_NULLPTR));
+        Back->setText(QApplication::translate("ListEquipments", "BACK", Q_NULLPTR));
     } // retranslateUi
 
 };
