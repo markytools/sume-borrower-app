@@ -17,7 +17,7 @@ CXXFLAGS      = -fno-keep-inline-dllexport -pipe -g -std=gnu++11 -Wextra -Wall -
 INCPATH       = -I. -I. -I. -IC:\Qt\Qt5.9.0\5.9\mingw53_32\include -IC:\Qt\Qt5.9.0\5.9\mingw53_32\include\QtWidgets -IC:\Qt\Qt5.9.0\5.9\mingw53_32\include\QtGui -IC:\Qt\Qt5.9.0\5.9\mingw53_32\include\QtANGLE -IC:\Qt\Qt5.9.0\5.9\mingw53_32\include\QtSql -IC:\Qt\Qt5.9.0\5.9\mingw53_32\include\QtCore -Idebug -I. -IC:\Qt\Qt5.9.0\5.9\mingw53_32\mkspecs\win32-g++ 
 LINKER      =        g++
 LFLAGS        =        -Wl,-subsystem,windows -mthreads
-LIBS        =        -lmingw32 -LC:\Qt\Qt5.9.0\5.9\mingw53_32\lib C:\Qt\Qt5.9.0\5.9\mingw53_32\lib\libqtmaind.a -LC:\utils\my_sql\my_sql\lib -LC:\utils\postgresql\pgsql\lib -lshell32 -LD:\CpE50\sume-borrower-app -lLaboratoryLib C:\Qt\Qt5.9.0\5.9\mingw53_32\lib\libQt5Widgetsd.a C:\Qt\Qt5.9.0\5.9\mingw53_32\lib\libQt5Guid.a C:\Qt\Qt5.9.0\5.9\mingw53_32\lib\libQt5Sqld.a C:\Qt\Qt5.9.0\5.9\mingw53_32\lib\libQt5Cored.a 
+LIBS        =        -lmingw32 -LC:\Qt\Qt5.9.0\5.9\mingw53_32\lib C:\Qt\Qt5.9.0\5.9\mingw53_32\lib\libqtmaind.a -LC:\utils\my_sql\my_sql\lib -LC:\utils\postgresql\pgsql\lib -lshell32 -LC:\Users\Acer\Documents\Cpe50Project\sume-borrower-app -lLaboratoryLib C:\Qt\Qt5.9.0\5.9\mingw53_32\lib\libQt5Widgetsd.a C:\Qt\Qt5.9.0\5.9\mingw53_32\lib\libQt5Guid.a C:\Qt\Qt5.9.0\5.9\mingw53_32\lib\libQt5Sqld.a C:\Qt\Qt5.9.0\5.9\mingw53_32\lib\libQt5Cored.a 
 QMAKE         = C:\Qt\Qt5.9.0\5.9\mingw53_32\bin\qmake.exe
 IDC           = idc
 IDL           = midl
@@ -305,10 +305,11 @@ debug/moc_sumeborrower.cpp: C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QMain
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qdialog.h \
 		information.h \
 		homedisplay.h \
+		listborrowers.h \
 		sumeborrower.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/bin/moc.exe
-	C:\Qt\Qt5.9.0\5.9\mingw53_32\bin\moc.exe $(DEFINES) --include debug/moc_predefs.h -IC:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/win32-g++ -ID:/CpE50/sume-borrower-app -ID:/CpE50/sume-borrower-app -ID:/CpE50/sume-borrower-app -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtANGLE -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++ -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward sumeborrower.h -o debug\moc_sumeborrower.cpp
+	C:\Qt\Qt5.9.0\5.9\mingw53_32\bin\moc.exe $(DEFINES) --include debug/moc_predefs.h -IC:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/win32-g++ -IC:/Users/Acer/Documents/Cpe50Project/sume-borrower-app -IC:/Users/Acer/Documents/Cpe50Project/sume-borrower-app -IC:/Users/Acer/Documents/Cpe50Project/sume-borrower-app -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtANGLE -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++ -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward sumeborrower.h -o debug\moc_sumeborrower.cpp
 
 debug/moc_borrowers.cpp: C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QWidget \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qwidget.h \
@@ -445,7 +446,7 @@ debug/moc_borrowers.cpp: C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QWidget 
 		borrowers.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/bin/moc.exe
-	C:\Qt\Qt5.9.0\5.9\mingw53_32\bin\moc.exe $(DEFINES) --include debug/moc_predefs.h -IC:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/win32-g++ -ID:/CpE50/sume-borrower-app -ID:/CpE50/sume-borrower-app -ID:/CpE50/sume-borrower-app -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtANGLE -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++ -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward borrowers.h -o debug\moc_borrowers.cpp
+	C:\Qt\Qt5.9.0\5.9\mingw53_32\bin\moc.exe $(DEFINES) --include debug/moc_predefs.h -IC:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/win32-g++ -IC:/Users/Acer/Documents/Cpe50Project/sume-borrower-app -IC:/Users/Acer/Documents/Cpe50Project/sume-borrower-app -IC:/Users/Acer/Documents/Cpe50Project/sume-borrower-app -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtANGLE -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++ -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward borrowers.h -o debug\moc_borrowers.cpp
 
 debug/moc_borrowingd.cpp: C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QWidget \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qwidget.h \
@@ -582,7 +583,7 @@ debug/moc_borrowingd.cpp: C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QWidget
 		borrowingd.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/bin/moc.exe
-	C:\Qt\Qt5.9.0\5.9\mingw53_32\bin\moc.exe $(DEFINES) --include debug/moc_predefs.h -IC:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/win32-g++ -ID:/CpE50/sume-borrower-app -ID:/CpE50/sume-borrower-app -ID:/CpE50/sume-borrower-app -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtANGLE -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++ -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward borrowingd.h -o debug\moc_borrowingd.cpp
+	C:\Qt\Qt5.9.0\5.9\mingw53_32\bin\moc.exe $(DEFINES) --include debug/moc_predefs.h -IC:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/win32-g++ -IC:/Users/Acer/Documents/Cpe50Project/sume-borrower-app -IC:/Users/Acer/Documents/Cpe50Project/sume-borrower-app -IC:/Users/Acer/Documents/Cpe50Project/sume-borrower-app -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtANGLE -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++ -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward borrowingd.h -o debug\moc_borrowingd.cpp
 
 debug/moc_confirmations.cpp: C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QWidget \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qwidget.h \
@@ -719,7 +720,7 @@ debug/moc_confirmations.cpp: C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QWid
 		confirmations.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/bin/moc.exe
-	C:\Qt\Qt5.9.0\5.9\mingw53_32\bin\moc.exe $(DEFINES) --include debug/moc_predefs.h -IC:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/win32-g++ -ID:/CpE50/sume-borrower-app -ID:/CpE50/sume-borrower-app -ID:/CpE50/sume-borrower-app -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtANGLE -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++ -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward confirmations.h -o debug\moc_confirmations.cpp
+	C:\Qt\Qt5.9.0\5.9\mingw53_32\bin\moc.exe $(DEFINES) --include debug/moc_predefs.h -IC:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/win32-g++ -IC:/Users/Acer/Documents/Cpe50Project/sume-borrower-app -IC:/Users/Acer/Documents/Cpe50Project/sume-borrower-app -IC:/Users/Acer/Documents/Cpe50Project/sume-borrower-app -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtANGLE -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++ -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward confirmations.h -o debug\moc_confirmations.cpp
 
 debug/moc_listborrowers.cpp: C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QWidget \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qwidget.h \
@@ -821,10 +822,42 @@ debug/moc_listborrowers.cpp: C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QWid
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/qfiledevice.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui/qvector2d.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui/qtouchdevice.h \
+		customqtui.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QStackedWidget \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qstackedwidget.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qframe.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QGridLayout \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qgridlayout.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qlayout.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qboxlayout.h \
+		laboratorylib.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql/QSqlDatabase \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql/qsqldatabase.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql/qtsqlglobal.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql/QSqlDriver \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql/qsqldriver.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql/QSqlError \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql/qsqlerror.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql/QSqlQuery \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql/qsqlquery.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/QVariant \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/QVector \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/QDebug \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/QDateTime \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/qdatetime.h \
+		utils.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/QJsonObject \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/qjsonobject.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/qjsonvalue.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/QJsonDocument \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/qjsondocument.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/QStringList \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/QTime \
 		listborrowers.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/bin/moc.exe
-	C:\Qt\Qt5.9.0\5.9\mingw53_32\bin\moc.exe $(DEFINES) --include debug/moc_predefs.h -IC:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/win32-g++ -ID:/CpE50/sume-borrower-app -ID:/CpE50/sume-borrower-app -ID:/CpE50/sume-borrower-app -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtANGLE -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++ -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward listborrowers.h -o debug\moc_listborrowers.cpp
+	C:\Qt\Qt5.9.0\5.9\mingw53_32\bin\moc.exe $(DEFINES) --include debug/moc_predefs.h -IC:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/win32-g++ -IC:/Users/Acer/Documents/Cpe50Project/sume-borrower-app -IC:/Users/Acer/Documents/Cpe50Project/sume-borrower-app -IC:/Users/Acer/Documents/Cpe50Project/sume-borrower-app -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtANGLE -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++ -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward listborrowers.h -o debug\moc_listborrowers.cpp
 
 debug/moc_listequipments.cpp: C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QWidget \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qwidget.h \
@@ -966,7 +999,7 @@ debug/moc_listequipments.cpp: C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QWi
 		listequipments.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/bin/moc.exe
-	C:\Qt\Qt5.9.0\5.9\mingw53_32\bin\moc.exe $(DEFINES) --include debug/moc_predefs.h -IC:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/win32-g++ -ID:/CpE50/sume-borrower-app -ID:/CpE50/sume-borrower-app -ID:/CpE50/sume-borrower-app -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtANGLE -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++ -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward listequipments.h -o debug\moc_listequipments.cpp
+	C:\Qt\Qt5.9.0\5.9\mingw53_32\bin\moc.exe $(DEFINES) --include debug/moc_predefs.h -IC:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/win32-g++ -IC:/Users/Acer/Documents/Cpe50Project/sume-borrower-app -IC:/Users/Acer/Documents/Cpe50Project/sume-borrower-app -IC:/Users/Acer/Documents/Cpe50Project/sume-borrower-app -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtANGLE -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++ -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward listequipments.h -o debug\moc_listequipments.cpp
 
 debug/moc_homedisplay.cpp: C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QWidget \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qwidget.h \
@@ -1103,7 +1136,7 @@ debug/moc_homedisplay.cpp: C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QWidge
 		homedisplay.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/bin/moc.exe
-	C:\Qt\Qt5.9.0\5.9\mingw53_32\bin\moc.exe $(DEFINES) --include debug/moc_predefs.h -IC:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/win32-g++ -ID:/CpE50/sume-borrower-app -ID:/CpE50/sume-borrower-app -ID:/CpE50/sume-borrower-app -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtANGLE -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++ -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward homedisplay.h -o debug\moc_homedisplay.cpp
+	C:\Qt\Qt5.9.0\5.9\mingw53_32\bin\moc.exe $(DEFINES) --include debug/moc_predefs.h -IC:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/win32-g++ -IC:/Users/Acer/Documents/Cpe50Project/sume-borrower-app -IC:/Users/Acer/Documents/Cpe50Project/sume-borrower-app -IC:/Users/Acer/Documents/Cpe50Project/sume-borrower-app -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtANGLE -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++ -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward homedisplay.h -o debug\moc_homedisplay.cpp
 
 debug/moc_information.cpp: C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QWidget \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qwidget.h \
@@ -1245,7 +1278,7 @@ debug/moc_information.cpp: C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QWidge
 		information.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/bin/moc.exe
-	C:\Qt\Qt5.9.0\5.9\mingw53_32\bin\moc.exe $(DEFINES) --include debug/moc_predefs.h -IC:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/win32-g++ -ID:/CpE50/sume-borrower-app -ID:/CpE50/sume-borrower-app -ID:/CpE50/sume-borrower-app -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtANGLE -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++ -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward information.h -o debug\moc_information.cpp
+	C:\Qt\Qt5.9.0\5.9\mingw53_32\bin\moc.exe $(DEFINES) --include debug/moc_predefs.h -IC:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/win32-g++ -IC:/Users/Acer/Documents/Cpe50Project/sume-borrower-app -IC:/Users/Acer/Documents/Cpe50Project/sume-borrower-app -IC:/Users/Acer/Documents/Cpe50Project/sume-borrower-app -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtANGLE -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++ -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward information.h -o debug\moc_information.cpp
 
 debug/moc_infopopup.cpp: C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QWidget \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qwidget.h \
@@ -1350,7 +1383,7 @@ debug/moc_infopopup.cpp: C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QWidget 
 		infopopup.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/bin/moc.exe
-	C:\Qt\Qt5.9.0\5.9\mingw53_32\bin\moc.exe $(DEFINES) --include debug/moc_predefs.h -IC:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/win32-g++ -ID:/CpE50/sume-borrower-app -ID:/CpE50/sume-borrower-app -ID:/CpE50/sume-borrower-app -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtANGLE -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++ -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward infopopup.h -o debug\moc_infopopup.cpp
+	C:\Qt\Qt5.9.0\5.9\mingw53_32\bin\moc.exe $(DEFINES) --include debug/moc_predefs.h -IC:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/win32-g++ -IC:/Users/Acer/Documents/Cpe50Project/sume-borrower-app -IC:/Users/Acer/Documents/Cpe50Project/sume-borrower-app -IC:/Users/Acer/Documents/Cpe50Project/sume-borrower-app -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtANGLE -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql -IC:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++ -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -ID:/Qt/Qt5.9.0/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward infopopup.h -o debug\moc_infopopup.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
@@ -1550,6 +1583,7 @@ debug/main.o: main.cpp sumeborrower.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qdialog.h \
 		information.h \
 		homedisplay.h \
+		listborrowers.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QApplication \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qapplication.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/qcoreapplication.h \
@@ -1704,6 +1738,7 @@ debug/sumeborrower.o: sumeborrower.cpp sumeborrower.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qdialog.h \
 		information.h \
 		homedisplay.h \
+		listborrowers.h \
 		ui_sumeborrower.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QAction \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qaction.h \
@@ -2517,8 +2552,39 @@ debug/listborrowers.o: listborrowers.cpp listborrowers.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/qfiledevice.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui/qvector2d.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui/qtouchdevice.h \
-		ui_listborrowers.h \
+		customqtui.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QStackedWidget \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qstackedwidget.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qframe.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QGridLayout \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qgridlayout.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qlayout.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qboxlayout.h \
+		laboratorylib.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql/QSqlDatabase \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql/qsqldatabase.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql/qtsqlglobal.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql/QSqlDriver \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql/qsqldriver.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql/QSqlError \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql/qsqlerror.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql/QSqlQuery \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtSql/qsqlquery.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/QVariant \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/QVector \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/QDebug \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/QDateTime \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/qdatetime.h \
+		utils.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/QJsonObject \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/qjsonobject.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/qjsonvalue.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/QJsonDocument \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/qjsondocument.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/QStringList \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/QTime \
+		ui_listborrowers.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QAction \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qaction.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui/qicon.h \
@@ -2532,16 +2598,10 @@ debug/listborrowers.o: listborrowers.cpp listborrowers.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui/qinputmethod.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QButtonGroup \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qbuttongroup.h \
-		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QGridLayout \
-		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qgridlayout.h \
-		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qlayout.h \
-		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qlayoutitem.h \
-		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qboxlayout.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QHeaderView \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qheaderview.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qabstractitemview.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qframe.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/qabstractitemmodel.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/qitemselectionmodel.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qabstractitemdelegate.h \
