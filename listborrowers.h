@@ -19,6 +19,8 @@ public:
 private slots:
     void on_Back_clicked();
 
+    void on_Info_clicked();
+
 private:
     Ui::ListBorrowers *ui;
 };

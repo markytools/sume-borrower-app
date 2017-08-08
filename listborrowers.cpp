@@ -132,3 +132,8 @@ void ListBorrowers::on_Back_clicked()
 {
     stackWidget->setCurrentIndex(2);
 }
+
+void ListBorrowers::on_Info_clicked()
+{
+    stackWidget->setCurrentIndex(4);
+}

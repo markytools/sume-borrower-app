@@ -65,6 +65,9 @@ FORMS += \
 INCLUDEPATH += $$PWD/.
 DEPENDPATH += $$PWD/.
 
+
+
+
 win32: LIBS += -L$$PWD/./ -lLaboratoryLib
 
 INCLUDEPATH += $$PWD/.

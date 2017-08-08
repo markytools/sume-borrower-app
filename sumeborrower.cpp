@@ -24,6 +24,8 @@ SUMEBorrower::SUMEBorrower(QWidget *parent) :
     homedisplay->stackWidget = stackWidget;
     ListBorrowers *listborrowers = new ListBorrowers(this);
     listborrowers->stackWidget = stackWidget;
+    Infopopup *infopopup = new Infopopup(this);
+    infopopup->stackWidget = stackWidget;
 //    stackWidget->addWidget(borrowers);
 //    stackWidget->addWidget(confirmations);
 
@@ -31,6 +33,7 @@ SUMEBorrower::SUMEBorrower(QWidget *parent) :
     stackWidget->addWidget(information); // Index 1
     stackWidget->addWidget(homedisplay); // Index 2
     stackWidget->addWidget(listborrowers); //Index 3
+    stackWidget->addWidget(infopopup); //Index 4
 
     setCentralWidget(stackWidget);
 

@@ -32,7 +32,7 @@ public:
     QHBoxLayout *horizontalLayout;
     QPushButton *AddButton;
     QPushButton *AddButton_2;
-    QPushButton *Back_2;
+    QPushButton *Info;
     QPushButton *Back;
 
     void setupUi(QWidget *ListBorrowers)
@@ -77,11 +77,11 @@ public:
 
         horizontalLayout->addWidget(AddButton_2);
 
-        Back_2 = new QPushButton(ListBorrowers);
-        Back_2->setObjectName(QStringLiteral("Back_2"));
-        Back_2->setFont(font1);
+        Info = new QPushButton(ListBorrowers);
+        Info->setObjectName(QStringLiteral("Info"));
+        Info->setFont(font1);
 
-        horizontalLayout->addWidget(Back_2);
+        horizontalLayout->addWidget(Info);
 
         Back = new QPushButton(ListBorrowers);
         Back->setObjectName(QStringLiteral("Back"));
@@ -104,7 +104,7 @@ public:
         label->setText(QApplication::translate("ListBorrowers", "                                  LIST OF BORROWERS:", Q_NULLPTR));
         AddButton->setText(QApplication::translate("ListBorrowers", "ADD", Q_NULLPTR));
         AddButton_2->setText(QApplication::translate("ListBorrowers", "DELETE", Q_NULLPTR));
-        Back_2->setText(QApplication::translate("ListBorrowers", "INFO", Q_NULLPTR));
+        Info->setText(QApplication::translate("ListBorrowers", "INFO", Q_NULLPTR));
         Back->setText(QApplication::translate("ListBorrowers", "BACK", Q_NULLPTR));
     } // retranslateUi
 
