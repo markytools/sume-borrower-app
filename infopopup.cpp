@@ -12,3 +12,8 @@ Infopopup::~Infopopup()
 {
     delete ui;
 }
+
+void Infopopup::on_Back_clicked()
+{
+    stackWidget->setCurrentIndex(3);
+}

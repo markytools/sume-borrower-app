@@ -65,7 +65,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="Back_2">
+      <widget class="QPushButton" name="Info">
        <property name="font">
         <font>
          <family>Segoe UI Black</family>

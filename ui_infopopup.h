@@ -29,11 +29,11 @@ class Ui_Infopopup
 public:
     QTableWidget *tableWidget;
     QLabel *label_3;
-    QPushButton *AddButton;
+    QPushButton *Back;
     QTableWidget *tableWidget_2;
     QLabel *label_7;
     QLabel *label_8;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
     QLabel *label_6;
@@ -57,17 +57,17 @@ public:
         tableWidget->setGeometry(QRect(10, 81, 391, 391));
         label_3 = new QLabel(Infopopup);
         label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setGeometry(QRect(340, 20, 103, 17));
+        label_3->setGeometry(QRect(340, 20, 151, 17));
         QFont font;
         font.setFamily(QStringLiteral("Segoe UI Black"));
         font.setPointSize(10);
         font.setBold(true);
         font.setWeight(75);
         label_3->setFont(font);
-        AddButton = new QPushButton(Infopopup);
-        AddButton->setObjectName(QStringLiteral("AddButton"));
-        AddButton->setGeometry(QRect(530, 450, 111, 25));
-        AddButton->setFont(font);
+        Back = new QPushButton(Infopopup);
+        Back->setObjectName(QStringLiteral("Back"));
+        Back->setGeometry(QRect(530, 450, 111, 25));
+        Back->setFont(font);
         tableWidget_2 = new QTableWidget(Infopopup);
         tableWidget_2->setObjectName(QStringLiteral("tableWidget_2"));
         tableWidget_2->setGeometry(QRect(420, 80, 311, 271));
@@ -79,21 +79,21 @@ public:
         label_8->setObjectName(QStringLiteral("label_8"));
         label_8->setGeometry(QRect(540, 50, 101, 20));
         label_8->setFont(font);
-        widget = new QWidget(Infopopup);
-        widget->setObjectName(QStringLiteral("widget"));
-        widget->setGeometry(QRect(420, 360, 311, 80));
-        verticalLayout = new QVBoxLayout(widget);
+        layoutWidget = new QWidget(Infopopup);
+        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
+        layoutWidget->setGeometry(QRect(420, 360, 311, 91));
+        verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        label_6 = new QLabel(widget);
+        label_6 = new QLabel(layoutWidget);
         label_6->setObjectName(QStringLiteral("label_6"));
         label_6->setFont(font);
 
         horizontalLayout->addWidget(label_6);
 
-        lineEdit = new QLineEdit(widget);
+        lineEdit = new QLineEdit(layoutWidget);
         lineEdit->setObjectName(QStringLiteral("lineEdit"));
 
         horizontalLayout->addWidget(lineEdit);
@@ -103,13 +103,13 @@ public:
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
-        label_5 = new QLabel(widget);
+        label_5 = new QLabel(layoutWidget);
         label_5->setObjectName(QStringLiteral("label_5"));
         label_5->setFont(font);
 
         horizontalLayout_2->addWidget(label_5);
 
-        lineEdit_3 = new QLineEdit(widget);
+        lineEdit_3 = new QLineEdit(layoutWidget);
         lineEdit_3->setObjectName(QStringLiteral("lineEdit_3"));
 
         horizontalLayout_2->addWidget(lineEdit_3);
@@ -119,13 +119,13 @@ public:
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
-        label_4 = new QLabel(widget);
+        label_4 = new QLabel(layoutWidget);
         label_4->setObjectName(QStringLiteral("label_4"));
         label_4->setFont(font);
 
         horizontalLayout_3->addWidget(label_4);
 
-        lineEdit_2 = new QLineEdit(widget);
+        lineEdit_2 = new QLineEdit(layoutWidget);
         lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
 
         horizontalLayout_3->addWidget(lineEdit_2);
@@ -142,8 +142,8 @@ public:
     void retranslateUi(QWidget *Infopopup)
     {
         Infopopup->setWindowTitle(QApplication::translate("Infopopup", "Form", Q_NULLPTR));
-        label_3->setText(QApplication::translate("Infopopup", "INFORMATION:", Q_NULLPTR));
-        AddButton->setText(QApplication::translate("Infopopup", "BACK", Q_NULLPTR));
+        label_3->setText(QApplication::translate("Infopopup", "INFORMATION", Q_NULLPTR));
+        Back->setText(QApplication::translate("Infopopup", "BACK", Q_NULLPTR));
         label_7->setText(QApplication::translate("Infopopup", "EQUIPMENTS:", Q_NULLPTR));
         label_8->setText(QApplication::translate("Infopopup", "MEMBERS:", Q_NULLPTR));
         label_6->setText(QApplication::translate("Infopopup", "GROUPNAME:", Q_NULLPTR));
