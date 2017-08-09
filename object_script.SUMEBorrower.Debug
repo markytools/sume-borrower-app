@@ -11,6 +11,7 @@ INPUT(
 ./debug\homedisplay.o
 ./debug\information.o
 ./debug\infopopup.o
+./debug\borrowitems.o
 ./debug\moc_sumeborrower.o
 ./debug\moc_borrowers.o
 ./debug\moc_borrowingd.o
