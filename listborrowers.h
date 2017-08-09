@@ -21,6 +21,8 @@ private slots:
 
     void on_Info_clicked();
 
+    void on_AddButton_clicked();
+
 private:
     Ui::ListBorrowers *ui;
 };

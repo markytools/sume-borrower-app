@@ -16,7 +16,16 @@ public:
     explicit Confirmations(QWidget *parent = 0);
     ~Confirmations();
 
+    void setEquipment(QVector<Equipment *> *value);
+
+    void setStudents(QVector<Student *> *value);
+
+    void setBorrower(Borrower *value);
+
 private:
+    QVector<Equipment *> *equipment;
+    QVector<Student *> *students;
+    Borrower *borrower;
     Ui::Confirmations *ui;
 };
 

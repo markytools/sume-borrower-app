@@ -12,3 +12,18 @@ Confirmations::~Confirmations()
 {
     delete ui;
 }
+
+void Confirmations::setEquipment(QVector<Equipment *> *value)
+{
+    equipment = value;
+}
+
+void Confirmations::setStudents(QVector<Student *> *value)
+{
+    students = value;
+}
+
+void Confirmations::setBorrower(Borrower *value)
+{
+    borrower = value;
+}
