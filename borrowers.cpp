@@ -6,8 +6,6 @@ Borrowers::Borrowers(QWidget *parent) :
     ui(new Ui::Borrowers)
 {
     ui->setupUi(this);
-    borrowItems = new QVector<BorrowItems*>();
-//    borrowItems->push_front(new BorrowItems("Test", 1, 1));
     QTableWidgetItem *quantityHeader = new QTableWidgetItem("QUANTITY");
     quantityHeader->setTextAlignment(Qt::AlignCenter);
     quantityHeader->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
@@ -22,13 +20,13 @@ Borrowers::Borrowers(QWidget *parent) :
     borrowedHeader->setFont(QFont("helvetica", 12, QFont::Bold));
 
     ui->listEquipments->setColumnCount(3);
-    ui->listEquipments->setHorizontalHeaderItem(0, quantityHeader);
+    ui->listEquipments->setHorizontalHeaderItem(2, quantityHeader);
     ui->listEquipments->setHorizontalHeaderItem(1, nameHeader);
-    ui->listEquipments->setHorizontalHeaderItem(2, borrowedHeader);
+    ui->listEquipments->setHorizontalHeaderItem(0, borrowedHeader);
 
-    ui->listEquipments->setColumnWidth(0, 150);
-    ui->listEquipments->setColumnWidth(1, 300);
     ui->listEquipments->setColumnWidth(2, 150);
+    ui->listEquipments->setColumnWidth(1, 300);
+    ui->listEquipments->setColumnWidth(0, 150);
 
 
     ui->listEquipments->setSelectionBehavior(QAbstractItemView::SelectRows);
@@ -41,30 +39,30 @@ Borrowers::Borrowers(QWidget *parent) :
     ui->borrowEquipments->setColumnWidth(1, 300);
 
     ui->borrowEquipments->setSelectionBehavior(QAbstractItemView::SelectRows);
+}
 
-    QVector<Equipment*> *equipments = labLib->getEquipments();
+Borrowers::~Borrowers()
+{
+    delete ui;
+}
 
-    ui->borrowEquipments->setRowCount(0);
+void Borrowers::on_Back_clicked()
+{
+    stackWidget->setCurrentIndex(5);
+}
 
-    for(int row = 0; row < borrowItems->size(); row++)
-    {
-        BorrowItems *borrowItem = borrowItems->at(row);
+void Borrowers::setBorrower(Borrower *&value)
+{
+    borrower = value;
+}
 
-        int borrowed = borrowItem->borrowed;
-        QString name = borrowItem->name;
+void Borrowers::reverseUpdateListEquipments()
+{
+    ui->listEquipments->clearContents();
 
-        ui->borrowEquipments->setRowCount(ui->borrowEquipments->rowCount() + 1);
+    QVector<Equipment *> *equipments = borrowerdata->getEquipment();
 
-        QTableWidgetItem *borrowedItem = new QTableWidgetItem(QString::number(borrowed));
-        borrowedItem->setTextAlignment(Qt::AlignCenter);
-        borrowedItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
-        QTableWidgetItem *nameItem = new QTableWidgetItem(name);
-        nameItem->setTextAlignment(Qt::AlignCenter);
-        nameItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
-
-        ui->borrowEquipments->setItem(ui->borrowEquipments->rowCount() - 1, 0, borrowedItem);
-        ui->borrowEquipments->setItem(ui->borrowEquipments->rowCount() - 1, 1, nameItem);
-    }
+    ui->listEquipments->setRowCount(0);
 
     for(int row = 0; row < equipments->size(); row++)
     {
@@ -86,73 +84,157 @@ Borrowers::Borrowers(QWidget *parent) :
         borrowedItem->setTextAlignment(Qt::AlignCenter);
         borrowedItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
 
-        ui->listEquipments->setItem(ui->listEquipments->rowCount() - 1, 0, quantityItem);
+        ui->listEquipments->setItem(ui->listEquipments->rowCount() - 1, 2, quantityItem);
         ui->listEquipments->setItem(ui->listEquipments->rowCount() - 1, 1, nameItem);
-        ui->listEquipments->setItem(ui->listEquipments->rowCount() - 1, 2, borrowedItem);
+        ui->listEquipments->setItem(ui->listEquipments->rowCount() - 1, 0, borrowedItem);
     }
 }
 
-Borrowers::~Borrowers()
-{
-    delete ui;
-}
-
-void Borrowers::on_Back_clicked()
-{
-    stackWidget->setCurrentIndex(5);
-}
-
-void Borrowers::setBorrower(Borrower *value)
-{
-    borrower = value;
-}
-
-void Borrowers::updateBorrowItems(bool equipmentEnlisted)
+void Borrowers::reverseUpdateBorrowItems(int previousRow)
 {
     ui->borrowEquipments->clearContents();
 
-    if(equipmentEnlisted){
-        for(int row = 0; row < borrowItems->size(); row++)
-        {
-            BorrowItems *borrowItem = borrowItems->at(row);
+    ui->borrowEquipments->setRowCount(0);
 
-            int borrowed = borrowItem->borrowed;
-            QString name = borrowItem->name;
+    QVector<BorrowedEquipment*> *borrowedEquipments = borrowerdata->getBorrowedequipment();
+    for(int row = 0; row < borrowedEquipments->size(); row++)
+    {
+        BorrowedEquipment *borrowItem = borrowedEquipments->at(row);
 
-            ui->borrowEquipments->setRowCount(ui->borrowEquipments->rowCount());
+        int borrowed = borrowItem->quantity;
+        QString name = borrowItem->equipmentName;
 
-            QTableWidgetItem *borrowedItem = new QTableWidgetItem(QString::number(borrowed));
-            borrowedItem->setTextAlignment(Qt::AlignCenter);
-            borrowedItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
-            QTableWidgetItem *nameItem = new QTableWidgetItem(name);
-            nameItem->setTextAlignment(Qt::AlignCenter);
-            nameItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+        ui->borrowEquipments->setRowCount(ui->borrowEquipments->rowCount() + 1);
+/*      cout << borrowedEquipments->size() << endl;
+        cout << borrowed << endl << name.toStdString() << endl;
+*/
+        QTableWidgetItem *borrowedItem = new QTableWidgetItem(QString::number(borrowed));
+        borrowedItem->setTextAlignment(Qt::AlignCenter);
+        borrowedItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+        QTableWidgetItem *nameItem = new QTableWidgetItem(name);
+        nameItem->setTextAlignment(Qt::AlignCenter);
+        nameItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
 
+        if(borrowItem->quantity != 0){
             ui->borrowEquipments->setItem(ui->borrowEquipments->rowCount() - 1, 0, borrowedItem);
             ui->borrowEquipments->setItem(ui->borrowEquipments->rowCount() - 1, 1, nameItem);
+        }
+        else if(borrowItem->quantity == 0){
+            ui->borrowEquipments->setRowCount(ui->borrowEquipments->rowCount() - 1);
         }
     }
 
-    else{
-        for(int row = 0; row < borrowItems->size(); row++)
-        {
-            BorrowItems *borrowItem = borrowItems->at(row);
+    ui->borrowEquipments->selectRow(previousRow);
+}
 
-            int borrowed = borrowItem->borrowed;
-            QString name = borrowItem->name;
+void Borrowers::updateBorrowItems()
+{
+/*    for (int i = 0; i < students->size(); i++){
+        cout << students->at(i)->name.toStdString() << endl;
+    }
+    cout << borrower->name.toStdString() << endl << borrower->section.toStdString() << endl << borrower->subject.toStdString() << endl;
+    cout << borrower->start.toString("MMM-dd-yyyy hh:mm").toStdString() << endl << borrower->end.toString("MMM-dd-yyyy hh:mm").toStdString() << endl;
+*/
+    ui->borrowEquipments->clearContents();
 
-            ui->borrowEquipments->setRowCount(ui->borrowEquipments->rowCount() + 1);
+    ui->borrowEquipments->setRowCount(0);
 
-            QTableWidgetItem *borrowedItem = new QTableWidgetItem(QString::number(borrowed));
-            borrowedItem->setTextAlignment(Qt::AlignCenter);
-            borrowedItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
-            QTableWidgetItem *nameItem = new QTableWidgetItem(name);
-            nameItem->setTextAlignment(Qt::AlignCenter);
-            nameItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+    QVector<BorrowedEquipment*> *borrowedEquipments = borrowerdata->getBorrowedequipment();
+    for(int row = 0; row < borrowedEquipments->size(); row++)
+    {
+        BorrowedEquipment *borrowItem = borrowedEquipments->at(row);
 
+        int borrowed = borrowItem->quantity;
+        QString name = borrowItem->equipmentName;
+
+        ui->borrowEquipments->setRowCount(ui->borrowEquipments->rowCount() + 1);
+/*      cout << borrowedEquipments->size() << endl;
+        cout << borrowed << endl << name.toStdString() << endl;
+*/
+        QTableWidgetItem *borrowedItem = new QTableWidgetItem(QString::number(borrowed));
+        borrowedItem->setTextAlignment(Qt::AlignCenter);
+        borrowedItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+        QTableWidgetItem *nameItem = new QTableWidgetItem(name);
+        nameItem->setTextAlignment(Qt::AlignCenter);
+        nameItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+
+        if(borrowItem->quantity != 0){
             ui->borrowEquipments->setItem(ui->borrowEquipments->rowCount() - 1, 0, borrowedItem);
             ui->borrowEquipments->setItem(ui->borrowEquipments->rowCount() - 1, 1, nameItem);
         }
+        else if(borrowItem->quantity == 0){
+            ui->borrowEquipments->setRowCount(ui->borrowEquipments->rowCount() - 1);
+        }
+    }
+}
+
+void Borrowers::updateListEquipments(int previousRow)
+{
+    ui->listEquipments->clearContents();
+
+    QVector<Equipment *> *equipments = borrowerdata->getEquipment();
+
+    ui->listEquipments->setRowCount(0);
+
+    for(int row = 0; row < equipments->size(); row++)
+    {
+        Equipment *equipment = equipments->at(row);
+
+        int quantity = equipment->quantity;
+        QString name = equipment->name;
+        int borrowed = equipment->borrowed;
+
+        ui->listEquipments->setRowCount(ui->listEquipments->rowCount() + 1);
+
+        QTableWidgetItem *quantityItem = new QTableWidgetItem(QString::number(quantity));
+        quantityItem->setTextAlignment(Qt::AlignCenter);
+        quantityItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+        QTableWidgetItem *nameItem = new QTableWidgetItem(name);
+        nameItem->setTextAlignment(Qt::AlignCenter);
+        nameItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+        QTableWidgetItem *borrowedItem = new QTableWidgetItem(QString::number(borrowed));
+        borrowedItem->setTextAlignment(Qt::AlignCenter);
+        borrowedItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+
+        ui->listEquipments->setItem(ui->listEquipments->rowCount() - 1, 2, quantityItem);
+        ui->listEquipments->setItem(ui->listEquipments->rowCount() - 1, 1, nameItem);
+        ui->listEquipments->setItem(ui->listEquipments->rowCount() - 1, 0, borrowedItem);
+    }
+
+    ui->listEquipments->selectRow(previousRow);
+}
+
+void Borrowers::display()
+{
+    borrowerdata->setEquipment(labLib->getEquipments());
+
+    QVector<Equipment *> *equipments = borrowerdata->getEquipment();
+
+    ui->borrowEquipments->setRowCount(0);
+
+    for(int row = 0; row < equipments->size(); row++)
+    {
+        Equipment *equipment = equipments->at(row);
+
+        int quantity = equipment->quantity;
+        QString name = equipment->name;
+        int borrowed = equipment->borrowed;
+
+        ui->listEquipments->setRowCount(ui->listEquipments->rowCount() + 1);
+
+        QTableWidgetItem *quantityItem = new QTableWidgetItem(QString::number(quantity));
+        quantityItem->setTextAlignment(Qt::AlignCenter);
+        quantityItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+        QTableWidgetItem *nameItem = new QTableWidgetItem(name);
+        nameItem->setTextAlignment(Qt::AlignCenter);
+        nameItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+        QTableWidgetItem *borrowedItem = new QTableWidgetItem(QString::number(borrowed));
+        borrowedItem->setTextAlignment(Qt::AlignCenter);
+        borrowedItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+
+        ui->listEquipments->setItem(ui->listEquipments->rowCount() - 1, 2, quantityItem);
+        ui->listEquipments->setItem(ui->listEquipments->rowCount() - 1, 1, nameItem);
+        ui->listEquipments->setItem(ui->listEquipments->rowCount() - 1, 0, borrowedItem);
     }
 }
 
@@ -163,25 +245,55 @@ void Borrowers::setStudents(QVector<Student *> *value)
 
 void Borrowers::on_leftToRight_clicked()
 {
-    int row = ui->listEquipments->currentRow();
-    bool equipmentEnlisted = false;
-
-    for (int i = 0; i < borrowItems->size(); i++){
-        BorrowItems *item = borrowItems->at(i);
-        if(item->name == ui->listEquipments->item(row, 1)->text()){
-            equipmentEnlisted = true;
-            item->borrowed = item->borrowed + 1;
-            break;
-        }
+    if(ui->listEquipments->selectionModel()->selectedRows().size() == 0){
+        QMessageBox messageBox;
+        messageBox.critical(0,"Error","No rows selected!");
+        messageBox.setFixedSize(500,200);
+        return;
     }
-    if(equipmentEnlisted){
+
+    if(ui->listEquipments->item(ui->listEquipments->currentRow(), 0)->text().toInt() == ui->listEquipments->item(ui->listEquipments->currentRow(), 2)->text().toInt()){
 
     }
     else{
-        QString borrowName = ui->listEquipments->item(row, 1)->text();
-        int borrowQuantity = ui->listEquipments->item(row, 0)->text().toInt();
-        int borrowBorrowed = 1;
-        borrowItems->push_front(new BorrowItems(borrowName, borrowBorrowed, borrowQuantity));
+        borrowerdata->borrowEquipmentOnce(ui->listEquipments->item(ui->listEquipments->currentRow(), 1)->text());
+        borrowerdata->updateBorrowEquipment(ui->listEquipments->item(ui->listEquipments->currentRow(), 1)->text());
+        int previousCurrentRow = ui->listEquipments->currentRow();
+        updateListEquipments(previousCurrentRow);
+        updateBorrowItems();
     }
-    updateBorrowItems(equipmentEnlisted);
+}
+
+void Borrowers::on_rightToLeft_clicked()
+{
+    if(ui->borrowEquipments->selectionModel()->selectedRows().size() == 0){
+        QMessageBox messageBox;
+        messageBox.critical(0,"Error","No rows selected!");
+        messageBox.setFixedSize(500,200);
+        return;
+    }
+
+    if(ui->borrowEquipments->rowCount() == 0){
+
+    }
+    else{
+        borrowerdata->reverseBorrowEquipmentOnce(ui->borrowEquipments->item(ui->borrowEquipments->currentRow(), 1)->text());
+        borrowerdata->reverseUpdateBorrowEquipment(ui->borrowEquipments->item(ui->borrowEquipments->currentRow(), 1)->text());
+        int previousCurrentRow = ui->borrowEquipments->currentRow();
+        reverseUpdateBorrowItems(previousCurrentRow);
+        reverseUpdateListEquipments();
+    }
+}
+
+void Borrowers::on_Proceed_clicked()
+{
+    stackWidget->setCurrentIndex(7);
+    Confirmations *confirmations = (Confirmations*)(stackWidget->widget(7));
+    confirmations->setBorrowerdata(borrowerdata);
+    confirmations->display();
+}
+
+void Borrowers::setBorrowerdata(BorrowerData *value)
+{
+    borrowerdata = value;
 }

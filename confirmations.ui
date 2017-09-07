@@ -6,34 +6,23 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>405</width>
+    <height>285</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0" colspan="2">
-    <widget class="QLabel" name="label">
-     <property name="font">
-      <font>
-       <family>Segoe UI Black</family>
-       <pointsize>11</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>                   EQUIPMENTS TO BE BORROWED</string>
+   <item row="2" column="0" colspan="2">
+    <widget class="QTableWidget" name="borrowEquipment">
+     <property name="enabled">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
-   <item row="1" column="0" colspan="2">
-    <widget class="QListView" name="listView"/>
-   </item>
-   <item row="2" column="0">
-    <widget class="QPushButton" name="pushButton_2">
+   <item row="4" column="0">
+    <widget class="QPushButton" name="Cancel">
      <property name="font">
       <font>
        <family>Segoe UI Black</family>
@@ -47,8 +36,8 @@
      </property>
     </widget>
    </item>
-   <item row="2" column="1">
-    <widget class="QPushButton" name="pushButton">
+   <item row="4" column="1">
+    <widget class="QPushButton" name="Proceed">
      <property name="font">
       <font>
        <family>Segoe UI Black</family>
@@ -59,6 +48,24 @@
      </property>
      <property name="text">
       <string>PROCEED</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="label">
+     <property name="font">
+      <font>
+       <family>Segoe UI Black</family>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>EQUIPMENTS TO BE BORROWED</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </item>

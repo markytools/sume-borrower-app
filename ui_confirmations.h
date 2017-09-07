@@ -16,8 +16,8 @@
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QListView>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QTableWidget>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -26,50 +26,52 @@ class Ui_Confirmations
 {
 public:
     QGridLayout *gridLayout;
+    QTableWidget *borrowEquipment;
+    QPushButton *Cancel;
+    QPushButton *Proceed;
     QLabel *label;
-    QListView *listView;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton;
 
     void setupUi(QWidget *Confirmations)
     {
         if (Confirmations->objectName().isEmpty())
             Confirmations->setObjectName(QStringLiteral("Confirmations"));
-        Confirmations->resize(400, 300);
+        Confirmations->resize(405, 285);
         gridLayout = new QGridLayout(Confirmations);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        label = new QLabel(Confirmations);
-        label->setObjectName(QStringLiteral("label"));
+        borrowEquipment = new QTableWidget(Confirmations);
+        borrowEquipment->setObjectName(QStringLiteral("borrowEquipment"));
+        borrowEquipment->setEnabled(true);
+
+        gridLayout->addWidget(borrowEquipment, 2, 0, 1, 2);
+
+        Cancel = new QPushButton(Confirmations);
+        Cancel->setObjectName(QStringLiteral("Cancel"));
         QFont font;
         font.setFamily(QStringLiteral("Segoe UI Black"));
-        font.setPointSize(11);
+        font.setPointSize(10);
         font.setBold(true);
         font.setWeight(75);
-        label->setFont(font);
+        Cancel->setFont(font);
 
-        gridLayout->addWidget(label, 0, 0, 1, 2);
+        gridLayout->addWidget(Cancel, 4, 0, 1, 1);
 
-        listView = new QListView(Confirmations);
-        listView->setObjectName(QStringLiteral("listView"));
+        Proceed = new QPushButton(Confirmations);
+        Proceed->setObjectName(QStringLiteral("Proceed"));
+        Proceed->setFont(font);
 
-        gridLayout->addWidget(listView, 1, 0, 1, 2);
+        gridLayout->addWidget(Proceed, 4, 1, 1, 1);
 
-        pushButton_2 = new QPushButton(Confirmations);
-        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+        label = new QLabel(Confirmations);
+        label->setObjectName(QStringLiteral("label"));
         QFont font1;
         font1.setFamily(QStringLiteral("Segoe UI Black"));
-        font1.setPointSize(10);
+        font1.setPointSize(11);
         font1.setBold(true);
         font1.setWeight(75);
-        pushButton_2->setFont(font1);
+        label->setFont(font1);
+        label->setAlignment(Qt::AlignCenter);
 
-        gridLayout->addWidget(pushButton_2, 2, 0, 1, 1);
-
-        pushButton = new QPushButton(Confirmations);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setFont(font1);
-
-        gridLayout->addWidget(pushButton, 2, 1, 1, 1);
+        gridLayout->addWidget(label, 0, 0, 1, 2);
 
 
         retranslateUi(Confirmations);
@@ -80,9 +82,9 @@ public:
     void retranslateUi(QWidget *Confirmations)
     {
         Confirmations->setWindowTitle(QApplication::translate("Confirmations", "Form", Q_NULLPTR));
-        label->setText(QApplication::translate("Confirmations", "                   EQUIPMENTS TO BE BORROWED", Q_NULLPTR));
-        pushButton_2->setText(QApplication::translate("Confirmations", "CANCEL", Q_NULLPTR));
-        pushButton->setText(QApplication::translate("Confirmations", "PROCEED", Q_NULLPTR));
+        Cancel->setText(QApplication::translate("Confirmations", "CANCEL", Q_NULLPTR));
+        Proceed->setText(QApplication::translate("Confirmations", "PROCEED", Q_NULLPTR));
+        label->setText(QApplication::translate("Confirmations", "EQUIPMENTS TO BE BORROWED", Q_NULLPTR));
     } // retranslateUi
 
 };

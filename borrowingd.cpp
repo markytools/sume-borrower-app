@@ -48,11 +48,20 @@ void BorrowingD::on_Proceed_clicked()
     QDateTime end = ui->endDateTime->dateTime();
     stackWidget->setCurrentIndex(6);
 
-    Borrower *borrower = new Borrower(name, section, subject, start, end);
-    setBorrower(borrower);
+//    Borrower *borrower = new Borrower(name, section, subject, start, end);
+//    setBorrower(borrower);
     Borrowers *borrowers = (Borrowers*)(stackWidget->widget(6));
+    BorrowerData *borrowerdata = new BorrowerData();
+    borrowerdata->setStudent(students);
+    borrowerdata->setName(name);
+    borrowerdata->setSection(section);
+    borrowerdata->setSubject(subject);
+    borrowerdata->setStart(start);
+    borrowerdata->setEnd(end);
     borrowers->setStudents(students);
-    borrowers->setBorrower(borrower);
+    borrowers->setBorrowerdata(borrowerdata);
+    borrowers->display();
+//    cout << name.toStdString() << endl;
 }
 
 void BorrowingD::setStudents(QVector<Student *> *value)
@@ -65,7 +74,7 @@ void BorrowingD::setEquipment(QVector<Equipment *> *value)
     equipment = value;
 }
 
-void BorrowingD::setBorrower(Borrower *value)
-{
-    borrower = value;
-}
+//void BorrowingD::setBorrower(Borrower *value)
+//{
+//    borrower = value;
+//}

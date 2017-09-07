@@ -36,7 +36,8 @@ SOURCES += \
     homedisplay.cpp \
     information.cpp \
     infopopup.cpp \
-    borrowitems.cpp
+    borrowerdata.cpp \
+    studentdetails.cpp
 
 HEADERS += \
         sumeborrower.h \
@@ -51,7 +52,8 @@ HEADERS += \
     homedisplay.h \
     information.h \
     infopopup.h \
-    borrowitems.h
+    borrowerdata.h \
+    studentdetails.h
 
 FORMS += \
         sumeborrower.ui \

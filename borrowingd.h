@@ -16,8 +16,6 @@ public:
     explicit BorrowingD(QWidget *parent = 0);
     ~BorrowingD();
 
-    void setBorrower(Borrower *value);
-
     void setEquipment(QVector<Equipment *> *value);
 
     void setStudents(QVector<Student *> *value);
@@ -34,7 +32,7 @@ private slots:
 private:
     QVector<Equipment *> *equipment;
     QVector<Student *> *students;
-    Borrower *borrower;
+//    Borrower *borrower;
     Ui::BorrowingD *ui;
 };
 
