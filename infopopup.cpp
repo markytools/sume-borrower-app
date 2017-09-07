@@ -6,6 +6,9 @@ Infopopup::Infopopup(QWidget *parent) :
     ui(new Ui::Infopopup)
 {
     ui->setupUi(this);
+    ui->groupName->setReadOnly(true);
+    ui->subject->setReadOnly(true);
+    ui->section->setReadOnly(true);
 }
 
 Infopopup::~Infopopup()

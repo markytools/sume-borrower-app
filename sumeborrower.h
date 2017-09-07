@@ -12,6 +12,8 @@
 #include "homedisplay.h"
 #include "listborrowers.h"
 #include "infopopup.h"
+#include "borrowingd.h"
+#include "borrowers.h"
 #include <QVector>
 namespace Ui {
 class SUMEBorrower;

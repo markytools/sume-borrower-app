@@ -11,6 +11,8 @@ INPUT(
 ./release\homedisplay.o
 ./release\information.o
 ./release\infopopup.o
+./release\borrowerdata.o
+./release\studentdetails.o
 ./release\moc_sumeborrower.o
 ./release\moc_borrowers.o
 ./release\moc_borrowingd.o

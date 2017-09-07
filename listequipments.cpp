@@ -35,8 +35,12 @@ ListEquipments::ListEquipments(QWidget *parent) :
     remarksHeader->setTextAlignment(Qt::AlignCenter);
     remarksHeader->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
     remarksHeader->setFont(QFont("helvetica", 12, QFont::Bold));
+    QTableWidgetItem *borrowedHeader = new QTableWidgetItem("TIMES BORROWED");
+    borrowedHeader->setTextAlignment(Qt::AlignCenter);
+    borrowedHeader->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+    borrowedHeader->setFont(QFont("helvetica", 12, QFont::Bold));
 
-    ui->equipmentTable->setColumnCount(7);
+    ui->equipmentTable->setColumnCount(8);
     ui->equipmentTable->setHorizontalHeaderItem(0, quantityHeader);
     ui->equipmentTable->setHorizontalHeaderItem(1, nameHeader);
     ui->equipmentTable->setHorizontalHeaderItem(2, serialHeader);
@@ -44,6 +48,7 @@ ListEquipments::ListEquipments(QWidget *parent) :
     ui->equipmentTable->setHorizontalHeaderItem(4, statusHeader);
     ui->equipmentTable->setHorizontalHeaderItem(5, locationHeader);
     ui->equipmentTable->setHorizontalHeaderItem(6, remarksHeader);
+    ui->equipmentTable->setHorizontalHeaderItem(7, borrowedHeader);
 
     ui->equipmentTable->setColumnWidth(0, 150);
     ui->equipmentTable->setColumnWidth(1, 300);
@@ -52,6 +57,7 @@ ListEquipments::ListEquipments(QWidget *parent) :
     ui->equipmentTable->setColumnWidth(4, 300);
     ui->equipmentTable->setColumnWidth(5, 300);
     ui->equipmentTable->setColumnWidth(6, 250);
+    ui->equipmentTable->setColumnWidth(7, 250);
 
     ui->equipmentTable->setSelectionBehavior(QAbstractItemView::SelectRows);
 
@@ -70,6 +76,7 @@ ListEquipments::ListEquipments(QWidget *parent) :
         QString status = equipment->status;
         QString location = equipment->location;
         QString remarks = equipment->remarks;
+        int borrowed = equipment->borrowed;
 
         ui->equipmentTable->setRowCount(ui->equipmentTable->rowCount() + 1);
 
@@ -94,6 +101,9 @@ ListEquipments::ListEquipments(QWidget *parent) :
         QTableWidgetItem *remarksItem = new QTableWidgetItem(remarks);
         remarksItem->setTextAlignment(Qt::AlignCenter);
         remarksItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+        QTableWidgetItem *borrowedItem = new QTableWidgetItem(borrowed);
+        borrowedItem->setTextAlignment(Qt::AlignCenter);
+        borrowedItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
 
         ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 0, quantityItem);
         ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 1, nameItem);
@@ -102,6 +112,7 @@ ListEquipments::ListEquipments(QWidget *parent) :
         ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 4, statusItem);
         ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 5, locationItem);
         ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 6, remarksItem);
+        ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 6, borrowedItem);
     }
 }
 

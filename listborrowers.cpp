@@ -137,3 +137,8 @@ void ListBorrowers::on_Info_clicked()
 {
     stackWidget->setCurrentIndex(4);
 }
+
+void ListBorrowers::on_AddButton_clicked()
+{
+    stackWidget->setCurrentIndex(5);
+}
