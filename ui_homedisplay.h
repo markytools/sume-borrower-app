@@ -26,17 +26,18 @@ public:
     QLabel *label_2;
     QPushButton *Borrowing;
     QPushButton *Equipments;
+    QPushButton *Equipments_2;
 
     void setupUi(QWidget *HomeDisplay)
     {
         if (HomeDisplay->objectName().isEmpty())
             HomeDisplay->setObjectName(QStringLiteral("HomeDisplay"));
-        HomeDisplay->resize(400, 300);
+        HomeDisplay->resize(569, 331);
         HomeDisplay->setMinimumSize(QSize(400, 300));
         HomeDisplay->setMaximumSize(QSize(16777215, 16777215));
         label_2 = new QLabel(HomeDisplay);
         label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(50, 30, 301, 81));
+        label_2->setGeometry(QRect(140, 40, 301, 81));
         QFont font;
         font.setFamily(QStringLiteral("Segoe UI Black"));
         font.setPointSize(20);
@@ -56,6 +57,10 @@ public:
         Equipments->setObjectName(QStringLiteral("Equipments"));
         Equipments->setGeometry(QRect(210, 140, 151, 121));
         Equipments->setFont(font1);
+        Equipments_2 = new QPushButton(HomeDisplay);
+        Equipments_2->setObjectName(QStringLiteral("Equipments_2"));
+        Equipments_2->setGeometry(QRect(400, 140, 151, 121));
+        Equipments_2->setFont(font1);
 
         retranslateUi(HomeDisplay);
 
@@ -68,6 +73,7 @@ public:
         label_2->setText(QApplication::translate("HomeDisplay", "**LAB BORROWER**", Q_NULLPTR));
         Borrowing->setText(QApplication::translate("HomeDisplay", "BORROWING", Q_NULLPTR));
         Equipments->setText(QApplication::translate("HomeDisplay", "EQUIPMENTS", Q_NULLPTR));
+        Equipments_2->setText(QApplication::translate("HomeDisplay", "EQUIPMENTS", Q_NULLPTR));
     } // retranslateUi
 
 };

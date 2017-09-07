@@ -37,7 +37,9 @@ SOURCES += \
     information.cpp \
     infopopup.cpp \
     borrowerdata.cpp \
-    studentdetails.cpp
+    studentdetails.cpp \
+    anothersubject.cpp \
+    subjectui.cpp
 
 HEADERS += \
         sumeborrower.h \
@@ -53,7 +55,11 @@ HEADERS += \
     information.h \
     infopopup.h \
     borrowerdata.h \
-    studentdetails.h
+    studentdetails.h \
+    anothersubject.h \
+    subjectui.h \
+    ui_anothersubject.h \
+    ui_subjectui.h
 
 FORMS += \
         sumeborrower.ui \
@@ -64,7 +70,9 @@ FORMS += \
     listequipments.ui \
     homedisplay.ui \
     information.ui \
-    infopopup.ui
+    infopopup.ui \
+    anothersubject.ui \
+    subjectui.ui
 
 INCLUDEPATH += $$PWD/.
 DEPENDPATH += $$PWD/.
