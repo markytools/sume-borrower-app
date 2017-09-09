@@ -10,7 +10,7 @@ void BorrowerData::reverseUpdateBorrowEquipment(QString borrowedEquipmentName)
     for (int i = 0; i < borrowedequipment->size(); i++){
         BorrowedEquipment *equipment = borrowedequipment->at(i);
         if(equipment->equipmentName == borrowedEquipmentName){
-            equipment->quantity = equipment->quantity - 1;
+            equipment->toBorrow = equipment->toBorrow - 1;
             break;
         }
     }
@@ -43,7 +43,7 @@ void BorrowerData::updateBorrowEquipment(QString borrowedEquipmentName)
     for (int i = 0; i < borrowedequipment->size(); i++){
         BorrowedEquipment *equipment = borrowedequipment->at(i);
         if(equipment->equipmentName == borrowedEquipmentName){
-            equipment->quantity = equipment->quantity + 1;
+            equipment->toBorrow = equipment->toBorrow + 1;
             break;
         }
     }

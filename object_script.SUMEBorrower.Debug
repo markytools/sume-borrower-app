@@ -13,8 +13,8 @@ INPUT(
 ./debug\infopopup.o
 ./debug\borrowerdata.o
 ./debug\studentdetails.o
-./debug\anothersubject.o
 ./debug\subjectui.o
+./debug\experiments.o
 ./debug\moc_sumeborrower.o
 ./debug\moc_borrowers.o
 ./debug\moc_borrowingd.o
@@ -24,6 +24,6 @@ INPUT(
 ./debug\moc_homedisplay.o
 ./debug\moc_information.o
 ./debug\moc_infopopup.o
-./debug\moc_anothersubject.o
 ./debug\moc_subjectui.o
+./debug\moc_experiments.o
 );

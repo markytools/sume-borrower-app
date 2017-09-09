@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'homedisplay.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.0
+** Created by: Qt User Interface Compiler version 5.9.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -73,7 +73,7 @@ public:
         label_2->setText(QApplication::translate("HomeDisplay", "**LAB BORROWER**", Q_NULLPTR));
         Borrowing->setText(QApplication::translate("HomeDisplay", "BORROWING", Q_NULLPTR));
         Equipments->setText(QApplication::translate("HomeDisplay", "EQUIPMENTS", Q_NULLPTR));
-        Equipments_2->setText(QApplication::translate("HomeDisplay", "EQUIPMENTS", Q_NULLPTR));
+        Equipments_2->setText(QApplication::translate("HomeDisplay", "SUBJECTS", Q_NULLPTR));
     } // retranslateUi
 
 };

@@ -101,7 +101,7 @@ void Borrowers::reverseUpdateBorrowItems(int previousRow)
     {
         BorrowedEquipment *borrowItem = borrowedEquipments->at(row);
 
-        int borrowed = borrowItem->quantity;
+        int borrowed = borrowItem->toBorrow;
         QString name = borrowItem->equipmentName;
 
         ui->borrowEquipments->setRowCount(ui->borrowEquipments->rowCount() + 1);
@@ -115,11 +115,11 @@ void Borrowers::reverseUpdateBorrowItems(int previousRow)
         nameItem->setTextAlignment(Qt::AlignCenter);
         nameItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
 
-        if(borrowItem->quantity != 0){
+        if(borrowItem->toBorrow != 0){
             ui->borrowEquipments->setItem(ui->borrowEquipments->rowCount() - 1, 0, borrowedItem);
             ui->borrowEquipments->setItem(ui->borrowEquipments->rowCount() - 1, 1, nameItem);
         }
-        else if(borrowItem->quantity == 0){
+        else if(borrowItem->toBorrow == 0){
             ui->borrowEquipments->setRowCount(ui->borrowEquipments->rowCount() - 1);
         }
     }
@@ -144,7 +144,7 @@ void Borrowers::updateBorrowItems()
     {
         BorrowedEquipment *borrowItem = borrowedEquipments->at(row);
 
-        int borrowed = borrowItem->quantity;
+        int borrowed = borrowItem->toBorrow;
         QString name = borrowItem->equipmentName;
 
         ui->borrowEquipments->setRowCount(ui->borrowEquipments->rowCount() + 1);
@@ -158,11 +158,11 @@ void Borrowers::updateBorrowItems()
         nameItem->setTextAlignment(Qt::AlignCenter);
         nameItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
 
-        if(borrowItem->quantity != 0){
+        if(borrowItem->toBorrow != 0){
             ui->borrowEquipments->setItem(ui->borrowEquipments->rowCount() - 1, 0, borrowedItem);
             ui->borrowEquipments->setItem(ui->borrowEquipments->rowCount() - 1, 1, nameItem);
         }
-        else if(borrowItem->quantity == 0){
+        else if(borrowItem->toBorrow == 0){
             ui->borrowEquipments->setRowCount(ui->borrowEquipments->rowCount() - 1);
         }
     }

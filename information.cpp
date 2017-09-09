@@ -16,6 +16,7 @@ void Information::edit(QString name)
     ui->nameLine->setReadOnly(true);
     ui->quantityLine->setText(QString::number(equipment->quantity));
     ui->serialLine->setText(equipment->serial);
+    ui->locationLine->setText(equipment->location);
     ui->propertyLine->setText(equipment->property);
     ui->statusLine->setText(equipment->status);
     ui->remarksLine->setText(equipment->remarks);
@@ -66,12 +67,12 @@ void Information::on_OKButton_clicked()
         stackWidget->setCurrentIndex(0);
         updateEquipments();
     }
-    ui->nameLine->setReadOnly(false);
 }
 
 void Information::setAddMode(bool value)
 {
     addMode = value;
+    ui->nameLine->setReadOnly(!value);
 }
 
 void Information::updateEquipments()

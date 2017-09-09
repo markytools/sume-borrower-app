@@ -13,8 +13,8 @@ INPUT(
 ./release\infopopup.o
 ./release\borrowerdata.o
 ./release\studentdetails.o
-./release\anothersubject.o
 ./release\subjectui.o
+./release\experiments.o
 ./release\moc_sumeborrower.o
 ./release\moc_borrowers.o
 ./release\moc_borrowingd.o
@@ -24,6 +24,6 @@ INPUT(
 ./release\moc_homedisplay.o
 ./release\moc_information.o
 ./release\moc_infopopup.o
-./release\moc_anothersubject.o
 ./release\moc_subjectui.o
+./release\moc_experiments.o
 );

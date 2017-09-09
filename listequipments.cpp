@@ -61,6 +61,13 @@ ListEquipments::ListEquipments(QWidget *parent) :
 
     ui->equipmentTable->setSelectionBehavior(QAbstractItemView::SelectRows);
 
+//    connect(ui->equipmentTable->selectionModel(),&QItemSelectionModel::selectionChanged,[=]() {//with lambda
+//        if (ui->equipmentTable->selectionModel()->selectedRows().size() > 2) {
+//            QList<QModelIndex> lst = ui->equipmentTable->selectionModel()->selectedRows();
+//            ui->equipmentTable->selectionModel()->select(lst.first(), QItemSelectionModel::Deselect);
+//        }
+//    });
+
 
     QVector<Equipment*> *equipments = labLib->getEquipments();
     ui->equipmentTable->setRowCount(0);
@@ -188,6 +195,7 @@ void ListEquipments::updateEquipments()
         QString status = equipment->status;
         QString location = equipment->location;
         QString remarks = equipment->remarks;
+        int borrowed = equipment->borrowed;
 
         ui->equipmentTable->setRowCount(ui->equipmentTable->rowCount() + 1);
 
@@ -212,6 +220,9 @@ void ListEquipments::updateEquipments()
         QTableWidgetItem *remarksItem = new QTableWidgetItem(remarks);
         remarksItem->setTextAlignment(Qt::AlignCenter);
         remarksItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+        QTableWidgetItem *borrowedItem = new QTableWidgetItem(QString::number(borrowed));
+        borrowedItem->setTextAlignment(Qt::AlignCenter);
+        borrowedItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
 
         ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 0, quantityItem);
         ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 1, nameItem);
@@ -220,6 +231,7 @@ void ListEquipments::updateEquipments()
         ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 4, statusItem);
         ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 5, locationItem);
         ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 6, remarksItem);
+        ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 7, borrowedItem);
     }
 }
 

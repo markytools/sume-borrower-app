@@ -46,7 +46,7 @@ void Confirmations::display()
     for(int i = 0; i < borrowerdata->getBorrowedequipment()->size(); i++){
 
 
-        int toBorrow = borrowerdata->getBorrowedequipment()->at(i)->quantity;
+        int toBorrow = borrowerdata->getBorrowedequipment()->at(i)->toBorrow;
         QString name = borrowerdata->getBorrowedequipment()->at(i)->equipmentName;
 
 
@@ -74,24 +74,24 @@ void Confirmations::display()
         else{
 
         }
-        cout << name.toStdString() << endl << toBorrow << endl;
+//        cout << name.toStdString() << endl << toBorrow << endl;
     }
-    cout << borrowerdata->getName().toStdString() << endl << borrowerdata->getSection().toStdString() << endl
-         << borrowerdata->getStart().toString("MMM-dd-yyyy hh:mm").toStdString() << endl << borrowerdata->getEnd().toString("MMM-dd-yyyy hh:mm").toStdString() << endl;
-    for(int i = 0; i < borrowerdata->getStudent()->size(); i++){
-        cout << borrowerdata->getStudent()->at(i)->name.toStdString() << endl;
-    }
-    cout << filteredBorrowedEquipments->size() << endl;
-    for(int i = 0; i < filteredBorrowedEquipments->size(); i++){
-        cout << filteredBorrowedEquipments->at(i)->equipmentName.toStdString() << endl
-             << filteredBorrowedEquipments->at(i)->quantity << endl;
-    }
+//    cout << borrowerdata->getName().toStdString() << endl << borrowerdata->getSection().toStdString() << endl
+//         << borrowerdata->getStart().toString("MMM-dd-yyyy hh:mm").toStdString() << endl << borrowerdata->getEnd().toString("MMM-dd-yyyy hh:mm").toStdString() << endl;
+//    for(int i = 0; i < borrowerdata->getStudent()->size(); i++){
+//        cout << borrowerdata->getStudent()->at(i)->name.toStdString() << endl;
+//    }
+//    cout << filteredBorrowedEquipments->size() << endl;
+//    for(int i = 0; i < filteredBorrowedEquipments->size(); i++){
+//        cout << filteredBorrowedEquipments->at(i)->equipmentName.toStdString() << endl
+//             << filteredBorrowedEquipments->at(i)->quantity << endl;
+//    }
 }
 
 void Confirmations::on_Proceed_clicked()
 {
     labLib->addBorrower(borrowerdata->getName().toUpper(), borrowerdata->getSubject().toUpper(), borrowerdata->getSection().toUpper(), borrowerdata->getStart(), borrowerdata->getEnd(), borrowerdata->getStudent(), filteredBorrowedEquipments);
-    cout << labLib->getSqlError().toStdString() << endl;
+//    cout << labLib->getSqlError().toStdString() << endl;
     //    stackWidget->setCurrentIndex(3);
 }
 

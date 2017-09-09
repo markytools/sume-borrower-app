@@ -20,18 +20,25 @@ SUMEBorrower::SUMEBorrower(QWidget *parent) :
     listequipments->labLib = labLib;
     Information *information = new Information(this);
     information->stackWidget = stackWidget;
+    information->labLib = labLib;
     HomeDisplay *homedisplay = new HomeDisplay(this);
     homedisplay->stackWidget = stackWidget;
+    homedisplay->labLib = labLib;
     ListBorrowers *listborrowers = new ListBorrowers(this);
     listborrowers->stackWidget = stackWidget;
+    listborrowers->labLib = labLib;
     Infopopup *infopopup = new Infopopup(this);
     infopopup->stackWidget = stackWidget;
+    infopopup->labLib = labLib;
     BorrowingD *borrowingd = new BorrowingD(this);
     borrowingd->stackWidget = stackWidget;
+    borrowingd->labLib = labLib;
     Borrowers *borrowers = new Borrowers(this);
     borrowers->stackWidget = stackWidget;
+    borrowers->labLib = labLib;
     Confirmations *confirmations = new Confirmations(this);
     confirmations->stackWidget = stackWidget;
+    confirmations->labLib = labLib;
 //    stackWidget->addWidget(borrowers);
 //    stackWidget->addWidget(confirmations);
 
@@ -95,7 +102,7 @@ SUMEBorrower::SUMEBorrower(QWidget *parent) :
 //    }
 
 
-
+    labLib->deleteAllEquipments();
 //
 }
 

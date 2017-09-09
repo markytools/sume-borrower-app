@@ -15,12 +15,26 @@ using namespace std;
 
 const QString DATETIMEFORMAT = "yyyy-MM-dd HH:mm:ss";
 
+class Subject {
+
+public:
+    Subject(QString name);
+    QString name;
+};
+
+class Experiment {
+
+public:
+    Experiment(QString name);
+    QString name;
+};
+
 class BorrowedEquipment {
 
 public:
-    BorrowedEquipment(QString equipmentName, int quantity);
+    BorrowedEquipment(QString equipmentName, int toBorrow);
     QString equipmentName;
-    int quantity;
+    int toBorrow;
 };
 
 class Equipment {
@@ -30,6 +44,7 @@ private:
 
 public:
     Equipment();
+    Equipment(QString name, QString serial, QString property, QString status, QString location, QString remarks, int quantity, int borrowed);
     int borrowed;
     int quantity;
     QString name;
@@ -73,12 +88,23 @@ private:
 public:
     LaboratoryLib();
     void initDatabase();
+
+    void addSubject(QString name);
+    void addExperiment(QString subjectName, QString experimentName);
+    void addEquipmentToExperiment(QString subjectName, QString experimentName, QString equipmentName);
+    void removeEquipmentFromExperiment(QString subjectName, QString experimentName, QString equipmentName);
+    void deleteExperiment(QString subjectName, QString experimentName);
+    void deleteSubject(QString subjectName);
+    QVector<Subject*> *getSubjects();
+    QVector<Experiment*> *getSubjectExperiments(QString subjectName);
+    QVector<Equipment*> *getExperimentEquipments(QString subjectName, QString experimentName);
+
     //Equipments must be valid!
     void addEquipment(QString name, int qty, QString serial, QString property, QString status, QString location, QString remarks);
     //Edit equipment with name 'name'
     void editEquipment(QString name, int qty, QString serial, QString property, QString status, QString location, QString remarks);
-    void deleteEquipment(QString name);
-    void deleteAllEquipments();
+    void deleteEquipment(QString name); //*
+    void deleteAllEquipments(); //*
     void borrowEquipment(QString name); //Should only be called once
     void returnEquipment(QString name); //Should only be called once
     Equipment *getEquipment(QString name) const;
@@ -86,10 +112,10 @@ public:
 
     void addBorrower(QString name, QString subject, QString section, QDateTime start, QDateTime end,
                      QVector<Student*> *students, QVector<BorrowedEquipment *> *borrowed_equip);
+    void deleteBorrower(QString name, QString subject, QString section); //*
     QVector<BorrowedEquipment *> *getBorrowedEquipments(QString borrowerName, QString subject, QString section);
     QVector<Borrower *> *getBorrowers();
     QVector<Student *> *getStudents(QString borrowerName, QString subject, QString section);
-
 
     QSqlDatabase getDb() const;
     QString getResult() const;
