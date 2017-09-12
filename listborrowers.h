@@ -3,6 +3,8 @@
 
 #include <QWidget>
 #include "customqtui.h"
+#include <QMessageBox>
+#include "infopopup.h"
 namespace Ui {
 class ListBorrowers;
 }
@@ -22,6 +24,8 @@ private slots:
     void on_Info_clicked();
 
     void on_AddButton_clicked();
+
+    void on_Delete_clicked();
 
 private:
     Ui::ListBorrowers *ui;

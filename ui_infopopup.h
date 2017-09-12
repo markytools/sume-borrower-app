@@ -29,11 +29,8 @@ class Ui_Infopopup
 {
 public:
     QGridLayout *gridLayout;
-    QLabel *label_3;
-    QLabel *label_7;
-    QLabel *label_8;
-    QTableWidget *tableWidget;
-    QTableWidget *tableWidget_2;
+    QTableWidget *borrowedEquipmentTable;
+    QTableWidget *membersTable;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
     QLabel *label_6;
@@ -45,6 +42,9 @@ public:
     QLabel *label_4;
     QLineEdit *section;
     QPushButton *Back;
+    QLabel *label_3;
+    QLabel *label_7;
+    QLabel *label_8;
 
     void setupUi(QWidget *Infopopup)
     {
@@ -55,38 +55,15 @@ public:
         Infopopup->setMaximumSize(QSize(16777215, 16777215));
         gridLayout = new QGridLayout(Infopopup);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        label_3 = new QLabel(Infopopup);
-        label_3->setObjectName(QStringLiteral("label_3"));
-        QFont font;
-        font.setFamily(QStringLiteral("Segoe UI Black"));
-        font.setPointSize(10);
-        font.setBold(true);
-        font.setWeight(75);
-        label_3->setFont(font);
+        borrowedEquipmentTable = new QTableWidget(Infopopup);
+        borrowedEquipmentTable->setObjectName(QStringLiteral("borrowedEquipmentTable"));
 
-        gridLayout->addWidget(label_3, 0, 1, 1, 1);
+        gridLayout->addWidget(borrowedEquipmentTable, 2, 0, 1, 2);
 
-        label_7 = new QLabel(Infopopup);
-        label_7->setObjectName(QStringLiteral("label_7"));
-        label_7->setFont(font);
+        membersTable = new QTableWidget(Infopopup);
+        membersTable->setObjectName(QStringLiteral("membersTable"));
 
-        gridLayout->addWidget(label_7, 1, 0, 1, 1);
-
-        label_8 = new QLabel(Infopopup);
-        label_8->setObjectName(QStringLiteral("label_8"));
-        label_8->setFont(font);
-
-        gridLayout->addWidget(label_8, 1, 2, 1, 1);
-
-        tableWidget = new QTableWidget(Infopopup);
-        tableWidget->setObjectName(QStringLiteral("tableWidget"));
-
-        gridLayout->addWidget(tableWidget, 2, 0, 1, 2);
-
-        tableWidget_2 = new QTableWidget(Infopopup);
-        tableWidget_2->setObjectName(QStringLiteral("tableWidget_2"));
-
-        gridLayout->addWidget(tableWidget_2, 2, 2, 1, 2);
+        gridLayout->addWidget(membersTable, 2, 2, 1, 2);
 
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
@@ -94,6 +71,11 @@ public:
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         label_6 = new QLabel(Infopopup);
         label_6->setObjectName(QStringLiteral("label_6"));
+        QFont font;
+        font.setFamily(QStringLiteral("Segoe UI Black"));
+        font.setPointSize(10);
+        font.setBold(true);
+        font.setWeight(75);
         label_6->setFont(font);
 
         horizontalLayout->addWidget(label_6);
@@ -147,6 +129,27 @@ public:
 
         gridLayout->addWidget(Back, 4, 3, 1, 1);
 
+        label_3 = new QLabel(Infopopup);
+        label_3->setObjectName(QStringLiteral("label_3"));
+        label_3->setFont(font);
+        label_3->setAlignment(Qt::AlignCenter);
+
+        gridLayout->addWidget(label_3, 0, 1, 1, 2);
+
+        label_7 = new QLabel(Infopopup);
+        label_7->setObjectName(QStringLiteral("label_7"));
+        label_7->setFont(font);
+        label_7->setAlignment(Qt::AlignCenter);
+
+        gridLayout->addWidget(label_7, 1, 0, 1, 2);
+
+        label_8 = new QLabel(Infopopup);
+        label_8->setObjectName(QStringLiteral("label_8"));
+        label_8->setFont(font);
+        label_8->setAlignment(Qt::AlignCenter);
+
+        gridLayout->addWidget(label_8, 1, 2, 1, 2);
+
 
         retranslateUi(Infopopup);
 
@@ -156,13 +159,13 @@ public:
     void retranslateUi(QWidget *Infopopup)
     {
         Infopopup->setWindowTitle(QApplication::translate("Infopopup", "Form", Q_NULLPTR));
-        label_3->setText(QApplication::translate("Infopopup", "INFORMATION", Q_NULLPTR));
-        label_7->setText(QApplication::translate("Infopopup", "EQUIPMENTS:", Q_NULLPTR));
-        label_8->setText(QApplication::translate("Infopopup", "MEMBERS:", Q_NULLPTR));
         label_6->setText(QApplication::translate("Infopopup", "GROUPNAME:", Q_NULLPTR));
         label_5->setText(QApplication::translate("Infopopup", "SUBJECT:", Q_NULLPTR));
         label_4->setText(QApplication::translate("Infopopup", "SECTION:", Q_NULLPTR));
         Back->setText(QApplication::translate("Infopopup", "BACK", Q_NULLPTR));
+        label_3->setText(QApplication::translate("Infopopup", "INFORMATION", Q_NULLPTR));
+        label_7->setText(QApplication::translate("Infopopup", "EQUIPMENTS:", Q_NULLPTR));
+        label_8->setText(QApplication::translate("Infopopup", "MEMBERS:", Q_NULLPTR));
     } // retranslateUi
 
 };

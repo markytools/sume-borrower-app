@@ -89,6 +89,42 @@ ListBorrowers::~ListBorrowers()
 
 void ListBorrowers::updateBorrowers()
 {
+    QTableWidgetItem *nameHeader = new QTableWidgetItem("NAME");
+    nameHeader->setTextAlignment(Qt::AlignCenter);
+    nameHeader->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+    nameHeader->setFont(QFont("helvetica", 12, QFont::Bold));
+    QTableWidgetItem *subjectHeader = new QTableWidgetItem("SUBJECT");
+    subjectHeader->setTextAlignment(Qt::AlignCenter);
+    subjectHeader->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+    subjectHeader->setFont(QFont("helvetica", 12, QFont::Bold));
+    QTableWidgetItem *sectionHeader = new QTableWidgetItem("SECTION");
+    sectionHeader->setTextAlignment(Qt::AlignCenter);
+    sectionHeader->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+    sectionHeader->setFont(QFont("helvetica", 12, QFont::Bold));
+    QTableWidgetItem *startHeader = new QTableWidgetItem("START");
+    startHeader->setTextAlignment(Qt::AlignCenter);
+    startHeader->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+    startHeader->setFont(QFont("helvetica", 12, QFont::Bold));
+    QTableWidgetItem *endHeader = new QTableWidgetItem("END");
+    endHeader->setTextAlignment(Qt::AlignCenter);
+    endHeader->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+    endHeader->setFont(QFont("helvetica", 12, QFont::Bold));
+
+    ui->borrowersTable->setColumnCount(5);
+    ui->borrowersTable->setHorizontalHeaderItem(0, nameHeader);
+    ui->borrowersTable->setHorizontalHeaderItem(1, subjectHeader);
+    ui->borrowersTable->setHorizontalHeaderItem(2, sectionHeader);
+    ui->borrowersTable->setHorizontalHeaderItem(3, startHeader);
+    ui->borrowersTable->setHorizontalHeaderItem(4, endHeader);
+
+    ui->borrowersTable->setColumnWidth(0, 150);
+    ui->borrowersTable->setColumnWidth(1, 300);
+    ui->borrowersTable->setColumnWidth(2, 300);
+    ui->borrowersTable->setColumnWidth(3, 300);
+    ui->borrowersTable->setColumnWidth(4, 300);
+
+    ui->borrowersTable->setSelectionBehavior(QAbstractItemView::SelectRows);
+
     QVector<Borrower*> *borrowers = labLib->getBorrowers();
     ui->borrowersTable->setRowCount(0);
 
@@ -121,10 +157,10 @@ void ListBorrowers::updateBorrowers()
         endItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
 
         ui->borrowersTable->setItem(ui->borrowersTable->rowCount() - 1, 0, nameItem);
-        ui->borrowersTable->setItem(ui->borrowersTable->rowCount() - 1, 0, subjectItem);
-        ui->borrowersTable->setItem(ui->borrowersTable->rowCount() - 1, 0, sectionItem);
-        ui->borrowersTable->setItem(ui->borrowersTable->rowCount() - 1, 0, startItem);
-        ui->borrowersTable->setItem(ui->borrowersTable->rowCount() - 1, 0, endItem);
+        ui->borrowersTable->setItem(ui->borrowersTable->rowCount() - 1, 1, subjectItem);
+        ui->borrowersTable->setItem(ui->borrowersTable->rowCount() - 1, 2, sectionItem);
+        ui->borrowersTable->setItem(ui->borrowersTable->rowCount() - 1, 3, startItem);
+        ui->borrowersTable->setItem(ui->borrowersTable->rowCount() - 1, 4, endItem);
     }
 }
 
@@ -135,10 +171,43 @@ void ListBorrowers::on_Back_clicked()
 
 void ListBorrowers::on_Info_clicked()
 {
-    stackWidget->setCurrentIndex(4);
+    if(ui->borrowersTable->selectedItems().size() != 0){
+        Infopopup *infopopup = (Infopopup*)(stackWidget->widget(4));
+        int row = ui->borrowersTable->currentRow();
+        QTableWidgetItem *name = ui->borrowersTable->item(row, 0);
+        QTableWidgetItem *subject = ui->borrowersTable->item(row, 1);
+        QTableWidgetItem *section = ui->borrowersTable->item(row, 2);
+        QString selectedName = name->text();
+        QString selectedSubject = subject->text();
+        QString selectedSection = section->text();
+        infopopup->display(selectedName,selectedSubject,selectedSection);
+        stackWidget->setCurrentIndex(4);
+    }
 }
 
 void ListBorrowers::on_AddButton_clicked()
 {
     stackWidget->setCurrentIndex(5);
+}
+
+void ListBorrowers::on_Delete_clicked()
+{
+    QMessageBox::StandardButton reply;
+    reply = QMessageBox::question(this, "Delete Borrowers", "Are you sure you want to delete borrowers?", QMessageBox::Yes|QMessageBox::No);
+    if(reply == QMessageBox::Yes)
+    {
+        if(ui->borrowersTable->selectedItems().size() != 0)
+        {
+            int row = ui->borrowersTable->currentRow();
+
+            QTableWidgetItem *name = ui->borrowersTable->item(row, 0);
+            QTableWidgetItem *subject = ui->borrowersTable->item(row, 1);
+            QTableWidgetItem *section = ui->borrowersTable->item(row, 2);
+            QString selectedName = name->text();
+            QString selectedSubject = subject->text();
+            QString selectedSection = section->text();
+            labLib->deleteBorrower(selectedName,selectedSubject,selectedSection);
+            updateBorrowers();
+        }
+    }
 }
