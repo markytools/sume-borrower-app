@@ -6,6 +6,7 @@
 #include <QTableWidgetItem>
 #include <customqtui.h>
 #include "borrowerdata.h"
+#include "listborrowers.h"
 namespace Ui {
 class Confirmations;
 }

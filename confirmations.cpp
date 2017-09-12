@@ -91,6 +91,9 @@ void Confirmations::display()
 void Confirmations::on_Proceed_clicked()
 {
     labLib->addBorrower(borrowerdata->getName().toUpper(), borrowerdata->getSubject().toUpper(), borrowerdata->getSection().toUpper(), borrowerdata->getStart(), borrowerdata->getEnd(), borrowerdata->getStudent(), filteredBorrowedEquipments);
+    ListBorrowers *listborrowers = (ListBorrowers*)(stackWidget->widget(3));
+    listborrowers->updateBorrowers();
+    stackWidget->setCurrentIndex(3);
 //    cout << labLib->getSqlError().toStdString() << endl;
     //    stackWidget->setCurrentIndex(3);
 }

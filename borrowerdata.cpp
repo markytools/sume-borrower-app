@@ -49,6 +49,18 @@ void BorrowerData::updateBorrowEquipment(QString borrowedEquipmentName)
     }
 }
 
+void BorrowerData::clearData()
+{
+    borrower->clear();
+    borrowedequipment->clear();
+    student->clear();
+    name.clear();
+    subject.clear();
+    section.clear();
+    start.currentDateTime();
+    end.currentDateTime();
+}
+
 void BorrowerData::setEquipment(QVector<Equipment *> *value)
 {
     borrowedequipment->clear();

@@ -102,7 +102,7 @@ SUMEBorrower::SUMEBorrower(QWidget *parent) :
 //    }
 
 
-    labLib->deleteAllEquipments();
+//    labLib->deleteAllEquipments();
 //
 }
 
