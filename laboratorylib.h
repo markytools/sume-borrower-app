@@ -103,8 +103,8 @@ public:
     void addEquipment(QString name, int qty, QString serial, QString property, QString status, QString location, QString remarks);
     //Edit equipment with name 'name'
     void editEquipment(QString name, int qty, QString serial, QString property, QString status, QString location, QString remarks);
-    void deleteEquipment(QString name); //*
-    void deleteAllEquipments(); //*
+    void deleteEquipment(QString name);
+    void deleteAllEquipments();
     void borrowEquipment(QString name); //Should only be called once
     void returnEquipment(QString name); //Should only be called once
     Equipment *getEquipment(QString name) const;
