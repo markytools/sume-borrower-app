@@ -42,7 +42,7 @@ SOURCES += \
     experiments.cpp
 
 HEADERS += \
-        sumeborrower.h \
+    sumeborrower.h \
     customqtui.h \
     laboratorylib.h \
     borrowers.h \

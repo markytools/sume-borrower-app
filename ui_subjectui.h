@@ -17,8 +17,10 @@
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QTableWidget>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -27,11 +29,14 @@ class Ui_SubjectUI
 {
 public:
     QGridLayout *gridLayout;
+    QVBoxLayout *verticalLayout;
+    QHBoxLayout *horizontalLayout_2;
     QLabel *label;
     QLabel *label_2;
     QTableWidget *tableWidget;
     QHBoxLayout *horizontalLayout;
     QPushButton *AddButton_2;
+    QLineEdit *lineEdit;
     QPushButton *AddButton_4;
     QPushButton *AddButton;
     QPushButton *AddButton_3;
@@ -43,6 +48,10 @@ public:
         SubjectUI->resize(733, 494);
         gridLayout = new QGridLayout(SubjectUI);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         label = new QLabel(SubjectUI);
         label->setObjectName(QStringLiteral("label"));
         QFont font;
@@ -53,19 +62,22 @@ public:
         label->setFont(font);
         label->setAlignment(Qt::AlignCenter);
 
-        gridLayout->addWidget(label, 0, 0, 1, 1);
+        horizontalLayout_2->addWidget(label);
 
         label_2 = new QLabel(SubjectUI);
         label_2->setObjectName(QStringLiteral("label_2"));
         label_2->setFont(font);
         label_2->setAlignment(Qt::AlignCenter);
 
-        gridLayout->addWidget(label_2, 0, 1, 1, 1);
+        horizontalLayout_2->addWidget(label_2);
+
+
+        verticalLayout->addLayout(horizontalLayout_2);
 
         tableWidget = new QTableWidget(SubjectUI);
         tableWidget->setObjectName(QStringLiteral("tableWidget"));
 
-        gridLayout->addWidget(tableWidget, 1, 0, 1, 2);
+        verticalLayout->addWidget(tableWidget);
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
@@ -79,6 +91,11 @@ public:
         AddButton_2->setFont(font1);
 
         horizontalLayout->addWidget(AddButton_2);
+
+        lineEdit = new QLineEdit(SubjectUI);
+        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+
+        horizontalLayout->addWidget(lineEdit);
 
         AddButton_4 = new QPushButton(SubjectUI);
         AddButton_4->setObjectName(QStringLiteral("AddButton_4"));
@@ -99,7 +116,10 @@ public:
         horizontalLayout->addWidget(AddButton_3);
 
 
-        gridLayout->addLayout(horizontalLayout, 2, 0, 1, 2);
+        verticalLayout->addLayout(horizontalLayout);
+
+
+        gridLayout->addLayout(verticalLayout, 0, 0, 1, 1);
 
 
         retranslateUi(SubjectUI);

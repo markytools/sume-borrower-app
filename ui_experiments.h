@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'experiments.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.1
+** Created by: Qt User Interface Compiler version 5.9.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -35,9 +35,6 @@ public:
     QHBoxLayout *horizontalLayout;
     QLabel *label_2;
     QLineEdit *lineEdit;
-    QHBoxLayout *horizontalLayout_2;
-    QLabel *label_3;
-    QLineEdit *lineEdit_2;
     QPushButton *AddButton_2;
     QPushButton *AddButton;
     QVBoxLayout *verticalLayout_2;
@@ -91,22 +88,6 @@ public:
 
 
         verticalLayout->addLayout(horizontalLayout);
-
-        horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
-        label_3 = new QLabel(Experiments);
-        label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setFont(font);
-
-        horizontalLayout_2->addWidget(label_3);
-
-        lineEdit_2 = new QLineEdit(Experiments);
-        lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
-
-        horizontalLayout_2->addWidget(lineEdit_2);
-
-
-        verticalLayout->addLayout(horizontalLayout_2);
 
         AddButton_2 = new QPushButton(Experiments);
         AddButton_2->setObjectName(QStringLiteral("AddButton_2"));
@@ -237,7 +218,6 @@ public:
     {
         Experiments->setWindowTitle(QApplication::translate("Experiments", "Form", Q_NULLPTR));
         label_2->setText(QApplication::translate("Experiments", "Name:", Q_NULLPTR));
-        label_3->setText(QApplication::translate("Experiments", "No.", Q_NULLPTR));
         AddButton_2->setText(QApplication::translate("Experiments", "Add Experiment", Q_NULLPTR));
         AddButton->setText(QApplication::translate("Experiments", "Delete Experiment", Q_NULLPTR));
         label_4->setText(QApplication::translate("Experiments", "SUBJECT:", Q_NULLPTR));
