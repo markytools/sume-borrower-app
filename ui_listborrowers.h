@@ -31,7 +31,6 @@ public:
     QTableWidget *borrowersTable;
     QHBoxLayout *horizontalLayout;
     QPushButton *AddButton;
-    QPushButton *Delete;
     QPushButton *Info;
     QPushButton *Back;
 
@@ -71,12 +70,6 @@ public:
 
         horizontalLayout->addWidget(AddButton);
 
-        Delete = new QPushButton(ListBorrowers);
-        Delete->setObjectName(QStringLiteral("Delete"));
-        Delete->setFont(font1);
-
-        horizontalLayout->addWidget(Delete);
-
         Info = new QPushButton(ListBorrowers);
         Info->setObjectName(QStringLiteral("Info"));
         Info->setFont(font1);
@@ -103,7 +96,6 @@ public:
         ListBorrowers->setWindowTitle(QApplication::translate("ListBorrowers", "Form", Q_NULLPTR));
         label->setText(QApplication::translate("ListBorrowers", "                                  LIST OF BORROWERS:", Q_NULLPTR));
         AddButton->setText(QApplication::translate("ListBorrowers", "ADD", Q_NULLPTR));
-        Delete->setText(QApplication::translate("ListBorrowers", "DELETE", Q_NULLPTR));
         Info->setText(QApplication::translate("ListBorrowers", "INFO", Q_NULLPTR));
         Back->setText(QApplication::translate("ListBorrowers", "BACK", Q_NULLPTR));
     } // retranslateUi

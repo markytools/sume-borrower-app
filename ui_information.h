@@ -13,6 +13,7 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
@@ -26,7 +27,10 @@ QT_BEGIN_NAMESPACE
 class Ui_Information
 {
 public:
-    QWidget *layoutWidget;
+    QGridLayout *gridLayout;
+    QVBoxLayout *verticalLayout_4;
+    QLabel *information;
+    QVBoxLayout *verticalLayout_3;
     QVBoxLayout *verticalLayout_2;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout_2;
@@ -50,39 +54,52 @@ public:
     QHBoxLayout *horizontalLayout;
     QLabel *label_4;
     QLineEdit *quantityLine;
+    QHBoxLayout *horizontalLayout_8;
     QPushButton *BackButton;
     QPushButton *OKButton;
-    QLabel *label_3;
 
     void setupUi(QWidget *Information)
     {
         if (Information->objectName().isEmpty())
             Information->setObjectName(QStringLiteral("Information"));
-        Information->resize(400, 300);
-        Information->setMinimumSize(QSize(400, 300));
-        Information->setMaximumSize(QSize(400, 300));
-        layoutWidget = new QWidget(Information);
-        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 50, 381, 214));
-        verticalLayout_2 = new QVBoxLayout(layoutWidget);
+        Information->resize(608, 292);
+        Information->setMinimumSize(QSize(0, 0));
+        Information->setMaximumSize(QSize(16777215, 16777215));
+        gridLayout = new QGridLayout(Information);
+        gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        verticalLayout_4 = new QVBoxLayout();
+        verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
+        information = new QLabel(Information);
+        information->setObjectName(QStringLiteral("information"));
+        QFont font;
+        font.setFamily(QStringLiteral("Segoe UI Black"));
+        font.setPointSize(20);
+        font.setBold(true);
+        font.setWeight(75);
+        information->setFont(font);
+
+        verticalLayout_4->addWidget(information);
+
+        verticalLayout_3 = new QVBoxLayout();
+        verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
+        verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
-        label_10 = new QLabel(layoutWidget);
+        label_10 = new QLabel(Information);
         label_10->setObjectName(QStringLiteral("label_10"));
-        QFont font;
-        font.setFamily(QStringLiteral("Segoe UI Black"));
-        font.setPointSize(8);
-        font.setBold(true);
-        font.setWeight(75);
-        label_10->setFont(font);
+        QFont font1;
+        font1.setFamily(QStringLiteral("Segoe UI Black"));
+        font1.setPointSize(8);
+        font1.setBold(true);
+        font1.setWeight(75);
+        label_10->setFont(font1);
 
         horizontalLayout_2->addWidget(label_10);
 
-        nameLine = new QLineEdit(layoutWidget);
+        nameLine = new QLineEdit(Information);
         nameLine->setObjectName(QStringLiteral("nameLine"));
 
         horizontalLayout_2->addWidget(nameLine);
@@ -92,13 +109,13 @@ public:
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
-        label_9 = new QLabel(layoutWidget);
+        label_9 = new QLabel(Information);
         label_9->setObjectName(QStringLiteral("label_9"));
-        label_9->setFont(font);
+        label_9->setFont(font1);
 
         horizontalLayout_3->addWidget(label_9);
 
-        serialLine = new QLineEdit(layoutWidget);
+        serialLine = new QLineEdit(Information);
         serialLine->setObjectName(QStringLiteral("serialLine"));
 
         horizontalLayout_3->addWidget(serialLine);
@@ -108,13 +125,13 @@ public:
 
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
-        label_8 = new QLabel(layoutWidget);
+        label_8 = new QLabel(Information);
         label_8->setObjectName(QStringLiteral("label_8"));
-        label_8->setFont(font);
+        label_8->setFont(font1);
 
         horizontalLayout_4->addWidget(label_8);
 
-        propertyLine = new QLineEdit(layoutWidget);
+        propertyLine = new QLineEdit(Information);
         propertyLine->setObjectName(QStringLiteral("propertyLine"));
 
         horizontalLayout_4->addWidget(propertyLine);
@@ -124,13 +141,13 @@ public:
 
         horizontalLayout_6 = new QHBoxLayout();
         horizontalLayout_6->setObjectName(QStringLiteral("horizontalLayout_6"));
-        label_6 = new QLabel(layoutWidget);
+        label_6 = new QLabel(Information);
         label_6->setObjectName(QStringLiteral("label_6"));
-        label_6->setFont(font);
+        label_6->setFont(font1);
 
         horizontalLayout_6->addWidget(label_6);
 
-        locationLine = new QLineEdit(layoutWidget);
+        locationLine = new QLineEdit(Information);
         locationLine->setObjectName(QStringLiteral("locationLine"));
 
         horizontalLayout_6->addWidget(locationLine);
@@ -140,13 +157,13 @@ public:
 
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
-        label_7 = new QLabel(layoutWidget);
+        label_7 = new QLabel(Information);
         label_7->setObjectName(QStringLiteral("label_7"));
-        label_7->setFont(font);
+        label_7->setFont(font1);
 
         horizontalLayout_5->addWidget(label_7);
 
-        statusLine = new QLineEdit(layoutWidget);
+        statusLine = new QLineEdit(Information);
         statusLine->setObjectName(QStringLiteral("statusLine"));
 
         horizontalLayout_5->addWidget(statusLine);
@@ -156,13 +173,13 @@ public:
 
         horizontalLayout_7 = new QHBoxLayout();
         horizontalLayout_7->setObjectName(QStringLiteral("horizontalLayout_7"));
-        label_5 = new QLabel(layoutWidget);
+        label_5 = new QLabel(Information);
         label_5->setObjectName(QStringLiteral("label_5"));
-        label_5->setFont(font);
+        label_5->setFont(font1);
 
         horizontalLayout_7->addWidget(label_5);
 
-        remarksLine = new QLineEdit(layoutWidget);
+        remarksLine = new QLineEdit(Information);
         remarksLine->setObjectName(QStringLiteral("remarksLine"));
 
         horizontalLayout_7->addWidget(remarksLine);
@@ -175,13 +192,13 @@ public:
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        label_4 = new QLabel(layoutWidget);
+        label_4 = new QLabel(Information);
         label_4->setObjectName(QStringLiteral("label_4"));
-        label_4->setFont(font);
+        label_4->setFont(font1);
 
         horizontalLayout->addWidget(label_4);
 
-        quantityLine = new QLineEdit(layoutWidget);
+        quantityLine = new QLineEdit(Information);
         quantityLine->setObjectName(QStringLiteral("quantityLine"));
 
         horizontalLayout->addWidget(quantityLine);
@@ -189,23 +206,37 @@ public:
 
         verticalLayout_2->addLayout(horizontalLayout);
 
+
+        verticalLayout_3->addLayout(verticalLayout_2);
+
+        horizontalLayout_8 = new QHBoxLayout();
+        horizontalLayout_8->setObjectName(QStringLiteral("horizontalLayout_8"));
         BackButton = new QPushButton(Information);
         BackButton->setObjectName(QStringLiteral("BackButton"));
-        BackButton->setGeometry(QRect(200, 270, 75, 25));
-        QFont font1;
-        font1.setFamily(QStringLiteral("Segoe UI Black"));
-        font1.setPointSize(10);
-        font1.setBold(true);
-        font1.setWeight(75);
-        BackButton->setFont(font1);
+        QFont font2;
+        font2.setFamily(QStringLiteral("Segoe UI Black"));
+        font2.setPointSize(10);
+        font2.setBold(true);
+        font2.setWeight(75);
+        BackButton->setFont(font2);
+
+        horizontalLayout_8->addWidget(BackButton);
+
         OKButton = new QPushButton(Information);
         OKButton->setObjectName(QStringLiteral("OKButton"));
-        OKButton->setGeometry(QRect(290, 270, 75, 25));
-        OKButton->setFont(font1);
-        label_3 = new QLabel(Information);
-        label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setGeometry(QRect(140, 20, 151, 20));
-        label_3->setFont(font1);
+        OKButton->setFont(font2);
+
+        horizontalLayout_8->addWidget(OKButton);
+
+
+        verticalLayout_3->addLayout(horizontalLayout_8);
+
+
+        verticalLayout_4->addLayout(verticalLayout_3);
+
+
+        gridLayout->addLayout(verticalLayout_4, 0, 0, 1, 1);
+
 
         retranslateUi(Information);
 
@@ -215,6 +246,7 @@ public:
     void retranslateUi(QWidget *Information)
     {
         Information->setWindowTitle(QApplication::translate("Information", "Form", Q_NULLPTR));
+        information->setText(QApplication::translate("Information", "INFORMATION:", Q_NULLPTR));
         label_10->setText(QApplication::translate("Information", "NAME", Q_NULLPTR));
         label_9->setText(QApplication::translate("Information", "SERIAL", Q_NULLPTR));
         label_8->setText(QApplication::translate("Information", "EQUIP_PROP", Q_NULLPTR));
@@ -224,7 +256,6 @@ public:
         label_4->setText(QApplication::translate("Information", "Quantity", Q_NULLPTR));
         BackButton->setText(QApplication::translate("Information", "BACK", Q_NULLPTR));
         OKButton->setText(QApplication::translate("Information", "OK", Q_NULLPTR));
-        label_3->setText(QApplication::translate("Information", "INFORMATION:", Q_NULLPTR));
     } // retranslateUi
 
 };

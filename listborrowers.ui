@@ -50,21 +50,6 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="Delete">
-       <property name="font">
-        <font>
-         <family>Segoe UI Black</family>
-         <pointsize>10</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>DELETE</string>
-       </property>
-      </widget>
-     </item>
-     <item>
       <widget class="QPushButton" name="Info">
        <property name="font">
         <font>
