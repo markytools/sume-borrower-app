@@ -15,6 +15,7 @@ INPUT(
 ./release\studentdetails.o
 ./release\subjectui.o
 ./release\experiments.o
+./release\login.o
 ./release\moc_sumeborrower.o
 ./release\moc_borrowers.o
 ./release\moc_borrowingd.o
@@ -26,4 +27,5 @@ INPUT(
 ./release\moc_infopopup.o
 ./release\moc_subjectui.o
 ./release\moc_experiments.o
+./release\moc_login.o
 );
