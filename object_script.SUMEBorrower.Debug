@@ -15,6 +15,7 @@ INPUT(
 ./debug\studentdetails.o
 ./debug\subjectui.o
 ./debug\experiments.o
+./debug\login.o
 ./debug\moc_sumeborrower.o
 ./debug\moc_borrowers.o
 ./debug\moc_borrowingd.o
@@ -26,4 +27,5 @@ INPUT(
 ./debug\moc_infopopup.o
 ./debug\moc_subjectui.o
 ./debug\moc_experiments.o
+./debug\moc_login.o
 );

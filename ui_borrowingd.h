@@ -48,6 +48,9 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_10;
     QLineEdit *subject;
+    QHBoxLayout *horizontalLayout_10;
+    QLabel *label_12;
+    QLineEdit *section_2;
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_11;
     QLineEdit *section;
@@ -163,6 +166,22 @@ public:
 
 
         verticalLayout->addLayout(horizontalLayout_2);
+
+        horizontalLayout_10 = new QHBoxLayout();
+        horizontalLayout_10->setObjectName(QStringLiteral("horizontalLayout_10"));
+        label_12 = new QLabel(BorrowingD);
+        label_12->setObjectName(QStringLiteral("label_12"));
+        label_12->setFont(font1);
+
+        horizontalLayout_10->addWidget(label_12);
+
+        section_2 = new QLineEdit(BorrowingD);
+        section_2->setObjectName(QStringLiteral("section_2"));
+
+        horizontalLayout_10->addWidget(section_2);
+
+
+        verticalLayout->addLayout(horizontalLayout_10);
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
@@ -288,7 +307,8 @@ public:
         label_2->setText(QApplication::translate("BorrowingD", "ENTER THE STUDENT NAME:", Q_NULLPTR));
         label_9->setText(QApplication::translate("BorrowingD", "GROUP NAME:", Q_NULLPTR));
         label_10->setText(QApplication::translate("BorrowingD", "SUBJECT:", Q_NULLPTR));
-        label_11->setText(QApplication::translate("BorrowingD", "SECTION:", Q_NULLPTR));
+        label_12->setText(QApplication::translate("BorrowingD", "SECTION:", Q_NULLPTR));
+        label_11->setText(QApplication::translate("BorrowingD", "INSTRUCTOR:", Q_NULLPTR));
         Add->setText(QApplication::translate("BorrowingD", "ADD", Q_NULLPTR));
         Delete->setText(QApplication::translate("BorrowingD", "DELETE", Q_NULLPTR));
         label_8->setText(QApplication::translate("BorrowingD", "START:", Q_NULLPTR));
