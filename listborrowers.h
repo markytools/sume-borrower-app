@@ -25,7 +25,7 @@ private slots:
 
     void on_AddButton_clicked();
 
-    void on_Delete_clicked();
+//    void on_Delete_clicked();
 
 private:
     Ui::ListBorrowers *ui;

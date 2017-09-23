@@ -190,24 +190,24 @@ void ListBorrowers::on_AddButton_clicked()
     stackWidget->setCurrentIndex(5);
 }
 
-void ListBorrowers::on_Delete_clicked()
-{
-    QMessageBox::StandardButton reply;
-    reply = QMessageBox::question(this, "Delete Borrowers", "Are you sure you want to delete borrowers?", QMessageBox::Yes|QMessageBox::No);
-    if(reply == QMessageBox::Yes)
-    {
-        if(ui->borrowersTable->selectedItems().size() != 0)
-        {
-            int row = ui->borrowersTable->currentRow();
+//void ListBorrowers::on_Delete_clicked()
+//{
+//    QMessageBox::StandardButton reply;
+//    reply = QMessageBox::question(this, "Delete Borrowers", "Are you sure you want to delete borrowers?", QMessageBox::Yes|QMessageBox::No);
+//    if(reply == QMessageBox::Yes)
+//    {
+//        if(ui->borrowersTable->selectedItems().size() != 0)
+//        {
+//            int row = ui->borrowersTable->currentRow();
 
-            QTableWidgetItem *name = ui->borrowersTable->item(row, 0);
-            QTableWidgetItem *subject = ui->borrowersTable->item(row, 1);
-            QTableWidgetItem *section = ui->borrowersTable->item(row, 2);
-            QString selectedName = name->text();
-            QString selectedSubject = subject->text();
-            QString selectedSection = section->text();
-            labLib->deleteBorrower(selectedName,selectedSubject,selectedSection);
-            updateBorrowers();
-        }
-    }
-}
+//            QTableWidgetItem *name = ui->borrowersTable->item(row, 0);
+//            QTableWidgetItem *subject = ui->borrowersTable->item(row, 1);
+//            QTableWidgetItem *section = ui->borrowersTable->item(row, 2);
+//            QString selectedName = name->text();
+//            QString selectedSubject = subject->text();
+//            QString selectedSection = section->text();
+//            labLib->deleteBorrower(selectedName,selectedSubject,selectedSection);
+//            updateBorrowers();
+//        }
+//    }
+//}

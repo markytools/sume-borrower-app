@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'homedisplay.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.1
+** Created by: Qt User Interface Compiler version 5.9.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -26,7 +26,7 @@ public:
     QLabel *label_2;
     QPushButton *Borrowing;
     QPushButton *Equipments;
-    QPushButton *Equipments_2;
+    QPushButton *Subjects;
 
     void setupUi(QWidget *HomeDisplay)
     {
@@ -57,10 +57,10 @@ public:
         Equipments->setObjectName(QStringLiteral("Equipments"));
         Equipments->setGeometry(QRect(210, 140, 151, 121));
         Equipments->setFont(font1);
-        Equipments_2 = new QPushButton(HomeDisplay);
-        Equipments_2->setObjectName(QStringLiteral("Equipments_2"));
-        Equipments_2->setGeometry(QRect(400, 140, 151, 121));
-        Equipments_2->setFont(font1);
+        Subjects = new QPushButton(HomeDisplay);
+        Subjects->setObjectName(QStringLiteral("Subjects"));
+        Subjects->setGeometry(QRect(400, 140, 151, 121));
+        Subjects->setFont(font1);
 
         retranslateUi(HomeDisplay);
 
@@ -73,7 +73,7 @@ public:
         label_2->setText(QApplication::translate("HomeDisplay", "**LAB BORROWER**", Q_NULLPTR));
         Borrowing->setText(QApplication::translate("HomeDisplay", "BORROWING", Q_NULLPTR));
         Equipments->setText(QApplication::translate("HomeDisplay", "EQUIPMENTS", Q_NULLPTR));
-        Equipments_2->setText(QApplication::translate("HomeDisplay", "SUBJECTS", Q_NULLPTR));
+        Subjects->setText(QApplication::translate("HomeDisplay", "SUBJECTS", Q_NULLPTR));
     } // retranslateUi
 
 };

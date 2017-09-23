@@ -88,7 +88,7 @@
     <string>EQUIPMENTS</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="Equipments_2">
+  <widget class="QPushButton" name="Subjects">
    <property name="geometry">
     <rect>
      <x>400</x>

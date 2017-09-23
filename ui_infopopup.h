@@ -46,7 +46,7 @@ public:
     QVBoxLayout *verticalLayout_2;
     QPushButton *Back_2;
     QLineEdit *ItemsReturned;
-    QPushButton *Back_3;
+    QPushButton *Delete;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
     QLabel *label_6;
@@ -150,11 +150,11 @@ public:
 
         verticalLayout_2->addWidget(ItemsReturned);
 
-        Back_3 = new QPushButton(Infopopup);
-        Back_3->setObjectName(QStringLiteral("Back_3"));
-        Back_3->setFont(font);
+        Delete = new QPushButton(Infopopup);
+        Delete->setObjectName(QStringLiteral("Delete"));
+        Delete->setFont(font);
 
-        verticalLayout_2->addWidget(Back_3);
+        verticalLayout_2->addWidget(Delete);
 
 
         horizontalLayout_4->addLayout(verticalLayout_2);
@@ -241,7 +241,7 @@ public:
         label_7->setText(QApplication::translate("Infopopup", "EQUIPMENTS:", Q_NULLPTR));
         label_8->setText(QApplication::translate("Infopopup", "MEMBERS:", Q_NULLPTR));
         Back_2->setText(QApplication::translate("Infopopup", "EXPORT TO EXCEL", Q_NULLPTR));
-        Back_3->setText(QApplication::translate("Infopopup", "DELETE BORROWER", Q_NULLPTR));
+        Delete->setText(QApplication::translate("Infopopup", "DELETE BORROWER", Q_NULLPTR));
         label_6->setText(QApplication::translate("Infopopup", "GROUPNAME:", Q_NULLPTR));
         label_5->setText(QApplication::translate("Infopopup", "SUBJECT:", Q_NULLPTR));
         label_4->setText(QApplication::translate("Infopopup", "SECTION:", Q_NULLPTR));

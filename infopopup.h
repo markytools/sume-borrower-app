@@ -2,8 +2,9 @@
 #define INFOPOPUP_H
 
 #include <QWidget>
-#include "customqtui.h"
-
+#include <QMessageBox>
+#include <customqtui.h>
+#include "listborrowers.h"
 namespace Ui {
 class Infopopup;
 }
@@ -30,6 +31,8 @@ public:
 
 private slots:
     void on_Back_clicked();
+
+    void on_Delete_clicked();
 
 private:
     Ui::Infopopup *ui;

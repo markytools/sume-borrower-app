@@ -153,7 +153,7 @@
           <widget class="QLineEdit" name="ItemsReturned"/>
          </item>
          <item>
-          <widget class="QPushButton" name="Back_3">
+          <widget class="QPushButton" name="Delete">
            <property name="font">
             <font>
              <family>Segoe UI Black</family>
