@@ -123,3 +123,16 @@ QVector<BorrowedEquipment *> *Infopopup::getBorrowedequipment() const
 {
     return borrowedequipment;
 }
+
+void Infopopup::on_Delete_clicked()
+{
+    QMessageBox::StandardButton reply;
+    reply = QMessageBox::question(this, "Delete Borrowers", "Are you sure you want to delete borrowers?", QMessageBox::Yes|QMessageBox::No);
+    if(reply == QMessageBox::Yes)
+    {
+        labLib->deleteBorrower(ui->groupName->text(),ui->subject->text(),ui->section->text());
+        ListBorrowers *listborrowers = (ListBorrowers*)(stackWidget->widget(3));
+        listborrowers->updateBorrowers();
+        stackWidget->setCurrentIndex(3);
+    }
+}

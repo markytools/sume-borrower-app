@@ -20,6 +20,8 @@ private slots:
 
     void on_Equipments_clicked();
 
+    void on_Subjects_clicked();
+
 private:
     Ui::HomeDisplay *ui;
 };

@@ -39,6 +39,12 @@ SUMEBorrower::SUMEBorrower(QWidget *parent) :
     Confirmations *confirmations = new Confirmations(this);
     confirmations->stackWidget = stackWidget;
     confirmations->labLib = labLib;
+    SubjectUI *subjectui = new SubjectUI(this);
+    subjectui->stackWidget = stackWidget;
+    subjectui->labLib = labLib;
+    Experiments *experiments = new Experiments(this);
+    experiments->stackWidget = stackWidget;
+    experiments->labLib = labLib;
 //    stackWidget->addWidget(borrowers);
 //    stackWidget->addWidget(confirmations);
 
@@ -50,7 +56,8 @@ SUMEBorrower::SUMEBorrower(QWidget *parent) :
     stackWidget->addWidget(borrowingd); //Index 5
     stackWidget->addWidget(borrowers); //Index 6
     stackWidget->addWidget(confirmations); //Index 7
-
+    stackWidget->addWidget(subjectui); //Index 8
+    stackWidget->addWidget(experiments); //Index 9
     setCentralWidget(stackWidget);
 
 

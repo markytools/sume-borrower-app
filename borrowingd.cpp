@@ -20,7 +20,7 @@ void BorrowingD::on_Cancel_clicked()
 
 void BorrowingD::on_Add_clicked()
 {
-    ui->listWidget->addItem(ui->studentName->text());
+    ui->listWidget->addItem(ui->studentName->text().toUpper());
 }
 
 void BorrowingD::on_Delete_clicked()

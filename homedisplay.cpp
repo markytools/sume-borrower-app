@@ -22,3 +22,8 @@ void HomeDisplay::on_Equipments_clicked()
 {
     stackWidget->setCurrentIndex(0);
 }
+
+void HomeDisplay::on_Subjects_clicked()
+{
+    stackWidget->setCurrentIndex(8);
+}
