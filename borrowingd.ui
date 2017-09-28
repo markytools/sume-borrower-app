@@ -164,7 +164,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="section_2"/>
+            <widget class="QLineEdit" name="section"/>
            </item>
           </layout>
          </item>
@@ -186,7 +186,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="section"/>
+            <widget class="QLineEdit" name="instructor"/>
            </item>
           </layout>
          </item>

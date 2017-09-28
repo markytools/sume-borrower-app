@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'borrowers.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.0
+** Created by: Qt User Interface Compiler version 5.9.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -57,7 +57,7 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QHBoxLayout *horizontalLayout;
     QLabel *label_4;
-    QLineEdit *lineEdit;
+    QLineEdit *searchEdit;
     QPushButton *Back;
     QPushButton *Proceed;
     QSpacerItem *horizontalSpacer_5;
@@ -217,10 +217,10 @@ public:
 
         horizontalLayout->addWidget(label_4);
 
-        lineEdit = new QLineEdit(Borrowers);
-        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+        searchEdit = new QLineEdit(Borrowers);
+        searchEdit->setObjectName(QStringLiteral("searchEdit"));
 
-        horizontalLayout->addWidget(lineEdit);
+        horizontalLayout->addWidget(searchEdit);
 
 
         horizontalLayout_2->addLayout(horizontalLayout);

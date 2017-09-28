@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'borrowingd.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.0
+** Created by: Qt User Interface Compiler version 5.9.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -50,10 +50,10 @@ public:
     QLineEdit *subject;
     QHBoxLayout *horizontalLayout_10;
     QLabel *label_12;
-    QLineEdit *section_2;
+    QLineEdit *section;
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_11;
-    QLineEdit *section;
+    QLineEdit *instructor;
     QVBoxLayout *verticalLayout_5;
     QHBoxLayout *horizontalLayout_7;
     QVBoxLayout *verticalLayout_3;
@@ -175,10 +175,10 @@ public:
 
         horizontalLayout_10->addWidget(label_12);
 
-        section_2 = new QLineEdit(BorrowingD);
-        section_2->setObjectName(QStringLiteral("section_2"));
+        section = new QLineEdit(BorrowingD);
+        section->setObjectName(QStringLiteral("section"));
 
-        horizontalLayout_10->addWidget(section_2);
+        horizontalLayout_10->addWidget(section);
 
 
         verticalLayout->addLayout(horizontalLayout_10);
@@ -191,10 +191,10 @@ public:
 
         horizontalLayout_3->addWidget(label_11);
 
-        section = new QLineEdit(BorrowingD);
-        section->setObjectName(QStringLiteral("section"));
+        instructor = new QLineEdit(BorrowingD);
+        instructor->setObjectName(QStringLiteral("instructor"));
 
-        horizontalLayout_3->addWidget(section);
+        horizontalLayout_3->addWidget(instructor);
 
 
         verticalLayout->addLayout(horizontalLayout_3);

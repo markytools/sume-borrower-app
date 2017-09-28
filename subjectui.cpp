@@ -78,15 +78,13 @@ void SubjectUI::on_Back_clicked()
 
 void SubjectUI::on_editSubject_clicked()
 {
-    if(ui->tableWidget->selectionModel()->selectedRows().size() == 0){
+    if (ui->tableWidget->selectionModel()->selectedRows().size() == 0) {
         QMessageBox messageBox;
         messageBox.critical(0,"Error","No subjects selected!");
         messageBox.setFixedSize(500,200);
         return;
     }
-
-    else
-    {
+    else {
         int row = ui->tableWidget->currentRow();
 
         QTableWidgetItem *item = ui->tableWidget->item(row, 0);

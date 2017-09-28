@@ -5,6 +5,7 @@
 #include "customqtui.h"
 #include <QMessageBox>
 #include "infopopup.h"
+#include "borrowingd.h"
 namespace Ui {
 class ListBorrowers;
 }
