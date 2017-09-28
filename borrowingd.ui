@@ -68,9 +68,9 @@
     </spacer>
    </item>
    <item row="1" column="0" colspan="3">
-    <layout class="QVBoxLayout" name="verticalLayout_6">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
+      <layout class="QHBoxLayout" name="horizontalLayout_12">
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_4">
          <item>
@@ -94,9 +94,43 @@
         </layout>
        </item>
        <item>
-        <widget class="QListWidget" name="listWidget"/>
+        <layout class="QHBoxLayout" name="horizontalLayout_11">
+         <item>
+          <widget class="QPushButton" name="Add">
+           <property name="font">
+            <font>
+             <family>Segoe UI Black</family>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>ADD</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="Delete">
+           <property name="font">
+            <font>
+             <family>Segoe UI Black</family>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>DELETE</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
       </layout>
+     </item>
+     <item>
+      <widget class="QListWidget" name="listWidget"/>
      </item>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_9">
@@ -196,40 +230,6 @@
         <layout class="QVBoxLayout" name="verticalLayout_5">
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_7">
-           <item>
-            <layout class="QVBoxLayout" name="verticalLayout_3">
-             <item>
-              <widget class="QPushButton" name="Add">
-               <property name="font">
-                <font>
-                 <family>Segoe UI Black</family>
-                 <pointsize>10</pointsize>
-                 <weight>75</weight>
-                 <bold>true</bold>
-                </font>
-               </property>
-               <property name="text">
-                <string>ADD</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="Delete">
-               <property name="font">
-                <font>
-                 <family>Segoe UI Black</family>
-                 <pointsize>10</pointsize>
-                 <weight>75</weight>
-                 <bold>true</bold>
-                </font>
-               </property>
-               <property name="text">
-                <string>DELETE</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
            <item>
             <layout class="QVBoxLayout" name="verticalLayout_4">
              <item>
