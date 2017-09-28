@@ -20,6 +20,8 @@ public:
 
     void setStudents(QVector<Student *> *value);
 
+    void resetFields();
+
 private slots:
     void on_Cancel_clicked();
 

@@ -36,6 +36,8 @@ public:
 
     void setBorrowerdata(BorrowerData *value);
 
+    void resetFields();
+
 private slots:
     void on_Back_clicked();
 
@@ -44,6 +46,8 @@ private slots:
     void on_rightToLeft_clicked();
 
     void on_Proceed_clicked();
+
+    void on_searchEdit_textChanged(const QString &text);
 
 private:
     BorrowerData *borrowerdata;

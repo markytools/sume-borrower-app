@@ -20,7 +20,11 @@ void BorrowingD::on_Cancel_clicked()
 
 void BorrowingD::on_Add_clicked()
 {
-    ui->listWidget->addItem(ui->studentName->text().toUpper());
+    if (!ui->studentName->text().isEmpty()) {
+        ui->listWidget->addItem(ui->studentName->text().toUpper());
+        ui->studentName->clear();
+        ui->studentName->setFocus();
+    }
 }
 
 void BorrowingD::on_Delete_clicked()
@@ -67,6 +71,18 @@ void BorrowingD::on_Proceed_clicked()
 void BorrowingD::setStudents(QVector<Student *> *value)
 {
     students = value;
+}
+
+void BorrowingD::resetFields()
+{
+    ui->studentName->clear();
+    ui->listWidget->clear();
+    ui->groupName->clear();
+    ui->subject->clear();
+    ui->section->clear();
+    ui->instructor->clear();
+    ui->startDateTime->setDateTime(QDateTime::currentDateTime());
+    ui->endDateTime->setDateTime(QDateTime::currentDateTime());
 }
 
 void BorrowingD::setEquipment(QVector<Equipment *> *value)

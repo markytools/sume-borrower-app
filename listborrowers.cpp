@@ -187,6 +187,8 @@ void ListBorrowers::on_Info_clicked()
 
 void ListBorrowers::on_AddButton_clicked()
 {
+    BorrowingD *borrowingD = (BorrowingD*)(stackWidget->widget(5));
+    borrowingD->resetFields();
     stackWidget->setCurrentIndex(5);
 }
 

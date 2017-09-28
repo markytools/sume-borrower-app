@@ -184,24 +184,46 @@ void Borrowers::updateListEquipments(int previousRow)
         QString name = equipment->name;
         int borrowed = equipment->borrowed;
 
-        ui->listEquipments->setRowCount(ui->listEquipments->rowCount() + 1);
+        QString filter = ui->searchEdit->text();
+        if (filter != "") {
+            if (ifStringHasSubstring(name.toUpper().toStdString(), filter.toUpper().toStdString())) {
+                ui->listEquipments->setRowCount(ui->listEquipments->rowCount() + 1);
 
-        QTableWidgetItem *quantityItem = new QTableWidgetItem(QString::number(quantity));
-        quantityItem->setTextAlignment(Qt::AlignCenter);
-        quantityItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
-        QTableWidgetItem *nameItem = new QTableWidgetItem(name);
-        nameItem->setTextAlignment(Qt::AlignCenter);
-        nameItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
-        QTableWidgetItem *borrowedItem = new QTableWidgetItem(QString::number(borrowed));
-        borrowedItem->setTextAlignment(Qt::AlignCenter);
-        borrowedItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+                QTableWidgetItem *quantityItem = new QTableWidgetItem(QString::number(quantity));
+                quantityItem->setTextAlignment(Qt::AlignCenter);
+                quantityItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+                QTableWidgetItem *nameItem = new QTableWidgetItem(name);
+                nameItem->setTextAlignment(Qt::AlignCenter);
+                nameItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+                QTableWidgetItem *borrowedItem = new QTableWidgetItem(QString::number(borrowed));
+                borrowedItem->setTextAlignment(Qt::AlignCenter);
+                borrowedItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
 
-        ui->listEquipments->setItem(ui->listEquipments->rowCount() - 1, 2, quantityItem);
-        ui->listEquipments->setItem(ui->listEquipments->rowCount() - 1, 1, nameItem);
-        ui->listEquipments->setItem(ui->listEquipments->rowCount() - 1, 0, borrowedItem);
+                ui->listEquipments->setItem(ui->listEquipments->rowCount() - 1, 2, quantityItem);
+                ui->listEquipments->setItem(ui->listEquipments->rowCount() - 1, 1, nameItem);
+                ui->listEquipments->setItem(ui->listEquipments->rowCount() - 1, 0, borrowedItem);
+            }
+        }
+        else {
+            ui->listEquipments->setRowCount(ui->listEquipments->rowCount() + 1);
+
+            QTableWidgetItem *quantityItem = new QTableWidgetItem(QString::number(quantity));
+            quantityItem->setTextAlignment(Qt::AlignCenter);
+            quantityItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+            QTableWidgetItem *nameItem = new QTableWidgetItem(name);
+            nameItem->setTextAlignment(Qt::AlignCenter);
+            nameItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+            QTableWidgetItem *borrowedItem = new QTableWidgetItem(QString::number(borrowed));
+            borrowedItem->setTextAlignment(Qt::AlignCenter);
+            borrowedItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+
+            ui->listEquipments->setItem(ui->listEquipments->rowCount() - 1, 2, quantityItem);
+            ui->listEquipments->setItem(ui->listEquipments->rowCount() - 1, 1, nameItem);
+            ui->listEquipments->setItem(ui->listEquipments->rowCount() - 1, 0, borrowedItem);
+        }
     }
 
-    ui->listEquipments->selectRow(previousRow);
+    if (previousRow != -1) ui->listEquipments->selectRow(previousRow);
 }
 
 void Borrowers::display()
@@ -296,4 +318,14 @@ void Borrowers::on_Proceed_clicked()
 void Borrowers::setBorrowerdata(BorrowerData *value)
 {
     borrowerdata = value;
+}
+
+void Borrowers::resetFields()
+{
+    ui->searchEdit->clear();
+}
+
+void Borrowers::on_searchEdit_textChanged(const QString &text)
+{
+    updateListEquipments(-1);
 }
