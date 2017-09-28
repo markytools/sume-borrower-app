@@ -14,68 +14,7 @@
    <string>Form</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
-   <item row="6" column="2" colspan="3">
-    <spacer name="horizontalSpacer_2">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>110</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="3" column="0">
-    <widget class="QLabel" name="label_8">
-     <property name="font">
-      <font>
-       <family>Segoe UI Black</family>
-       <pointsize>10</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>LIST OF EQUIPMENTS:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="0">
-    <widget class="QLabel" name="label_7">
-     <property name="font">
-      <font>
-       <family>Segoe UI Black</family>
-       <pointsize>10</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>EXPERIMENT:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="5" column="3">
-    <widget class="QPushButton" name="rightToLeft">
-     <property name="font">
-      <font>
-       <family>Segoe UI Black</family>
-       <pointsize>10</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>&lt;&lt;</string>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="0" rowspan="2" colspan="3">
-    <widget class="QTableWidget" name="listEquipments"/>
-   </item>
-   <item row="0" column="0" colspan="5">
+   <item row="0" column="0" colspan="3">
     <layout class="QGridLayout" name="gridLayout">
      <item row="0" column="0" colspan="2">
       <layout class="QVBoxLayout" name="verticalLayout">
@@ -230,37 +169,168 @@
      </item>
     </layout>
    </item>
-   <item row="4" column="3">
-    <widget class="QPushButton" name="leftToRight">
-     <property name="font">
-      <font>
-       <family>Segoe UI Black</family>
-       <pointsize>10</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>&gt;&gt;</string>
-     </property>
-    </widget>
+   <item row="1" column="0" colspan="3">
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_7">
+           <property name="font">
+            <font>
+             <family>Segoe UI Black</family>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>EXPERIMENT:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_12">
+           <property name="font">
+            <font>
+             <family>Segoe UI Black</family>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>(experiment)</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_8">
+         <property name="font">
+          <font>
+           <family>Segoe UI Black</family>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>LIST OF EQUIPMENTS:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="listEquipments"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <widget class="QPushButton" name="leftToRight">
+           <property name="font">
+            <font>
+             <family>Segoe UI Black</family>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>&gt;&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="rightToLeft">
+           <property name="font">
+            <font>
+             <family>Segoe UI Black</family>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>&lt;&lt;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_9">
+         <property name="font">
+          <font>
+           <family>Segoe UI Black</family>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_11">
+         <property name="font">
+          <font>
+           <family>Segoe UI Black</family>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>EXPERIMENT EQUIPMENTS:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="experimentEquipments"/>
+       </item>
+      </layout>
+     </item>
+    </layout>
    </item>
-   <item row="1" column="1">
-    <widget class="QLabel" name="experimentName">
-     <property name="font">
-      <font>
-       <family>Segoe UI Black</family>
-       <pointsize>10</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-   </item>
-   <item row="6" column="0">
+   <item row="2" column="0" rowspan="3">
     <widget class="QPushButton" name="Back">
      <property name="font">
       <font>
@@ -275,25 +345,7 @@
      </property>
     </widget>
    </item>
-   <item row="4" column="4" rowspan="2">
-    <widget class="QTableWidget" name="experimentEquipments"/>
-   </item>
-   <item row="3" column="4">
-    <widget class="QLabel" name="label_9">
-     <property name="font">
-      <font>
-       <family>Segoe UI Black</family>
-       <pointsize>10</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>EXPERIMENT EQUIPMENTS:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="6" column="1">
+   <item row="3" column="1" rowspan="2">
     <spacer name="horizontalSpacer">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -306,7 +358,33 @@
      </property>
     </spacer>
    </item>
+   <item row="4" column="2">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>110</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
   </layout>
+  <zorder>label_8</zorder>
+  <zorder>label_7</zorder>
+  <zorder>listEquipments</zorder>
+  <zorder>Back</zorder>
+  <zorder>experimentEquipments</zorder>
+  <zorder>label_9</zorder>
+  <zorder>experimentEquipments</zorder>
+  <zorder>leftToRight</zorder>
+  <zorder>rightToLeft</zorder>
+  <zorder>verticalSpacer_3</zorder>
+  <zorder>verticalSpacer_4</zorder>
+  <zorder>label_11</zorder>
+  <zorder>label_12</zorder>
  </widget>
  <resources/>
  <connections/>
