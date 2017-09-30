@@ -34,6 +34,8 @@ public:
     QSpacerItem *horizontalSpacer;
     QLabel *label_3;
     QSpacerItem *horizontalSpacer_2;
+    QSpacerItem *horizontalSpacer_6;
+    QPushButton *Back;
     QVBoxLayout *verticalLayout_5;
     QHBoxLayout *horizontalLayout_5;
     QVBoxLayout *verticalLayout_3;
@@ -57,8 +59,9 @@ public:
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_4;
     QLineEdit *section;
-    QSpacerItem *horizontalSpacer_6;
-    QPushButton *Back;
+    QHBoxLayout *horizontalLayout_7;
+    QLabel *label_9;
+    QLineEdit *instructor;
 
     void setupUi(QWidget *Infopopup)
     {
@@ -93,6 +96,16 @@ public:
 
 
         gridLayout->addLayout(horizontalLayout_6, 0, 0, 1, 2);
+
+        horizontalSpacer_6 = new QSpacerItem(567, 22, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout->addItem(horizontalSpacer_6, 2, 0, 1, 1);
+
+        Back = new QPushButton(Infopopup);
+        Back->setObjectName(QStringLiteral("Back"));
+        Back->setFont(font);
+
+        gridLayout->addWidget(Back, 2, 1, 1, 1);
 
         verticalLayout_5 = new QVBoxLayout();
         verticalLayout_5->setObjectName(QStringLiteral("verticalLayout_5"));
@@ -209,6 +222,22 @@ public:
 
         verticalLayout->addLayout(horizontalLayout_3);
 
+        horizontalLayout_7 = new QHBoxLayout();
+        horizontalLayout_7->setObjectName(QStringLiteral("horizontalLayout_7"));
+        label_9 = new QLabel(Infopopup);
+        label_9->setObjectName(QStringLiteral("label_9"));
+        label_9->setFont(font);
+
+        horizontalLayout_7->addWidget(label_9);
+
+        instructor = new QLineEdit(Infopopup);
+        instructor->setObjectName(QStringLiteral("instructor"));
+
+        horizontalLayout_7->addWidget(instructor);
+
+
+        verticalLayout->addLayout(horizontalLayout_7);
+
 
         horizontalLayout_4->addLayout(verticalLayout);
 
@@ -217,16 +246,6 @@ public:
 
 
         gridLayout->addLayout(verticalLayout_5, 1, 0, 1, 2);
-
-        horizontalSpacer_6 = new QSpacerItem(567, 22, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        gridLayout->addItem(horizontalSpacer_6, 2, 0, 1, 1);
-
-        Back = new QPushButton(Infopopup);
-        Back->setObjectName(QStringLiteral("Back"));
-        Back->setFont(font);
-
-        gridLayout->addWidget(Back, 2, 1, 1, 1);
 
 
         retranslateUi(Infopopup);
@@ -238,6 +257,7 @@ public:
     {
         Infopopup->setWindowTitle(QApplication::translate("Infopopup", "Form", Q_NULLPTR));
         label_3->setText(QApplication::translate("Infopopup", "INFORMATION", Q_NULLPTR));
+        Back->setText(QApplication::translate("Infopopup", "BACK", Q_NULLPTR));
         label_7->setText(QApplication::translate("Infopopup", "EQUIPMENTS:", Q_NULLPTR));
         label_8->setText(QApplication::translate("Infopopup", "MEMBERS:", Q_NULLPTR));
         Back_2->setText(QApplication::translate("Infopopup", "EXPORT TO EXCEL", Q_NULLPTR));
@@ -245,7 +265,7 @@ public:
         label_6->setText(QApplication::translate("Infopopup", "GROUPNAME:", Q_NULLPTR));
         label_5->setText(QApplication::translate("Infopopup", "SUBJECT:", Q_NULLPTR));
         label_4->setText(QApplication::translate("Infopopup", "SECTION:", Q_NULLPTR));
-        Back->setText(QApplication::translate("Infopopup", "BACK", Q_NULLPTR));
+        label_9->setText(QApplication::translate("Infopopup", "INSTRUCTOR:", Q_NULLPTR));
     } // retranslateUi
 
 };

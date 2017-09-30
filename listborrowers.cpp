@@ -19,6 +19,10 @@ ListBorrowers::ListBorrowers(QWidget *parent) :
     sectionHeader->setTextAlignment(Qt::AlignCenter);
     sectionHeader->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
     sectionHeader->setFont(QFont("helvetica", 12, QFont::Bold));
+    QTableWidgetItem *instructorHeader = new QTableWidgetItem("INSTRUCTOR");
+    instructorHeader->setTextAlignment(Qt::AlignCenter);
+    instructorHeader->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+    instructorHeader->setFont(QFont("helvetica", 12, QFont::Bold));
     QTableWidgetItem *startHeader = new QTableWidgetItem("START");
     startHeader->setTextAlignment(Qt::AlignCenter);
     startHeader->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
@@ -28,18 +32,20 @@ ListBorrowers::ListBorrowers(QWidget *parent) :
     endHeader->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
     endHeader->setFont(QFont("helvetica", 12, QFont::Bold));
 
-    ui->borrowersTable->setColumnCount(5);
+    ui->borrowersTable->setColumnCount(6);
     ui->borrowersTable->setHorizontalHeaderItem(0, nameHeader);
     ui->borrowersTable->setHorizontalHeaderItem(1, subjectHeader);
     ui->borrowersTable->setHorizontalHeaderItem(2, sectionHeader);
-    ui->borrowersTable->setHorizontalHeaderItem(3, startHeader);
-    ui->borrowersTable->setHorizontalHeaderItem(4, endHeader);
+    ui->borrowersTable->setHorizontalHeaderItem(3, instructorHeader);
+    ui->borrowersTable->setHorizontalHeaderItem(4, startHeader);
+    ui->borrowersTable->setHorizontalHeaderItem(5, endHeader);
 
     ui->borrowersTable->setColumnWidth(0, 150);
     ui->borrowersTable->setColumnWidth(1, 300);
     ui->borrowersTable->setColumnWidth(2, 300);
     ui->borrowersTable->setColumnWidth(3, 300);
     ui->borrowersTable->setColumnWidth(4, 300);
+    ui->borrowersTable->setColumnWidth(5, 300);
 
     ui->borrowersTable->setSelectionBehavior(QAbstractItemView::SelectRows);
 
@@ -53,6 +59,7 @@ ListBorrowers::ListBorrowers(QWidget *parent) :
         QString name = borrower->name;
         QString subject = borrower->subject;
         QString section = borrower->section;
+        QString instructor = borrower->instructor;
         QDateTime start = borrower->start;
         QDateTime end = borrower->end;
 
@@ -67,18 +74,22 @@ ListBorrowers::ListBorrowers(QWidget *parent) :
         QTableWidgetItem *sectionItem = new QTableWidgetItem(section);
         sectionItem->setTextAlignment(Qt::AlignCenter);
         sectionItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
-        QTableWidgetItem *startItem = new QTableWidgetItem(start.toString("yyyy-MM-dd HH:mm:ss"));
+        QTableWidgetItem *instructorItem = new QTableWidgetItem(instructor);
+        instructorItem->setTextAlignment(Qt::AlignCenter);
+        instructorItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+        QTableWidgetItem *startItem = new QTableWidgetItem(start.toString("yyyy-MM-dd hh:mm:ss AP"));
         startItem->setTextAlignment(Qt::AlignCenter);
         startItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
-        QTableWidgetItem *endItem = new QTableWidgetItem(end.toString("yyyy-MM-dd HH:mm:ss"));
+        QTableWidgetItem *endItem = new QTableWidgetItem(end.toString("yyyy-MM-dd hh:mm:ss AP"));
         endItem->setTextAlignment(Qt::AlignCenter);
         endItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
 
         ui->borrowersTable->setItem(ui->borrowersTable->rowCount() - 1, 0, nameItem);
         ui->borrowersTable->setItem(ui->borrowersTable->rowCount() - 1, 1, subjectItem);
         ui->borrowersTable->setItem(ui->borrowersTable->rowCount() - 1, 2, sectionItem);
-        ui->borrowersTable->setItem(ui->borrowersTable->rowCount() - 1, 3, startItem);
-        ui->borrowersTable->setItem(ui->borrowersTable->rowCount() - 1, 4, endItem);
+        ui->borrowersTable->setItem(ui->borrowersTable->rowCount() - 1, 3, instructorItem);
+        ui->borrowersTable->setItem(ui->borrowersTable->rowCount() - 1, 4, startItem);
+        ui->borrowersTable->setItem(ui->borrowersTable->rowCount() - 1, 5, endItem);
     }
 }
 
@@ -101,6 +112,10 @@ void ListBorrowers::updateBorrowers()
     sectionHeader->setTextAlignment(Qt::AlignCenter);
     sectionHeader->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
     sectionHeader->setFont(QFont("helvetica", 12, QFont::Bold));
+    QTableWidgetItem *instructorHeader = new QTableWidgetItem("INSTRUCTOR");
+    instructorHeader->setTextAlignment(Qt::AlignCenter);
+    instructorHeader->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+    instructorHeader->setFont(QFont("helvetica", 12, QFont::Bold));
     QTableWidgetItem *startHeader = new QTableWidgetItem("START");
     startHeader->setTextAlignment(Qt::AlignCenter);
     startHeader->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
@@ -110,18 +125,20 @@ void ListBorrowers::updateBorrowers()
     endHeader->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
     endHeader->setFont(QFont("helvetica", 12, QFont::Bold));
 
-    ui->borrowersTable->setColumnCount(5);
+    ui->borrowersTable->setColumnCount(6);
     ui->borrowersTable->setHorizontalHeaderItem(0, nameHeader);
     ui->borrowersTable->setHorizontalHeaderItem(1, subjectHeader);
     ui->borrowersTable->setHorizontalHeaderItem(2, sectionHeader);
-    ui->borrowersTable->setHorizontalHeaderItem(3, startHeader);
-    ui->borrowersTable->setHorizontalHeaderItem(4, endHeader);
+    ui->borrowersTable->setHorizontalHeaderItem(3, instructorHeader);
+    ui->borrowersTable->setHorizontalHeaderItem(4, startHeader);
+    ui->borrowersTable->setHorizontalHeaderItem(5, endHeader);
 
     ui->borrowersTable->setColumnWidth(0, 150);
     ui->borrowersTable->setColumnWidth(1, 300);
     ui->borrowersTable->setColumnWidth(2, 300);
     ui->borrowersTable->setColumnWidth(3, 300);
     ui->borrowersTable->setColumnWidth(4, 300);
+    ui->borrowersTable->setColumnWidth(5, 300);
 
     ui->borrowersTable->setSelectionBehavior(QAbstractItemView::SelectRows);
 
@@ -135,6 +152,7 @@ void ListBorrowers::updateBorrowers()
         QString name = borrower->name;
         QString subject = borrower->subject;
         QString section = borrower->section;
+        QString instructor = borrower->instructor;
         QDateTime start = borrower->start;
         QDateTime end = borrower->end;
 
@@ -149,18 +167,22 @@ void ListBorrowers::updateBorrowers()
         QTableWidgetItem *sectionItem = new QTableWidgetItem(section);
         sectionItem->setTextAlignment(Qt::AlignCenter);
         sectionItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
-        QTableWidgetItem *startItem = new QTableWidgetItem(start.toString("yyyy-MM-dd HH:mm:ss"));
+        QTableWidgetItem *instructorItem = new QTableWidgetItem(instructor);
+        instructorItem->setTextAlignment(Qt::AlignCenter);
+        instructorItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+        QTableWidgetItem *startItem = new QTableWidgetItem(start.toString("yyyy-MM-dd hh:mm:ss AP"));
         startItem->setTextAlignment(Qt::AlignCenter);
         startItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
-        QTableWidgetItem *endItem = new QTableWidgetItem(end.toString("yyyy-MM-dd HH:mm:ss"));
+        QTableWidgetItem *endItem = new QTableWidgetItem(end.toString("yyyy-MM-dd hh:mm:ss AP"));
         endItem->setTextAlignment(Qt::AlignCenter);
         endItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
 
         ui->borrowersTable->setItem(ui->borrowersTable->rowCount() - 1, 0, nameItem);
         ui->borrowersTable->setItem(ui->borrowersTable->rowCount() - 1, 1, subjectItem);
         ui->borrowersTable->setItem(ui->borrowersTable->rowCount() - 1, 2, sectionItem);
-        ui->borrowersTable->setItem(ui->borrowersTable->rowCount() - 1, 3, startItem);
-        ui->borrowersTable->setItem(ui->borrowersTable->rowCount() - 1, 4, endItem);
+        ui->borrowersTable->setItem(ui->borrowersTable->rowCount() - 1, 3, instructorItem);
+        ui->borrowersTable->setItem(ui->borrowersTable->rowCount() - 1, 4, startItem);
+        ui->borrowersTable->setItem(ui->borrowersTable->rowCount() - 1, 5, endItem);
     }
 }
 
@@ -177,10 +199,12 @@ void ListBorrowers::on_Info_clicked()
         QTableWidgetItem *name = ui->borrowersTable->item(row, 0);
         QTableWidgetItem *subject = ui->borrowersTable->item(row, 1);
         QTableWidgetItem *section = ui->borrowersTable->item(row, 2);
+        QTableWidgetItem *instructor = ui->borrowersTable->item(row, 3);
         QString selectedName = name->text();
         QString selectedSubject = subject->text();
         QString selectedSection = section->text();
-        infopopup->display(selectedName,selectedSubject,selectedSection);
+        QString selectedInstructor = instructor->text();
+        infopopup->display(selectedName,selectedSubject,selectedSection,selectedInstructor);
         stackWidget->setCurrentIndex(4);
     }
 }

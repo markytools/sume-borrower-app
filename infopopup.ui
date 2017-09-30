@@ -283,7 +283,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="groupName_2"/>
+            <widget class="QLineEdit" name="instructor"/>
            </item>
           </layout>
          </item>

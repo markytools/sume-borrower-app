@@ -9,6 +9,7 @@ Infopopup::Infopopup(QWidget *parent) :
     ui->groupName->setReadOnly(true);
     ui->subject->setReadOnly(true);
     ui->section->setReadOnly(true);
+    ui->instructor->setReadOnly(true);
 }
 
 Infopopup::~Infopopup()
@@ -41,7 +42,7 @@ Borrower *Infopopup::getBorrower() const
     return borrower;
 }
 
-void Infopopup::display(QString groupName, QString groupSubject, QString groupSection)
+void Infopopup::display(QString groupName, QString groupSubject, QString groupSection, QString groupInstructor)
 {
     QTableWidgetItem *equipmentNameHeader = new QTableWidgetItem("EQUIPMENT NAME");
     equipmentNameHeader->setTextAlignment(Qt::AlignCenter);
@@ -77,8 +78,8 @@ void Infopopup::display(QString groupName, QString groupSubject, QString groupSe
 
     ui->membersTable->setRowCount(0);
 
-    QVector<BorrowedEquipment*> *borrowedEquipments = labLib->getBorrowedEquipments(groupName, groupSubject, groupSection);
-    QVector<Student*> *students = labLib->getStudents(groupName, groupSubject, groupSection);
+    QVector<BorrowedEquipment*> *borrowedEquipments = labLib->getBorrowedEquipments(groupName, groupSubject, groupSection, groupInstructor);
+    QVector<Student*> *students = labLib->getStudents(groupName, groupSubject, groupSection, groupInstructor);
 
     for(int row = 0; row < borrowedEquipments->size(); row++)
     {
@@ -117,6 +118,7 @@ void Infopopup::display(QString groupName, QString groupSubject, QString groupSe
     ui->groupName->setText(groupName);
     ui->subject->setText(groupSubject);
     ui->section->setText(groupSection);
+    ui->instructor->setText(groupInstructor);
 }
 
 QVector<BorrowedEquipment *> *Infopopup::getBorrowedequipment() const
@@ -130,9 +132,14 @@ void Infopopup::on_Delete_clicked()
     reply = QMessageBox::question(this, "Delete Borrowers", "Are you sure you want to delete borrowers?", QMessageBox::Yes|QMessageBox::No);
     if(reply == QMessageBox::Yes)
     {
-        labLib->deleteBorrower(ui->groupName->text(),ui->subject->text(),ui->section->text());
+        labLib->deleteBorrower(ui->groupName->text(),ui->subject->text(),ui->section->text(), ui->instructor->text());
         ListBorrowers *listborrowers = (ListBorrowers*)(stackWidget->widget(3));
         listborrowers->updateBorrowers();
         stackWidget->setCurrentIndex(3);
     }
+}
+
+void Infopopup::setInstructor(const QString &value)
+{
+    instructor = value;
 }

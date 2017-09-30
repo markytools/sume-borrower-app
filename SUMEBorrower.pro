@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui sql
+QT       += xlsx
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -76,6 +77,8 @@ FORMS += \
     subjectui.ui \
     experiments.ui \
     login.ui
+
+
 
 win32: LIBS += -L$$PWD/./ -lLaboratoryLib
 

@@ -41,8 +41,25 @@ void Information::on_BackButton_clicked()
 
 void Information::on_OKButton_clicked()
 {
-    if(addMode == true)
-    {
+    if (ui->nameLine->text().isEmpty()) {
+        labLib->showErrorMessageBox(false, "Information lacking", "Please enter the equipment name");
+        return;
+    }
+    if (ui->quantityLine->text().isEmpty()) {
+        labLib->showErrorMessageBox(false, "Information lacking", "Please enter the equipment's quantity");
+        return;
+    }
+
+    QVector<Equipment*> *equipments = labLib->getEquipments();
+    for (int row = 0; row < equipments->size(); row++) {
+        Equipment *equipment = equipments->at(row);
+        if (ui->nameLine->text().toUpper() == equipment->name.toUpper()) {
+            labLib->showErrorMessageBox(false, "Duplication Error", "Equipment name already exists!");
+            return;
+        }
+    }
+
+    if (addMode == true) {
         labLib->addEquipment(ui->nameLine->text().toUpper(), ui->quantityLine->text().toInt(), ui->serialLine->text().toUpper(), ui->propertyLine->text().toUpper(), ui->statusLine->text().toUpper(), ui->locationLine->text().toUpper(), ui->remarksLine->text().toUpper());
         ui->nameLine->clear();
         ui->quantityLine->clear();

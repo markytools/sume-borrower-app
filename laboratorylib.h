@@ -11,6 +11,8 @@
 #include <QDebug>
 #include <QDateTime>
 #include "utils.h"
+#include <QtXlsx>
+#include <QMessageBox>
 using namespace std;
 
 const QString DATETIMEFORMAT = "yyyy-MM-dd HH:mm:ss";
@@ -60,10 +62,11 @@ public:
 class Borrower {
 
 public:
-    Borrower(QString name, QString subject, QString section, QDateTime start, QDateTime end);
+    Borrower(QString name, QString subject, QString section, QString instructor, QDateTime start, QDateTime end);
     QString name;
     QString subject;
     QString section;
+    QString instructor;
     QDateTime start;
     QDateTime end;
 };
@@ -110,17 +113,19 @@ public:
     Equipment *getEquipment(QString name) const;
     QVector<Equipment*> *getEquipments() const;
 
-    void addBorrower(QString name, QString subject, QString section, QDateTime start, QDateTime end,
+    void addBorrower(QString name, QString subject, QString section, QString instructor, QDateTime start, QDateTime end,
                      QVector<Student*> *students, QVector<BorrowedEquipment *> *borrowed_equip);
-    void deleteBorrower(QString name, QString subject, QString section); //*
-    QVector<BorrowedEquipment *> *getBorrowedEquipments(QString borrowerName, QString subject, QString section);
+    void deleteBorrower(QString name, QString subject, QString section, QString instructor); //*
+    QVector<BorrowedEquipment *> *getBorrowedEquipments(QString borrowerName, QString subject, QString section, QString instructor);
     QVector<Borrower *> *getBorrowers();
-    QVector<Student *> *getStudents(QString borrowerName, QString subject, QString section);
+    QVector<Student *> *getStudents(QString borrowerName, QString subject, QString section, QString instructor);
 
     QSqlDatabase getDb() const;
     QString getResult() const;
     QString getSqlError() const;
     void setSqlError(const QString &value);
+
+    bool showErrorMessageBox(bool assert, QString title, QString message); //If assert is false, QMessageBox will show up
 };
 
 #endif // LABORATORYLIB_H

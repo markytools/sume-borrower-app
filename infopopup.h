@@ -21,13 +21,15 @@ public:
 
     Borrower *getBorrower() const;
 
-    void display(QString groupName, QString groupSubject, QString groupSection);
+    void display(QString groupName, QString groupSubject, QString groupSection, QString groupInstructor);
 
     void setGroupName(const QString &value);
 
     void setSubject(const QString &value);
 
     void setSection(const QString &value);
+
+    void setInstructor(const QString &value);
 
 private slots:
     void on_Back_clicked();
@@ -41,6 +43,7 @@ private:
     QString groupName;
     QString subject;
     QString section;
+    QString instructor;
 };
 
 #endif // INFOPOPUP_H

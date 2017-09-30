@@ -35,6 +35,8 @@ public:
 
     void setEnd(const QDateTime &value);
 
+    void setInstructor(const QString &value);
+
     QVector<Student *> *getStudent() const;
 
     QString getName() const;
@@ -47,6 +49,8 @@ public:
 
     QDateTime getEnd() const;
 
+    QString getInstructor() const;
+
 private:
     QVector<Equipment*> *equipments;
     QVector<Borrower*> *borrower;
@@ -55,6 +59,7 @@ private:
     QString name;
     QString subject;
     QString section;
+    QString instructor;
     QDateTime start;
     QDateTime end;
 };
