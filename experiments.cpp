@@ -170,35 +170,49 @@ void Experiments::on_deleteExperiment_clicked()
 
 void Experiments::on_experimentsTable_cellClicked(int row, int column)
 {
-    ui->experimentName->setText(ui->experimentsTable->item(row, column)->text());
-    setExperimentName(ui->experimentsTable->item(row, column)->text());
-    showExperimentEquipments();
+    if (row >= 0) {
+        ui->experimentName->setText(ui->experimentsTable->item(row, column)->text());
+        setExperimentName(ui->experimentsTable->item(row, column)->text());
+        showExperimentEquipments();
+    }
 }
 
 void Experiments::on_experimentsTable_currentCellChanged(int currentRow, int currentColumn, int previousRow, int previousColumn)
 {
-    ui->experimentName->setText(ui->experimentsTable->item(currentRow, currentColumn)->text());
-    setExperimentName(ui->experimentsTable->item(currentRow, currentColumn)->text());
-    showExperimentEquipments();
+    if (currentRow >= 0) {
+        ui->experimentName->setText(ui->experimentsTable->item(currentRow, currentColumn)->text());
+        setExperimentName(ui->experimentsTable->item(currentRow, currentColumn)->text());
+        showExperimentEquipments();
+    }
 }
 
 void Experiments::on_leftToRight_clicked()
 {
-    if(ui->listEquipments->selectionModel()->selectedRows().size() == 0){
+    cout << "agaa" << endl;
+    if (ui->listEquipments->selectionModel()->selectedRows().size() == 0){
+        cout << "agaw" << endl;
         QMessageBox messageBox;
+        cout << "aghsaa" << endl;
         messageBox.critical(0,"Error","No rows selected!");
+        cout << "aghsaa" << endl;
         messageBox.setFixedSize(500,200);
+        cout << "ahsgaa" << endl;
         return;
     }
 
     else{
         int equipmentRow = ui->listEquipments->currentRow();
+        cout << "ahsshsgaa" << endl;
 
         QTableWidgetItem *equipment = ui->listEquipments->item(equipmentRow, 0);
+        cout << "aghhshaa" << endl;
         QString selectEquipment = equipment->text();
+        cout << "agafhhsa" << endl;
 
         labLib->addEquipmentToExperiment(subjectName, experimentName, selectEquipment);
+        cout << "agahha" << endl;
         showExperimentEquipments();
+        cout << "ahegaa" << endl;
     }
 }
 
@@ -225,4 +239,12 @@ void Experiments::on_rightToLeft_clicked()
 void Experiments::setExperimentName(const QString &value)
 {
     experimentName = value;
+}
+
+void Experiments::resetFields()
+{
+    ui->experimentEquipments->clearContents();
+    ui->listEquipments->clearContents();
+    ui->experimentsTable->clearContents();
+    ui->lineEdit->clear();
 }

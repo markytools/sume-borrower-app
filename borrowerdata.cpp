@@ -145,3 +145,13 @@ QDateTime BorrowerData::getEnd() const
 {
     return end;
 }
+
+QString BorrowerData::getInstructor() const
+{
+    return instructor;
+}
+
+void BorrowerData::setInstructor(const QString &value)
+{
+    instructor = value;
+}

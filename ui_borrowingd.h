@@ -34,11 +34,14 @@ public:
     QSpacerItem *horizontalSpacer;
     QLabel *label;
     QSpacerItem *horizontalSpacer_2;
-    QVBoxLayout *verticalLayout_6;
     QVBoxLayout *verticalLayout_2;
+    QHBoxLayout *horizontalLayout_12;
     QHBoxLayout *horizontalLayout_4;
     QLabel *label_2;
     QLineEdit *studentName;
+    QHBoxLayout *horizontalLayout_11;
+    QPushButton *Add;
+    QPushButton *Delete;
     QListWidget *listWidget;
     QHBoxLayout *horizontalLayout_9;
     QVBoxLayout *verticalLayout;
@@ -56,9 +59,6 @@ public:
     QLineEdit *instructor;
     QVBoxLayout *verticalLayout_5;
     QHBoxLayout *horizontalLayout_7;
-    QVBoxLayout *verticalLayout_3;
-    QPushButton *Add;
-    QPushButton *Delete;
     QVBoxLayout *verticalLayout_4;
     QHBoxLayout *horizontalLayout_5;
     QLabel *label_8;
@@ -98,10 +98,10 @@ public:
 
         gridLayout->addItem(horizontalSpacer_2, 0, 2, 1, 1);
 
-        verticalLayout_6 = new QVBoxLayout();
-        verticalLayout_6->setObjectName(QStringLiteral("verticalLayout_6"));
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        horizontalLayout_12 = new QHBoxLayout();
+        horizontalLayout_12->setObjectName(QStringLiteral("horizontalLayout_12"));
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
         label_2 = new QLabel(BorrowingD);
@@ -121,15 +121,37 @@ public:
         horizontalLayout_4->addWidget(studentName);
 
 
-        verticalLayout_2->addLayout(horizontalLayout_4);
+        horizontalLayout_12->addLayout(horizontalLayout_4);
+
+        horizontalLayout_11 = new QHBoxLayout();
+        horizontalLayout_11->setObjectName(QStringLiteral("horizontalLayout_11"));
+        Add = new QPushButton(BorrowingD);
+        Add->setObjectName(QStringLiteral("Add"));
+        QFont font2;
+        font2.setFamily(QStringLiteral("Segoe UI Black"));
+        font2.setPointSize(10);
+        font2.setBold(true);
+        font2.setWeight(75);
+        Add->setFont(font2);
+
+        horizontalLayout_11->addWidget(Add);
+
+        Delete = new QPushButton(BorrowingD);
+        Delete->setObjectName(QStringLiteral("Delete"));
+        Delete->setFont(font2);
+
+        horizontalLayout_11->addWidget(Delete);
+
+
+        horizontalLayout_12->addLayout(horizontalLayout_11);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_12);
 
         listWidget = new QListWidget(BorrowingD);
         listWidget->setObjectName(QStringLiteral("listWidget"));
 
         verticalLayout_2->addWidget(listWidget);
-
-
-        verticalLayout_6->addLayout(verticalLayout_2);
 
         horizontalLayout_9 = new QHBoxLayout();
         horizontalLayout_9->setObjectName(QStringLiteral("horizontalLayout_9"));
@@ -206,28 +228,6 @@ public:
         verticalLayout_5->setObjectName(QStringLiteral("verticalLayout_5"));
         horizontalLayout_7 = new QHBoxLayout();
         horizontalLayout_7->setObjectName(QStringLiteral("horizontalLayout_7"));
-        verticalLayout_3 = new QVBoxLayout();
-        verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
-        Add = new QPushButton(BorrowingD);
-        Add->setObjectName(QStringLiteral("Add"));
-        QFont font2;
-        font2.setFamily(QStringLiteral("Segoe UI Black"));
-        font2.setPointSize(10);
-        font2.setBold(true);
-        font2.setWeight(75);
-        Add->setFont(font2);
-
-        verticalLayout_3->addWidget(Add);
-
-        Delete = new QPushButton(BorrowingD);
-        Delete->setObjectName(QStringLiteral("Delete"));
-        Delete->setFont(font2);
-
-        verticalLayout_3->addWidget(Delete);
-
-
-        horizontalLayout_7->addLayout(verticalLayout_3);
-
         verticalLayout_4 = new QVBoxLayout();
         verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
         horizontalLayout_5 = new QHBoxLayout();
@@ -289,10 +289,10 @@ public:
         horizontalLayout_9->addLayout(verticalLayout_5);
 
 
-        verticalLayout_6->addLayout(horizontalLayout_9);
+        verticalLayout_2->addLayout(horizontalLayout_9);
 
 
-        gridLayout->addLayout(verticalLayout_6, 1, 0, 1, 3);
+        gridLayout->addLayout(verticalLayout_2, 1, 0, 1, 3);
 
 
         retranslateUi(BorrowingD);
@@ -305,12 +305,12 @@ public:
         BorrowingD->setWindowTitle(QApplication::translate("BorrowingD", "Form", Q_NULLPTR));
         label->setText(QApplication::translate("BorrowingD", "BORROWING DETAILS", Q_NULLPTR));
         label_2->setText(QApplication::translate("BorrowingD", "ENTER THE STUDENT NAME:", Q_NULLPTR));
+        Add->setText(QApplication::translate("BorrowingD", "ADD", Q_NULLPTR));
+        Delete->setText(QApplication::translate("BorrowingD", "DELETE", Q_NULLPTR));
         label_9->setText(QApplication::translate("BorrowingD", "GROUP NAME:", Q_NULLPTR));
         label_10->setText(QApplication::translate("BorrowingD", "SUBJECT:", Q_NULLPTR));
         label_12->setText(QApplication::translate("BorrowingD", "SECTION:", Q_NULLPTR));
         label_11->setText(QApplication::translate("BorrowingD", "INSTRUCTOR:", Q_NULLPTR));
-        Add->setText(QApplication::translate("BorrowingD", "ADD", Q_NULLPTR));
-        Delete->setText(QApplication::translate("BorrowingD", "DELETE", Q_NULLPTR));
         label_8->setText(QApplication::translate("BorrowingD", "START:", Q_NULLPTR));
         label_7->setText(QApplication::translate("BorrowingD", "END:", Q_NULLPTR));
         Cancel->setText(QApplication::translate("BorrowingD", "CANCEL", Q_NULLPTR));

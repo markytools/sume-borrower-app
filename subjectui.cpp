@@ -14,7 +14,7 @@ SubjectUI::SubjectUI(QWidget *parent) :
     ui->tableWidget->setColumnCount(1);
     ui->tableWidget->setHorizontalHeaderItem(0, subjectHeader);
 
-    ui->tableWidget->setColumnWidth(0, ui->tableWidget->maximumWidth());
+    ui->tableWidget->setColumnWidth(0, 400);
 
     ui->tableWidget->setSelectionBehavior(QAbstractItemView::SelectRows);
     updateSubjects();
@@ -30,6 +30,7 @@ void SubjectUI::on_addSubject_clicked()
     if(!ui->lineEdit->text().isEmpty()){
         labLib->addSubject(ui->lineEdit->text().toUpper());
         updateSubjects();
+        ui->lineEdit->clear();
     }
 }
 
@@ -92,6 +93,7 @@ void SubjectUI::on_editSubject_clicked()
 
 
         Experiments *experiments = (Experiments*)(stackWidget->widget(9));
+        experiments->resetFields();
         experiments->setSubjectName(selectedSubject);
         experiments->display();
         stackWidget->setCurrentIndex(9);

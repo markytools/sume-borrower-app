@@ -24,6 +24,8 @@ public:
 
     void setExperimentName(const QString &value);
 
+    void resetFields();
+
 private slots:
     void on_Back_clicked();
 
