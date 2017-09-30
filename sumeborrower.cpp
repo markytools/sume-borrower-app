@@ -10,7 +10,8 @@ SUMEBorrower::SUMEBorrower(QWidget *parent) :
     //initialize database
     LaboratoryLib *labLib = new LaboratoryLib();
     labLib->initDatabase();
-    stackWidget = new QStackedWidget();
+    stackWidget = new StackedWidget();
+    stackWidget->setAutoResize(true);
 //    Borrowers *borrowers = new Borrowers(this);
 //    borrowers->stackWidget = stackWidget;
 //    Confirmations *confirmations = new Confirmations(this);

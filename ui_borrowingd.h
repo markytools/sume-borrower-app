@@ -305,6 +305,7 @@ public:
         BorrowingD->setWindowTitle(QApplication::translate("BorrowingD", "Form", Q_NULLPTR));
         label->setText(QApplication::translate("BorrowingD", "BORROWING DETAILS", Q_NULLPTR));
         label_2->setText(QApplication::translate("BorrowingD", "ENTER THE STUDENT NAME:", Q_NULLPTR));
+        studentName->setPlaceholderText(QApplication::translate("BorrowingD", "Press ENTER to add the name", Q_NULLPTR));
         Add->setText(QApplication::translate("BorrowingD", "ADD", Q_NULLPTR));
         Delete->setText(QApplication::translate("BorrowingD", "DELETE", Q_NULLPTR));
         label_9->setText(QApplication::translate("BorrowingD", "GROUP NAME:", Q_NULLPTR));

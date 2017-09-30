@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>669</width>
-    <height>460</height>
+    <width>835</width>
+    <height>482</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>0</width>
-    <height>0</height>
+    <width>835</width>
+    <height>482</height>
    </size>
   </property>
   <property name="maximumSize">
@@ -305,7 +305,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="groupName_3"/>
+            <widget class="QLineEdit" name="startTime"/>
            </item>
           </layout>
          </item>
@@ -327,7 +327,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="groupName_4"/>
+            <widget class="QLineEdit" name="endTime"/>
            </item>
           </layout>
          </item>

@@ -66,7 +66,8 @@ public:
     {
         if (Borrowers->objectName().isEmpty())
             Borrowers->setObjectName(QStringLiteral("Borrowers"));
-        Borrowers->resize(988, 487);
+        Borrowers->resize(1088, 487);
+        Borrowers->setMinimumSize(QSize(1088, 487));
         gridLayout = new QGridLayout(Borrowers);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         horizontalSpacer = new QSpacerItem(237, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);

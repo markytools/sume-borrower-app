@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'listborrowers.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.0
+** Created by: Qt User Interface Compiler version 5.9.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -38,7 +38,8 @@ public:
     {
         if (ListBorrowers->objectName().isEmpty())
             ListBorrowers->setObjectName(QStringLiteral("ListBorrowers"));
-        ListBorrowers->resize(707, 491);
+        ListBorrowers->resize(889, 476);
+        ListBorrowers->setMinimumSize(QSize(889, 476));
         gridLayout = new QGridLayout(ListBorrowers);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         label = new QLabel(ListBorrowers);
@@ -49,6 +50,7 @@ public:
         font.setBold(true);
         font.setWeight(75);
         label->setFont(font);
+        label->setAlignment(Qt::AlignCenter);
 
         gridLayout->addWidget(label, 0, 0, 1, 1);
 
@@ -94,7 +96,7 @@ public:
     void retranslateUi(QWidget *ListBorrowers)
     {
         ListBorrowers->setWindowTitle(QApplication::translate("ListBorrowers", "Form", Q_NULLPTR));
-        label->setText(QApplication::translate("ListBorrowers", "                                  LIST OF BORROWERS:", Q_NULLPTR));
+        label->setText(QApplication::translate("ListBorrowers", "LIST OF BORROWERS", Q_NULLPTR));
         AddButton->setText(QApplication::translate("ListBorrowers", "ADD", Q_NULLPTR));
         Info->setText(QApplication::translate("ListBorrowers", "INFO", Q_NULLPTR));
         Back->setText(QApplication::translate("ListBorrowers", "BACK", Q_NULLPTR));

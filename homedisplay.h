@@ -15,6 +15,8 @@ public:
     explicit HomeDisplay(QWidget *parent = 0);
     ~HomeDisplay();
 
+    QSize sizeHint();
+
 private slots:
     void on_Borrowing_clicked();
 

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'listequipments.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.0
+** Created by: Qt User Interface Compiler version 5.9.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -41,7 +41,8 @@ public:
     {
         if (ListEquipments->objectName().isEmpty())
             ListEquipments->setObjectName(QStringLiteral("ListEquipments"));
-        ListEquipments->resize(733, 490);
+        ListEquipments->resize(889, 476);
+        ListEquipments->setMinimumSize(QSize(889, 476));
         gridLayout = new QGridLayout(ListEquipments);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         label = new QLabel(ListEquipments);

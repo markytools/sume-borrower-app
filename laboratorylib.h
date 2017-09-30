@@ -87,6 +87,7 @@ private:
     Equipment equipment;
     QVector<Equipment*> *sa;
     Equipment* equip;
+    QMessageBox messageBox;
 
 public:
     LaboratoryLib();
@@ -126,6 +127,7 @@ public:
     void setSqlError(const QString &value);
 
     bool showErrorMessageBox(bool assert, QString title, QString message); //If assert is false, QMessageBox will show up
+    bool isErrorMsgBoxVisible();
 };
 
 #endif // LABORATORYLIB_H

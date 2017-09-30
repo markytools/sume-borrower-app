@@ -24,9 +24,9 @@ Borrowers::Borrowers(QWidget *parent) :
     ui->listEquipments->setHorizontalHeaderItem(1, nameHeader);
     ui->listEquipments->setHorizontalHeaderItem(0, borrowedHeader);
 
-    ui->listEquipments->setColumnWidth(2, 140);
-    ui->listEquipments->setColumnWidth(1, 280);
-    ui->listEquipments->setColumnWidth(0, 130);
+    ui->listEquipments->setColumnWidth(2, 100);
+    ui->listEquipments->setColumnWidth(1, 200);
+    ui->listEquipments->setColumnWidth(0, 120);
 
 
     ui->listEquipments->setSelectionBehavior(QAbstractItemView::SelectRows);
@@ -328,6 +328,10 @@ void Borrowers::on_rightToLeft_clicked()
 
 void Borrowers::on_Proceed_clicked()
 {
+    if (ui->borrowEquipments->rowCount() <= 0) {
+        labLib->showErrorMessageBox(false, "No Borrowed Equipments", "You have not set at least one borrowed equipment");
+        return;
+    }
     stackWidget->setCurrentIndex(7);
     Confirmations *confirmations = (Confirmations*)(stackWidget->widget(7));
     confirmations->setBorrowerdata(borrowerdata);
