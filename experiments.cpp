@@ -36,6 +36,8 @@ Experiments::Experiments(QWidget *parent) :
     ui->experimentEquipments->setColumnWidth(0, 300);
 
     ui->experimentEquipments->setSelectionBehavior(QAbstractItemView::SelectRows);
+
+    installEventFilter(this);
 }
 
 Experiments::~Experiments()
@@ -150,6 +152,7 @@ void Experiments::on_addExperiment_clicked()
         labLib->addExperiment(subjectName, ui->lineEdit->text().toUpper());
         updateExperiments();
         ui->lineEdit->text().clear();
+        ui->lineEdit->clear();
     }
 }
 
@@ -178,6 +181,8 @@ void Experiments::on_experimentsTable_cellClicked(int row, int column)
         setExperimentName(ui->experimentsTable->item(row, column)->text());
         showExperimentEquipments();
     }
+
+    ui->searchEdit->clear();
 }
 
 void Experiments::on_experimentsTable_currentCellChanged(int currentRow, int currentColumn, int previousRow, int previousColumn)
@@ -187,6 +192,8 @@ void Experiments::on_experimentsTable_currentCellChanged(int currentRow, int cur
         setExperimentName(ui->experimentsTable->item(currentRow, currentColumn)->text());
         showExperimentEquipments();
     }
+
+    ui->searchEdit->clear();
 }
 
 void Experiments::on_leftToRight_clicked()
@@ -249,4 +256,30 @@ void Experiments::resetFields()
     ui->listEquipments->clearContents();
     ui->experimentsTable->clearContents();
     ui->lineEdit->clear();
+}
+
+bool Experiments::eventFilter(QObject *obj, QEvent *event)
+{
+    if (event->type()==QEvent::KeyPress) {
+        QKeyEvent* key = static_cast<QKeyEvent*>(event);
+        if ((key->key()==Qt::Key_Enter) || (key->key()==Qt::Key_Return)) {
+            if (!labLib->isErrorMsgBoxVisible()) {
+                if (ui->lineEdit->hasFocus()) {
+                    on_addExperiment_clicked();
+                }
+            }
+        }
+        else {
+            return QObject::eventFilter(obj, event);
+        }
+        return true;
+    } else {
+        return QObject::eventFilter(obj, event);
+    }
+    return false;
+}
+
+void Experiments::on_searchEdit_textChanged(const QString &text)
+{
+
 }

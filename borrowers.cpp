@@ -25,7 +25,7 @@ Borrowers::Borrowers(QWidget *parent) :
     ui->listEquipments->setHorizontalHeaderItem(0, borrowedHeader);
 
     ui->listEquipments->setColumnWidth(2, 100);
-    ui->listEquipments->setColumnWidth(1, 200);
+    ui->listEquipments->setColumnWidth(1, 180);
     ui->listEquipments->setColumnWidth(0, 120);
 
 
@@ -35,8 +35,8 @@ Borrowers::Borrowers(QWidget *parent) :
     ui->borrowEquipments->setHorizontalHeaderItem(0, borrowedHeader);
     ui->borrowEquipments->setHorizontalHeaderItem(1, nameHeader);
 
-    ui->borrowEquipments->setColumnWidth(0, 150);
-    ui->borrowEquipments->setColumnWidth(1, 300);
+    ui->borrowEquipments->setColumnWidth(0, 130);
+    ui->borrowEquipments->setColumnWidth(1, 250);
 
     ui->borrowEquipments->setSelectionBehavior(QAbstractItemView::SelectRows);
 }
@@ -309,7 +309,7 @@ void Borrowers::on_leftToRight_clicked()
 
 void Borrowers::on_rightToLeft_clicked()
 {
-    if(ui->borrowEquipments->selectionModel()->selectedRows().size() == 0){
+    if (ui->borrowEquipments->selectionModel()->selectedRows().size() == 0) {
         labLib->showErrorMessageBox(false, "Error", "No rows selected!");
         return;
     }
@@ -317,7 +317,7 @@ void Borrowers::on_rightToLeft_clicked()
     if(ui->borrowEquipments->rowCount() == 0){
 
     }
-    else{
+    else {
         borrowerdata->reverseBorrowEquipmentOnce(ui->borrowEquipments->item(ui->borrowEquipments->currentRow(), 1)->text());
         borrowerdata->reverseUpdateBorrowEquipment(ui->borrowEquipments->item(ui->borrowEquipments->currentRow(), 1)->text());
         int previousCurrentRow = ui->borrowEquipments->currentRow();

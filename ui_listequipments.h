@@ -120,7 +120,7 @@ public:
         label->setText(QApplication::translate("ListEquipments", "**LIST OF EQUIPMENTS**", Q_NULLPTR));
         AddButton->setText(QApplication::translate("ListEquipments", "ADD", Q_NULLPTR));
         EditButton->setText(QApplication::translate("ListEquipments", "EDIT", Q_NULLPTR));
-        RemoveButton->setText(QApplication::translate("ListEquipments", "REMOVE SELECTION", Q_NULLPTR));
+        RemoveButton->setText(QApplication::translate("ListEquipments", "REMOVE EQUIPMENT", Q_NULLPTR));
         RemoveAllButton->setText(QApplication::translate("ListEquipments", "REMOVE ALL", Q_NULLPTR));
         RemoveAllButton_2->setText(QApplication::translate("ListEquipments", "MORE INFO", Q_NULLPTR));
         Back->setText(QApplication::translate("ListEquipments", "BACK", Q_NULLPTR));

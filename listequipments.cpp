@@ -43,20 +43,20 @@ ListEquipments::ListEquipments(QWidget *parent) :
     ui->equipmentTable->setColumnCount(8);
     ui->equipmentTable->setHorizontalHeaderItem(0, quantityHeader);
     ui->equipmentTable->setHorizontalHeaderItem(1, nameHeader);
-    ui->equipmentTable->setHorizontalHeaderItem(2, serialHeader);
-    ui->equipmentTable->setHorizontalHeaderItem(3, propertyHeader);
-    ui->equipmentTable->setHorizontalHeaderItem(4, statusHeader);
-    ui->equipmentTable->setHorizontalHeaderItem(5, locationHeader);
-    ui->equipmentTable->setHorizontalHeaderItem(6, remarksHeader);
-    ui->equipmentTable->setHorizontalHeaderItem(7, borrowedHeader);
+    ui->equipmentTable->setHorizontalHeaderItem(2, borrowedHeader);
+    ui->equipmentTable->setHorizontalHeaderItem(3, serialHeader);
+    ui->equipmentTable->setHorizontalHeaderItem(4, propertyHeader);
+    ui->equipmentTable->setHorizontalHeaderItem(5, statusHeader);
+    ui->equipmentTable->setHorizontalHeaderItem(6, locationHeader);
+    ui->equipmentTable->setHorizontalHeaderItem(7, remarksHeader);
 
     ui->equipmentTable->setColumnWidth(0, 150);
     ui->equipmentTable->setColumnWidth(1, 300);
-    ui->equipmentTable->setColumnWidth(2, 300);
+    ui->equipmentTable->setColumnWidth(2, 250);
     ui->equipmentTable->setColumnWidth(3, 300);
     ui->equipmentTable->setColumnWidth(4, 300);
     ui->equipmentTable->setColumnWidth(5, 300);
-    ui->equipmentTable->setColumnWidth(6, 250);
+    ui->equipmentTable->setColumnWidth(6, 300);
     ui->equipmentTable->setColumnWidth(7, 250);
 
     ui->equipmentTable->setSelectionBehavior(QAbstractItemView::SelectRows);
@@ -114,12 +114,12 @@ ListEquipments::ListEquipments(QWidget *parent) :
 
         ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 0, quantityItem);
         ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 1, nameItem);
-        ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 2, serialItem);
-        ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 3, propertyItem);
-        ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 4, statusItem);
-        ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 5, locationItem);
-        ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 6, remarksItem);
-        ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 7, borrowedItem);
+        ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 2, borrowedItem);
+        ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 3, serialItem);
+        ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 4, propertyItem);
+        ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 5, statusItem);
+        ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 6, locationItem);
+        ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 7, remarksItem);
     }
 }
 
@@ -140,10 +140,17 @@ void ListEquipments::on_EditButton_clicked()
     if(ui->equipmentTable->selectedItems().size() != 0)
     {
         int row = ui->equipmentTable->currentRow();
+        QTableWidgetItem *item = ui->equipmentTable->item(row, 1);
+        QTableWidgetItem *timeBorrowedItem = ui->equipmentTable->item(row, 2);
+        QString selectedName = item->text();
+        int timesBorrowed = timeBorrowedItem->text().toInt();
+
+        if (timesBorrowed > 0) {
+            labLib->showErrorMessageBox(false, "Request Error", "You cannot edit an equipment when it is borrowed");
+            return;
+        }
 
         Information *information = (Information*)(stackWidget->widget(1));
-        QTableWidgetItem *item = ui->equipmentTable->item(row, 1);
-        QString selectedName = item->text();
         information->setAddMode(false);
         information->edit(selectedName);
         stackWidget->setCurrentIndex(1);
@@ -161,7 +168,14 @@ void ListEquipments::on_RemoveButton_clicked()
             int row = ui->equipmentTable->currentRow();
 
             QTableWidgetItem *item = ui->equipmentTable->item(row, 1);
+            QTableWidgetItem *timeBorrowedItem = ui->equipmentTable->item(row, 2);
             QString selectedName = item->text();
+            int timesBorrowed = timeBorrowedItem->text().toInt();
+            if (timesBorrowed > 0) {
+                labLib->showErrorMessageBox(false, "Request Error", "You cannot remove an equipment when it is borrowed");
+                return;
+            }
+
             labLib->deleteEquipment(selectedName);
             updateEquipments();
         }
@@ -170,10 +184,18 @@ void ListEquipments::on_RemoveButton_clicked()
 
 void ListEquipments::on_RemoveAllButton_clicked()
 {
+    for (int i = 0; i < ui->equipmentTable->rowCount(); i++) {
+        QTableWidgetItem *timeBorrowedItem = ui->equipmentTable->item(i, 2);
+        int timesBorrowed = timeBorrowedItem->text().toInt();
+        if (timesBorrowed > 0) {
+            labLib->showErrorMessageBox(false, "Request Error", "Some equipments are currently being borrowed");
+            return;
+        }
+    }
+
     QMessageBox::StandardButton reply;
     reply = QMessageBox::question(this, "Remove All Equipments", "Are you sure you want to remove all equipments?", QMessageBox::Yes|QMessageBox::No);
-    if(reply == QMessageBox::Yes)
-    {
+    if (reply == QMessageBox::Yes) {
         labLib->deleteAllEquipments();
         updateEquipments();
     }
@@ -226,12 +248,12 @@ void ListEquipments::updateEquipments()
 
         ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 0, quantityItem);
         ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 1, nameItem);
-        ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 2, serialItem);
-        ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 3, propertyItem);
-        ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 4, statusItem);
-        ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 5, locationItem);
-        ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 6, remarksItem);
-        ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 7, borrowedItem);
+        ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 2, borrowedItem);
+        ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 3, serialItem);
+        ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 4, propertyItem);
+        ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 5, statusItem);
+        ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 6, locationItem);
+        ui->equipmentTable->setItem(ui->equipmentTable->rowCount() - 1, 7, remarksItem);
     }
 }
 

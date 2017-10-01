@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'login.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.0
+** Created by: Qt User Interface Compiler version 5.9.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -41,7 +41,7 @@ public:
     {
         if (LogIn->objectName().isEmpty())
             LogIn->setObjectName(QStringLiteral("LogIn"));
-        LogIn->resize(502, 334);
+        LogIn->resize(336, 297);
         gridLayout = new QGridLayout(LogIn);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         verticalSpacer = new QSpacerItem(20, 255, QSizePolicy::Minimum, QSizePolicy::Expanding);

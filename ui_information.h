@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'information.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.0
+** Created by: Qt User Interface Compiler version 5.9.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -62,8 +62,8 @@ public:
     {
         if (Information->objectName().isEmpty())
             Information->setObjectName(QStringLiteral("Information"));
-        Information->resize(608, 292);
-        Information->setMinimumSize(QSize(0, 0));
+        Information->resize(445, 292);
+        Information->setMinimumSize(QSize(445, 292));
         Information->setMaximumSize(QSize(16777215, 16777215));
         gridLayout = new QGridLayout(Information);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
@@ -73,7 +73,7 @@ public:
         information->setObjectName(QStringLiteral("information"));
         QFont font;
         font.setFamily(QStringLiteral("Segoe UI Black"));
-        font.setPointSize(20);
+        font.setPointSize(14);
         font.setBold(true);
         font.setWeight(75);
         information->setFont(font);
@@ -253,7 +253,7 @@ public:
         label_6->setText(QApplication::translate("Information", "LOCATION", Q_NULLPTR));
         label_7->setText(QApplication::translate("Information", "OP_STATUS", Q_NULLPTR));
         label_5->setText(QApplication::translate("Information", "REMARKS", Q_NULLPTR));
-        label_4->setText(QApplication::translate("Information", "Quantity", Q_NULLPTR));
+        label_4->setText(QApplication::translate("Information", "QUANTITY", Q_NULLPTR));
         BackButton->setText(QApplication::translate("Information", "BACK", Q_NULLPTR));
         OKButton->setText(QApplication::translate("Information", "OK", Q_NULLPTR));
     } // retranslateUi

@@ -73,8 +73,8 @@ public:
     {
         if (Infopopup->objectName().isEmpty())
             Infopopup->setObjectName(QStringLiteral("Infopopup"));
-        Infopopup->resize(835, 482);
-        Infopopup->setMinimumSize(QSize(835, 482));
+        Infopopup->resize(928, 482);
+        Infopopup->setMinimumSize(QSize(928, 482));
         Infopopup->setMaximumSize(QSize(16777215, 16777215));
         gridLayout = new QGridLayout(Infopopup);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
@@ -166,6 +166,7 @@ public:
 
         ItemsReturned = new QLineEdit(Infopopup);
         ItemsReturned->setObjectName(QStringLiteral("ItemsReturned"));
+        ItemsReturned->setReadOnly(true);
 
         verticalLayout_2->addWidget(ItemsReturned);
 
