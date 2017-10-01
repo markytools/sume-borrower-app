@@ -10,6 +10,8 @@ Infopopup::Infopopup(QWidget *parent) :
     ui->subject->setReadOnly(true);
     ui->section->setReadOnly(true);
     ui->instructor->setReadOnly(true);
+    ui->startTime->setReadOnly(true);
+    ui->endTime->setReadOnly(true);
 }
 
 Infopopup::~Infopopup()
@@ -42,7 +44,8 @@ Borrower *Infopopup::getBorrower() const
     return borrower;
 }
 
-void Infopopup::display(QString groupName, QString groupSubject, QString groupSection, QString groupInstructor)
+void Infopopup::display(QString groupName, QString groupSubject, QString groupSection, QString groupInstructor,
+                        QString groupStartTime, QString groupEndTime)
 {
     QTableWidgetItem *equipmentNameHeader = new QTableWidgetItem("EQUIPMENT NAME");
     equipmentNameHeader->setTextAlignment(Qt::AlignCenter);
@@ -62,8 +65,8 @@ void Infopopup::display(QString groupName, QString groupSubject, QString groupSe
     ui->borrowedEquipmentTable->setHorizontalHeaderItem(0, equipmentNameHeader);
     ui->borrowedEquipmentTable->setHorizontalHeaderItem(1, quantityHeader);
 
-    ui->borrowedEquipmentTable->setColumnWidth(0, 300);
-    ui->borrowedEquipmentTable->setColumnWidth(1, 300);
+    ui->borrowedEquipmentTable->setColumnWidth(0, 200);
+    ui->borrowedEquipmentTable->setColumnWidth(1, 200);
 
     ui->borrowedEquipmentTable->setSelectionBehavior(QAbstractItemView::SelectRows);
 
@@ -119,6 +122,10 @@ void Infopopup::display(QString groupName, QString groupSubject, QString groupSe
     ui->subject->setText(groupSubject);
     ui->section->setText(groupSection);
     ui->instructor->setText(groupInstructor);
+    ui->startTime->setText(groupStartTime);
+    ui->endTime->setText(groupEndTime);
+
+
 }
 
 QVector<BorrowedEquipment *> *Infopopup::getBorrowedequipment() const

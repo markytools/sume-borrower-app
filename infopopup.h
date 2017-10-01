@@ -21,7 +21,7 @@ public:
 
     Borrower *getBorrower() const;
 
-    void display(QString groupName, QString groupSubject, QString groupSection, QString groupInstructor);
+    void display(QString groupName, QString groupSubject, QString groupSection, QString groupInstructor, QString startTime, QString groupEndTime);
 
     void setGroupName(const QString &value);
 

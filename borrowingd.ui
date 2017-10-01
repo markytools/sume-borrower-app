@@ -89,7 +89,11 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="studentName"/>
+          <widget class="QLineEdit" name="studentName">
+           <property name="placeholderText">
+            <string>Press ENTER to add the name</string>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>

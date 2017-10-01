@@ -3,7 +3,6 @@
 
 #include <QMainWindow>
 #include "laboratorylib.h"
-#include <QStackedWidget>
 #include "borrowers.h"
 #include "confirmations.h"
 #include "laboratorylib.h"
@@ -31,7 +30,7 @@ public:
 
 private:
     Ui::SUMEBorrower *ui;
-    QStackedWidget *stackWidget;
+    StackedWidget *stackWidget;
 };
 
 #endif // SUMEBORROWER_H

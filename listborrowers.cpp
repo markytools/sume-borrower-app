@@ -40,12 +40,12 @@ ListBorrowers::ListBorrowers(QWidget *parent) :
     ui->borrowersTable->setHorizontalHeaderItem(4, startHeader);
     ui->borrowersTable->setHorizontalHeaderItem(5, endHeader);
 
-    ui->borrowersTable->setColumnWidth(0, 150);
-    ui->borrowersTable->setColumnWidth(1, 300);
-    ui->borrowersTable->setColumnWidth(2, 300);
-    ui->borrowersTable->setColumnWidth(3, 300);
-    ui->borrowersTable->setColumnWidth(4, 300);
-    ui->borrowersTable->setColumnWidth(5, 300);
+    ui->borrowersTable->setColumnWidth(0, 200);
+    ui->borrowersTable->setColumnWidth(1, 200);
+    ui->borrowersTable->setColumnWidth(2, 100);
+    ui->borrowersTable->setColumnWidth(3, 200);
+    ui->borrowersTable->setColumnWidth(4, 150);
+    ui->borrowersTable->setColumnWidth(5, 150);
 
     ui->borrowersTable->setSelectionBehavior(QAbstractItemView::SelectRows);
 
@@ -98,6 +98,11 @@ ListBorrowers::~ListBorrowers()
     delete ui;
 }
 
+QSize ListBorrowers::sizeHint()
+{
+    return minimumSize();
+}
+
 void ListBorrowers::updateBorrowers()
 {
     QTableWidgetItem *nameHeader = new QTableWidgetItem("NAME");
@@ -132,13 +137,6 @@ void ListBorrowers::updateBorrowers()
     ui->borrowersTable->setHorizontalHeaderItem(3, instructorHeader);
     ui->borrowersTable->setHorizontalHeaderItem(4, startHeader);
     ui->borrowersTable->setHorizontalHeaderItem(5, endHeader);
-
-    ui->borrowersTable->setColumnWidth(0, 150);
-    ui->borrowersTable->setColumnWidth(1, 300);
-    ui->borrowersTable->setColumnWidth(2, 300);
-    ui->borrowersTable->setColumnWidth(3, 300);
-    ui->borrowersTable->setColumnWidth(4, 300);
-    ui->borrowersTable->setColumnWidth(5, 300);
 
     ui->borrowersTable->setSelectionBehavior(QAbstractItemView::SelectRows);
 
@@ -200,12 +198,19 @@ void ListBorrowers::on_Info_clicked()
         QTableWidgetItem *subject = ui->borrowersTable->item(row, 1);
         QTableWidgetItem *section = ui->borrowersTable->item(row, 2);
         QTableWidgetItem *instructor = ui->borrowersTable->item(row, 3);
+        QTableWidgetItem *startTime = ui->borrowersTable->item(row, 4);
+        QTableWidgetItem *endTime = ui->borrowersTable->item(row, 5);
         QString selectedName = name->text();
         QString selectedSubject = subject->text();
         QString selectedSection = section->text();
         QString selectedInstructor = instructor->text();
-        infopopup->display(selectedName,selectedSubject,selectedSection,selectedInstructor);
+        QString selectedStartTime = startTime->text();
+        QString selectedEndTime = endTime->text();
+        infopopup->display(selectedName,selectedSubject,selectedSection,selectedInstructor,selectedStartTime,selectedEndTime);
         stackWidget->setCurrentIndex(4);
+    }
+    else {
+        labLib->showErrorMessageBox(false, "No Borrower Select", "Select a borrower from the table");
     }
 }
 
@@ -214,6 +219,7 @@ void ListBorrowers::on_AddButton_clicked()
     BorrowingD *borrowingD = (BorrowingD*)(stackWidget->widget(5));
     borrowingD->resetFields();
     stackWidget->setCurrentIndex(5);
+
 }
 
 //void ListBorrowers::on_Delete_clicked()

@@ -7,8 +7,14 @@
     <x>0</x>
     <y>0</y>
     <width>733</width>
-    <height>494</height>
+    <height>487</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>733</width>
+    <height>487</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Form</string>
@@ -29,25 +35,7 @@
           </font>
          </property>
          <property name="text">
-          <string>SUBJECT:</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_2">
-         <property name="font">
-          <font>
-           <family>Segoe UI Black</family>
-           <pointsize>16</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string/>
+          <string>SUBJECTS</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -72,7 +60,7 @@
           </font>
          </property>
          <property name="text">
-          <string>Add Subject</string>
+          <string>ADD SUBJECT</string>
          </property>
         </widget>
        </item>
@@ -103,7 +91,7 @@
           </font>
          </property>
          <property name="text">
-          <string>Edit Subject</string>
+          <string>EDIT SUBJECT</string>
          </property>
         </widget>
        </item>
@@ -118,7 +106,7 @@
           </font>
          </property>
          <property name="text">
-          <string>Delete Subject</string>
+          <string>DELETE SUBJECT</string>
          </property>
         </widget>
        </item>
@@ -133,7 +121,7 @@
           </font>
          </property>
          <property name="text">
-          <string>Back</string>
+          <string>BACK</string>
          </property>
         </widget>
        </item>

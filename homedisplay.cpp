@@ -6,11 +6,18 @@ HomeDisplay::HomeDisplay(QWidget *parent) :
     ui(new Ui::HomeDisplay)
 {
     ui->setupUi(this);
+
+    adjustSize();
 }
 
 HomeDisplay::~HomeDisplay()
 {
     delete ui;
+}
+
+QSize HomeDisplay::sizeHint()
+{
+    return minimumSize();
 }
 
 void HomeDisplay::on_Borrowing_clicked()

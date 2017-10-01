@@ -22,6 +22,9 @@ public:
 
     void resetFields();
 
+protected:
+    bool eventFilter(QObject* obj, QEvent* event);
+
 private slots:
     void on_Cancel_clicked();
 
@@ -30,6 +33,8 @@ private slots:
     void on_Delete_clicked();
 
     void on_Proceed_clicked();
+
+    void updateStartAndEndTimes();
 
 private:
     QVector<Equipment *> *equipment;

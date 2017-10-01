@@ -19,6 +19,8 @@ public:
     void updateBorrowers();
     ~ListBorrowers();
 
+    QSize sizeHint();
+
 private slots:
     void on_Back_clicked();
 

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'confirmations.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.0
+** Created by: Qt User Interface Compiler version 5.9.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -35,7 +35,8 @@ public:
     {
         if (Confirmations->objectName().isEmpty())
             Confirmations->setObjectName(QStringLiteral("Confirmations"));
-        Confirmations->resize(405, 285);
+        Confirmations->resize(596, 278);
+        Confirmations->setMinimumSize(QSize(596, 278));
         gridLayout = new QGridLayout(Confirmations);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         borrowEquipment = new QTableWidget(Confirmations);

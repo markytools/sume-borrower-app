@@ -26,6 +26,9 @@ public:
 
     void resetFields();
 
+protected:
+    bool eventFilter(QObject* obj, QEvent* event);
+
 private slots:
     void on_Back_clicked();
 
@@ -42,6 +45,8 @@ private slots:
     void on_leftToRight_clicked();
 
     void on_rightToLeft_clicked();
+
+    void on_searchEdit_textChanged(const QString &text);
 
 private:
     QVector<Equipment*> *listEquipments;

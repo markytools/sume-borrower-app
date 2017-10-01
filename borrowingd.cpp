@@ -6,6 +6,13 @@ BorrowingD::BorrowingD(QWidget *parent) :
     ui(new Ui::BorrowingD)
 {
     ui->setupUi(this);
+
+    ui->startDateTime->setReadOnly(true);
+    QTimer *timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()), this, SLOT(updateStartAndEndTimes()));
+    timer->start(200);
+
+    installEventFilter(this);
 }
 
 BorrowingD::~BorrowingD()
@@ -53,15 +60,28 @@ void BorrowingD::on_Delete_clicked()
 void BorrowingD::on_Proceed_clicked()
 {
     if (ui->listWidget->count() <= 0) {
-        QMessageBox messageBox;
-        messageBox.critical(0,"No student","Must have at least one student");
-        messageBox.setFixedSize(500,200);
+        labLib->showErrorMessageBox(false, "No student", "Must have at least one student");
+        return;
+    }
+    if (ui->groupName->text().isEmpty()) {
+        labLib->showErrorMessageBox(false, "Information lacking", "Enter a borrower/group name");
+        return;
+    }
+    if (ui->subject->text().isEmpty()) {
+        labLib->showErrorMessageBox(false, "Information lacking", "Enter a subject");
+        return;
+    }
+    if (ui->instructor->text().isEmpty()) {
+        labLib->showErrorMessageBox(false, "Information lacking", "Enter an instructor");
+        return;
+    }
+    if (ui->endDateTime->dateTime() <= QDateTime::currentDateTime()) {
+        labLib->showErrorMessageBox(false, "Invalid data", "End time should not be less than start time");
         return;
     }
 
     QVector<Student*> *students = new QVector<Student*>();
-    for(int i = 0; i < ui->listWidget->count(); ++i)
-    {
+    for (int i = 0; i < ui->listWidget->count(); ++i) {
         Student *student = new Student(ui->listWidget->item(i)->text());
         students->push_front(student);
     }
@@ -91,7 +111,13 @@ void BorrowingD::on_Proceed_clicked()
     borrowers->display();
 
     stackWidget->setCurrentIndex(6);
-//    cout << name.toStdString() << endl;
+    //    cout << name.toStdString() << endl;
+}
+
+void BorrowingD::updateStartAndEndTimes()
+{
+    ui->startDateTime->setDateTime(QDateTime::currentDateTime());
+    if (ui->endDateTime->dateTime() < ui->startDateTime->dateTime()) ui->endDateTime->setDateTime(QDateTime::currentDateTime());
 }
 
 void BorrowingD::setStudents(QVector<Student *> *value)
@@ -109,6 +135,27 @@ void BorrowingD::resetFields()
     ui->instructor->clear();
     ui->startDateTime->setDateTime(QDateTime::currentDateTime());
     ui->endDateTime->setDateTime(QDateTime::currentDateTime());
+
+    ui->studentName->setFocus();
+}
+
+bool BorrowingD::eventFilter(QObject *obj, QEvent *event)
+{
+    if (event->type()==QEvent::KeyPress) {
+        QKeyEvent* key = static_cast<QKeyEvent*>(event);
+        if ((key->key()==Qt::Key_Enter) || (key->key()==Qt::Key_Return)) {
+            if (ui->studentName->hasFocus() && !labLib->isErrorMsgBoxVisible()) {
+                on_Add_clicked();
+            }
+        }
+        else {
+            return QObject::eventFilter(obj, event);
+        }
+        return true;
+    } else {
+        return QObject::eventFilter(obj, event);
+    }
+    return false;
 }
 
 void BorrowingD::setEquipment(QVector<Equipment *> *value)

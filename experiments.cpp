@@ -36,6 +36,8 @@ Experiments::Experiments(QWidget *parent) :
     ui->experimentEquipments->setColumnWidth(0, 300);
 
     ui->experimentEquipments->setSelectionBehavior(QAbstractItemView::SelectRows);
+
+    installEventFilter(this);
 }
 
 Experiments::~Experiments()
@@ -51,6 +53,8 @@ void Experiments::setSubjectName(const QString &value)
 
 void Experiments::display()
 {
+    ui->listEquipments->clearContents();
+    ui->experimentEquipments->clearContents();
     ui->experimentsTable->clearContents();
     ui->experimentsTable->setRowCount(0);
 
@@ -82,7 +86,7 @@ void Experiments::showExperimentEquipments()
     QString selectedExperiment = item->text();
     listEquipments = labLib->getEquipments();
     experimentEquipments = labLib->getExperimentEquipments(subjectName, selectedExperiment);
-    for(int i = 0; i < listEquipments->size(); i++){
+    for (int i = 0; i < listEquipments->size(); i++) {
         sameName = false;
         QString equipmentName = listEquipments->at(i)->name;
         for(int j = 0; j < experimentEquipments->size(); j++){
@@ -95,7 +99,7 @@ void Experiments::showExperimentEquipments()
                 sameName = false;
             }
         }
-        if(sameName == true){
+        if (sameName == true) {
             ui->experimentEquipments->setRowCount(ui->experimentEquipments->rowCount() + 1);
 
             QTableWidgetItem *equipmentNameItem = new QTableWidgetItem(equipmentName);
@@ -104,7 +108,7 @@ void Experiments::showExperimentEquipments()
 
             ui->experimentEquipments->setItem(ui->experimentEquipments->rowCount() - 1, 0, equipmentNameItem);
         }
-        else if(sameName == false){
+        else if (sameName == false) {
             ui->listEquipments->setRowCount(ui->listEquipments->rowCount() + 1);
 
             QTableWidgetItem *equipmentNameItem = new QTableWidgetItem(equipmentName);
@@ -129,7 +133,7 @@ void Experiments::updateExperiments()
 
     experiments = labLib->getSubjectExperiments(subjectName);
 
-    for(int i = 0; i < experiments->size(); i++){
+    for (int i = 0; i < experiments->size(); i++) {
         QString subject = experiments->at(i)->name;
 
         ui->experimentsTable->setRowCount(ui->experimentsTable->rowCount() + 1);
@@ -147,6 +151,8 @@ void Experiments::on_addExperiment_clicked()
     if(!ui->lineEdit->text().isEmpty()){
         labLib->addExperiment(subjectName, ui->lineEdit->text().toUpper());
         updateExperiments();
+        ui->lineEdit->text().clear();
+        ui->lineEdit->clear();
     }
 }
 
@@ -175,6 +181,8 @@ void Experiments::on_experimentsTable_cellClicked(int row, int column)
         setExperimentName(ui->experimentsTable->item(row, column)->text());
         showExperimentEquipments();
     }
+
+    ui->searchEdit->clear();
 }
 
 void Experiments::on_experimentsTable_currentCellChanged(int currentRow, int currentColumn, int previousRow, int previousColumn)
@@ -184,6 +192,8 @@ void Experiments::on_experimentsTable_currentCellChanged(int currentRow, int cur
         setExperimentName(ui->experimentsTable->item(currentRow, currentColumn)->text());
         showExperimentEquipments();
     }
+
+    ui->searchEdit->clear();
 }
 
 void Experiments::on_leftToRight_clicked()
@@ -218,14 +228,13 @@ void Experiments::on_leftToRight_clicked()
 
 void Experiments::on_rightToLeft_clicked()
 {
-    if(ui->experimentEquipments->selectionModel()->selectedRows().size() == 0){
+    if (ui->experimentEquipments->selectionModel()->selectedRows().size() == 0) {
         QMessageBox messageBox;
         messageBox.critical(0,"Error","No rows selected!");
         messageBox.setFixedSize(500,200);
         return;
     }
-
-    else{
+    else {
         int equipmentRow = ui->experimentEquipments->currentRow();
 
         QTableWidgetItem *equipment = ui->experimentEquipments->item(equipmentRow, 0);
@@ -247,4 +256,30 @@ void Experiments::resetFields()
     ui->listEquipments->clearContents();
     ui->experimentsTable->clearContents();
     ui->lineEdit->clear();
+}
+
+bool Experiments::eventFilter(QObject *obj, QEvent *event)
+{
+    if (event->type()==QEvent::KeyPress) {
+        QKeyEvent* key = static_cast<QKeyEvent*>(event);
+        if ((key->key()==Qt::Key_Enter) || (key->key()==Qt::Key_Return)) {
+            if (!labLib->isErrorMsgBoxVisible()) {
+                if (ui->lineEdit->hasFocus()) {
+                    on_addExperiment_clicked();
+                }
+            }
+        }
+        else {
+            return QObject::eventFilter(obj, event);
+        }
+        return true;
+    } else {
+        return QObject::eventFilter(obj, event);
+    }
+    return false;
+}
+
+void Experiments::on_searchEdit_textChanged(const QString &text)
+{
+
 }

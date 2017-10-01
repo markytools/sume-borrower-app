@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Experiments_t {
-    QByteArrayData data[16];
-    char stringdata0[280];
+    QByteArrayData data[18];
+    char stringdata0[311];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -46,7 +46,9 @@ QT_MOC_LITERAL(11, 193, 13), // "currentColumn"
 QT_MOC_LITERAL(12, 207, 11), // "previousRow"
 QT_MOC_LITERAL(13, 219, 14), // "previousColumn"
 QT_MOC_LITERAL(14, 234, 22), // "on_leftToRight_clicked"
-QT_MOC_LITERAL(15, 257, 22) // "on_rightToLeft_clicked"
+QT_MOC_LITERAL(15, 257, 22), // "on_rightToLeft_clicked"
+QT_MOC_LITERAL(16, 280, 25), // "on_searchEdit_textChanged"
+QT_MOC_LITERAL(17, 306, 4) // "text"
 
     },
     "Experiments\0on_Back_clicked\0\0"
@@ -56,7 +58,8 @@ QT_MOC_LITERAL(15, 257, 22) // "on_rightToLeft_clicked"
     "column\0on_experimentsTable_currentCellChanged\0"
     "currentRow\0currentColumn\0previousRow\0"
     "previousColumn\0on_leftToRight_clicked\0"
-    "on_rightToLeft_clicked"
+    "on_rightToLeft_clicked\0on_searchEdit_textChanged\0"
+    "text"
 };
 #undef QT_MOC_LITERAL
 
@@ -66,7 +69,7 @@ static const uint qt_meta_data_Experiments[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       8,   14, // methods
+       9,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -74,14 +77,15 @@ static const uint qt_meta_data_Experiments[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   54,    2, 0x08 /* Private */,
-       3,    0,   55,    2, 0x08 /* Private */,
-       4,    0,   56,    2, 0x08 /* Private */,
-       5,    0,   57,    2, 0x08 /* Private */,
-       6,    2,   58,    2, 0x08 /* Private */,
-       9,    4,   63,    2, 0x08 /* Private */,
-      14,    0,   72,    2, 0x08 /* Private */,
-      15,    0,   73,    2, 0x08 /* Private */,
+       1,    0,   59,    2, 0x08 /* Private */,
+       3,    0,   60,    2, 0x08 /* Private */,
+       4,    0,   61,    2, 0x08 /* Private */,
+       5,    0,   62,    2, 0x08 /* Private */,
+       6,    2,   63,    2, 0x08 /* Private */,
+       9,    4,   68,    2, 0x08 /* Private */,
+      14,    0,   77,    2, 0x08 /* Private */,
+      15,    0,   78,    2, 0x08 /* Private */,
+      16,    1,   79,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -92,6 +96,7 @@ static const uint qt_meta_data_Experiments[] = {
     QMetaType::Void, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int,   10,   11,   12,   13,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::QString,   17,
 
        0        // eod
 };
@@ -110,6 +115,7 @@ void Experiments::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 5: _t->on_experimentsTable_currentCellChanged((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3])),(*reinterpret_cast< int(*)>(_a[4]))); break;
         case 6: _t->on_leftToRight_clicked(); break;
         case 7: _t->on_rightToLeft_clicked(); break;
+        case 8: _t->on_searchEdit_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -142,13 +148,13 @@ int Experiments::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 8)
+        if (_id < 9)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 8;
+        _id -= 9;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 8)
+        if (_id < 9)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 8;
+        _id -= 9;
     }
     return _id;
 }

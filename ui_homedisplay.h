@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'homedisplay.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.0
+** Created by: Qt User Interface Compiler version 5.9.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -32,8 +32,8 @@ public:
     {
         if (HomeDisplay->objectName().isEmpty())
             HomeDisplay->setObjectName(QStringLiteral("HomeDisplay"));
-        HomeDisplay->resize(569, 331);
-        HomeDisplay->setMinimumSize(QSize(400, 300));
+        HomeDisplay->resize(571, 338);
+        HomeDisplay->setMinimumSize(QSize(571, 338));
         HomeDisplay->setMaximumSize(QSize(16777215, 16777215));
         label_2 = new QLabel(HomeDisplay);
         label_2->setObjectName(QStringLiteral("label_2"));

@@ -30,22 +30,14 @@ class Ui_Experiments
 {
 public:
     QGridLayout *gridLayout_2;
-    QGridLayout *gridLayout;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
     QLabel *label_2;
     QLineEdit *lineEdit;
     QPushButton *addExperiment;
     QPushButton *deleteExperiment;
-    QVBoxLayout *verticalLayout_2;
-    QHBoxLayout *horizontalLayout_3;
-    QLabel *label_4;
-    QLabel *subjectNameLabel;
-    QSpacerItem *horizontalSpacer_3;
-    QLabel *label_10;
-    QTableWidget *experimentsTable;
-    QSpacerItem *verticalSpacer_2;
     QSpacerItem *verticalSpacer;
+    QSpacerItem *verticalSpacer_2;
     QHBoxLayout *horizontalLayout_4;
     QVBoxLayout *verticalLayout_4;
     QHBoxLayout *horizontalLayout_2;
@@ -53,6 +45,7 @@ public:
     QLabel *experimentName;
     QLabel *label_8;
     QTableWidget *listEquipments;
+    QLineEdit *searchEdit;
     QVBoxLayout *verticalLayout_6;
     QSpacerItem *verticalSpacer_3;
     QVBoxLayout *verticalLayout_5;
@@ -63,19 +56,27 @@ public:
     QLabel *label_9;
     QLabel *label_11;
     QTableWidget *experimentEquipments;
-    QPushButton *Back;
-    QSpacerItem *horizontalSpacer;
+    QSpacerItem *verticalSpacer_5;
     QSpacerItem *horizontalSpacer_2;
+    QSpacerItem *horizontalSpacer;
+    QPushButton *Back;
+    QGridLayout *gridLayout;
+    QVBoxLayout *verticalLayout_2;
+    QHBoxLayout *horizontalLayout_3;
+    QLabel *label_4;
+    QLabel *subjectNameLabel;
+    QSpacerItem *horizontalSpacer_3;
+    QLabel *label_10;
+    QTableWidget *experimentsTable;
 
     void setupUi(QWidget *Experiments)
     {
         if (Experiments->objectName().isEmpty())
             Experiments->setObjectName(QStringLiteral("Experiments"));
-        Experiments->resize(743, 502);
+        Experiments->resize(1088, 487);
+        Experiments->setMinimumSize(QSize(1088, 487));
         gridLayout_2 = new QGridLayout(Experiments);
         gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
-        gridLayout = new QGridLayout();
-        gridLayout->setObjectName(QStringLiteral("gridLayout"));
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         horizontalLayout = new QHBoxLayout();
@@ -111,56 +112,16 @@ public:
 
         verticalLayout->addWidget(deleteExperiment);
 
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        gridLayout->addLayout(verticalLayout, 0, 0, 1, 2);
-
-        verticalLayout_2 = new QVBoxLayout();
-        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        horizontalLayout_3 = new QHBoxLayout();
-        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
-        label_4 = new QLabel(Experiments);
-        label_4->setObjectName(QStringLiteral("label_4"));
-        label_4->setFont(font);
-
-        horizontalLayout_3->addWidget(label_4);
-
-        subjectNameLabel = new QLabel(Experiments);
-        subjectNameLabel->setObjectName(QStringLiteral("subjectNameLabel"));
-        subjectNameLabel->setFont(font);
-
-        horizontalLayout_3->addWidget(subjectNameLabel);
-
-        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_3->addItem(horizontalSpacer_3);
-
-
-        verticalLayout_2->addLayout(horizontalLayout_3);
-
-        label_10 = new QLabel(Experiments);
-        label_10->setObjectName(QStringLiteral("label_10"));
-        label_10->setFont(font);
-
-        verticalLayout_2->addWidget(label_10);
-
-        experimentsTable = new QTableWidget(Experiments);
-        experimentsTable->setObjectName(QStringLiteral("experimentsTable"));
-
-        verticalLayout_2->addWidget(experimentsTable);
-
-
-        gridLayout->addLayout(verticalLayout_2, 0, 2, 2, 1);
+        verticalLayout->addItem(verticalSpacer);
 
         verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        gridLayout->addItem(verticalSpacer_2, 1, 0, 1, 1);
-
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        gridLayout->addItem(verticalSpacer, 1, 1, 1, 1);
+        verticalLayout->addItem(verticalSpacer_2);
 
 
-        gridLayout_2->addLayout(gridLayout, 0, 0, 1, 3);
+        gridLayout_2->addLayout(verticalLayout, 0, 0, 1, 1);
 
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
@@ -170,6 +131,11 @@ public:
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         label_7 = new QLabel(Experiments);
         label_7->setObjectName(QStringLiteral("label_7"));
+        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(label_7->sizePolicy().hasHeightForWidth());
+        label_7->setSizePolicy(sizePolicy);
         label_7->setFont(font);
 
         horizontalLayout_2->addWidget(label_7);
@@ -193,6 +159,11 @@ public:
         listEquipments->setObjectName(QStringLiteral("listEquipments"));
 
         verticalLayout_4->addWidget(listEquipments);
+
+        searchEdit = new QLineEdit(Experiments);
+        searchEdit->setObjectName(QStringLiteral("searchEdit"));
+
+        verticalLayout_4->addWidget(searchEdit);
 
 
         horizontalLayout_4->addLayout(verticalLayout_4);
@@ -246,11 +217,23 @@ public:
 
         verticalLayout_3->addWidget(experimentEquipments);
 
+        verticalSpacer_5 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_3->addItem(verticalSpacer_5);
+
 
         horizontalLayout_4->addLayout(verticalLayout_3);
 
 
         gridLayout_2->addLayout(horizontalLayout_4, 1, 0, 1, 3);
+
+        horizontalSpacer_2 = new QSpacerItem(110, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_2->addItem(horizontalSpacer_2, 4, 2, 1, 1);
+
+        horizontalSpacer = new QSpacerItem(224, 22, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_2->addItem(horizontalSpacer, 3, 1, 2, 1);
 
         Back = new QPushButton(Experiments);
         Back->setObjectName(QStringLiteral("Back"));
@@ -258,13 +241,47 @@ public:
 
         gridLayout_2->addWidget(Back, 2, 0, 3, 1);
 
-        horizontalSpacer = new QSpacerItem(224, 22, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        gridLayout = new QGridLayout();
+        gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        verticalLayout_2 = new QVBoxLayout();
+        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
+        label_4 = new QLabel(Experiments);
+        label_4->setObjectName(QStringLiteral("label_4"));
+        label_4->setFont(font);
 
-        gridLayout_2->addItem(horizontalSpacer, 3, 1, 2, 1);
+        horizontalLayout_3->addWidget(label_4);
 
-        horizontalSpacer_2 = new QSpacerItem(110, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        subjectNameLabel = new QLabel(Experiments);
+        subjectNameLabel->setObjectName(QStringLiteral("subjectNameLabel"));
+        subjectNameLabel->setFont(font);
 
-        gridLayout_2->addItem(horizontalSpacer_2, 4, 2, 1, 1);
+        horizontalLayout_3->addWidget(subjectNameLabel);
+
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_3->addItem(horizontalSpacer_3);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_3);
+
+        label_10 = new QLabel(Experiments);
+        label_10->setObjectName(QStringLiteral("label_10"));
+        label_10->setFont(font);
+
+        verticalLayout_2->addWidget(label_10);
+
+        experimentsTable = new QTableWidget(Experiments);
+        experimentsTable->setObjectName(QStringLiteral("experimentsTable"));
+
+        verticalLayout_2->addWidget(experimentsTable);
+
+
+        gridLayout->addLayout(verticalLayout_2, 0, 2, 2, 1);
+
+
+        gridLayout_2->addLayout(gridLayout, 0, 1, 1, 2);
 
 
         retranslateUi(Experiments);
@@ -276,19 +293,21 @@ public:
     {
         Experiments->setWindowTitle(QApplication::translate("Experiments", "Form", Q_NULLPTR));
         label_2->setText(QApplication::translate("Experiments", "Name:", Q_NULLPTR));
-        addExperiment->setText(QApplication::translate("Experiments", "Add Experiment", Q_NULLPTR));
-        deleteExperiment->setText(QApplication::translate("Experiments", "Delete Experiment", Q_NULLPTR));
-        label_4->setText(QApplication::translate("Experiments", "SUBJECT:", Q_NULLPTR));
-        subjectNameLabel->setText(QString());
-        label_10->setText(QApplication::translate("Experiments", "EXPERIMENTS", Q_NULLPTR));
+        lineEdit->setPlaceholderText(QApplication::translate("Experiments", "Press ENTER to add experiment name", Q_NULLPTR));
+        addExperiment->setText(QApplication::translate("Experiments", "ADD EXPERIMENT", Q_NULLPTR));
+        deleteExperiment->setText(QApplication::translate("Experiments", "DELETE EXPERIMENT", Q_NULLPTR));
         label_7->setText(QApplication::translate("Experiments", "EXPERIMENT:", Q_NULLPTR));
-        experimentName->setText(QApplication::translate("Experiments", "(experiment)", Q_NULLPTR));
+        experimentName->setText(QString());
         label_8->setText(QApplication::translate("Experiments", "LIST OF EQUIPMENTS:", Q_NULLPTR));
+        searchEdit->setPlaceholderText(QApplication::translate("Experiments", "Type keyword here to search equipment or leave it blank to show all", Q_NULLPTR));
         leftToRight->setText(QApplication::translate("Experiments", ">>", Q_NULLPTR));
         rightToLeft->setText(QApplication::translate("Experiments", "<<", Q_NULLPTR));
         label_9->setText(QString());
         label_11->setText(QApplication::translate("Experiments", "EXPERIMENT EQUIPMENTS:", Q_NULLPTR));
         Back->setText(QApplication::translate("Experiments", "BACK", Q_NULLPTR));
+        label_4->setText(QApplication::translate("Experiments", "SUBJECT:", Q_NULLPTR));
+        subjectNameLabel->setText(QString());
+        label_10->setText(QApplication::translate("Experiments", "EXPERIMENTS", Q_NULLPTR));
     } // retranslateUi
 
 };

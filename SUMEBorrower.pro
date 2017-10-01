@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui sql
+QT       += widgets
 QT       += xlsx
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -41,7 +42,8 @@ SOURCES += \
     studentdetails.cpp \
     subjectui.cpp \
     experiments.cpp \
-    login.cpp
+    login.cpp \
+    stackedwidget.cpp
 
 HEADERS += \
     sumeborrower.h \
@@ -62,7 +64,8 @@ HEADERS += \
     ui_anothersubject.h \
     ui_subjectui.h \
     experiments.h \
-    login.h
+    login.h \
+    stackedwidget.h
 
 FORMS += \
         sumeborrower.ui \

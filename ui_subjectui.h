@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'subjectui.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.0
+** Created by: Qt User Interface Compiler version 5.9.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -33,7 +33,6 @@ public:
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label;
-    QLabel *label_2;
     QTableWidget *tableWidget;
     QHBoxLayout *horizontalLayout;
     QPushButton *addSubject;
@@ -47,7 +46,8 @@ public:
     {
         if (SubjectUI->objectName().isEmpty())
             SubjectUI->setObjectName(QStringLiteral("SubjectUI"));
-        SubjectUI->resize(733, 494);
+        SubjectUI->resize(733, 487);
+        SubjectUI->setMinimumSize(QSize(733, 487));
         gridLayout = new QGridLayout(SubjectUI);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         verticalLayout = new QVBoxLayout();
@@ -65,13 +65,6 @@ public:
         label->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_2->addWidget(label);
-
-        label_2 = new QLabel(SubjectUI);
-        label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setFont(font);
-        label_2->setAlignment(Qt::AlignCenter);
-
-        horizontalLayout_2->addWidget(label_2);
 
 
         verticalLayout->addLayout(horizontalLayout_2);
@@ -136,12 +129,11 @@ public:
     void retranslateUi(QWidget *SubjectUI)
     {
         SubjectUI->setWindowTitle(QApplication::translate("SubjectUI", "Form", Q_NULLPTR));
-        label->setText(QApplication::translate("SubjectUI", "SUBJECT:", Q_NULLPTR));
-        label_2->setText(QString());
-        addSubject->setText(QApplication::translate("SubjectUI", "Add Subject", Q_NULLPTR));
-        editSubject->setText(QApplication::translate("SubjectUI", "Edit Subject", Q_NULLPTR));
-        deleteSubject->setText(QApplication::translate("SubjectUI", "Delete Subject", Q_NULLPTR));
-        Back->setText(QApplication::translate("SubjectUI", "Back", Q_NULLPTR));
+        label->setText(QApplication::translate("SubjectUI", "SUBJECTS", Q_NULLPTR));
+        addSubject->setText(QApplication::translate("SubjectUI", "ADD SUBJECT", Q_NULLPTR));
+        editSubject->setText(QApplication::translate("SubjectUI", "EDIT SUBJECT", Q_NULLPTR));
+        deleteSubject->setText(QApplication::translate("SubjectUI", "DELETE SUBJECT", Q_NULLPTR));
+        Back->setText(QApplication::translate("SubjectUI", "BACK", Q_NULLPTR));
     } // retranslateUi
 
 };

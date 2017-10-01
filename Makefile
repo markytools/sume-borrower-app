@@ -236,8 +236,8 @@ Makefile: SUMEBorrower.pro D:/Qt/Qt5.9.1/5.9.1/mingw53_32/mkspecs/win32-g++/qmak
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/mkspecs/features/lex.prf \
 		SUMEBorrower.pro \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/lib/qtmain.prl \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/lib/Qt5Xlsx.prl \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/lib/Qt5Widgets.prl \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/lib/Qt5Xlsx.prl \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/lib/Qt5Gui.prl \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/lib/Qt5Sql.prl \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/lib/Qt5Core.prl
@@ -417,8 +417,8 @@ D:/Qt/Qt5.9.1/5.9.1/mingw53_32/mkspecs/features/yacc.prf:
 D:/Qt/Qt5.9.1/5.9.1/mingw53_32/mkspecs/features/lex.prf:
 SUMEBorrower.pro:
 D:/Qt/Qt5.9.1/5.9.1/mingw53_32/lib/qtmain.prl:
-D:/Qt/Qt5.9.1/5.9.1/mingw53_32/lib/Qt5Xlsx.prl:
 D:/Qt/Qt5.9.1/5.9.1/mingw53_32/lib/Qt5Widgets.prl:
+D:/Qt/Qt5.9.1/5.9.1/mingw53_32/lib/Qt5Xlsx.prl:
 D:/Qt/Qt5.9.1/5.9.1/mingw53_32/lib/Qt5Gui.prl:
 D:/Qt/Qt5.9.1/5.9.1/mingw53_32/lib/Qt5Sql.prl:
 D:/Qt/Qt5.9.1/5.9.1/mingw53_32/lib/Qt5Core.prl:

@@ -1,7 +1,7 @@
 #ifndef CUSTOMQTUI_H
 #define CUSTOMQTUI_H
 
-#include <QStackedWidget>
+#include "stackedwidget.h"
 #include <QGridLayout>
 #include "laboratorylib.h"
 
@@ -16,7 +16,7 @@ protected:
 
 public:
     CustomQtUI();
-    QStackedWidget *stackWidget;
+    StackedWidget *stackWidget;
     LaboratoryLib *labLib;
 };
 

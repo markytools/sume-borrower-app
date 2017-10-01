@@ -62,13 +62,19 @@ public:
     QHBoxLayout *horizontalLayout_7;
     QLabel *label_9;
     QLineEdit *instructor;
+    QHBoxLayout *horizontalLayout_8;
+    QLabel *label_10;
+    QLineEdit *startTime;
+    QHBoxLayout *horizontalLayout_9;
+    QLabel *label_11;
+    QLineEdit *endTime;
 
     void setupUi(QWidget *Infopopup)
     {
         if (Infopopup->objectName().isEmpty())
             Infopopup->setObjectName(QStringLiteral("Infopopup"));
-        Infopopup->resize(669, 460);
-        Infopopup->setMinimumSize(QSize(0, 0));
+        Infopopup->resize(928, 482);
+        Infopopup->setMinimumSize(QSize(928, 482));
         Infopopup->setMaximumSize(QSize(16777215, 16777215));
         gridLayout = new QGridLayout(Infopopup);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
@@ -160,6 +166,7 @@ public:
 
         ItemsReturned = new QLineEdit(Infopopup);
         ItemsReturned->setObjectName(QStringLiteral("ItemsReturned"));
+        ItemsReturned->setReadOnly(true);
 
         verticalLayout_2->addWidget(ItemsReturned);
 
@@ -238,6 +245,38 @@ public:
 
         verticalLayout->addLayout(horizontalLayout_7);
 
+        horizontalLayout_8 = new QHBoxLayout();
+        horizontalLayout_8->setObjectName(QStringLiteral("horizontalLayout_8"));
+        label_10 = new QLabel(Infopopup);
+        label_10->setObjectName(QStringLiteral("label_10"));
+        label_10->setFont(font);
+
+        horizontalLayout_8->addWidget(label_10);
+
+        startTime = new QLineEdit(Infopopup);
+        startTime->setObjectName(QStringLiteral("startTime"));
+
+        horizontalLayout_8->addWidget(startTime);
+
+
+        verticalLayout->addLayout(horizontalLayout_8);
+
+        horizontalLayout_9 = new QHBoxLayout();
+        horizontalLayout_9->setObjectName(QStringLiteral("horizontalLayout_9"));
+        label_11 = new QLabel(Infopopup);
+        label_11->setObjectName(QStringLiteral("label_11"));
+        label_11->setFont(font);
+
+        horizontalLayout_9->addWidget(label_11);
+
+        endTime = new QLineEdit(Infopopup);
+        endTime->setObjectName(QStringLiteral("endTime"));
+
+        horizontalLayout_9->addWidget(endTime);
+
+
+        verticalLayout->addLayout(horizontalLayout_9);
+
 
         horizontalLayout_4->addLayout(verticalLayout);
 
@@ -266,6 +305,8 @@ public:
         label_5->setText(QApplication::translate("Infopopup", "SUBJECT:", Q_NULLPTR));
         label_4->setText(QApplication::translate("Infopopup", "SECTION:", Q_NULLPTR));
         label_9->setText(QApplication::translate("Infopopup", "INSTRUCTOR:", Q_NULLPTR));
+        label_10->setText(QApplication::translate("Infopopup", "START TIME:", Q_NULLPTR));
+        label_11->setText(QApplication::translate("Infopopup", "END TIME:", Q_NULLPTR));
     } // retranslateUi
 
 };
