@@ -2,6 +2,7 @@
 #define BORROWINGD_H
 
 #include <QWidget>
+#include <QTimer>
 #include <customqtui.h>
 #include "borrowers.h"
 namespace Ui {
