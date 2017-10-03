@@ -17,6 +17,7 @@ INPUT(
 ./release\experiments.o
 ./release\login.o
 ./release\stackedwidget.o
+./release\changepass.o
 ./release\moc_sumeborrower.o
 ./release\moc_borrowers.o
 ./release\moc_borrowingd.o
@@ -30,4 +31,5 @@ INPUT(
 ./release\moc_experiments.o
 ./release\moc_login.o
 ./release\moc_stackedwidget.o
+./release\moc_changepass.o
 );

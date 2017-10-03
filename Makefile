@@ -203,6 +203,8 @@ Makefile: SUMEBorrower.pro C:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/win32-g++/qmake.
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/modules/qt_lib_widgets_private.pri \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/modules/qt_lib_winextras.pri \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/modules/qt_lib_winextras_private.pri \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/modules/qt_lib_xlsx.pri \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/modules/qt_lib_xlsx_private.pri \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/modules/qt_lib_xml.pri \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/modules/qt_lib_xml_private.pri \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/modules/qt_lib_xmlpatterns.pri \
@@ -236,6 +238,7 @@ Makefile: SUMEBorrower.pro C:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/win32-g++/qmake.
 		SUMEBorrower.pro \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/lib/qtmain.prl \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/lib/Qt5Widgets.prl \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/lib/Qt5Xlsx.prl \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/lib/Qt5Gui.prl \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/lib/Qt5Sql.prl \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/lib/Qt5Core.prl
@@ -381,6 +384,8 @@ C:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/modules/qt_lib_widgets.pri:
 C:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/modules/qt_lib_widgets_private.pri:
 C:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/modules/qt_lib_winextras.pri:
 C:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/modules/qt_lib_winextras_private.pri:
+C:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/modules/qt_lib_xlsx.pri:
+C:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/modules/qt_lib_xlsx_private.pri:
 C:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/modules/qt_lib_xml.pri:
 C:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/modules/qt_lib_xml_private.pri:
 C:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/modules/qt_lib_xmlpatterns.pri:
@@ -414,6 +419,7 @@ C:/Qt/Qt5.9.0/5.9/mingw53_32/mkspecs/features/lex.prf:
 SUMEBorrower.pro:
 C:/Qt/Qt5.9.0/5.9/mingw53_32/lib/qtmain.prl:
 C:/Qt/Qt5.9.0/5.9/mingw53_32/lib/Qt5Widgets.prl:
+C:/Qt/Qt5.9.0/5.9/mingw53_32/lib/Qt5Xlsx.prl:
 C:/Qt/Qt5.9.0/5.9/mingw53_32/lib/Qt5Gui.prl:
 C:/Qt/Qt5.9.0/5.9/mingw53_32/lib/Qt5Sql.prl:
 C:/Qt/Qt5.9.0/5.9/mingw53_32/lib/Qt5Core.prl:
