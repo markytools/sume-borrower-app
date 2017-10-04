@@ -77,6 +77,7 @@ public:
         font.setBold(true);
         font.setWeight(75);
         information->setFont(font);
+        information->setAlignment(Qt::AlignCenter);
 
         verticalLayout_4->addWidget(information);
 
@@ -246,7 +247,7 @@ public:
     void retranslateUi(QWidget *Information)
     {
         Information->setWindowTitle(QApplication::translate("Information", "Form", Q_NULLPTR));
-        information->setText(QApplication::translate("Information", "INFORMATION:", Q_NULLPTR));
+        information->setText(QApplication::translate("Information", "EQUIPMENT INFORMATION:", Q_NULLPTR));
         label_10->setText(QApplication::translate("Information", "NAME", Q_NULLPTR));
         label_9->setText(QApplication::translate("Information", "SERIAL", Q_NULLPTR));
         label_8->setText(QApplication::translate("Information", "EQUIP_PROP", Q_NULLPTR));

@@ -34,9 +34,10 @@ public:
 class BorrowedEquipment {
 
 public:
-    BorrowedEquipment(QString equipmentName, int toBorrow);
+    BorrowedEquipment(QString equipmentName, int toBorrow, int returned);
     QString equipmentName;
     int toBorrow;
+    int returned = 0;
 };
 
 class Equipment {
@@ -117,6 +118,9 @@ public:
     void addBorrower(QString name, QString subject, QString section, QString instructor, QDateTime start, QDateTime end,
                      QVector<Student*> *students, QVector<BorrowedEquipment *> *borrowed_equip);
     void deleteBorrower(QString name, QString subject, QString section, QString instructor); //*
+    void setBorrowedEquipmentReturn(QString borrowerName, QString subject, QString section, QString instructor,
+                                    QString equipmentName, int returned);
+    int isBorrowedEquipmentReturned(QString borrowerName, QString subject, QString section, QString instructor, QString equipmentName);
     QVector<BorrowedEquipment *> *getBorrowedEquipments(QString borrowerName, QString subject, QString section, QString instructor);
     QVector<Borrower *> *getBorrowers();
     QVector<Student *> *getStudents(QString borrowerName, QString subject, QString section, QString instructor);
@@ -128,6 +132,9 @@ public:
 
     bool showErrorMessageBox(bool assert, QString title, QString message); //If assert is false, QMessageBox will show up
     bool isErrorMsgBoxVisible();
+
+    void exportBorrowerToExcel(QString name, QString subject, QString section, QDateTime start, QDateTime end,
+                               QVector<Student*> *students, QVector<BorrowedEquipment*> *borrowedEquipments);
 };
 
 #endif // LABORATORYLIB_H

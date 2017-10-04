@@ -379,3 +379,22 @@ void copyFileToDest(string sourceStr, string destStr)
 
     dst << src.rdbuf();
 }
+
+bool isEmptyOrWhiteSpace(string str)
+{
+    if (!str.empty()) return false;
+    if (str.find_first_not_of(' ') != std::string::npos) return false;
+    return true;
+}
+
+string getStringBeforeOrAfter(string str, char c, bool before)
+{
+    std::string::size_type pos = str.find(c);
+    if (pos != std::string::npos) {
+        if (before) return str.substr(0, pos);
+        else return str.substr(pos + 1, str.length());
+    }
+    else {
+        return "";
+    }
+}

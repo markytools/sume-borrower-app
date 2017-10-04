@@ -18,6 +18,8 @@ SubjectUI::SubjectUI(QWidget *parent) :
 
     ui->tableWidget->setSelectionBehavior(QAbstractItemView::SelectRows);
     updateSubjects();
+
+    installEventFilter(this);
 }
 
 SubjectUI::~SubjectUI()
@@ -28,6 +30,14 @@ SubjectUI::~SubjectUI()
 void SubjectUI::on_addSubject_clicked()
 {
     if(!ui->lineEdit->text().isEmpty()){
+        for (int row = 0; row < ui->tableWidget->rowCount(); row++){
+            QString subjectName = ui->tableWidget->item(row, 0)->text();
+            if (ui->lineEdit->text().toUpper() == subjectName.toUpper()) {
+                labLib->showErrorMessageBox(false, "Duplicate Error", "Subject name already exists");
+                return;
+            }
+        }
+
         labLib->addSubject(ui->lineEdit->text().toUpper());
         updateSubjects();
         ui->lineEdit->clear();
@@ -52,6 +62,25 @@ void SubjectUI::updateSubjects()
 
         ui->tableWidget->setItem(ui->tableWidget->rowCount() - 1, 0, subjectItem);
     }
+}
+
+bool SubjectUI::eventFilter(QObject *obj, QEvent *event)
+{
+    if (event->type()==QEvent::KeyPress) {
+        QKeyEvent* key = static_cast<QKeyEvent*>(event);
+        if ((key->key()==Qt::Key_Enter) || (key->key()==Qt::Key_Return)) {
+            if (ui->lineEdit->hasFocus() && !labLib->isErrorMsgBoxVisible()) {
+                on_addSubject_clicked();
+            }
+        }
+        else {
+            return QObject::eventFilter(obj, event);
+        }
+        return true;
+    } else {
+        return QObject::eventFilter(obj, event);
+    }
+    return false;
 }
 
 void SubjectUI::on_deleteSubject_clicked()

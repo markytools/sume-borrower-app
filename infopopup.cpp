@@ -12,6 +12,7 @@ Infopopup::Infopopup(QWidget *parent) :
     ui->instructor->setReadOnly(true);
     ui->startTime->setReadOnly(true);
     ui->endTime->setReadOnly(true);
+    returnedCheckBoxes = new QVector<QCheckBox*>();
 }
 
 Infopopup::~Infopopup()
@@ -47,26 +48,34 @@ Borrower *Infopopup::getBorrower() const
 void Infopopup::display(QString groupName, QString groupSubject, QString groupSection, QString groupInstructor,
                         QString groupStartTime, QString groupEndTime)
 {
+    returnedCheckBoxes->clear();
+
     QTableWidgetItem *equipmentNameHeader = new QTableWidgetItem("EQUIPMENT NAME");
     equipmentNameHeader->setTextAlignment(Qt::AlignCenter);
     equipmentNameHeader->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
     equipmentNameHeader->setFont(QFont("helvetica", 12, QFont::Bold));
-    QTableWidgetItem *quantityHeader = new QTableWidgetItem("QTY BORROWED");
+    QTableWidgetItem *quantityHeader = new QTableWidgetItem("BORROWED");
     quantityHeader->setTextAlignment(Qt::AlignCenter);
     quantityHeader->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
     quantityHeader->setFont(QFont("helvetica", 12, QFont::Bold));
+    QTableWidgetItem *returnedHeader = new QTableWidgetItem("RETURNED");
+    returnedHeader->setTextAlignment(Qt::AlignCenter);
+    returnedHeader->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+    returnedHeader->setFont(QFont("helvetica", 12, QFont::Bold));
     QTableWidgetItem *studentsHeader = new QTableWidgetItem("STUDENTS");
     studentsHeader->setTextAlignment(Qt::AlignCenter);
     studentsHeader->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
     studentsHeader->setFont(QFont("helvetica", 12, QFont::Bold));
 
 
-    ui->borrowedEquipmentTable->setColumnCount(2);
+    ui->borrowedEquipmentTable->setColumnCount(3);
     ui->borrowedEquipmentTable->setHorizontalHeaderItem(0, equipmentNameHeader);
     ui->borrowedEquipmentTable->setHorizontalHeaderItem(1, quantityHeader);
+    ui->borrowedEquipmentTable->setHorizontalHeaderItem(2, returnedHeader);
 
     ui->borrowedEquipmentTable->setColumnWidth(0, 200);
-    ui->borrowedEquipmentTable->setColumnWidth(1, 200);
+    ui->borrowedEquipmentTable->setColumnWidth(1, 120);
+    ui->borrowedEquipmentTable->setColumnWidth(2, 120);
 
     ui->borrowedEquipmentTable->setSelectionBehavior(QAbstractItemView::SelectRows);
 
@@ -75,7 +84,7 @@ void Infopopup::display(QString groupName, QString groupSubject, QString groupSe
     ui->membersTable->setColumnCount(1);
     ui->membersTable->setHorizontalHeaderItem(0, studentsHeader);
 
-    ui->membersTable->setColumnWidth(0, 150);
+    ui->membersTable->setColumnWidth(0, 250);
 
     ui->membersTable->setSelectionBehavior(QAbstractItemView::SelectRows);
 
@@ -84,6 +93,7 @@ void Infopopup::display(QString groupName, QString groupSubject, QString groupSe
     QVector<BorrowedEquipment*> *borrowedEquipments = labLib->getBorrowedEquipments(groupName, groupSubject, groupSection, groupInstructor);
     QVector<Student*> *students = labLib->getStudents(groupName, groupSubject, groupSection, groupInstructor);
 
+    bool allReturned = true;
     for(int row = 0; row < borrowedEquipments->size(); row++)
     {
         BorrowedEquipment *borrowedequipment = borrowedEquipments->at(row);
@@ -100,8 +110,38 @@ void Infopopup::display(QString groupName, QString groupSubject, QString groupSe
         borrowedQuantityItem->setTextAlignment(Qt::AlignCenter);
         borrowedQuantityItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
 
+
+        QCheckBox *returnedCB = new QCheckBox(this);
+        returnedCB->setObjectName("returned" + equipmentName);
+        int returned = labLib->isBorrowedEquipmentReturned(groupName, groupSubject, groupSection, groupInstructor, equipmentName);
+        if (returned) {
+            returnedCB->setChecked(true);
+        }
+        else {
+            returnedCB->setChecked(false);
+            allReturned = false;
+        }
+
+        QSignalMapper *mapper = new QSignalMapper(this);
+        connect(returnedCB, SIGNAL(released()), mapper, SLOT(map()));
+        BorrowedEquipmentData *dateData = new BorrowedEquipmentData(groupName, groupSubject, groupSection, groupInstructor,
+                                                                    equipmentName, returnedCB);
+        mapper->setMapping(returnedCB, dateData);
+        connect(mapper, SIGNAL(mapped(QObject*)), this, SLOT(setReturnedCheckBox(QObject*)));
+
+        QWidget* pWidget = new QWidget();
+        QHBoxLayout* pLayout = new QHBoxLayout(pWidget);
+        pLayout->addWidget(returnedCB);
+        pLayout->setAlignment(Qt::AlignCenter);
+        pLayout->setContentsMargins(0, 0, 0, 0);
+        pWidget->setLayout(pLayout);
+
+        returnedCheckBoxes->push_front(returnedCB);
+
+
         ui->borrowedEquipmentTable->setItem(ui->borrowedEquipmentTable->rowCount() - 1, 0, equipmentNameItem);
         ui->borrowedEquipmentTable->setItem(ui->borrowedEquipmentTable->rowCount() - 1, 1, borrowedQuantityItem);
+        ui->borrowedEquipmentTable->setCellWidget(ui->borrowedEquipmentTable->rowCount() - 1, 2, pWidget);
     }
 
     for(int row = 0; row < students->size(); row++)
@@ -125,7 +165,17 @@ void Infopopup::display(QString groupName, QString groupSubject, QString groupSe
     ui->startTime->setText(groupStartTime);
     ui->endTime->setText(groupEndTime);
 
+    if (allReturned) {
+        ui->itemsReturned->setStyleSheet("font-weight: bold; color: #00e616;");
+        ui->itemsReturned->setText("All items have been returned.");
+    }
+    else {
+        ui->itemsReturned->setStyleSheet("font-weight: bold; color: #ff0000;");
+        ui->itemsReturned->setText("Some of the equipments have not been returned yet!");
+    }
 
+    if (allReturned) ui->Delete->setDisabled(false);
+    else ui->Delete->setDisabled(true);
 }
 
 QVector<BorrowedEquipment *> *Infopopup::getBorrowedequipment() const
@@ -146,7 +196,69 @@ void Infopopup::on_Delete_clicked()
     }
 }
 
+void Infopopup::setReturnedCheckBox(QObject *borrowedEquipmentData)
+{
+    BorrowedEquipmentData *bEquipData = (BorrowedEquipmentData*)(borrowedEquipmentData);
+    if (bEquipData->returned->isChecked()) {
+        labLib->setBorrowedEquipmentReturn(bEquipData->borrowerName, bEquipData->subject, bEquipData->section,
+                                           bEquipData->instructor, bEquipData->equipmentName, 1);
+    }
+    else {
+        labLib->setBorrowedEquipmentReturn(bEquipData->borrowerName, bEquipData->subject, bEquipData->section,
+                                           bEquipData->instructor, bEquipData->equipmentName, 0);
+    }
+
+
+   bool allReturned = allEquipmentsReturned();
+
+   if (allReturned) ui->Delete->setDisabled(false);
+   else ui->Delete->setDisabled(true);
+}
+
+bool Infopopup::allEquipmentsReturned()
+{
+    bool allReturned = true;
+    for (int i = 0; i < returnedCheckBoxes->size(); i++) {
+        if (!returnedCheckBoxes->at(i)->isChecked()) {
+            allReturned = false;
+            break;
+        }
+    }
+
+    if (allReturned) {
+        ui->itemsReturned->setStyleSheet("font-weight: bold; color: #00e616;");
+        ui->itemsReturned->setText("All items have been returned.");
+    }
+    else {
+
+        ui->itemsReturned->setStyleSheet("font-weight: bold; color: #ff0000;");
+        ui->itemsReturned->setText("Some of the equipments have not been returned yet!");
+    }
+
+    return allReturned;
+}
+
 void Infopopup::setInstructor(const QString &value)
 {
     instructor = value;
+}
+
+BorrowedEquipmentData::BorrowedEquipmentData()
+{
+
+}
+
+BorrowedEquipmentData::BorrowedEquipmentData(QString borrowerName, QString subject, QString section, QString instructor, QString equipmentName, QCheckBox *&returned)
+{
+    this->borrowerName = borrowerName;
+    this->subject = subject;
+    this->section = section;
+    this->instructor = instructor;
+    this->equipmentName = equipmentName;
+    this->returned = returned;
+}
+
+void Infopopup::on_exportToExcel_clicked()
+{
+
 }

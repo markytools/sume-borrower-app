@@ -37,11 +37,12 @@ public:
     QVBoxLayout *verticalLayout;
     QPushButton *rightToLeft;
     QPushButton *leftToRight;
-    QSpacerItem *verticalSpacer_2;
     QSpacerItem *verticalSpacer_3;
-    QLabel *label;
     QSpacerItem *horizontalSpacer;
     QSpacerItem *horizontalSpacer_2;
+    QLabel *label;
+    QSpacerItem *verticalSpacer_2;
+    QSpacerItem *horizontalSpacer_3;
     QHBoxLayout *horizontalLayout_3;
     QVBoxLayout *verticalLayout_4;
     QLabel *label_5;
@@ -49,17 +50,17 @@ public:
     QVBoxLayout *verticalLayout_5;
     QLabel *label_6;
     QTableWidget *ExperimentTableWidget;
-    QSpacerItem *horizontalSpacer_3;
     QHBoxLayout *horizontalLayout_2;
     QPushButton *Back;
     QPushButton *Proceed;
+    QSpacerItem *horizontalSpacer_5;
     QSpacerItem *horizontalSpacer_4;
     QPushButton *Back_2;
-    QSpacerItem *horizontalSpacer_5;
     QVBoxLayout *verticalLayout_2;
     QLabel *label_2;
     QTableWidget *listEquipments;
     QLineEdit *searchEdit;
+    QLabel *label_4;
 
     void setupUi(QWidget *Borrowers)
     {
@@ -93,7 +94,7 @@ public:
         verticalLayout_3->addItem(horizontalSpacer_6);
 
 
-        gridLayout->addLayout(verticalLayout_3, 3, 4, 3, 1);
+        gridLayout->addLayout(verticalLayout_3, 4, 4, 3, 1);
 
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
@@ -110,15 +111,19 @@ public:
         verticalLayout->addWidget(leftToRight);
 
 
-        gridLayout->addLayout(verticalLayout, 4, 2, 1, 2);
-
-        verticalSpacer_2 = new QSpacerItem(20, 49, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        gridLayout->addItem(verticalSpacer_2, 3, 2, 1, 2);
+        gridLayout->addLayout(verticalLayout, 5, 2, 1, 2);
 
         verticalSpacer_3 = new QSpacerItem(20, 47, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        gridLayout->addItem(verticalSpacer_3, 5, 2, 1, 2);
+        gridLayout->addItem(verticalSpacer_3, 6, 2, 1, 2);
+
+        horizontalSpacer = new QSpacerItem(237, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout->addItem(horizontalSpacer, 0, 0, 1, 1);
+
+        horizontalSpacer_2 = new QSpacerItem(138, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout->addItem(horizontalSpacer_2, 0, 4, 1, 1);
 
         label = new QLabel(Borrowers);
         label->setObjectName(QStringLiteral("label"));
@@ -132,13 +137,13 @@ public:
 
         gridLayout->addWidget(label, 0, 1, 1, 3);
 
-        horizontalSpacer = new QSpacerItem(237, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        verticalSpacer_2 = new QSpacerItem(20, 49, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        gridLayout->addItem(horizontalSpacer, 0, 0, 1, 1);
+        gridLayout->addItem(verticalSpacer_2, 4, 2, 1, 2);
 
-        horizontalSpacer_2 = new QSpacerItem(138, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        horizontalSpacer_3 = new QSpacerItem(437, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        gridLayout->addItem(horizontalSpacer_2, 0, 4, 1, 1);
+        gridLayout->addItem(horizontalSpacer_3, 3, 0, 1, 2);
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
@@ -179,10 +184,6 @@ public:
 
         gridLayout->addLayout(horizontalLayout_3, 1, 0, 1, 5);
 
-        horizontalSpacer_3 = new QSpacerItem(437, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        gridLayout->addItem(horizontalSpacer_3, 2, 0, 1, 2);
-
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         Back = new QPushButton(Borrowers);
@@ -198,21 +199,21 @@ public:
         horizontalLayout_2->addWidget(Proceed);
 
 
-        gridLayout->addLayout(horizontalLayout_2, 6, 0, 1, 1);
+        gridLayout->addLayout(horizontalLayout_2, 7, 0, 1, 1);
+
+        horizontalSpacer_5 = new QSpacerItem(587, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout->addItem(horizontalSpacer_5, 7, 1, 1, 4);
 
         horizontalSpacer_4 = new QSpacerItem(438, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        gridLayout->addItem(horizontalSpacer_4, 2, 4, 1, 1);
+        gridLayout->addItem(horizontalSpacer_4, 3, 4, 1, 1);
 
         Back_2 = new QPushButton(Borrowers);
         Back_2->setObjectName(QStringLiteral("Back_2"));
         Back_2->setFont(font);
 
-        gridLayout->addWidget(Back_2, 2, 2, 1, 2);
-
-        horizontalSpacer_5 = new QSpacerItem(587, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        gridLayout->addItem(horizontalSpacer_5, 6, 1, 1, 4);
+        gridLayout->addWidget(Back_2, 3, 2, 1, 2);
 
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
@@ -234,7 +235,18 @@ public:
         verticalLayout_2->addWidget(searchEdit);
 
 
-        gridLayout->addLayout(verticalLayout_2, 3, 0, 3, 2);
+        gridLayout->addLayout(verticalLayout_2, 4, 0, 3, 2);
+
+        label_4 = new QLabel(Borrowers);
+        label_4->setObjectName(QStringLiteral("label_4"));
+        QFont font2;
+        font2.setPointSize(9);
+        font2.setBold(false);
+        font2.setWeight(50);
+        label_4->setFont(font2);
+        label_4->setAlignment(Qt::AlignCenter);
+
+        gridLayout->addWidget(label_4, 2, 0, 1, 5);
 
 
         retranslateUi(Borrowers);
@@ -253,9 +265,10 @@ public:
         label_6->setText(QApplication::translate("Borrowers", "EXPERIMENTS", Q_NULLPTR));
         Back->setText(QApplication::translate("Borrowers", "BACK", Q_NULLPTR));
         Proceed->setText(QApplication::translate("Borrowers", "PROCEED", Q_NULLPTR));
-        Back_2->setText(QApplication::translate("Borrowers", "FILTER", Q_NULLPTR));
+        Back_2->setText(QApplication::translate("Borrowers", "ADD FILTER", Q_NULLPTR));
         label_2->setText(QApplication::translate("Borrowers", "LIST OF EQUIPMENTS", Q_NULLPTR));
         searchEdit->setPlaceholderText(QApplication::translate("Borrowers", "Type keyword here to search equipment or leave it blank to show all", Q_NULLPTR));
+        label_4->setText(QApplication::translate("Borrowers", "USE THIS BUTTON TO FILTER OUT THE LIST OF EQUIPMENTS FOR A SPECIFIC EXPERIMENT", Q_NULLPTR));
     } // retranslateUi
 
 };

@@ -16,6 +16,7 @@ string getCurrentTime();
 string substringAtPos(string str, int pos, char delim); //returned string does not include the delim char
 string convertCharToString(char c);
 void removeSubstring(string &str, string substr);
+bool isEmptyOrWhiteSpace(string str);
 bool isContactNumFormat(string str);
 bool isLettersOnly(string str);
 bool isLettersAndNumbersOnly(string str);
@@ -46,6 +47,7 @@ void generateRandStr(char *s, const int len);
 string getCurrentFileDirector();
 string removeLastOccurrenceStr(string s, char c);
 string getStringBetweenStrings(string original, string first, string last); //returns original when no first and last
+string getStringBeforeOrAfter(string str, char c, bool before);
 void launchFileWIthDefaultProg(string filename);
 
 #endif // UTILS_H

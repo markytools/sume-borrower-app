@@ -19,6 +19,9 @@ public:
 
     void updateSubjects();
 
+protected:
+    bool eventFilter(QObject* obj, QEvent* event);
+
 private slots:
     void on_addSubject_clicked();
 

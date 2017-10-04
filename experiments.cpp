@@ -156,6 +156,13 @@ void Experiments::updateExperiments()
 void Experiments::on_addExperiment_clicked()
 {
     if(!ui->lineEdit->text().isEmpty()){
+        for (int row = 0; row < ui->experimentsTable->rowCount(); row++){
+            QString experimentName = ui->experimentsTable->item(row, 0)->text();
+            if (ui->lineEdit->text().toUpper() == experimentName.toUpper()) {
+                labLib->showErrorMessageBox(false, "Duplicate Error", "Experiment name already exists");
+                return;
+            }
+        }
         labLib->addExperiment(subjectName, ui->lineEdit->text().toUpper());
         updateExperiments();
         ui->lineEdit->text().clear();

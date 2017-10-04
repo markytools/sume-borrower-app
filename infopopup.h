@@ -5,9 +5,24 @@
 #include <QMessageBox>
 #include <customqtui.h>
 #include "listborrowers.h"
+#include <QCheckBox>
+#include <QSignalMapper>
 namespace Ui {
 class Infopopup;
 }
+
+class BorrowedEquipmentData : public QObject {
+
+public:
+    QString borrowerName;
+    QString subject;
+    QString section;
+    QString instructor;
+    QString equipmentName;
+    QCheckBox *returned;
+    BorrowedEquipmentData();
+    BorrowedEquipmentData(QString borrowerName, QString subject, QString section, QString instructor, QString equipmentName, QCheckBox *&returned);
+};
 
 class Infopopup : public QWidget, public CustomQtUI
 {
@@ -36,14 +51,22 @@ private slots:
 
     void on_Delete_clicked();
 
+    void setReturnedCheckBox(QObject *borrowedEquipmentData);
+
+    void on_exportToExcel_clicked();
+
 private:
     Ui::Infopopup *ui;
     Borrower *borrower;
     QVector<BorrowedEquipment*> *borrowedequipment;
+    QVector<QCheckBox*> *returnedCheckBoxes;
     QString groupName;
     QString subject;
     QString section;
     QString instructor;
+    QString currentSelectedEquipmentName;
+
+    bool allEquipmentsReturned();
 };
 
 #endif // INFOPOPUP_H

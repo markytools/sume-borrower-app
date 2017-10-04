@@ -6,6 +6,10 @@ Information::Information(QWidget *parent) :
     ui(new Ui::Information)
 {
     ui->setupUi(this);
+
+    QRegExp re("[^@]*");
+    QRegExpValidator *validator = new QRegExpValidator(re, this);
+    ui->nameLine->setValidator(validator);
     ui->quantityLine->setValidator(new QIntValidator);
 }
 

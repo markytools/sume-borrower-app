@@ -92,7 +92,7 @@ public:
 
         horizontalLayout->addWidget(lineEdit);
 
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Preferred, QSizePolicy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer);
 
@@ -131,6 +131,7 @@ public:
         SubjectUI->setWindowTitle(QApplication::translate("SubjectUI", "Form", Q_NULLPTR));
         label->setText(QApplication::translate("SubjectUI", "SUBJECTS", Q_NULLPTR));
         addSubject->setText(QApplication::translate("SubjectUI", "ADD SUBJECT", Q_NULLPTR));
+        lineEdit->setPlaceholderText(QApplication::translate("SubjectUI", "Press ENTER to add subject", Q_NULLPTR));
         editSubject->setText(QApplication::translate("SubjectUI", "EDIT SUBJECT", Q_NULLPTR));
         deleteSubject->setText(QApplication::translate("SubjectUI", "DELETE SUBJECT", Q_NULLPTR));
         Back->setText(QApplication::translate("SubjectUI", "BACK", Q_NULLPTR));

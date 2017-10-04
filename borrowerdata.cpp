@@ -66,7 +66,7 @@ void BorrowerData::setEquipment(QVector<Equipment *> *value)
     borrowedequipment->clear();
     equipments = value;
     for(int i = 0; i < equipments->size(); i++){
-        BorrowedEquipment *blankborrowedequipment = new BorrowedEquipment(equipments->at(i)->name, 0);
+        BorrowedEquipment *blankborrowedequipment = new BorrowedEquipment(equipments->at(i)->name, 0, 0);
         borrowedequipment->push_front(blankborrowedequipment);
     }
 }
