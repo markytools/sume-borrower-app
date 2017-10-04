@@ -46,8 +46,8 @@ public:
     QTableWidget *membersTable;
     QHBoxLayout *horizontalLayout_4;
     QVBoxLayout *verticalLayout_2;
-    QPushButton *Back_2;
-    QLineEdit *ItemsReturned;
+    QPushButton *exportToExcel;
+    QLineEdit *itemsReturned;
     QPushButton *Delete;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
@@ -73,8 +73,8 @@ public:
     {
         if (Infopopup->objectName().isEmpty())
             Infopopup->setObjectName(QStringLiteral("Infopopup"));
-        Infopopup->resize(928, 482);
-        Infopopup->setMinimumSize(QSize(928, 482));
+        Infopopup->resize(950, 482);
+        Infopopup->setMinimumSize(QSize(950, 482));
         Infopopup->setMaximumSize(QSize(16777215, 16777215));
         gridLayout = new QGridLayout(Infopopup);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
@@ -158,17 +158,18 @@ public:
         horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        Back_2 = new QPushButton(Infopopup);
-        Back_2->setObjectName(QStringLiteral("Back_2"));
-        Back_2->setFont(font);
+        exportToExcel = new QPushButton(Infopopup);
+        exportToExcel->setObjectName(QStringLiteral("exportToExcel"));
+        exportToExcel->setFont(font);
 
-        verticalLayout_2->addWidget(Back_2);
+        verticalLayout_2->addWidget(exportToExcel);
 
-        ItemsReturned = new QLineEdit(Infopopup);
-        ItemsReturned->setObjectName(QStringLiteral("ItemsReturned"));
-        ItemsReturned->setReadOnly(true);
+        itemsReturned = new QLineEdit(Infopopup);
+        itemsReturned->setObjectName(QStringLiteral("itemsReturned"));
+        itemsReturned->setAlignment(Qt::AlignCenter);
+        itemsReturned->setReadOnly(true);
 
-        verticalLayout_2->addWidget(ItemsReturned);
+        verticalLayout_2->addWidget(itemsReturned);
 
         Delete = new QPushButton(Infopopup);
         Delete->setObjectName(QStringLiteral("Delete"));
@@ -299,7 +300,7 @@ public:
         Back->setText(QApplication::translate("Infopopup", "BACK", Q_NULLPTR));
         label_7->setText(QApplication::translate("Infopopup", "EQUIPMENTS:", Q_NULLPTR));
         label_8->setText(QApplication::translate("Infopopup", "MEMBERS:", Q_NULLPTR));
-        Back_2->setText(QApplication::translate("Infopopup", "EXPORT TO EXCEL", Q_NULLPTR));
+        exportToExcel->setText(QApplication::translate("Infopopup", "EXPORT TO EXCEL", Q_NULLPTR));
         Delete->setText(QApplication::translate("Infopopup", "DELETE BORROWER", Q_NULLPTR));
         label_6->setText(QApplication::translate("Infopopup", "GROUPNAME:", Q_NULLPTR));
         label_5->setText(QApplication::translate("Infopopup", "SUBJECT:", Q_NULLPTR));

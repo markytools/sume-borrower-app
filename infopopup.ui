@@ -6,13 +6,13 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>928</width>
+    <width>950</width>
     <height>482</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>928</width>
+    <width>950</width>
     <height>482</height>
    </size>
   </property>
@@ -163,7 +163,7 @@
        <item>
         <layout class="QVBoxLayout" name="verticalLayout_2">
          <item>
-          <widget class="QPushButton" name="Back_2">
+          <widget class="QPushButton" name="exportToExcel">
            <property name="font">
             <font>
              <family>Segoe UI Black</family>
@@ -178,7 +178,10 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="ItemsReturned">
+          <widget class="QLineEdit" name="itemsReturned">
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
            <property name="readOnly">
             <bool>true</bool>
            </property>

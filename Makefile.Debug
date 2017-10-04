@@ -569,13 +569,16 @@ debug/moc_sumeborrower.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QMa
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWidget \
 		customqtui.h \
 		stackedwidget.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
 		confirmations.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QTableWidget \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qtablewidget.h \
@@ -713,13 +716,21 @@ debug/moc_borrowers.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWidge
 		customqtui.h \
 		stackedwidget.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/QList \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
 		laboratorylib.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/QSqlDatabase \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqldatabase.h \
@@ -732,7 +743,6 @@ debug/moc_borrowers.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWidge
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqlquery.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVariant \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVector \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDateTime \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdatetime.h \
 		utils.h \
@@ -749,7 +759,6 @@ debug/moc_borrowers.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWidge
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QtCoreDepends \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractanimation.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstracteventdispatcher.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractitemmodel.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractnativeeventfilter.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractproxymodel.h \
@@ -766,7 +775,6 @@ debug/moc_borrowers.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWidge
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcollator.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineoption.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineparser.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcryptographichash.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdeadlinetimer.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qelapsedtimer.h \
@@ -885,8 +893,6 @@ debug/moc_borrowers.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWidge
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericmatrix.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericpluginfactory.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengine.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengineplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qimageiohandler.h \
@@ -1116,13 +1122,21 @@ debug/moc_borrowingd.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWidg
 		customqtui.h \
 		stackedwidget.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/QList \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
 		laboratorylib.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/QSqlDatabase \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqldatabase.h \
@@ -1135,7 +1149,6 @@ debug/moc_borrowingd.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWidg
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqlquery.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVariant \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVector \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDateTime \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdatetime.h \
 		utils.h \
@@ -1152,7 +1165,6 @@ debug/moc_borrowingd.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWidg
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QtCoreDepends \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractanimation.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstracteventdispatcher.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractitemmodel.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractnativeeventfilter.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractproxymodel.h \
@@ -1169,7 +1181,6 @@ debug/moc_borrowingd.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWidg
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcollator.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineoption.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineparser.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcryptographichash.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdeadlinetimer.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qelapsedtimer.h \
@@ -1288,8 +1299,6 @@ debug/moc_borrowingd.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWidg
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericmatrix.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericpluginfactory.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengine.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengineplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qimageiohandler.h \
@@ -1543,13 +1552,21 @@ debug/moc_confirmations.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QW
 		customqtui.h \
 		stackedwidget.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/QList \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
 		laboratorylib.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/QSqlDatabase \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqldatabase.h \
@@ -1562,7 +1579,6 @@ debug/moc_confirmations.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QW
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqlquery.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVariant \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVector \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDateTime \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdatetime.h \
 		utils.h \
@@ -1579,7 +1595,6 @@ debug/moc_confirmations.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QW
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QtCoreDepends \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractanimation.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstracteventdispatcher.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractnativeeventfilter.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractproxymodel.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractstate.h \
@@ -1595,7 +1610,6 @@ debug/moc_confirmations.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QW
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcollator.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineoption.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineparser.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcryptographichash.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdeadlinetimer.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qelapsedtimer.h \
@@ -1711,8 +1725,6 @@ debug/moc_confirmations.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QW
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericmatrix.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericpluginfactory.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengine.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengineplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qimageiohandler.h \
@@ -1928,13 +1940,21 @@ debug/moc_listborrowers.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QW
 		customqtui.h \
 		stackedwidget.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/QList \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
 		laboratorylib.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/QSqlDatabase \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqldatabase.h \
@@ -1947,7 +1967,6 @@ debug/moc_listborrowers.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QW
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqlquery.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVariant \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVector \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDateTime \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdatetime.h \
 		utils.h \
@@ -1964,7 +1983,6 @@ debug/moc_listborrowers.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QW
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QtCoreDepends \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractanimation.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstracteventdispatcher.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractitemmodel.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractnativeeventfilter.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractproxymodel.h \
@@ -1981,7 +1999,6 @@ debug/moc_listborrowers.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QW
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcollator.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineoption.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineparser.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcryptographichash.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdeadlinetimer.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qelapsedtimer.h \
@@ -2100,8 +2117,6 @@ debug/moc_listborrowers.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QW
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericmatrix.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericpluginfactory.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengine.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengineplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qimageiohandler.h \
@@ -2337,13 +2352,21 @@ debug/moc_listequipments.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/Q
 		customqtui.h \
 		stackedwidget.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/QList \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
 		laboratorylib.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/QSqlDatabase \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqldatabase.h \
@@ -2356,7 +2379,6 @@ debug/moc_listequipments.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/Q
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqlquery.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVariant \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVector \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDateTime \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdatetime.h \
 		utils.h \
@@ -2373,7 +2395,6 @@ debug/moc_listequipments.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/Q
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QtCoreDepends \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractanimation.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstracteventdispatcher.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractitemmodel.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractnativeeventfilter.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractproxymodel.h \
@@ -2390,7 +2411,6 @@ debug/moc_listequipments.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/Q
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcollator.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineoption.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineparser.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcryptographichash.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdeadlinetimer.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qelapsedtimer.h \
@@ -2509,8 +2529,6 @@ debug/moc_listequipments.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/Q
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericmatrix.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericpluginfactory.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengine.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengineplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qimageiohandler.h \
@@ -2719,13 +2737,21 @@ debug/moc_homedisplay.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWid
 		customqtui.h \
 		stackedwidget.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/QList \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
 		laboratorylib.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/QSqlDatabase \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqldatabase.h \
@@ -2738,7 +2764,6 @@ debug/moc_homedisplay.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWid
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqlquery.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVariant \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVector \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDateTime \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdatetime.h \
 		utils.h \
@@ -2755,7 +2780,6 @@ debug/moc_homedisplay.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWid
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QtCoreDepends \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractanimation.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstracteventdispatcher.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractitemmodel.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractnativeeventfilter.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractproxymodel.h \
@@ -2772,7 +2796,6 @@ debug/moc_homedisplay.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWid
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcollator.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineoption.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineparser.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcryptographichash.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdeadlinetimer.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qelapsedtimer.h \
@@ -2891,8 +2914,6 @@ debug/moc_homedisplay.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWid
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericmatrix.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericpluginfactory.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengine.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengineplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qimageiohandler.h \
@@ -3102,13 +3123,21 @@ debug/moc_information.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWid
 		customqtui.h \
 		stackedwidget.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/QList \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
 		laboratorylib.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/QSqlDatabase \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqldatabase.h \
@@ -3121,7 +3150,6 @@ debug/moc_information.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWid
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqlquery.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVariant \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVector \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDateTime \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdatetime.h \
 		utils.h \
@@ -3138,7 +3166,6 @@ debug/moc_information.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWid
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QtCoreDepends \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractanimation.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstracteventdispatcher.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractitemmodel.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractnativeeventfilter.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractproxymodel.h \
@@ -3155,7 +3182,6 @@ debug/moc_information.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWid
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcollator.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineoption.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineparser.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcryptographichash.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdeadlinetimer.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qelapsedtimer.h \
@@ -3274,8 +3300,6 @@ debug/moc_information.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWid
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericmatrix.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericpluginfactory.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengine.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengineplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qimageiohandler.h \
@@ -3490,13 +3514,21 @@ debug/moc_infopopup.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWidge
 		customqtui.h \
 		stackedwidget.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/QList \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
 		laboratorylib.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/QSqlDatabase \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqldatabase.h \
@@ -3509,7 +3541,6 @@ debug/moc_infopopup.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWidge
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqlquery.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVariant \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVector \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDateTime \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdatetime.h \
 		utils.h \
@@ -3526,7 +3557,6 @@ debug/moc_infopopup.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWidge
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QtCoreDepends \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractanimation.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstracteventdispatcher.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractitemmodel.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractnativeeventfilter.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractproxymodel.h \
@@ -3543,7 +3573,6 @@ debug/moc_infopopup.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWidge
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcollator.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineoption.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineparser.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcryptographichash.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdeadlinetimer.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qelapsedtimer.h \
@@ -3662,8 +3691,6 @@ debug/moc_infopopup.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWidge
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericmatrix.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericpluginfactory.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengine.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengineplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qimageiohandler.h \
@@ -3896,13 +3923,21 @@ debug/moc_subjectui.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWidge
 		customqtui.h \
 		stackedwidget.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/QList \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
 		laboratorylib.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/QSqlDatabase \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqldatabase.h \
@@ -3915,7 +3950,6 @@ debug/moc_subjectui.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWidge
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqlquery.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVariant \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVector \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDateTime \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdatetime.h \
 		utils.h \
@@ -3932,7 +3966,6 @@ debug/moc_subjectui.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWidge
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QtCoreDepends \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractanimation.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstracteventdispatcher.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractitemmodel.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractnativeeventfilter.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractproxymodel.h \
@@ -3949,7 +3982,6 @@ debug/moc_subjectui.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWidge
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcollator.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineoption.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineparser.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcryptographichash.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdeadlinetimer.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qelapsedtimer.h \
@@ -4068,8 +4100,6 @@ debug/moc_subjectui.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWidge
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericmatrix.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericpluginfactory.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengine.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengineplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qimageiohandler.h \
@@ -4277,13 +4307,21 @@ debug/moc_experiments.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWid
 		customqtui.h \
 		stackedwidget.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/QList \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
 		laboratorylib.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/QSqlDatabase \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqldatabase.h \
@@ -4296,7 +4334,6 @@ debug/moc_experiments.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWid
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqlquery.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVariant \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVector \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDateTime \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdatetime.h \
 		utils.h \
@@ -4313,7 +4350,6 @@ debug/moc_experiments.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWid
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QtCoreDepends \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractanimation.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstracteventdispatcher.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractitemmodel.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractnativeeventfilter.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractproxymodel.h \
@@ -4330,7 +4366,6 @@ debug/moc_experiments.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWid
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcollator.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineoption.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineparser.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcryptographichash.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdeadlinetimer.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qelapsedtimer.h \
@@ -4449,8 +4484,6 @@ debug/moc_experiments.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWid
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericmatrix.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericpluginfactory.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengine.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengineplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qimageiohandler.h \
@@ -4763,8 +4796,20 @@ debug/moc_stackedwidget.cpp: D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/QList 
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qfontinfo.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qsizepolicy.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qcursor.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
 		stackedwidget.h \
 		debug/moc_predefs.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/bin/moc.exe
@@ -5211,13 +5256,16 @@ debug/main.o: main.cpp sumeborrower.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWidget \
 		customqtui.h \
 		stackedwidget.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
 		confirmations.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QTableWidget \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qtablewidget.h \
@@ -5243,9 +5291,7 @@ debug/main.o: main.cpp sumeborrower.h \
 		information.h \
 		homedisplay.h \
 		subjectui.h \
-		experiments.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h
+		experiments.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\main.o main.cpp
 
 debug/sumeborrower.o: sumeborrower.cpp sumeborrower.h \
@@ -5624,13 +5670,16 @@ debug/sumeborrower.o: sumeborrower.cpp sumeborrower.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QWidget \
 		customqtui.h \
 		stackedwidget.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
 		confirmations.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QTableWidget \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qtablewidget.h \
@@ -5661,8 +5710,6 @@ debug/sumeborrower.o: sumeborrower.cpp sumeborrower.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QAction \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qaction.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qactiongroup.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QButtonGroup \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qbuttongroup.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QHeaderView \
@@ -5779,13 +5826,21 @@ debug/customqtui.o: customqtui.cpp customqtui.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qfontinfo.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qsizepolicy.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qcursor.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
 		laboratorylib.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/QSqlDatabase \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqldatabase.h \
@@ -5798,7 +5853,6 @@ debug/customqtui.o: customqtui.cpp customqtui.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqlquery.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVariant \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVector \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDateTime \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdatetime.h \
 		utils.h \
@@ -5815,7 +5869,6 @@ debug/customqtui.o: customqtui.cpp customqtui.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QtCoreDepends \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractanimation.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstracteventdispatcher.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractitemmodel.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractnativeeventfilter.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractproxymodel.h \
@@ -5832,7 +5885,6 @@ debug/customqtui.o: customqtui.cpp customqtui.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcollator.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineoption.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineparser.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcryptographichash.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdeadlinetimer.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qelapsedtimer.h \
@@ -5951,8 +6003,6 @@ debug/customqtui.o: customqtui.cpp customqtui.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericmatrix.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericpluginfactory.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengine.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengineplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qimageiohandler.h \
@@ -6163,13 +6213,21 @@ debug/borrowers.o: borrowers.cpp borrowers.h \
 		customqtui.h \
 		stackedwidget.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/QList \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
 		laboratorylib.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/QSqlDatabase \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqldatabase.h \
@@ -6182,7 +6240,6 @@ debug/borrowers.o: borrowers.cpp borrowers.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqlquery.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVariant \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVector \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDateTime \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdatetime.h \
 		utils.h \
@@ -6199,7 +6256,6 @@ debug/borrowers.o: borrowers.cpp borrowers.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QtCoreDepends \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractanimation.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstracteventdispatcher.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractitemmodel.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractnativeeventfilter.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractproxymodel.h \
@@ -6216,7 +6272,6 @@ debug/borrowers.o: borrowers.cpp borrowers.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcollator.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineoption.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineparser.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcryptographichash.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdeadlinetimer.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qelapsedtimer.h \
@@ -6335,8 +6390,6 @@ debug/borrowers.o: borrowers.cpp borrowers.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericmatrix.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericpluginfactory.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengine.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengineplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qimageiohandler.h \
@@ -6461,8 +6514,6 @@ debug/borrowers.o: borrowers.cpp borrowers.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QAction \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qaction.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qactiongroup.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QButtonGroup \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qbuttongroup.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QHBoxLayout \
@@ -6475,8 +6526,7 @@ debug/borrowers.o: borrowers.cpp borrowers.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QPushButton \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qpushbutton.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qabstractbutton.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QSpacerItem \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QSpacerItem
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\borrowers.o borrowers.cpp
 
 debug/borrowingd.o: borrowingd.cpp borrowingd.h \
@@ -6583,13 +6633,21 @@ debug/borrowingd.o: borrowingd.cpp borrowingd.h \
 		customqtui.h \
 		stackedwidget.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/QList \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
 		laboratorylib.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/QSqlDatabase \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqldatabase.h \
@@ -6602,7 +6660,6 @@ debug/borrowingd.o: borrowingd.cpp borrowingd.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqlquery.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVariant \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVector \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDateTime \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdatetime.h \
 		utils.h \
@@ -6619,7 +6676,6 @@ debug/borrowingd.o: borrowingd.cpp borrowingd.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QtCoreDepends \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractanimation.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstracteventdispatcher.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractitemmodel.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractnativeeventfilter.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractproxymodel.h \
@@ -6636,7 +6692,6 @@ debug/borrowingd.o: borrowingd.cpp borrowingd.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcollator.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineoption.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineparser.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcryptographichash.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdeadlinetimer.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qelapsedtimer.h \
@@ -6755,8 +6810,6 @@ debug/borrowingd.o: borrowingd.cpp borrowingd.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericmatrix.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericpluginfactory.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengine.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengineplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qimageiohandler.h \
@@ -6884,8 +6937,6 @@ debug/borrowingd.o: borrowingd.cpp borrowingd.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QAction \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qaction.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qactiongroup.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QButtonGroup \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qbuttongroup.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDateTimeEdit \
@@ -6903,8 +6954,7 @@ debug/borrowingd.o: borrowingd.cpp borrowingd.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QPushButton \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qpushbutton.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qabstractbutton.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QSpacerItem \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QSpacerItem
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\borrowingd.o borrowingd.cpp
 
 debug/confirmations.o: confirmations.cpp confirmations.h \
@@ -7032,13 +7082,21 @@ debug/confirmations.o: confirmations.cpp confirmations.h \
 		customqtui.h \
 		stackedwidget.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/QList \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
 		laboratorylib.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/QSqlDatabase \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqldatabase.h \
@@ -7051,7 +7109,6 @@ debug/confirmations.o: confirmations.cpp confirmations.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqlquery.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVariant \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVector \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDateTime \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdatetime.h \
 		utils.h \
@@ -7068,7 +7125,6 @@ debug/confirmations.o: confirmations.cpp confirmations.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QtCoreDepends \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractanimation.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstracteventdispatcher.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractnativeeventfilter.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractproxymodel.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractstate.h \
@@ -7084,7 +7140,6 @@ debug/confirmations.o: confirmations.cpp confirmations.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcollator.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineoption.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineparser.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcryptographichash.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdeadlinetimer.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qelapsedtimer.h \
@@ -7200,8 +7255,6 @@ debug/confirmations.o: confirmations.cpp confirmations.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericmatrix.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericpluginfactory.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengine.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengineplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qimageiohandler.h \
@@ -7312,8 +7365,6 @@ debug/confirmations.o: confirmations.cpp confirmations.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QAction \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qaction.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qactiongroup.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QButtonGroup \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qbuttongroup.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QHeaderView \
@@ -7429,13 +7480,21 @@ debug/listborrowers.o: listborrowers.cpp listborrowers.h \
 		customqtui.h \
 		stackedwidget.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/QList \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
 		laboratorylib.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/QSqlDatabase \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqldatabase.h \
@@ -7448,7 +7507,6 @@ debug/listborrowers.o: listborrowers.cpp listborrowers.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqlquery.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVariant \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVector \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDateTime \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdatetime.h \
 		utils.h \
@@ -7465,7 +7523,6 @@ debug/listborrowers.o: listborrowers.cpp listborrowers.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QtCoreDepends \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractanimation.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstracteventdispatcher.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractitemmodel.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractnativeeventfilter.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractproxymodel.h \
@@ -7482,7 +7539,6 @@ debug/listborrowers.o: listborrowers.cpp listborrowers.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcollator.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineoption.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineparser.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcryptographichash.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdeadlinetimer.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qelapsedtimer.h \
@@ -7601,8 +7657,6 @@ debug/listborrowers.o: listborrowers.cpp listborrowers.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericmatrix.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericpluginfactory.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengine.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengineplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qimageiohandler.h \
@@ -7730,8 +7784,6 @@ debug/listborrowers.o: listborrowers.cpp listborrowers.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QAction \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qaction.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qactiongroup.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QButtonGroup \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qbuttongroup.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QHBoxLayout \
@@ -7851,13 +7903,21 @@ debug/listequipments.o: listequipments.cpp listequipments.h \
 		customqtui.h \
 		stackedwidget.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/QList \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
 		laboratorylib.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/QSqlDatabase \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqldatabase.h \
@@ -7870,7 +7930,6 @@ debug/listequipments.o: listequipments.cpp listequipments.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqlquery.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVariant \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVector \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDateTime \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdatetime.h \
 		utils.h \
@@ -7887,7 +7946,6 @@ debug/listequipments.o: listequipments.cpp listequipments.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QtCoreDepends \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractanimation.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstracteventdispatcher.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractitemmodel.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractnativeeventfilter.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractproxymodel.h \
@@ -7904,7 +7962,6 @@ debug/listequipments.o: listequipments.cpp listequipments.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcollator.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineoption.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineparser.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcryptographichash.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdeadlinetimer.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qelapsedtimer.h \
@@ -8023,8 +8080,6 @@ debug/listequipments.o: listequipments.cpp listequipments.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericmatrix.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericpluginfactory.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengine.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengineplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qimageiohandler.h \
@@ -8128,8 +8183,6 @@ debug/listequipments.o: listequipments.cpp listequipments.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QAction \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qaction.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qactiongroup.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QButtonGroup \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qbuttongroup.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QHBoxLayout \
@@ -8311,13 +8364,21 @@ debug/homedisplay.o: homedisplay.cpp homedisplay.h \
 		customqtui.h \
 		stackedwidget.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/QList \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
 		laboratorylib.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/QSqlDatabase \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqldatabase.h \
@@ -8330,7 +8391,6 @@ debug/homedisplay.o: homedisplay.cpp homedisplay.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqlquery.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVariant \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVector \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDateTime \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdatetime.h \
 		utils.h \
@@ -8347,7 +8407,6 @@ debug/homedisplay.o: homedisplay.cpp homedisplay.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QtCoreDepends \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractanimation.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstracteventdispatcher.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractitemmodel.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractnativeeventfilter.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractproxymodel.h \
@@ -8364,7 +8423,6 @@ debug/homedisplay.o: homedisplay.cpp homedisplay.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcollator.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineoption.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineparser.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcryptographichash.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdeadlinetimer.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qelapsedtimer.h \
@@ -8483,8 +8541,6 @@ debug/homedisplay.o: homedisplay.cpp homedisplay.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericmatrix.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericpluginfactory.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengine.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengineplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qimageiohandler.h \
@@ -8590,8 +8646,6 @@ debug/homedisplay.o: homedisplay.cpp homedisplay.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QAction \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qaction.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qactiongroup.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QButtonGroup \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qbuttongroup.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QHeaderView \
@@ -8719,13 +8773,21 @@ debug/information.o: information.cpp information.h \
 		customqtui.h \
 		stackedwidget.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/QList \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
 		laboratorylib.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/QSqlDatabase \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqldatabase.h \
@@ -8738,7 +8800,6 @@ debug/information.o: information.cpp information.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqlquery.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVariant \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVector \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDateTime \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdatetime.h \
 		utils.h \
@@ -8755,7 +8816,6 @@ debug/information.o: information.cpp information.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QtCoreDepends \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractanimation.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstracteventdispatcher.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractitemmodel.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractnativeeventfilter.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractproxymodel.h \
@@ -8772,7 +8832,6 @@ debug/information.o: information.cpp information.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcollator.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineoption.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineparser.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcryptographichash.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdeadlinetimer.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qelapsedtimer.h \
@@ -8891,8 +8950,6 @@ debug/information.o: information.cpp information.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericmatrix.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericpluginfactory.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengine.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengineplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qimageiohandler.h \
@@ -8999,8 +9056,6 @@ debug/information.o: information.cpp information.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QAction \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qaction.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qactiongroup.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QButtonGroup \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qbuttongroup.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QHBoxLayout \
@@ -9024,8 +9079,7 @@ debug/information.o: information.cpp information.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlineedit.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QPushButton \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qpushbutton.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qabstractbutton.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qabstractbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\information.o information.cpp
 
 debug/infopopup.o: infopopup.cpp infopopup.h \
@@ -9135,13 +9189,21 @@ debug/infopopup.o: infopopup.cpp infopopup.h \
 		customqtui.h \
 		stackedwidget.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/QList \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
 		laboratorylib.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/QSqlDatabase \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqldatabase.h \
@@ -9154,7 +9216,6 @@ debug/infopopup.o: infopopup.cpp infopopup.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqlquery.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVariant \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVector \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDateTime \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdatetime.h \
 		utils.h \
@@ -9171,7 +9232,6 @@ debug/infopopup.o: infopopup.cpp infopopup.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QtCoreDepends \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractanimation.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstracteventdispatcher.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractitemmodel.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractnativeeventfilter.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractproxymodel.h \
@@ -9188,7 +9248,6 @@ debug/infopopup.o: infopopup.cpp infopopup.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcollator.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineoption.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineparser.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcryptographichash.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdeadlinetimer.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qelapsedtimer.h \
@@ -9307,8 +9366,6 @@ debug/infopopup.o: infopopup.cpp infopopup.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericmatrix.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericpluginfactory.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengine.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengineplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qimageiohandler.h \
@@ -9433,8 +9490,6 @@ debug/infopopup.o: infopopup.cpp infopopup.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QAction \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qaction.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qactiongroup.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QButtonGroup \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qbuttongroup.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QHBoxLayout \
@@ -9447,8 +9502,7 @@ debug/infopopup.o: infopopup.cpp infopopup.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QPushButton \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qpushbutton.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qabstractbutton.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QSpacerItem \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QSpacerItem
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\infopopup.o infopopup.cpp
 
 debug/borrowerdata.o: borrowerdata.cpp borrowerdata.h \
@@ -10034,13 +10088,21 @@ debug/subjectui.o: subjectui.cpp subjectui.h \
 		customqtui.h \
 		stackedwidget.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/QList \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
 		laboratorylib.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/QSqlDatabase \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqldatabase.h \
@@ -10053,7 +10115,6 @@ debug/subjectui.o: subjectui.cpp subjectui.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqlquery.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVariant \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVector \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDateTime \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdatetime.h \
 		utils.h \
@@ -10070,7 +10131,6 @@ debug/subjectui.o: subjectui.cpp subjectui.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QtCoreDepends \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractanimation.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstracteventdispatcher.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractitemmodel.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractnativeeventfilter.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractproxymodel.h \
@@ -10087,7 +10147,6 @@ debug/subjectui.o: subjectui.cpp subjectui.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcollator.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineoption.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineparser.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcryptographichash.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdeadlinetimer.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qelapsedtimer.h \
@@ -10206,8 +10265,6 @@ debug/subjectui.o: subjectui.cpp subjectui.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericmatrix.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericpluginfactory.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengine.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengineplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qimageiohandler.h \
@@ -10311,8 +10368,6 @@ debug/subjectui.o: subjectui.cpp subjectui.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QAction \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qaction.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qactiongroup.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QButtonGroup \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qbuttongroup.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QHBoxLayout \
@@ -10340,8 +10395,7 @@ debug/subjectui.o: subjectui.cpp subjectui.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QSpacerItem \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QTableWidget \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qtablewidget.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qtableview.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qtableview.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\subjectui.o subjectui.cpp
 
 debug/experiments.o: experiments.cpp experiments.h \
@@ -10448,13 +10502,21 @@ debug/experiments.o: experiments.cpp experiments.h \
 		customqtui.h \
 		stackedwidget.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/QList \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QGridLayout \
 		laboratorylib.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/QSqlDatabase \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqldatabase.h \
@@ -10467,7 +10529,6 @@ debug/experiments.o: experiments.cpp experiments.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtSql/qsqlquery.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVariant \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QVector \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDateTime \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdatetime.h \
 		utils.h \
@@ -10484,7 +10545,6 @@ debug/experiments.o: experiments.cpp experiments.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QtCoreDepends \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractanimation.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstracteventdispatcher.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractitemmodel.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractnativeeventfilter.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qabstractproxymodel.h \
@@ -10501,7 +10561,6 @@ debug/experiments.o: experiments.cpp experiments.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcollator.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineoption.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcommandlineparser.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcryptographichash.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qdeadlinetimer.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qelapsedtimer.h \
@@ -10620,8 +10679,6 @@ debug/experiments.o: experiments.cpp experiments.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericmatrix.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qgenericpluginfactory.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengine.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qiconengineplugin.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qimageiohandler.h \
@@ -10727,8 +10784,6 @@ debug/experiments.o: experiments.cpp experiments.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QAction \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qaction.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qactiongroup.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QButtonGroup \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qbuttongroup.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QHBoxLayout \
@@ -10756,8 +10811,7 @@ debug/experiments.o: experiments.cpp experiments.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QSpacerItem \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QTableWidget \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qtablewidget.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qtableview.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qtableview.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\experiments.o experiments.cpp
 
 debug/login.o: login.cpp login.h \
@@ -11014,8 +11068,15 @@ debug/stackedwidget.o: stackedwidget.cpp stackedwidget.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qfontinfo.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qsizepolicy.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qcursor.h \
-		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QApplication \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/qeventloop.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qguiapplication.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtGui/qinputmethod.h \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QDesktopWidget \
+		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtCore/QDebug \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/QVBoxLayout \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qboxlayout.h \
 		D:/Qt/Qt5.9.1/5.9.1/mingw53_32/include/QtWidgets/qlayout.h \

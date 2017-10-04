@@ -6,6 +6,7 @@
 #include <customqtui.h>
 #include "confirmations.h"
 #include "borrowerdata.h"
+#include "utils.h"
 namespace Ui {
 class Borrowers;
 }

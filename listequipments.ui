@@ -104,21 +104,6 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="RemoveAllButton_2">
-       <property name="font">
-        <font>
-         <family>Segoe UI Black</family>
-         <pointsize>10</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>MORE INFO</string>
-       </property>
-      </widget>
-     </item>
-     <item>
       <widget class="QPushButton" name="Back">
        <property name="font">
         <font>
