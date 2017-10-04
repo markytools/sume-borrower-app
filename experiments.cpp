@@ -122,8 +122,15 @@ void Experiments::showExperimentEquipments()
 
 void Experiments::on_Back_clicked()
 {
-    stackWidget->setCurrentIndex(8);
+    ui->experimentEquipments->clearContents();
+    ui->experimentEquipments->setRowCount(0);
+    ui->experimentsTable->clearContents();
+    ui->experimentsTable->setRowCount(0);
+    ui->listEquipments->clearContents();
+    ui->listEquipments->setRowCount(0);
+    setExperimentName("");
     setSubjectName("");
+    stackWidget->setCurrentIndex(8);
 }
 
 void Experiments::updateExperiments()

@@ -43,7 +43,8 @@ SOURCES += \
     subjectui.cpp \
     experiments.cpp \
     login.cpp \
-    stackedwidget.cpp
+    stackedwidget.cpp \
+    changepass.cpp
 
 HEADERS += \
     sumeborrower.h \
@@ -65,7 +66,8 @@ HEADERS += \
     ui_subjectui.h \
     experiments.h \
     login.h \
-    stackedwidget.h
+    stackedwidget.h \
+    changepass.h
 
 FORMS += \
         sumeborrower.ui \
@@ -79,7 +81,8 @@ FORMS += \
     infopopup.ui \
     subjectui.ui \
     experiments.ui \
-    login.ui
+    login.ui \
+    changepass.ui
 
 
 
