@@ -17,13 +17,13 @@ CXXFLAGS      = -fno-keep-inline-dllexport -pipe -O2 -std=gnu++11 -Wextra -Wall 
 INCPATH       = -I. -I. -IC:\Qt\Qt5.9.0\5.9\mingw53_32\include -IC:\Qt\Qt5.9.0\5.9\mingw53_32\include\QtWidgets -IC:\Qt\Qt5.9.0\5.9\mingw53_32\include\QtXlsx -IC:\Qt\Qt5.9.0\5.9\mingw53_32\include\QtGui -IC:\Qt\Qt5.9.0\5.9\mingw53_32\include\QtANGLE -IC:\Qt\Qt5.9.0\5.9\mingw53_32\include\QtSql -IC:\Qt\Qt5.9.0\5.9\mingw53_32\include\QtCore -Irelease -I. -IC:\Qt\Qt5.9.0\5.9\mingw53_32\mkspecs\win32-g++ 
 LINKER      =        g++
 LFLAGS        =        -Wl,-s -Wl,-subsystem,windows -mthreads
-LIBS        =        -lmingw32 -LC:\Qt\Qt5.9.0\5.9\mingw53_32\lib C:\Qt\Qt5.9.0\5.9\mingw53_32\lib\libqtmain.a -LC:\utils\my_sql\my_sql\lib -LC:\utils\postgresql\pgsql\lib -lshell32 -LD:\CpE50\borrowerapp\sume-borrower-app -lLaboratoryLib C:\Qt\Qt5.9.0\5.9\mingw53_32\lib\libQt5Widgets.a C:\Qt\Qt5.9.0\5.9\mingw53_32\lib\libQt5Xlsx.a C:\Qt\Qt5.9.0\5.9\mingw53_32\lib\libQt5Gui.a C:\Qt\Qt5.9.0\5.9\mingw53_32\lib\libQt5Sql.a C:\Qt\Qt5.9.0\5.9\mingw53_32\lib\libQt5Core.a 
+LIBS        =        -lmingw32 -LC:\Qt\Qt5.9.0\5.9\mingw53_32\lib C:\Qt\Qt5.9.0\5.9\mingw53_32\lib\libqtmain.a -LC:\utils\my_sql\my_sql\lib -LC:\utils\postgresql\pgsql\lib -lshell32 -LD:\CpE50\borrowerapp\sume-borrower-app -lLaboratoryLib C:\Qt\Qt5.9.0\5.9\mingw53_32\lib\libQt5Widgets.a C:\Qt\Qt5.9.0\5.9\mingw53_32\lib\libQt5Xlsx.a C:\Qt\Qt5.9.0\5.9\mingw53_32\lib\libQt5Gui.a C:\Qt\Qt5.9.0\5.9\mingw53_32\lib\libQt5Sql.a C:\Qt\Qt5.9.0\5.9\mingw53_32\lib\libQt5Core.a release\myapp_res.o 
 QMAKE         = C:\Qt\Qt5.9.0\5.9\mingw53_32\bin\qmake.exe
 IDC           = idc
 IDL           = midl
 ZIP           = zip -r -9
 DEF_FILE      = 
-RES_FILE      = 
+RES_FILE      = release\myapp_res.o
 COPY          = copy /y
 SED           = $(QMAKE) -install sed
 COPY_FILE     = copy /y
@@ -161,8 +161,11 @@ DESTDIR_TARGET = release\SUMEBorrower.exe
 first: all
 all: Makefile.Release  $(DESTDIR_TARGET)
 
-$(DESTDIR_TARGET): ui_sumeborrower.h ui_borrowers.h ui_borrowingd.h ui_confirmations.h ui_listborrowers.h ui_listequipments.h ui_homedisplay.h ui_information.h ui_infopopup.h ui_subjectui.h ui_experiments.h ui_login.h ui_changepass.h $(OBJECTS) 
+$(DESTDIR_TARGET): ui_sumeborrower.h ui_borrowers.h ui_borrowingd.h ui_confirmations.h ui_listborrowers.h ui_listequipments.h ui_homedisplay.h ui_information.h ui_infopopup.h ui_subjectui.h ui_experiments.h ui_login.h ui_changepass.h $(OBJECTS) release/myapp_res.o
 	$(LINKER) $(LFLAGS) -o $(DESTDIR_TARGET) object_script.SUMEBorrower.Release  $(LIBS)
+
+release/myapp_res.o: myapp.rc
+	windres -i myapp.rc -o release\myapp_res.o --include-dir=. $(DEFINES)
 
 qmake: FORCE
 	@$(QMAKE) -o Makefile.Release SUMEBorrower.pro -spec win32-g++
@@ -174,6 +177,7 @@ dist:
 
 clean: compiler_clean 
 	-$(DEL_FILE) release\main.o release\sumeborrower.o release\customqtui.o release\borrowers.o release\borrowingd.o release\confirmations.o release\listborrowers.o release\listequipments.o release\utils.o release\homedisplay.o release\information.o release\infopopup.o release\borrowerdata.o release\studentdetails.o release\subjectui.o release\experiments.o release\login.o release\stackedwidget.o release\changepass.o release\moc_sumeborrower.o release\moc_borrowers.o release\moc_borrowingd.o release\moc_confirmations.o release\moc_listborrowers.o release\moc_listequipments.o release\moc_homedisplay.o release\moc_information.o release\moc_infopopup.o release\moc_subjectui.o release\moc_experiments.o release\moc_login.o release\moc_stackedwidget.o release\moc_changepass.o
+	-$(DEL_FILE) release\myapp_res.o
 
 distclean: clean 
 	-$(DEL_FILE) .qmake.stash
@@ -11138,7 +11142,9 @@ release/login.o: login.cpp login.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui/qtextformat.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui/qpen.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui/qtextoption.h \
-		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QSpacerItem \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QPushButton \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qpushbutton.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qabstractbutton.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QVBoxLayout
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\login.o login.cpp
 
