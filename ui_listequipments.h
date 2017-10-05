@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'listequipments.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.1
+** Created by: Qt User Interface Compiler version 5.9.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -34,7 +34,6 @@ public:
     QPushButton *EditButton;
     QPushButton *RemoveButton;
     QPushButton *RemoveAllButton;
-    QPushButton *RemoveAllButton_2;
     QPushButton *Back;
 
     void setupUi(QWidget *ListEquipments)
@@ -93,12 +92,6 @@ public:
 
         horizontalLayout->addWidget(RemoveAllButton);
 
-        RemoveAllButton_2 = new QPushButton(ListEquipments);
-        RemoveAllButton_2->setObjectName(QStringLiteral("RemoveAllButton_2"));
-        RemoveAllButton_2->setFont(font1);
-
-        horizontalLayout->addWidget(RemoveAllButton_2);
-
         Back = new QPushButton(ListEquipments);
         Back->setObjectName(QStringLiteral("Back"));
         Back->setFont(font1);
@@ -122,7 +115,6 @@ public:
         EditButton->setText(QApplication::translate("ListEquipments", "EDIT", Q_NULLPTR));
         RemoveButton->setText(QApplication::translate("ListEquipments", "REMOVE EQUIPMENT", Q_NULLPTR));
         RemoveAllButton->setText(QApplication::translate("ListEquipments", "REMOVE ALL", Q_NULLPTR));
-        RemoveAllButton_2->setText(QApplication::translate("ListEquipments", "MORE INFO", Q_NULLPTR));
         Back->setText(QApplication::translate("ListEquipments", "BACK", Q_NULLPTR));
     } // retranslateUi
 
