@@ -356,5 +356,70 @@
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>SubjectsTableWidget</sender>
+   <signal>cellClicked(int,int)</signal>
+   <receiver>ExperimentTableWidget</receiver>
+   <slot>clearSelection()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>346</x>
+     <y>114</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>575</x>
+     <y>111</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SubjectsTableWidget</sender>
+   <signal>cellClicked(int,int)</signal>
+   <receiver>ExperimentTableWidget</receiver>
+   <slot>clearContents()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>441</x>
+     <y>156</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>579</x>
+     <y>153</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listEquipments</sender>
+   <signal>cellClicked(int,int)</signal>
+   <receiver>ExperimentTableWidget</receiver>
+   <slot>clearSelection()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>311</x>
+     <y>344</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>659</x>
+     <y>172</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listEquipments</sender>
+   <signal>cellClicked(int,int)</signal>
+   <receiver>SubjectsTableWidget</receiver>
+   <slot>clearSelection()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>256</x>
+     <y>355</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>283</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

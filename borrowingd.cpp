@@ -83,6 +83,10 @@ void BorrowingD::on_Proceed_clicked()
         labLib->showErrorMessageBox(false, "Information lacking", "Enter a subject");
         return;
     }
+    if (ui->section->text().isEmpty()) {
+        labLib->showErrorMessageBox(false, "Information lacking", "Enter a section");
+        return;
+    }
     if (ui->instructor->text().isEmpty()) {
         labLib->showErrorMessageBox(false, "Information lacking", "Enter an instructor");
         return;

@@ -37,7 +37,15 @@ public:
 
     void setBorrowerdata(BorrowerData *value);
 
+    void showExperiments();
+
+    void showSubjects();
+
     void resetFields();
+
+    void setSubjectName(const QString &value);
+
+    void setExperimentName(const QString &value);
 
 private slots:
     void on_Back_clicked();
@@ -50,7 +58,21 @@ private slots:
 
     void on_searchEdit_textChanged(const QString &text);
 
+    void on_SubjectsTableWidget_cellClicked(int row, int column);
+
+    void on_SubjectsTableWidget_currentCellChanged(int currentRow, int currentColumn, int previousRow, int previousColumn);
+
+    void on_ExperimentTableWidget_cellClicked(int row, int column);
+
+    void on_ExperimentTableWidget_currentCellChanged(int currentRow, int currentColumn, int previousRow, int previousColumn);
+
+    void on_Back_2_clicked();
+
 private:
+    QString experimentName;
+    QString subjectName;
+    QVector <Subject *> *subjects;
+    QVector <Experiment *> *experiments;
     BorrowerData *borrowerdata;
     QVector<BorrowedEquipment *> *borrowItems;
     QVector<Student *> *students;

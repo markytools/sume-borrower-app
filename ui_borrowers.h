@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'borrowers.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.1
+** Created by: Qt User Interface Compiler version 5.9.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -250,6 +250,10 @@ public:
 
 
         retranslateUi(Borrowers);
+        QObject::connect(SubjectsTableWidget, SIGNAL(cellClicked(int,int)), ExperimentTableWidget, SLOT(clearSelection()));
+        QObject::connect(SubjectsTableWidget, SIGNAL(cellClicked(int,int)), ExperimentTableWidget, SLOT(clearContents()));
+        QObject::connect(listEquipments, SIGNAL(cellClicked(int,int)), ExperimentTableWidget, SLOT(clearSelection()));
+        QObject::connect(listEquipments, SIGNAL(cellClicked(int,int)), SubjectsTableWidget, SLOT(clearSelection()));
 
         QMetaObject::connectSlotsByName(Borrowers);
     } // setupUi
