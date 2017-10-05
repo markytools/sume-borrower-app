@@ -18,7 +18,7 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
-#include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -28,7 +28,8 @@ class Ui_LogIn
 {
 public:
     QGridLayout *gridLayout;
-    QSpacerItem *verticalSpacer;
+    QPushButton *pushButton;
+    QLabel *label;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
     QLabel *label_10;
@@ -36,17 +37,33 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_11;
     QLineEdit *lineEdit_2;
+    QPushButton *pushButton_2;
 
     void setupUi(QWidget *LogIn)
     {
         if (LogIn->objectName().isEmpty())
             LogIn->setObjectName(QStringLiteral("LogIn"));
-        LogIn->resize(336, 297);
+        LogIn->resize(327, 371);
+        LogIn->setMinimumSize(QSize(327, 371));
         gridLayout = new QGridLayout(LogIn);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        verticalSpacer = new QSpacerItem(20, 255, QSizePolicy::Minimum, QSizePolicy::Expanding);
+        pushButton = new QPushButton(LogIn);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
+        QFont font;
+        font.setPointSize(15);
+        font.setBold(true);
+        font.setWeight(75);
+        pushButton->setFont(font);
 
-        gridLayout->addItem(verticalSpacer, 0, 0, 1, 1);
+        gridLayout->addWidget(pushButton, 2, 0, 1, 1);
+
+        label = new QLabel(LogIn);
+        label->setObjectName(QStringLiteral("label"));
+        label->setFont(font);
+        label->setAlignment(Qt::AlignCenter);
+        label->setWordWrap(true);
+
+        gridLayout->addWidget(label, 0, 0, 1, 1);
 
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
@@ -54,12 +71,12 @@ public:
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         label_10 = new QLabel(LogIn);
         label_10->setObjectName(QStringLiteral("label_10"));
-        QFont font;
-        font.setFamily(QStringLiteral("Segoe UI Black"));
-        font.setPointSize(8);
-        font.setBold(true);
-        font.setWeight(75);
-        label_10->setFont(font);
+        QFont font1;
+        font1.setFamily(QStringLiteral("Segoe UI Black"));
+        font1.setPointSize(8);
+        font1.setBold(true);
+        font1.setWeight(75);
+        label_10->setFont(font1);
 
         horizontalLayout->addWidget(label_10);
 
@@ -75,7 +92,7 @@ public:
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         label_11 = new QLabel(LogIn);
         label_11->setObjectName(QStringLiteral("label_11"));
-        label_11->setFont(font);
+        label_11->setFont(font1);
 
         horizontalLayout_2->addWidget(label_11);
 
@@ -90,6 +107,12 @@ public:
 
         gridLayout->addLayout(verticalLayout, 1, 0, 1, 1);
 
+        pushButton_2 = new QPushButton(LogIn);
+        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+        pushButton_2->setFont(font);
+
+        gridLayout->addWidget(pushButton_2, 3, 0, 1, 1);
+
 
         retranslateUi(LogIn);
 
@@ -99,8 +122,11 @@ public:
     void retranslateUi(QWidget *LogIn)
     {
         LogIn->setWindowTitle(QApplication::translate("LogIn", "Form", Q_NULLPTR));
+        pushButton->setText(QApplication::translate("LogIn", "LOGIN", Q_NULLPTR));
+        label->setText(QApplication::translate("LogIn", "SILLIMAN UNIVERSITY MECHANICAL ENGINEERING LABORATORY BORROWER", Q_NULLPTR));
         label_10->setText(QApplication::translate("LogIn", "USERNAME:", Q_NULLPTR));
         label_11->setText(QApplication::translate("LogIn", "PASSWORD:", Q_NULLPTR));
+        pushButton_2->setText(QApplication::translate("LogIn", "CHANGE PASSWORD", Q_NULLPTR));
     } // retranslateUi
 
 };

@@ -10,7 +10,7 @@ Information::Information(QWidget *parent) :
     QRegExp re("[^@]*");
     QRegExpValidator *validator = new QRegExpValidator(re, this);
     ui->nameLine->setValidator(validator);
-    ui->quantityLine->setValidator(new QIntValidator);
+    ui->quantityLine->setValidator(new QIntValidator(1, 99999, this));
 }
 
 void Information::edit(QString name)
@@ -49,7 +49,7 @@ void Information::on_OKButton_clicked()
         labLib->showErrorMessageBox(false, "Information lacking", "Please enter the equipment name");
         return;
     }
-    if (ui->quantityLine->text().isEmpty()) {
+    if (ui->quantityLine->text().isEmpty() || ui->quantityLine->text().toInt() == 0) {
         labLib->showErrorMessageBox(false, "Information lacking", "Please enter the equipment's quantity");
         return;
     }

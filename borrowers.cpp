@@ -254,7 +254,7 @@ void Borrowers::updateBorrowItems()
         nameItem->setTextAlignment(Qt::AlignCenter);
         nameItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
 
-        if(borrowItem->toBorrow != 0){
+        if (borrowItem->toBorrow != 0){
             ui->borrowEquipments->setItem(ui->borrowEquipments->rowCount() - 1, 0, borrowedItem);
             ui->borrowEquipments->setItem(ui->borrowEquipments->rowCount() - 1, 1, nameItem);
         }

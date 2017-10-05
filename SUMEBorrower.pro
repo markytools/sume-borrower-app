@@ -90,3 +90,5 @@ win32: LIBS += -L$$PWD/./ -lLaboratoryLib
 
 INCLUDEPATH += $$PWD/.
 DEPENDPATH += $$PWD/.
+
+RC_FILE = myapp.rc

@@ -13,6 +13,7 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QDateTimeEdit>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
@@ -33,7 +34,6 @@ public:
     QGridLayout *gridLayout;
     QSpacerItem *horizontalSpacer;
     QLabel *label;
-    QSpacerItem *horizontalSpacer_2;
     QVBoxLayout *verticalLayout_2;
     QHBoxLayout *horizontalLayout_12;
     QHBoxLayout *horizontalLayout_4;
@@ -59,6 +59,7 @@ public:
     QLineEdit *instructor;
     QVBoxLayout *verticalLayout_5;
     QHBoxLayout *horizontalLayout_7;
+    QSpacerItem *horizontalSpacer_3;
     QVBoxLayout *verticalLayout_4;
     QHBoxLayout *horizontalLayout_5;
     QLabel *label_8;
@@ -66,9 +67,11 @@ public:
     QHBoxLayout *horizontalLayout_6;
     QLabel *label_7;
     QDateTimeEdit *endDateTime;
+    QCheckBox *hasEndTime;
     QHBoxLayout *horizontalLayout_8;
     QPushButton *Cancel;
     QPushButton *Proceed;
+    QSpacerItem *horizontalSpacer_2;
 
     void setupUi(QWidget *BorrowingD)
     {
@@ -93,10 +96,6 @@ public:
         label->setFont(font);
 
         gridLayout->addWidget(label, 0, 1, 1, 1);
-
-        horizontalSpacer_2 = new QSpacerItem(218, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        gridLayout->addItem(horizontalSpacer_2, 0, 2, 1, 1);
 
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
@@ -228,6 +227,10 @@ public:
         verticalLayout_5->setObjectName(QStringLiteral("verticalLayout_5"));
         horizontalLayout_7 = new QHBoxLayout();
         horizontalLayout_7->setObjectName(QStringLiteral("horizontalLayout_7"));
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Preferred, QSizePolicy::Minimum);
+
+        horizontalLayout_7->addItem(horizontalSpacer_3);
+
         verticalLayout_4 = new QVBoxLayout();
         verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
         horizontalLayout_5 = new QHBoxLayout();
@@ -262,6 +265,21 @@ public:
 
         verticalLayout_4->addLayout(horizontalLayout_6);
 
+        hasEndTime = new QCheckBox(BorrowingD);
+        hasEndTime->setObjectName(QStringLiteral("hasEndTime"));
+        hasEndTime->setEnabled(true);
+        QFont font3;
+        font3.setPointSize(10);
+        font3.setBold(false);
+        font3.setWeight(50);
+        hasEndTime->setFont(font3);
+        hasEndTime->setLayoutDirection(Qt::LeftToRight);
+        hasEndTime->setAutoFillBackground(false);
+        hasEndTime->setStyleSheet(QStringLiteral(""));
+        hasEndTime->setTristate(false);
+
+        verticalLayout_4->addWidget(hasEndTime);
+
 
         horizontalLayout_7->addLayout(verticalLayout_4);
 
@@ -294,6 +312,10 @@ public:
 
         gridLayout->addLayout(verticalLayout_2, 1, 0, 1, 3);
 
+        horizontalSpacer_2 = new QSpacerItem(218, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout->addItem(horizontalSpacer_2, 0, 2, 1, 1);
+
 
         retranslateUi(BorrowingD);
 
@@ -314,6 +336,7 @@ public:
         label_11->setText(QApplication::translate("BorrowingD", "INSTRUCTOR:", Q_NULLPTR));
         label_8->setText(QApplication::translate("BorrowingD", "START:", Q_NULLPTR));
         label_7->setText(QApplication::translate("BorrowingD", "END:", Q_NULLPTR));
+        hasEndTime->setText(QApplication::translate("BorrowingD", "has End Time", Q_NULLPTR));
         Cancel->setText(QApplication::translate("BorrowingD", "CANCEL", Q_NULLPTR));
         Proceed->setText(QApplication::translate("BorrowingD", "PROCEED", Q_NULLPTR));
     } // retranslateUi

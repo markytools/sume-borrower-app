@@ -32,11 +32,9 @@ public:
     explicit Infopopup(QWidget *parent = 0);
     ~Infopopup();
 
-    QVector<BorrowedEquipment *> *getBorrowedequipment() const;
-
     Borrower *getBorrower() const;
 
-    void display(QString groupName, QString groupSubject, QString groupSection, QString groupInstructor, QString startTime, QString groupEndTime);
+    void display(QString groupName, QString groupSubject, QString groupSection, QString groupInstructor, QString startTime, QString groupEndTime, int hasEndTime);
 
     void setGroupName(const QString &value);
 
@@ -58,13 +56,18 @@ private slots:
 private:
     Ui::Infopopup *ui;
     Borrower *borrower;
-    QVector<BorrowedEquipment*> *borrowedequipment;
+//    QVector<BorrowedEquipment*> *borrowedequipment;
     QVector<QCheckBox*> *returnedCheckBoxes;
     QString groupName;
     QString subject;
     QString section;
     QString instructor;
+    QString start;
+    QString end;
+    int hasEndTime;
     QString currentSelectedEquipmentName;
+    QVector<Student*> *students;
+    QVector<BorrowedEquipment*> *borrowedEquipments;
 
     bool allEquipmentsReturned();
 };

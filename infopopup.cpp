@@ -46,8 +46,16 @@ Borrower *Infopopup::getBorrower() const
 }
 
 void Infopopup::display(QString groupName, QString groupSubject, QString groupSection, QString groupInstructor,
-                        QString groupStartTime, QString groupEndTime)
+                        QString groupStartTime, QString groupEndTime, int hasEndTime)
 {
+    this->groupName = groupName;
+    this->subject = groupSubject;
+    this->section = groupSection;
+    this->instructor = groupInstructor;
+    this->start = groupStartTime;
+    this->end = groupEndTime;
+    this->hasEndTime = hasEndTime;
+
     returnedCheckBoxes->clear();
 
     QTableWidgetItem *equipmentNameHeader = new QTableWidgetItem("EQUIPMENT NAME");
@@ -90,8 +98,8 @@ void Infopopup::display(QString groupName, QString groupSubject, QString groupSe
 
     ui->membersTable->setRowCount(0);
 
-    QVector<BorrowedEquipment*> *borrowedEquipments = labLib->getBorrowedEquipments(groupName, groupSubject, groupSection, groupInstructor);
-    QVector<Student*> *students = labLib->getStudents(groupName, groupSubject, groupSection, groupInstructor);
+    this->borrowedEquipments = labLib->getBorrowedEquipments(groupName, groupSubject, groupSection, groupInstructor);
+    this->students = labLib->getStudents(groupName, groupSubject, groupSection, groupInstructor);
 
     bool allReturned = true;
     for(int row = 0; row < borrowedEquipments->size(); row++)
@@ -163,7 +171,8 @@ void Infopopup::display(QString groupName, QString groupSubject, QString groupSe
     ui->section->setText(groupSection);
     ui->instructor->setText(groupInstructor);
     ui->startTime->setText(groupStartTime);
-    ui->endTime->setText(groupEndTime);
+    if (hasEndTime == 1) ui->endTime->setText(groupEndTime);
+    else ui->endTime->setText("");
 
     if (allReturned) {
         ui->itemsReturned->setStyleSheet("font-weight: bold; color: #00e616;");
@@ -176,11 +185,6 @@ void Infopopup::display(QString groupName, QString groupSubject, QString groupSe
 
     if (allReturned) ui->Delete->setDisabled(false);
     else ui->Delete->setDisabled(true);
-}
-
-QVector<BorrowedEquipment *> *Infopopup::getBorrowedequipment() const
-{
-    return borrowedequipment;
 }
 
 void Infopopup::on_Delete_clicked()
@@ -260,5 +264,7 @@ BorrowedEquipmentData::BorrowedEquipmentData(QString borrowerName, QString subje
 
 void Infopopup::on_exportToExcel_clicked()
 {
-
+    this->borrowedEquipments = labLib->getBorrowedEquipments(groupName, subject, section, instructor);
+    this->students = labLib->getStudents(groupName, subject, section, instructor);
+    labLib->exportAllDataBorrowerToExcel(groupName, subject, section, instructor, start, end, hasEndTime, students, borrowedEquipments);
 }

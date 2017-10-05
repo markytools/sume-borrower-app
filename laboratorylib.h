@@ -63,13 +63,14 @@ public:
 class Borrower {
 
 public:
-    Borrower(QString name, QString subject, QString section, QString instructor, QDateTime start, QDateTime end);
+    Borrower(QString name, QString subject, QString section, QString instructor, QDateTime start, QDateTime end, int hasEndTime);
     QString name;
     QString subject;
     QString section;
     QString instructor;
     QDateTime start;
     QDateTime end;
+    int hasEndTime = 0;
 };
 
 class Student {
@@ -89,6 +90,9 @@ private:
     QVector<Equipment*> *sa;
     Equipment* equip;
     QMessageBox messageBox;
+
+//    const QString blankNoTableExcelLocation;
+    const QString blankTableExcelLocation = "release/";
 
 public:
     LaboratoryLib();
@@ -115,12 +119,14 @@ public:
     Equipment *getEquipment(QString name) const;
     QVector<Equipment*> *getEquipments() const;
 
-    void addBorrower(QString name, QString subject, QString section, QString instructor, QDateTime start, QDateTime end,
+    void addBorrower(QString name, QString subject, QString section, QString instructor, QDateTime start, QDateTime end, int hasEndTime,
                      QVector<Student*> *students, QVector<BorrowedEquipment *> *borrowed_equip);
     void deleteBorrower(QString name, QString subject, QString section, QString instructor); //*
     void setBorrowedEquipmentReturn(QString borrowerName, QString subject, QString section, QString instructor,
                                     QString equipmentName, int returned);
     int isBorrowedEquipmentReturned(QString borrowerName, QString subject, QString section, QString instructor, QString equipmentName);
+    int setHasEndTime(QString borrowerName, QString subject, QString section, QString instructor, int hasEndTime);
+    int hasEndTime(QString borrowerName, QString subject, QString section, QString instructor);
     QVector<BorrowedEquipment *> *getBorrowedEquipments(QString borrowerName, QString subject, QString section, QString instructor);
     QVector<Borrower *> *getBorrowers();
     QVector<Student *> *getStudents(QString borrowerName, QString subject, QString section, QString instructor);
@@ -133,7 +139,8 @@ public:
     bool showErrorMessageBox(bool assert, QString title, QString message); //If assert is false, QMessageBox will show up
     bool isErrorMsgBoxVisible();
 
-    void exportBorrowerToExcel(QString name, QString subject, QString section, QDateTime start, QDateTime end,
+    //also automatically opens file
+    void exportAllDataBorrowerToExcel(QString name, QString subject, QString section, QString instructor, QString start, QString end, int hasEndTime,
                                QVector<Student*> *students, QVector<BorrowedEquipment*> *borrowedEquipments);
 };
 
