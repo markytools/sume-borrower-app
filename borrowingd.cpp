@@ -12,6 +12,12 @@ BorrowingD::BorrowingD(QWidget *parent) :
     connect(timer, SIGNAL(timeout()), this, SLOT(updateStartAndEndTimes()));
     timer->start(200);
 
+
+    QCheckBox *hasEndTime = ui->hasEndTime;
+    connect(hasEndTime, SIGNAL(stateChanged(int)), this, SLOT(hasEndTimeStateChanged(int)));
+    hasEndTime->setChecked(false);
+    ui->endDateTime->setDisabled(true);
+
     installEventFilter(this);
 }
 
@@ -28,6 +34,11 @@ void BorrowingD::on_Cancel_clicked()
 void BorrowingD::on_Add_clicked()
 {
     if (!ui->studentName->text().isEmpty()) {
+//        if (ui->listWidget->count() >= 14) {
+//            labLib->showErrorMessageBox(false, "List Full","You can only have a limited amount of students");
+//            return;
+//        }
+
         bool hasName = false;
         for (int i = 0; i < ui->listWidget->count(); ++i) {
             QString name = ui->listWidget->item(i)->text();
@@ -41,6 +52,7 @@ void BorrowingD::on_Add_clicked()
             ui->listWidget->addItem(ui->studentName->text().toUpper());
             ui->studentName->clear();
             ui->studentName->setFocus();
+            ui->listWidget->scrollToBottom();
         }
         else {
             labLib->showErrorMessageBox(false, "Duplicate Error","You cannot have duplicate student names!");
@@ -79,7 +91,7 @@ void BorrowingD::on_Proceed_clicked()
         labLib->showErrorMessageBox(false, "Information lacking", "Enter an instructor");
         return;
     }
-    if (ui->endDateTime->dateTime() <= QDateTime::currentDateTime()) {
+    if (ui->hasEndTime->isChecked() && ui->endDateTime->dateTime() <= QDateTime::currentDateTime()) {
         labLib->showErrorMessageBox(false, "Invalid data", "End time should not be less than start time");
         return;
     }
@@ -96,6 +108,7 @@ void BorrowingD::on_Proceed_clicked()
     QString instructor = ui->instructor->text();
     QDateTime start = ui->startDateTime->dateTime();
     QDateTime end = ui->endDateTime->dateTime();
+    int hasEndTime = (ui->hasEndTime->isChecked()) ? 1 : 0;
 
 //    Borrower *borrower = new Borrower(name, section, subject, start, end);
 //    setBorrower(borrower);
@@ -110,6 +123,7 @@ void BorrowingD::on_Proceed_clicked()
     borrowerdata->setInstructor(instructor);
     borrowerdata->setStart(start);
     borrowerdata->setEnd(end);
+    borrowerdata->setHasEndTime(hasEndTime);
     borrowers->setStudents(students);
     borrowers->setBorrowerdata(borrowerdata);
     borrowers->display();
@@ -121,7 +135,17 @@ void BorrowingD::on_Proceed_clicked()
 void BorrowingD::updateStartAndEndTimes()
 {
     ui->startDateTime->setDateTime(QDateTime::currentDateTime());
-    if (ui->endDateTime->dateTime() < ui->startDateTime->dateTime()) ui->endDateTime->setDateTime(QDateTime::currentDateTime());
+//    if (ui->endDateTime->dateTime() < ui->startDateTime->dateTime()) ui->endDateTime->setDateTime(QDateTime::currentDateTime());
+}
+
+void BorrowingD::hasEndTimeStateChanged(int state)
+{
+    if (state == Qt::Checked) {
+        ui->endDateTime->setDisabled(false);
+    }
+    else if (state == Qt::Unchecked) {
+        ui->endDateTime->setDisabled(true);
+    }
 }
 
 void BorrowingD::setStudents(QVector<Student *> *value)
@@ -141,6 +165,8 @@ void BorrowingD::resetFields()
     ui->endDateTime->setDateTime(QDateTime::currentDateTime());
 
     ui->studentName->setFocus();
+    ui->hasEndTime->setChecked(false);
+    ui->endDateTime->setDisabled(true);
 }
 
 bool BorrowingD::eventFilter(QObject *obj, QEvent *event)

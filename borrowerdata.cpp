@@ -151,6 +151,16 @@ QString BorrowerData::getInstructor() const
     return instructor;
 }
 
+void BorrowerData::setHasEndTime(int value)
+{
+    hasEndTime = value;
+}
+
+int BorrowerData::getHasEndTime() const
+{
+    return hasEndTime;
+}
+
 void BorrowerData::setInstructor(const QString &value)
 {
     instructor = value;
