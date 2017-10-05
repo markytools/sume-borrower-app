@@ -36,6 +36,7 @@ private slots:
     void on_Proceed_clicked();
 
     void updateStartAndEndTimes();
+    void hasEndTimeStateChanged(int state);
 
 private:
     QVector<Equipment *> *equipment;

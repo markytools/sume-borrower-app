@@ -51,6 +51,10 @@ public:
 
     QString getInstructor() const;
 
+    void setHasEndTime(int value);
+
+    int getHasEndTime() const;
+
 private:
     QVector<Equipment*> *equipments;
     QVector<Borrower*> *borrower;
@@ -62,6 +66,7 @@ private:
     QString instructor;
     QDateTime start;
     QDateTime end;
+    int hasEndTime;
 };
 
 #endif // BORROWERDATA_H

@@ -206,7 +206,8 @@ void ListBorrowers::on_Info_clicked()
         QString selectedInstructor = instructor->text();
         QString selectedStartTime = startTime->text();
         QString selectedEndTime = endTime->text();
-        infopopup->display(selectedName,selectedSubject,selectedSection,selectedInstructor,selectedStartTime,selectedEndTime);
+        int hasEndTime = labLib->hasEndTime(selectedName, selectedSubject, selectedSection, selectedInstructor);
+        infopopup->display(selectedName,selectedSubject,selectedSection,selectedInstructor,selectedStartTime,selectedEndTime, hasEndTime);
         stackWidget->setCurrentIndex(4);
     }
     else {
