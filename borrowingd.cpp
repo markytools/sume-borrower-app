@@ -113,6 +113,7 @@ void BorrowingD::on_Proceed_clicked()
 //    Borrower *borrower = new Borrower(name, section, subject, start, end);
 //    setBorrower(borrower);
     Borrowers *borrowers = (Borrowers*)(stackWidget->widget(6));
+    borrowers->showSubjects();
     borrowers->resetFields();
 
     BorrowerData *borrowerdata = new BorrowerData();

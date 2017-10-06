@@ -63,7 +63,6 @@ Borrowers::Borrowers(QWidget *parent) :
     ui->SubjectsTableWidget->setColumnWidth(0, 300);
 
     ui->SubjectsTableWidget->setSelectionBehavior(QAbstractItemView::SelectRows);
-    showSubjects();
 
 }
 
