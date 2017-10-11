@@ -28,6 +28,7 @@ BorrowingD::~BorrowingD()
 
 void BorrowingD::on_Cancel_clicked()
 {
+    resetFields();
     stackWidget->setCurrentIndex(3);
 }
 
