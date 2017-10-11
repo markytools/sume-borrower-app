@@ -29,7 +29,6 @@ class Ui_changePass
 {
 public:
     QGridLayout *gridLayout;
-    QSpacerItem *verticalSpacer;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
     QLabel *label_10;
@@ -40,20 +39,20 @@ public:
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_12;
     QLineEdit *lineEdit_3;
-    QSpacerItem *horizontalSpacer;
     QPushButton *Cancel;
+    QSpacerItem *horizontalSpacer_2;
+    QPushButton *pushButton;
+    QLabel *label;
 
     void setupUi(QWidget *changePass)
     {
         if (changePass->objectName().isEmpty())
             changePass->setObjectName(QStringLiteral("changePass"));
-        changePass->resize(400, 300);
+        changePass->resize(326, 337);
+        changePass->setMinimumSize(QSize(326, 337));
+        changePass->setMaximumSize(QSize(326, 337));
         gridLayout = new QGridLayout(changePass);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        verticalSpacer = new QSpacerItem(20, 162, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        gridLayout->addItem(verticalSpacer, 0, 1, 1, 1);
-
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         horizontalLayout = new QHBoxLayout();
@@ -110,22 +109,40 @@ public:
         verticalLayout->addLayout(horizontalLayout_3);
 
 
-        gridLayout->addLayout(verticalLayout, 1, 0, 1, 2);
-
-        horizontalSpacer = new QSpacerItem(298, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        gridLayout->addItem(horizontalSpacer, 2, 0, 1, 1);
+        gridLayout->addLayout(verticalLayout, 1, 0, 1, 4);
 
         Cancel = new QPushButton(changePass);
         Cancel->setObjectName(QStringLiteral("Cancel"));
         QFont font1;
         font1.setFamily(QStringLiteral("Segoe UI Black"));
-        font1.setPointSize(10);
+        font1.setPointSize(12);
         font1.setBold(true);
         font1.setWeight(75);
         Cancel->setFont(font1);
 
-        gridLayout->addWidget(Cancel, 2, 1, 1, 1);
+        gridLayout->addWidget(Cancel, 2, 3, 1, 1);
+
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout->addItem(horizontalSpacer_2, 2, 2, 1, 1);
+
+        pushButton = new QPushButton(changePass);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
+        pushButton->setFont(font1);
+
+        gridLayout->addWidget(pushButton, 2, 1, 1, 1);
+
+        label = new QLabel(changePass);
+        label->setObjectName(QStringLiteral("label"));
+        QFont font2;
+        font2.setPointSize(15);
+        font2.setBold(true);
+        font2.setWeight(75);
+        label->setFont(font2);
+        label->setAlignment(Qt::AlignCenter);
+        label->setWordWrap(true);
+
+        gridLayout->addWidget(label, 0, 0, 1, 4);
 
 
         retranslateUi(changePass);
@@ -140,6 +157,8 @@ public:
         label_11->setText(QApplication::translate("changePass", "OLD PASSWORD:", Q_NULLPTR));
         label_12->setText(QApplication::translate("changePass", "NEW PASSWORD:", Q_NULLPTR));
         Cancel->setText(QApplication::translate("changePass", "SUBMIT", Q_NULLPTR));
+        pushButton->setText(QApplication::translate("changePass", "BACK", Q_NULLPTR));
+        label->setText(QApplication::translate("changePass", "SILLIMAN UNIVERSITY MECHANICAL ENGINEERING LABORATORY BORROWER", Q_NULLPTR));
     } // retranslateUi
 
 };

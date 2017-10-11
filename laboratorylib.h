@@ -142,6 +142,11 @@ public:
     //also automatically opens file
     void exportAllDataBorrowerToExcel(QString name, QString subject, QString section, QString instructor, QString start, QString end, int hasEndTime,
                                QVector<Student*> *students, QVector<BorrowedEquipment*> *borrowedEquipments);
+
+    QString getPassword();
+    void setPassword(QString password);
+    QString getUserId();
+    void setUserId(QString userid);
 };
 
 #endif // LABORATORYLIB_H
