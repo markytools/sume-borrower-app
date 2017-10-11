@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'login.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.1
+** Created by: Qt User Interface Compiler version 5.9.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -28,7 +28,7 @@ class Ui_LogIn
 {
 public:
     QGridLayout *gridLayout;
-    QPushButton *pushButton;
+    QPushButton *login;
     QLabel *label;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
@@ -37,7 +37,7 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_11;
     QLineEdit *lineEdit_2;
-    QPushButton *pushButton_2;
+    QPushButton *changepass;
 
     void setupUi(QWidget *LogIn)
     {
@@ -48,15 +48,15 @@ public:
         LogIn->setMaximumSize(QSize(327, 371));
         gridLayout = new QGridLayout(LogIn);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        pushButton = new QPushButton(LogIn);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
+        login = new QPushButton(LogIn);
+        login->setObjectName(QStringLiteral("login"));
         QFont font;
         font.setPointSize(15);
         font.setBold(true);
         font.setWeight(75);
-        pushButton->setFont(font);
+        login->setFont(font);
 
-        gridLayout->addWidget(pushButton, 2, 0, 1, 1);
+        gridLayout->addWidget(login, 2, 0, 1, 1);
 
         label = new QLabel(LogIn);
         label->setObjectName(QStringLiteral("label"));
@@ -108,11 +108,11 @@ public:
 
         gridLayout->addLayout(verticalLayout, 1, 0, 1, 1);
 
-        pushButton_2 = new QPushButton(LogIn);
-        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-        pushButton_2->setFont(font);
+        changepass = new QPushButton(LogIn);
+        changepass->setObjectName(QStringLiteral("changepass"));
+        changepass->setFont(font);
 
-        gridLayout->addWidget(pushButton_2, 3, 0, 1, 1);
+        gridLayout->addWidget(changepass, 3, 0, 1, 1);
 
 
         retranslateUi(LogIn);
@@ -123,11 +123,11 @@ public:
     void retranslateUi(QWidget *LogIn)
     {
         LogIn->setWindowTitle(QApplication::translate("LogIn", "Form", Q_NULLPTR));
-        pushButton->setText(QApplication::translate("LogIn", "LOGIN", Q_NULLPTR));
+        login->setText(QApplication::translate("LogIn", "LOGIN", Q_NULLPTR));
         label->setText(QApplication::translate("LogIn", "SILLIMAN UNIVERSITY MECHANICAL ENGINEERING LABORATORY BORROWER", Q_NULLPTR));
         label_10->setText(QApplication::translate("LogIn", "USERNAME:", Q_NULLPTR));
         label_11->setText(QApplication::translate("LogIn", "PASSWORD:", Q_NULLPTR));
-        pushButton_2->setText(QApplication::translate("LogIn", "CHANGE PASSWORD", Q_NULLPTR));
+        changepass->setText(QApplication::translate("LogIn", "CHANGE PASSWORD", Q_NULLPTR));
     } // retranslateUi
 
 };
