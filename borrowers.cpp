@@ -63,7 +63,6 @@ Borrowers::Borrowers(QWidget *parent) :
     ui->SubjectsTableWidget->setColumnWidth(0, 300);
 
     ui->SubjectsTableWidget->setSelectionBehavior(QAbstractItemView::SelectRows);
-    showSubjects();
 
 }
 
@@ -74,6 +73,19 @@ Borrowers::~Borrowers()
 
 void Borrowers::on_Back_clicked()
 {
+    ui->borrowEquipments->clearContents();
+    ui->borrowEquipments->clearSelection();
+    ui->borrowEquipments->setRowCount(0);
+    ui->ExperimentTableWidget->clearContents();
+    ui->ExperimentTableWidget->clearSelection();
+    ui->ExperimentTableWidget->setRowCount(0);
+    ui->listEquipments->clearContents();
+    ui->listEquipments->clearSelection();
+    ui->listEquipments->setRowCount(0);
+    ui->SubjectsTableWidget->clearContents();
+    ui->SubjectsTableWidget->clearSelection();
+    ui->SubjectsTableWidget->setRowCount(0);
+    resetFields();
     delete borrowerdata;
     stackWidget->setCurrentIndex(3);
 }
@@ -227,9 +239,7 @@ void Borrowers::reverseUpdateBorrowItems(int previousRow)
         QString name = borrowItem->equipmentName;
 
         ui->borrowEquipments->setRowCount(ui->borrowEquipments->rowCount() + 1);
-/*      cout << borrowedEquipments->size() << endl;
-        cout << borrowed << endl << name.toStdString() << endl;
-*/
+
         QTableWidgetItem *borrowedItem = new QTableWidgetItem(QString::number(borrowed));
         borrowedItem->setTextAlignment(Qt::AlignCenter);
         borrowedItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
@@ -251,12 +261,6 @@ void Borrowers::reverseUpdateBorrowItems(int previousRow)
 
 void Borrowers::updateBorrowItems()
 {
-/*    for (int i = 0; i < students->size(); i++){
-        cout << students->at(i)->name.toStdString() << endl;
-    }
-    cout << borrower->name.toStdString() << endl << borrower->section.toStdString() << endl << borrower->subject.toStdString() << endl;
-    cout << borrower->start.toString("MMM-dd-yyyy hh:mm").toStdString() << endl << borrower->end.toString("MMM-dd-yyyy hh:mm").toStdString() << endl;
-*/
     ui->borrowEquipments->clearContents();
 
     ui->borrowEquipments->setRowCount(0);
@@ -270,9 +274,7 @@ void Borrowers::updateBorrowItems()
         QString name = borrowItem->equipmentName;
 
         ui->borrowEquipments->setRowCount(ui->borrowEquipments->rowCount() + 1);
-/*      cout << borrowedEquipments->size() << endl;
-        cout << borrowed << endl << name.toStdString() << endl;
-*/
+
         QTableWidgetItem *borrowedItem = new QTableWidgetItem(QString::number(borrowed));
         borrowedItem->setTextAlignment(Qt::AlignCenter);
         borrowedItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
@@ -297,9 +299,6 @@ void Borrowers::updateListEquipments(int previousRow)
     QVector<Equipment *> *equipments = borrowerdata->getEquipment();
 
     ui->listEquipments->setRowCount(0);
-
-//    string stringbefore = getStringBefore(ui->searchEdit->text().toStdString(), '@');
-//    cout << "value: " << stringbefore << endl;
 
     for(int row = 0; row < equipments->size(); row++) {
         Equipment *equipment = equipments->at(row);
@@ -586,39 +585,45 @@ void Borrowers::setSubjectName(const QString &value)
 
 void Borrowers::on_SubjectsTableWidget_cellClicked(int row, int column)
 {
-    ui->searchEdit->text().clear();
-    ui->searchEdit->clear();
-    cout <<"Table Row"<< row << endl;
-    cout <<"Table Row"<< column << endl;
-    QTableWidgetItem *item = ui->SubjectsTableWidget->item(row, column);
-    cout << "Item" << endl;
-    QString name = item->text();
-    cout << "Text" << endl;
-    setSubjectName(name);
-    cout << "Subject set" << endl;
-    showExperiments();
-    setExperimentName("");
-    cout << "Showing experiments" << endl;
+    if (row >= 0){
+        ui->searchEdit->text().clear();
+        ui->searchEdit->clear();
+        cout <<"Table Row"<< row << endl;
+        cout <<"Table Row"<< column << endl;
+        QTableWidgetItem *item = ui->SubjectsTableWidget->item(row, column);
+        cout << "Item" << endl;
+        QString name = item->text();
+        cout << "Text" << endl;
+        setSubjectName(name);
+        cout << "Subject set" << endl;
+        showExperiments();
+        setExperimentName("");
+        cout << "Showing experiments" << endl;
+    }
 }
 
 void Borrowers::on_SubjectsTableWidget_currentCellChanged(int currentRow, int currentColumn, int previousRow, int previousColumn)
 {
-    ui->searchEdit->text().clear();
-    ui->searchEdit->clear();
-    cout << currentRow << endl;
-    cout << currentColumn << endl;
-    QTableWidgetItem *item = ui->SubjectsTableWidget->item(currentRow, currentColumn);
-    QString name = item->text();
-    setSubjectName(name);
-    setExperimentName("");
-    showExperiments();
+    if (currentRow >= 0){
+        ui->searchEdit->text().clear();
+        ui->searchEdit->clear();
+        cout << currentRow << endl;
+        cout << currentColumn << endl;
+        QTableWidgetItem *item = ui->SubjectsTableWidget->item(currentRow, currentColumn);
+        QString name = item->text();
+        setSubjectName(name);
+        setExperimentName("");
+        showExperiments();
+    }
 }
 
 void Borrowers::on_ExperimentTableWidget_cellClicked(int row, int column)
 {
-    QTableWidgetItem *item = ui->ExperimentTableWidget->item(row, column);
-    QString name = item->text();
-    setExperimentName(name);
+    if (row >=0){
+        QTableWidgetItem *item = ui->ExperimentTableWidget->item(row, column);
+        QString name = item->text();
+        setExperimentName(name);
+    }
 }
 
 void Borrowers::on_ExperimentTableWidget_currentCellChanged(int currentRow, int currentColumn, int previousRow, int previousColumn)

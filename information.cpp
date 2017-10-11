@@ -54,16 +54,15 @@ void Information::on_OKButton_clicked()
         return;
     }
 
-    QVector<Equipment*> *equipments = labLib->getEquipments();
-    for (int row = 0; row < equipments->size(); row++) {
-        Equipment *equipment = equipments->at(row);
-        if (ui->nameLine->text().toUpper() == equipment->name.toUpper()) {
-            labLib->showErrorMessageBox(false, "Duplication Error", "Equipment name already exists!");
-            return;
-        }
-    }
-
     if (addMode == true) {
+        QVector<Equipment*> *equipments = labLib->getEquipments();
+        for (int row = 0; row < equipments->size(); row++) {
+            Equipment *equipment = equipments->at(row);
+            if (ui->nameLine->text().toUpper() == equipment->name.toUpper()) {
+                labLib->showErrorMessageBox(false, "Duplication Error", "Equipment name already exists!");
+                return;
+            }
+        }
         labLib->addEquipment(ui->nameLine->text().toUpper(), ui->quantityLine->text().toInt(), ui->serialLine->text().toUpper(), ui->propertyLine->text().toUpper(), ui->statusLine->text().toUpper(), ui->locationLine->text().toUpper(), ui->remarksLine->text().toUpper());
         ui->nameLine->clear();
         ui->quantityLine->clear();
