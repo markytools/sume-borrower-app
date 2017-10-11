@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'changepass.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.1
+** Created by: Qt User Interface Compiler version 5.9.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -41,7 +41,7 @@ public:
     QLineEdit *lineEdit_3;
     QPushButton *Cancel;
     QSpacerItem *horizontalSpacer_2;
-    QPushButton *pushButton;
+    QPushButton *back;
     QLabel *label;
 
     void setupUi(QWidget *changePass)
@@ -126,11 +126,11 @@ public:
 
         gridLayout->addItem(horizontalSpacer_2, 2, 2, 1, 1);
 
-        pushButton = new QPushButton(changePass);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setFont(font1);
+        back = new QPushButton(changePass);
+        back->setObjectName(QStringLiteral("back"));
+        back->setFont(font1);
 
-        gridLayout->addWidget(pushButton, 2, 1, 1, 1);
+        gridLayout->addWidget(back, 2, 1, 1, 1);
 
         label = new QLabel(changePass);
         label->setObjectName(QStringLiteral("label"));
@@ -157,7 +157,7 @@ public:
         label_11->setText(QApplication::translate("changePass", "OLD PASSWORD:", Q_NULLPTR));
         label_12->setText(QApplication::translate("changePass", "NEW PASSWORD:", Q_NULLPTR));
         Cancel->setText(QApplication::translate("changePass", "SUBMIT", Q_NULLPTR));
-        pushButton->setText(QApplication::translate("changePass", "BACK", Q_NULLPTR));
+        back->setText(QApplication::translate("changePass", "BACK", Q_NULLPTR));
         label->setText(QApplication::translate("changePass", "SILLIMAN UNIVERSITY MECHANICAL ENGINEERING LABORATORY BORROWER", Q_NULLPTR));
     } // retranslateUi
 

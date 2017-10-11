@@ -27,7 +27,7 @@
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="2" column="0">
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="login">
      <property name="font">
       <font>
        <pointsize>15</pointsize>
@@ -109,7 +109,7 @@
     </layout>
    </item>
    <item row="3" column="0">
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="changepass">
      <property name="font">
       <font>
        <pointsize>15</pointsize>

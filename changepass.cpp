@@ -12,3 +12,8 @@ changePass::~changePass()
 {
     delete ui;
 }
+
+void changePass::on_back_clicked()
+{
+    stackWidget->setCurrentIndex(10);
+}

@@ -12,3 +12,13 @@ LogIn::~LogIn()
 {
     delete ui;
 }
+
+void LogIn::on_login_clicked()
+{
+    stackWidget->setCurrentIndex(2);
+}
+
+void LogIn::on_changepass_clicked()
+{
+    stackWidget->setCurrentIndex(11);
+}

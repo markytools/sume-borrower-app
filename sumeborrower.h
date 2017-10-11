@@ -15,6 +15,8 @@
 #include "borrowers.h"
 #include "subjectui.h"
 #include "experiments.h"
+#include "login.h"
+#include "changepass.h"
 #include <QVector>
 namespace Ui {
 class SUMEBorrower;
