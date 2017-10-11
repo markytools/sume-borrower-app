@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'login.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.0
+** Created by: Qt User Interface Compiler version 5.9.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -45,6 +45,7 @@ public:
             LogIn->setObjectName(QStringLiteral("LogIn"));
         LogIn->resize(327, 371);
         LogIn->setMinimumSize(QSize(327, 371));
+        LogIn->setMaximumSize(QSize(327, 371));
         gridLayout = new QGridLayout(LogIn);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         pushButton = new QPushButton(LogIn);
