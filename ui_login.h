@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'login.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.0
+** Created by: Qt User Interface Compiler version 5.9.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -99,6 +99,7 @@ public:
 
         password_input = new QLineEdit(LogIn);
         password_input->setObjectName(QStringLiteral("password_input"));
+        password_input->setEchoMode(QLineEdit::Password);
 
         horizontalLayout_2->addWidget(password_input);
 
