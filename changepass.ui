@@ -46,7 +46,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit"/>
+        <widget class="QLineEdit" name="user_input"/>
        </item>
       </layout>
      </item>
@@ -68,7 +68,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_2"/>
+        <widget class="QLineEdit" name="old_password"/>
        </item>
       </layout>
      </item>
@@ -90,14 +90,14 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_3"/>
+        <widget class="QLineEdit" name="new_password"/>
        </item>
       </layout>
      </item>
     </layout>
    </item>
    <item row="2" column="3">
-    <widget class="QPushButton" name="Cancel">
+    <widget class="QPushButton" name="submit">
      <property name="font">
       <font>
        <family>Segoe UI Black</family>

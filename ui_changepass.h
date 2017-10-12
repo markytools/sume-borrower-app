@@ -32,14 +32,14 @@ public:
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
     QLabel *label_10;
-    QLineEdit *lineEdit;
+    QLineEdit *user_input;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_11;
-    QLineEdit *lineEdit_2;
+    QLineEdit *old_password;
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_12;
-    QLineEdit *lineEdit_3;
-    QPushButton *Cancel;
+    QLineEdit *new_password;
+    QPushButton *submit;
     QSpacerItem *horizontalSpacer_2;
     QPushButton *back;
     QLabel *label;
@@ -68,10 +68,10 @@ public:
 
         horizontalLayout->addWidget(label_10);
 
-        lineEdit = new QLineEdit(changePass);
-        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+        user_input = new QLineEdit(changePass);
+        user_input->setObjectName(QStringLiteral("user_input"));
 
-        horizontalLayout->addWidget(lineEdit);
+        horizontalLayout->addWidget(user_input);
 
 
         verticalLayout->addLayout(horizontalLayout);
@@ -84,10 +84,10 @@ public:
 
         horizontalLayout_2->addWidget(label_11);
 
-        lineEdit_2 = new QLineEdit(changePass);
-        lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
+        old_password = new QLineEdit(changePass);
+        old_password->setObjectName(QStringLiteral("old_password"));
 
-        horizontalLayout_2->addWidget(lineEdit_2);
+        horizontalLayout_2->addWidget(old_password);
 
 
         verticalLayout->addLayout(horizontalLayout_2);
@@ -100,10 +100,10 @@ public:
 
         horizontalLayout_3->addWidget(label_12);
 
-        lineEdit_3 = new QLineEdit(changePass);
-        lineEdit_3->setObjectName(QStringLiteral("lineEdit_3"));
+        new_password = new QLineEdit(changePass);
+        new_password->setObjectName(QStringLiteral("new_password"));
 
-        horizontalLayout_3->addWidget(lineEdit_3);
+        horizontalLayout_3->addWidget(new_password);
 
 
         verticalLayout->addLayout(horizontalLayout_3);
@@ -111,16 +111,16 @@ public:
 
         gridLayout->addLayout(verticalLayout, 1, 0, 1, 4);
 
-        Cancel = new QPushButton(changePass);
-        Cancel->setObjectName(QStringLiteral("Cancel"));
+        submit = new QPushButton(changePass);
+        submit->setObjectName(QStringLiteral("submit"));
         QFont font1;
         font1.setFamily(QStringLiteral("Segoe UI Black"));
         font1.setPointSize(12);
         font1.setBold(true);
         font1.setWeight(75);
-        Cancel->setFont(font1);
+        submit->setFont(font1);
 
-        gridLayout->addWidget(Cancel, 2, 3, 1, 1);
+        gridLayout->addWidget(submit, 2, 3, 1, 1);
 
         horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -156,7 +156,7 @@ public:
         label_10->setText(QApplication::translate("changePass", "USERNAME:", Q_NULLPTR));
         label_11->setText(QApplication::translate("changePass", "OLD PASSWORD:", Q_NULLPTR));
         label_12->setText(QApplication::translate("changePass", "NEW PASSWORD:", Q_NULLPTR));
-        Cancel->setText(QApplication::translate("changePass", "SUBMIT", Q_NULLPTR));
+        submit->setText(QApplication::translate("changePass", "SUBMIT", Q_NULLPTR));
         back->setText(QApplication::translate("changePass", "BACK", Q_NULLPTR));
         label->setText(QApplication::translate("changePass", "SILLIMAN UNIVERSITY MECHANICAL ENGINEERING LABORATORY BORROWER", Q_NULLPTR));
     } // retranslateUi

@@ -18,6 +18,8 @@ public:
 private slots:
     void on_back_clicked();
 
+    void on_submit_clicked();
+
 private:
     Ui::changePass *ui;
 };

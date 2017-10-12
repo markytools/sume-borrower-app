@@ -33,10 +33,10 @@ public:
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
     QLabel *label_10;
-    QLineEdit *lineEdit;
+    QLineEdit *user_input;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_11;
-    QLineEdit *lineEdit_2;
+    QLineEdit *password_input;
     QPushButton *changepass;
 
     void setupUi(QWidget *LogIn)
@@ -81,10 +81,10 @@ public:
 
         horizontalLayout->addWidget(label_10);
 
-        lineEdit = new QLineEdit(LogIn);
-        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+        user_input = new QLineEdit(LogIn);
+        user_input->setObjectName(QStringLiteral("user_input"));
 
-        horizontalLayout->addWidget(lineEdit);
+        horizontalLayout->addWidget(user_input);
 
 
         verticalLayout->addLayout(horizontalLayout);
@@ -97,10 +97,10 @@ public:
 
         horizontalLayout_2->addWidget(label_11);
 
-        lineEdit_2 = new QLineEdit(LogIn);
-        lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
+        password_input = new QLineEdit(LogIn);
+        password_input->setObjectName(QStringLiteral("password_input"));
 
-        horizontalLayout_2->addWidget(lineEdit_2);
+        horizontalLayout_2->addWidget(password_input);
 
 
         verticalLayout->addLayout(horizontalLayout_2);
