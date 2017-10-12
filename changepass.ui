@@ -68,7 +68,11 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="old_password"/>
+        <widget class="QLineEdit" name="old_password">
+         <property name="echoMode">
+          <enum>QLineEdit::Password</enum>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -90,7 +94,11 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="new_password"/>
+        <widget class="QLineEdit" name="new_password">
+         <property name="echoMode">
+          <enum>QLineEdit::Password</enum>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>

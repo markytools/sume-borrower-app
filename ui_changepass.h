@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'changepass.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.0
+** Created by: Qt User Interface Compiler version 5.9.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -86,6 +86,7 @@ public:
 
         old_password = new QLineEdit(changePass);
         old_password->setObjectName(QStringLiteral("old_password"));
+        old_password->setEchoMode(QLineEdit::Password);
 
         horizontalLayout_2->addWidget(old_password);
 
@@ -102,6 +103,7 @@ public:
 
         new_password = new QLineEdit(changePass);
         new_password->setObjectName(QStringLiteral("new_password"));
+        new_password->setEchoMode(QLineEdit::Password);
 
         horizontalLayout_3->addWidget(new_password);
 
