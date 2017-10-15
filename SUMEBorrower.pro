@@ -92,3 +92,6 @@ INCLUDEPATH += $$PWD/.
 DEPENDPATH += $$PWD/.
 
 RC_FILE = myapp.rc
+
+RESOURCES += \
+    resources.qrc

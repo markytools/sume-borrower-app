@@ -18,6 +18,7 @@ INPUT(
 ./release\login.o
 ./release\stackedwidget.o
 ./release\changepass.o
+./release\qrc_resources.o
 ./release\moc_sumeborrower.o
 ./release\moc_borrowers.o
 ./release\moc_borrowingd.o

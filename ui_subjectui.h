@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'subjectui.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.1
+** Created by: Qt User Interface Compiler version 5.9.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -35,19 +35,23 @@ public:
     QLabel *label;
     QTableWidget *tableWidget;
     QHBoxLayout *horizontalLayout;
-    QPushButton *addSubject;
-    QLineEdit *lineEdit;
     QSpacerItem *horizontalSpacer;
-    QPushButton *editSubject;
-    QPushButton *deleteSubject;
     QPushButton *Back;
+    QSpacerItem *horizontalSpacer_2;
+    QPushButton *editSubject;
+    QSpacerItem *horizontalSpacer_3;
+    QPushButton *deleteSubject;
+    QSpacerItem *horizontalSpacer_4;
+    QLineEdit *lineEdit;
+    QPushButton *addSubject;
+    QSpacerItem *horizontalSpacer_5;
 
     void setupUi(QWidget *SubjectUI)
     {
         if (SubjectUI->objectName().isEmpty())
             SubjectUI->setObjectName(QStringLiteral("SubjectUI"));
-        SubjectUI->resize(733, 487);
-        SubjectUI->setMinimumSize(QSize(733, 487));
+        SubjectUI->resize(720, 600);
+        SubjectUI->setMinimumSize(QSize(180, 600));
         gridLayout = new QGridLayout(SubjectUI);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         verticalLayout = new QVBoxLayout();
@@ -57,11 +61,17 @@ public:
         label = new QLabel(SubjectUI);
         label->setObjectName(QStringLiteral("label"));
         QFont font;
-        font.setFamily(QStringLiteral("Segoe UI Black"));
-        font.setPointSize(16);
+        font.setFamily(QStringLiteral("Adobe Gothic Std B"));
+        font.setPointSize(15);
         font.setBold(true);
         font.setWeight(75);
         label->setFont(font);
+        label->setStyleSheet(QLatin1String("#label{\n"
+"background-color:transparent;\n"
+"color: #eb4444;\n"
+"background:none;\n"
+"border:none;\n"
+"}"));
         label->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_2->addWidget(label);
@@ -71,48 +81,108 @@ public:
 
         tableWidget = new QTableWidget(SubjectUI);
         tableWidget->setObjectName(QStringLiteral("tableWidget"));
+        QFont font1;
+        font1.setFamily(QStringLiteral("Adobe Gothic Std B"));
+        font1.setPointSize(10);
+        tableWidget->setFont(font1);
 
         verticalLayout->addWidget(tableWidget);
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        addSubject = new QPushButton(SubjectUI);
-        addSubject->setObjectName(QStringLiteral("addSubject"));
-        QFont font1;
-        font1.setFamily(QStringLiteral("Segoe UI Black"));
-        font1.setPointSize(10);
-        font1.setBold(true);
-        font1.setWeight(75);
-        addSubject->setFont(font1);
-
-        horizontalLayout->addWidget(addSubject);
-
-        lineEdit = new QLineEdit(SubjectUI);
-        lineEdit->setObjectName(QStringLiteral("lineEdit"));
-
-        horizontalLayout->addWidget(lineEdit);
-
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Preferred, QSizePolicy::Minimum);
+        horizontalSpacer = new QSpacerItem(10, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer);
 
+        Back = new QPushButton(SubjectUI);
+        Back->setObjectName(QStringLiteral("Back"));
+        QFont font2;
+        font2.setFamily(QStringLiteral("Adobe Gothic Std B"));
+        font2.setPointSize(10);
+        font2.setBold(false);
+        font2.setWeight(50);
+        Back->setFont(font2);
+        Back->setStyleSheet(QLatin1String("#Back{\n"
+"background-color: #eb4444;\n"
+"color: white;\n"
+"border-style: outset;\n"
+"border-radius: 3px;\n"
+"padding: 3px;\n"
+"}"));
+
+        horizontalLayout->addWidget(Back);
+
+        horizontalSpacer_2 = new QSpacerItem(10, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_2);
+
         editSubject = new QPushButton(SubjectUI);
         editSubject->setObjectName(QStringLiteral("editSubject"));
-        editSubject->setFont(font1);
+        editSubject->setFont(font2);
+        editSubject->setStyleSheet(QLatin1String("#editSubject{\n"
+"background-color: #eb4444;\n"
+"color: white;\n"
+"border-style: outset;\n"
+"border-radius: 3px;\n"
+"padding: 3px;\n"
+"}"));
 
         horizontalLayout->addWidget(editSubject);
 
+        horizontalSpacer_3 = new QSpacerItem(10, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_3);
+
         deleteSubject = new QPushButton(SubjectUI);
         deleteSubject->setObjectName(QStringLiteral("deleteSubject"));
-        deleteSubject->setFont(font1);
+        deleteSubject->setFont(font2);
+        deleteSubject->setStyleSheet(QLatin1String("#deleteSubject{\n"
+"background-color: #eb4444;\n"
+"color: white;\n"
+"border-style: outset;\n"
+"border-radius: 3px;\n"
+"padding: 3px;\n"
+"}"));
 
         horizontalLayout->addWidget(deleteSubject);
 
-        Back = new QPushButton(SubjectUI);
-        Back->setObjectName(QStringLiteral("Back"));
-        Back->setFont(font1);
+        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
-        horizontalLayout->addWidget(Back);
+        horizontalLayout->addItem(horizontalSpacer_4);
+
+        lineEdit = new QLineEdit(SubjectUI);
+        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+        QFont font3;
+        font3.setFamily(QStringLiteral("Adobe Gothic Std B"));
+        font3.setPointSize(8);
+        lineEdit->setFont(font3);
+        lineEdit->setStyleSheet(QLatin1String("#lineEdit{\n"
+"background-color:white;\n"
+"color: #eb4444;\n"
+"border-style: outset;\n"
+"border-width: 1px;\n"
+"border-color: #eb4444;\n"
+"border-radius: 3px;\n"
+"}"));
+
+        horizontalLayout->addWidget(lineEdit);
+
+        addSubject = new QPushButton(SubjectUI);
+        addSubject->setObjectName(QStringLiteral("addSubject"));
+        addSubject->setFont(font2);
+        addSubject->setStyleSheet(QLatin1String("#addSubject{\n"
+"background-color: #eb4444;\n"
+"color: white;\n"
+"border-style: outset;\n"
+"border-radius: 3px;\n"
+"padding: 3px;\n"
+"}"));
+
+        horizontalLayout->addWidget(addSubject);
+
+        horizontalSpacer_5 = new QSpacerItem(10, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_5);
 
 
         verticalLayout->addLayout(horizontalLayout);
@@ -130,11 +200,11 @@ public:
     {
         SubjectUI->setWindowTitle(QApplication::translate("SubjectUI", "Form", Q_NULLPTR));
         label->setText(QApplication::translate("SubjectUI", "SUBJECTS", Q_NULLPTR));
-        addSubject->setText(QApplication::translate("SubjectUI", "ADD SUBJECT", Q_NULLPTR));
+        Back->setText(QApplication::translate("SubjectUI", "Back", Q_NULLPTR));
+        editSubject->setText(QApplication::translate("SubjectUI", "Edit Subject", Q_NULLPTR));
+        deleteSubject->setText(QApplication::translate("SubjectUI", "Delete Subject", Q_NULLPTR));
         lineEdit->setPlaceholderText(QApplication::translate("SubjectUI", "Press ENTER to add subject", Q_NULLPTR));
-        editSubject->setText(QApplication::translate("SubjectUI", "EDIT SUBJECT", Q_NULLPTR));
-        deleteSubject->setText(QApplication::translate("SubjectUI", "DELETE SUBJECT", Q_NULLPTR));
-        Back->setText(QApplication::translate("SubjectUI", "BACK", Q_NULLPTR));
+        addSubject->setText(QApplication::translate("SubjectUI", "Add Subject", Q_NULLPTR));
     } // retranslateUi
 
 };

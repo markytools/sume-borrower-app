@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'sumeborrower.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.1
+** Created by: Qt User Interface Compiler version 5.9.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -25,9 +25,9 @@ QT_BEGIN_NAMESPACE
 class Ui_SUMEBorrower
 {
 public:
+    QWidget *centralWidget;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
-    QWidget *centralWidget;
     QStatusBar *statusBar;
 
     void setupUi(QMainWindow *SUMEBorrower)
@@ -35,15 +35,21 @@ public:
         if (SUMEBorrower->objectName().isEmpty())
             SUMEBorrower->setObjectName(QStringLiteral("SUMEBorrower"));
         SUMEBorrower->resize(400, 300);
-        menuBar = new QMenuBar(SUMEBorrower);
-        menuBar->setObjectName(QStringLiteral("menuBar"));
-        SUMEBorrower->setMenuBar(menuBar);
-        mainToolBar = new QToolBar(SUMEBorrower);
-        mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
-        SUMEBorrower->addToolBar(mainToolBar);
+        SUMEBorrower->setStyleSheet(QLatin1String("#SUMEBorrower{\n"
+"background-color:white;\n"
+"background:none;\n"
+"border:none;\n"
+"}"));
         centralWidget = new QWidget(SUMEBorrower);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         SUMEBorrower->setCentralWidget(centralWidget);
+        menuBar = new QMenuBar(SUMEBorrower);
+        menuBar->setObjectName(QStringLiteral("menuBar"));
+        menuBar->setGeometry(QRect(0, 0, 400, 21));
+        SUMEBorrower->setMenuBar(menuBar);
+        mainToolBar = new QToolBar(SUMEBorrower);
+        mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
+        SUMEBorrower->addToolBar(Qt::TopToolBarArea, mainToolBar);
         statusBar = new QStatusBar(SUMEBorrower);
         statusBar->setObjectName(QStringLiteral("statusBar"));
         SUMEBorrower->setStatusBar(statusBar);

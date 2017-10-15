@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>686</width>
-    <height>478</height>
+    <width>800</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>0</width>
-    <height>0</height>
+    <width>800</width>
+    <height>600</height>
    </size>
   </property>
   <property name="maximumSize">
@@ -25,35 +25,14 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">#BorrowingD{
+background-color:white;
+background:none;
+border:none;
+}</string>
+  </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0">
-    <spacer name="horizontalSpacer">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>203</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="0" column="1">
-    <widget class="QLabel" name="label">
-     <property name="font">
-      <font>
-       <family>Segoe UI Black</family>
-       <pointsize>16</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>BORROWING DETAILS</string>
-     </property>
-    </widget>
-   </item>
    <item row="1" column="0" colspan="3">
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
@@ -64,19 +43,46 @@
           <widget class="QLabel" name="label_2">
            <property name="font">
             <font>
-             <family>Segoe UI Black</family>
-             <pointsize>8</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
+             <family>Adobe Gothic Std B</family>
+             <pointsize>10</pointsize>
+             <weight>50</weight>
+             <bold>false</bold>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">#label_2{
+background-color:transparent;
+color: #eb4444;
+background:none;
+border:none;
+}</string>
+           </property>
            <property name="text">
-            <string>ENTER THE STUDENT NAME:</string>
+            <string>Enter the Student Name:     </string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QLineEdit" name="studentName">
+           <property name="font">
+            <font>
+             <family>Adobe Gothic Std B</family>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">#studentName{
+background-color:white;
+color: #eb4444;
+border-style: outset;
+border-width: 1px;
+border-color: #eb4444;
+border-radius: 3px;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
            <property name="placeholderText">
             <string>Press ENTER to add the name</string>
            </property>
@@ -90,14 +96,23 @@
           <widget class="QPushButton" name="Add">
            <property name="font">
             <font>
-             <family>Segoe UI Black</family>
+             <family>Adobe Gothic Std B</family>
              <pointsize>10</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
+             <weight>50</weight>
+             <bold>false</bold>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">#Add{
+background-color: #eb4444;
+color: white;
+border-style: outset;
+border-radius: 3px;
+padding: 3px;
+}</string>
+           </property>
            <property name="text">
-            <string>ADD</string>
+            <string>Add</string>
            </property>
           </widget>
          </item>
@@ -105,14 +120,23 @@
           <widget class="QPushButton" name="Delete">
            <property name="font">
             <font>
-             <family>Segoe UI Black</family>
+             <family>Adobe Gothic Std B</family>
              <pointsize>10</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
+             <weight>50</weight>
+             <bold>false</bold>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">#Delete{
+background-color: #eb4444;
+color: white;
+border-style: outset;
+border-radius: 3px;
+padding: 3px;
+}</string>
+           </property>
            <property name="text">
-            <string>DELETE</string>
+            <string>Delete</string>
            </property>
           </widget>
          </item>
@@ -121,7 +145,14 @@
       </layout>
      </item>
      <item>
-      <widget class="QListWidget" name="listWidget"/>
+      <widget class="QListWidget" name="listWidget">
+       <property name="font">
+        <font>
+         <family>Adobe Gothic Std B</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_9">
@@ -133,19 +164,44 @@
             <widget class="QLabel" name="label_9">
              <property name="font">
               <font>
-               <family>Segoe UI Black</family>
-               <pointsize>8</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
+               <family>Adobe Gothic Std B</family>
+               <pointsize>10</pointsize>
+               <weight>50</weight>
+               <bold>false</bold>
               </font>
              </property>
+             <property name="styleSheet">
+              <string notr="true">#label_9{
+background-color:transparent;
+color: #eb4444;
+background:none;
+border:none;
+}</string>
+             </property>
              <property name="text">
-              <string>GROUP NAME:</string>
+              <string>Group Name:</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="groupName"/>
+            <widget class="QLineEdit" name="groupName">
+             <property name="font">
+              <font>
+               <family>Adobe Gothic Std B</family>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#groupName{
+background-color:white;
+color: #eb4444;
+border-style: outset;
+border-width: 1px;
+border-color: #eb4444;
+border-radius: 3px;
+}</string>
+             </property>
+            </widget>
            </item>
           </layout>
          </item>
@@ -155,19 +211,44 @@
             <widget class="QLabel" name="label_10">
              <property name="font">
               <font>
-               <family>Segoe UI Black</family>
-               <pointsize>8</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
+               <family>Adobe Gothic Std B</family>
+               <pointsize>10</pointsize>
+               <weight>50</weight>
+               <bold>false</bold>
               </font>
              </property>
+             <property name="styleSheet">
+              <string notr="true">#label_10{
+background-color:transparent;
+color: #eb4444;
+background:none;
+border:none;
+}</string>
+             </property>
              <property name="text">
-              <string>SUBJECT:</string>
+              <string>Subject:          </string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="subject"/>
+            <widget class="QLineEdit" name="subject">
+             <property name="font">
+              <font>
+               <family>Adobe Gothic Std B</family>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#subject{
+background-color:white;
+color: #eb4444;
+border-style: outset;
+border-width: 1px;
+border-color: #eb4444;
+border-radius: 3px;
+}</string>
+             </property>
+            </widget>
            </item>
           </layout>
          </item>
@@ -177,19 +258,44 @@
             <widget class="QLabel" name="label_12">
              <property name="font">
               <font>
-               <family>Segoe UI Black</family>
-               <pointsize>8</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
+               <family>Adobe Gothic Std B</family>
+               <pointsize>10</pointsize>
+               <weight>50</weight>
+               <bold>false</bold>
               </font>
              </property>
+             <property name="styleSheet">
+              <string notr="true">#label_12{
+background-color:transparent;
+color: #eb4444;
+background:none;
+border:none;
+}</string>
+             </property>
              <property name="text">
-              <string>SECTION:</string>
+              <string>Section:          </string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="section"/>
+            <widget class="QLineEdit" name="section">
+             <property name="font">
+              <font>
+               <family>Adobe Gothic Std B</family>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#section{
+background-color:white;
+color: #eb4444;
+border-style: outset;
+border-width: 1px;
+border-color: #eb4444;
+border-radius: 3px;
+}</string>
+             </property>
+            </widget>
            </item>
           </layout>
          </item>
@@ -199,19 +305,44 @@
             <widget class="QLabel" name="label_11">
              <property name="font">
               <font>
-               <family>Segoe UI Black</family>
-               <pointsize>8</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
+               <family>Adobe Gothic Std B</family>
+               <pointsize>10</pointsize>
+               <weight>50</weight>
+               <bold>false</bold>
               </font>
              </property>
+             <property name="styleSheet">
+              <string notr="true">#label_11{
+background-color:transparent;
+color: #eb4444;
+background:none;
+border:none;
+}</string>
+             </property>
              <property name="text">
-              <string>INSTRUCTOR:</string>
+              <string>Instructor:     </string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="instructor"/>
+            <widget class="QLineEdit" name="instructor">
+             <property name="font">
+              <font>
+               <family>Adobe Gothic Std B</family>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#instructor{
+background-color:white;
+color: #eb4444;
+border-style: outset;
+border-width: 1px;
+border-color: #eb4444;
+border-radius: 3px;
+}</string>
+             </property>
+            </widget>
            </item>
           </layout>
          </item>
@@ -245,19 +376,44 @@
                 <widget class="QLabel" name="label_8">
                  <property name="font">
                   <font>
-                   <family>Segoe UI Black</family>
+                   <family>Adobe Gothic Std B</family>
                    <pointsize>10</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <bold>false</bold>
                   </font>
                  </property>
+                 <property name="styleSheet">
+                  <string notr="true">#label_8{
+background-color:transparent;
+color: #eb4444;
+background:none;
+border:none;
+}</string>
+                 </property>
                  <property name="text">
-                  <string>START:</string>
+                  <string>Start:</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QDateTimeEdit" name="startDateTime"/>
+                <widget class="QDateTimeEdit" name="startDateTime">
+                 <property name="font">
+                  <font>
+                   <family>Adobe Gothic Std B</family>
+                   <pointsize>8</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">#startDateTime{
+background-color:white;
+color: #eb4444;
+border-style: outset;
+border-width: 1px;
+border-color: #eb4444;
+border-radius: 3px;
+}</string>
+                 </property>
+                </widget>
                </item>
               </layout>
              </item>
@@ -267,19 +423,44 @@
                 <widget class="QLabel" name="label_7">
                  <property name="font">
                   <font>
-                   <family>Segoe UI Black</family>
+                   <family>Adobe Gothic Std B</family>
                    <pointsize>10</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
+                   <weight>50</weight>
+                   <bold>false</bold>
                   </font>
                  </property>
+                 <property name="styleSheet">
+                  <string notr="true">#label_7{
+background-color:transparent;
+color: #eb4444;
+background:none;
+border:none;
+}</string>
+                 </property>
                  <property name="text">
-                  <string>END:</string>
+                  <string>End:</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QDateTimeEdit" name="endDateTime"/>
+                <widget class="QDateTimeEdit" name="endDateTime">
+                 <property name="font">
+                  <font>
+                   <family>Adobe Gothic Std B</family>
+                   <pointsize>8</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">#endDateTime{
+background-color:white;
+color: #eb4444;
+border-style: outset;
+border-width: 1px;
+border-color: #eb4444;
+border-radius: 3px;
+}</string>
+                 </property>
+                </widget>
                </item>
               </layout>
              </item>
@@ -290,7 +471,8 @@
                </property>
                <property name="font">
                 <font>
-                 <pointsize>10</pointsize>
+                 <family>Adobe Gothic Std B</family>
+                 <pointsize>8</pointsize>
                  <weight>50</weight>
                  <bold>false</bold>
                 </font>
@@ -302,10 +484,15 @@
                 <bool>false</bool>
                </property>
                <property name="styleSheet">
-                <string notr="true"/>
+                <string notr="true">#hasEndTime{
+background-color:transparent;
+color: #eb4444;
+background:none;
+border:none;
+}</string>
                </property>
                <property name="text">
-                <string>has End Time</string>
+                <string>Has End Time</string>
                </property>
                <property name="tristate">
                 <bool>false</bool>
@@ -319,34 +506,100 @@
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_8">
            <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
             <widget class="QPushButton" name="Cancel">
              <property name="font">
               <font>
-               <family>Segoe UI Black</family>
+               <family>Adobe Gothic Std B</family>
                <pointsize>10</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
+               <weight>50</weight>
+               <bold>false</bold>
               </font>
              </property>
+             <property name="styleSheet">
+              <string notr="true">#Cancel{
+background-color: #eb4444;
+color: white;
+border-style: outset;
+border-radius: 3px;
+padding: 3px;
+}</string>
+             </property>
              <property name="text">
-              <string>CANCEL</string>
+              <string>Cancel</string>
              </property>
             </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>10</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
            </item>
            <item>
             <widget class="QPushButton" name="Proceed">
              <property name="font">
               <font>
-               <family>Segoe UI Black</family>
+               <family>Adobe Gothic Std B</family>
                <pointsize>10</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
+               <weight>50</weight>
+               <bold>false</bold>
               </font>
              </property>
+             <property name="styleSheet">
+              <string notr="true">#Proceed{
+background-color: #eb4444;
+color: white;
+border-style: outset;
+border-radius: 3px;
+padding: 3px;
+}</string>
+             </property>
              <property name="text">
-              <string>PROCEED</string>
+              <string>Proceed</string>
              </property>
             </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>10</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
            </item>
           </layout>
          </item>
@@ -356,18 +609,35 @@
      </item>
     </layout>
    </item>
-   <item row="0" column="2">
-    <spacer name="horizontalSpacer_2">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>218</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
+   <item row="0" column="0" colspan="3">
+    <layout class="QHBoxLayout" name="horizontalLayout_13">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <family>Adobe Gothic Std B</family>
+         <pointsize>15</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#label{
+background-color:transparent;
+color: #eb4444;
+background:none;
+border:none;
+}</string>
+       </property>
+       <property name="text">
+        <string>BORROWING DETAILS</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
   </layout>
  </widget>

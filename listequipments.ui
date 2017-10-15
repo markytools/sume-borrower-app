@@ -6,115 +6,282 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>889</width>
-    <height>476</height>
+    <width>1080</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>889</width>
-    <height>476</height>
+    <width>1080</width>
+    <height>600</height>
    </size>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">#ListEquipments{
+background-color:white;
+background:none;
+border:none;
+}</string>
+  </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0">
-    <widget class="QLabel" name="label">
+   <item row="2" column="0">
+    <widget class="QTableWidget" name="equipmentTable">
      <property name="font">
       <font>
-       <family>Segoe UI Black</family>
-       <pointsize>16</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
+       <family>Adobe Gothic Std B</family>
+       <pointsize>10</pointsize>
       </font>
-     </property>
-     <property name="text">
-      <string>**LIST OF EQUIPMENTS**</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </item>
-   <item row="1" column="0">
-    <widget class="QTableWidget" name="equipmentTable"/>
-   </item>
-   <item row="2" column="0">
+   <item row="3" column="0">
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QPushButton" name="AddButton">
-       <property name="font">
-        <font>
-         <family>Segoe UI Black</family>
-         <pointsize>10</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
        </property>
-       <property name="text">
-        <string>ADD</string>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
        </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="EditButton">
-       <property name="font">
-        <font>
-         <family>Segoe UI Black</family>
-         <pointsize>10</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>10</width>
+         <height>20</height>
+        </size>
        </property>
-       <property name="text">
-        <string>EDIT</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="RemoveButton">
-       <property name="font">
-        <font>
-         <family>Segoe UI Black</family>
-         <pointsize>10</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>REMOVE EQUIPMENT</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="RemoveAllButton">
-       <property name="font">
-        <font>
-         <family>Segoe UI Black</family>
-         <pointsize>10</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>REMOVE ALL</string>
-       </property>
-      </widget>
+      </spacer>
      </item>
      <item>
       <widget class="QPushButton" name="Back">
        <property name="font">
         <font>
-         <family>Segoe UI Black</family>
+         <family>Adobe Gothic Std B</family>
          <pointsize>10</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#Back{
+background-color: #eb4444;
+color: white;
+border-style: outset;
+border-radius: 3px;
+padding: 3px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Back</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_5">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>60</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="RemoveButton">
+       <property name="font">
+        <font>
+         <family>Adobe Gothic Std B</family>
+         <pointsize>10</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#RemoveButton{
+background-color: #eb4444;
+color: white;
+border-style: outset;
+border-radius: 3px;
+padding: 3px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Remove Equipment</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_6">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>10</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="RemoveAllButton">
+       <property name="font">
+        <font>
+         <family>Adobe Gothic Std B</family>
+         <pointsize>10</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#RemoveAllButton{
+background-color: #eb4444;
+color: white;
+border-style: outset;
+border-radius: 3px;
+padding: 3px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Remove All</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="EditButton">
+       <property name="font">
+        <font>
+         <family>Adobe Gothic Std B</family>
+         <pointsize>10</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#EditButton{
+background-color: #eb4444;
+color: white;
+border-style: outset;
+border-radius: 3px;
+padding: 3px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Edit</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>10</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="AddButton">
+       <property name="font">
+        <font>
+         <family>Adobe Gothic Std B</family>
+         <pointsize>10</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#AddButton{
+background-color: #eb4444;
+color: white;
+border-style: outset;
+border-radius: 3px;
+padding: 3px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Add</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>10</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <family>Adobe Gothic Std B</family>
+         <pointsize>15</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">#label{
+background-color:transparent;
+color: #eb4444;
+background:none;
+border:none;
+}</string>
+       </property>
        <property name="text">
-        <string>BACK</string>
+        <string>LIST OF EQUIPMENTS</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
