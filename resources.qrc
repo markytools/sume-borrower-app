@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>images/su_logo.png</file>
+        <file>images/su_logo_extended.png</file>
+        <file>images/borrow.png</file>
+        <file>images/subs.png</file>
+        <file>images/equips.png</file>
+    </qresource>
+</RCC>
