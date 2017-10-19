@@ -281,7 +281,7 @@ border:none;
 }</string>
              </property>
              <property name="text">
-              <string>Group Name:   </string>
+              <string>Group Name:      </string>
              </property>
             </widget>
            </item>
@@ -422,7 +422,7 @@ border:none;
 }</string>
              </property>
              <property name="text">
-              <string>Instructor:        </string>
+              <string>Instructor:         </string>
              </property>
             </widget>
            </item>
@@ -469,7 +469,7 @@ border:none;
 }</string>
              </property>
              <property name="text">
-              <string>Start Time:       </string>
+              <string>Start Time:        </string>
              </property>
             </widget>
            </item>
@@ -516,7 +516,7 @@ border:none;
 }</string>
              </property>
              <property name="text">
-              <string>End Time:         </string>
+              <string>End Time:          </string>
              </property>
             </widget>
            </item>

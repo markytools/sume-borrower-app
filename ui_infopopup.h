@@ -455,12 +455,12 @@ public:
         label_8->setText(QApplication::translate("Infopopup", "MEMBERS", Q_NULLPTR));
         exportToExcel->setText(QApplication::translate("Infopopup", "Export To Excel", Q_NULLPTR));
         Delete->setText(QApplication::translate("Infopopup", "Delete Borrower", Q_NULLPTR));
-        label_6->setText(QApplication::translate("Infopopup", "Group Name:   ", Q_NULLPTR));
+        label_6->setText(QApplication::translate("Infopopup", "Group Name:      ", Q_NULLPTR));
         label_5->setText(QApplication::translate("Infopopup", "Subject:             ", Q_NULLPTR));
         label_4->setText(QApplication::translate("Infopopup", "Section:             ", Q_NULLPTR));
-        label_9->setText(QApplication::translate("Infopopup", "Instructor:        ", Q_NULLPTR));
-        label_10->setText(QApplication::translate("Infopopup", "Start Time:       ", Q_NULLPTR));
-        label_11->setText(QApplication::translate("Infopopup", "End Time:         ", Q_NULLPTR));
+        label_9->setText(QApplication::translate("Infopopup", "Instructor:         ", Q_NULLPTR));
+        label_10->setText(QApplication::translate("Infopopup", "Start Time:        ", Q_NULLPTR));
+        label_11->setText(QApplication::translate("Infopopup", "End Time:          ", Q_NULLPTR));
         Back->setText(QApplication::translate("Infopopup", "Back", Q_NULLPTR));
     } // retranslateUi
 

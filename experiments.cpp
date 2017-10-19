@@ -130,6 +130,7 @@ void Experiments::on_Back_clicked()
     ui->listEquipments->setRowCount(0);
     setExperimentName("");
     setSubjectName("");
+    ui->experimentName->clear();
     stackWidget->setCurrentIndex(8);
 }
 

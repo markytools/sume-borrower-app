@@ -30,18 +30,6 @@ class Ui_Experiments
 {
 public:
     QGridLayout *gridLayout_2;
-    QVBoxLayout *verticalLayout;
-    QHBoxLayout *horizontalLayout;
-    QLabel *label_2;
-    QLineEdit *lineEdit;
-    QHBoxLayout *horizontalLayout_6;
-    QSpacerItem *horizontalSpacer_4;
-    QVBoxLayout *verticalLayout_7;
-    QPushButton *addExperiment;
-    QPushButton *deleteExperiment;
-    QSpacerItem *horizontalSpacer_5;
-    QSpacerItem *verticalSpacer;
-    QSpacerItem *verticalSpacer_2;
     QHBoxLayout *horizontalLayout_4;
     QVBoxLayout *verticalLayout_4;
     QHBoxLayout *horizontalLayout_2;
@@ -62,6 +50,19 @@ public:
     QLabel *label_11;
     QTableWidget *experimentEquipments;
     QSpacerItem *verticalSpacer_5;
+    QHBoxLayout *horizontalLayout_5;
+    QSpacerItem *horizontalSpacer;
+    QPushButton *Back;
+    QSpacerItem *horizontalSpacer_2;
+    QVBoxLayout *verticalLayout;
+    QHBoxLayout *horizontalLayout;
+    QLabel *label_2;
+    QLineEdit *lineEdit;
+    QSpacerItem *horizontalSpacer_3;
+    QPushButton *addExperiment;
+    QSpacerItem *horizontalSpacer_4;
+    QPushButton *deleteExperiment;
+    QSpacerItem *horizontalSpacer_5;
     QGridLayout *gridLayout;
     QVBoxLayout *verticalLayout_2;
     QHBoxLayout *horizontalLayout_3;
@@ -69,10 +70,6 @@ public:
     QLabel *subjectNameLabel;
     QLabel *label_10;
     QTableWidget *experimentsTable;
-    QHBoxLayout *horizontalLayout_5;
-    QSpacerItem *horizontalSpacer;
-    QPushButton *Back;
-    QSpacerItem *horizontalSpacer_2;
 
     void setupUi(QWidget *Experiments)
     {
@@ -87,102 +84,6 @@ public:
 "}"));
         gridLayout_2 = new QGridLayout(Experiments);
         gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
-        verticalLayout = new QVBoxLayout();
-        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        label_2 = new QLabel(Experiments);
-        label_2->setObjectName(QStringLiteral("label_2"));
-        QFont font;
-        font.setFamily(QStringLiteral("Adobe Gothic Std B"));
-        font.setPointSize(10);
-        font.setBold(false);
-        font.setWeight(50);
-        label_2->setFont(font);
-        label_2->setStyleSheet(QLatin1String("#label_2{\n"
-"background-color:transparent;\n"
-"color: #eb4444;\n"
-"background:none;\n"
-"border:none;\n"
-"}"));
-
-        horizontalLayout->addWidget(label_2);
-
-        lineEdit = new QLineEdit(Experiments);
-        lineEdit->setObjectName(QStringLiteral("lineEdit"));
-        QFont font1;
-        font1.setFamily(QStringLiteral("Adobe Gothic Std B"));
-        font1.setPointSize(8);
-        lineEdit->setFont(font1);
-        lineEdit->setStyleSheet(QLatin1String("#lineEdit{\n"
-"background-color:white;\n"
-"color: #eb4444;\n"
-"border-style: outset;\n"
-"border-width: 1px;\n"
-"border-color: #eb4444;\n"
-"border-radius: 3px;\n"
-"}"));
-
-        horizontalLayout->addWidget(lineEdit);
-
-
-        verticalLayout->addLayout(horizontalLayout);
-
-        horizontalLayout_6 = new QHBoxLayout();
-        horizontalLayout_6->setObjectName(QStringLiteral("horizontalLayout_6"));
-        horizontalSpacer_4 = new QSpacerItem(300, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
-
-        horizontalLayout_6->addItem(horizontalSpacer_4);
-
-        verticalLayout_7 = new QVBoxLayout();
-        verticalLayout_7->setObjectName(QStringLiteral("verticalLayout_7"));
-        addExperiment = new QPushButton(Experiments);
-        addExperiment->setObjectName(QStringLiteral("addExperiment"));
-        addExperiment->setFont(font);
-        addExperiment->setStyleSheet(QLatin1String("#addExperiment{\n"
-"background-color: #eb4444;\n"
-"color: white;\n"
-"border-style: outset;\n"
-"border-radius: 3px;\n"
-"padding: 3px;\n"
-"}"));
-
-        verticalLayout_7->addWidget(addExperiment);
-
-        deleteExperiment = new QPushButton(Experiments);
-        deleteExperiment->setObjectName(QStringLiteral("deleteExperiment"));
-        deleteExperiment->setFont(font);
-        deleteExperiment->setStyleSheet(QLatin1String("#deleteExperiment{\n"
-"background-color: #eb4444;\n"
-"color: white;\n"
-"border-style: outset;\n"
-"border-radius: 3px;\n"
-"padding: 3px;\n"
-"}"));
-
-        verticalLayout_7->addWidget(deleteExperiment);
-
-
-        horizontalLayout_6->addLayout(verticalLayout_7);
-
-        horizontalSpacer_5 = new QSpacerItem(300, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
-
-        horizontalLayout_6->addItem(horizontalSpacer_5);
-
-
-        verticalLayout->addLayout(horizontalLayout_6);
-
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout->addItem(verticalSpacer);
-
-        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout->addItem(verticalSpacer_2);
-
-
-        gridLayout_2->addLayout(verticalLayout, 0, 0, 1, 1);
-
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
         verticalLayout_4 = new QVBoxLayout();
@@ -196,6 +97,11 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(label_7->sizePolicy().hasHeightForWidth());
         label_7->setSizePolicy(sizePolicy);
+        QFont font;
+        font.setFamily(QStringLiteral("Adobe Gothic Std B"));
+        font.setPointSize(10);
+        font.setBold(false);
+        font.setWeight(50);
         label_7->setFont(font);
         label_7->setStyleSheet(QLatin1String("#label_7{\n"
 "background-color:transparent;\n"
@@ -203,7 +109,7 @@ public:
 "background:none;\n"
 "border:none;\n"
 "}"));
-        label_7->setAlignment(Qt::AlignCenter);
+        label_7->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         horizontalLayout_2->addWidget(label_7);
 
@@ -224,12 +130,12 @@ public:
 
         label_8 = new QLabel(Experiments);
         label_8->setObjectName(QStringLiteral("label_8"));
-        QFont font2;
-        font2.setFamily(QStringLiteral("Adobe Gothic Std B"));
-        font2.setPointSize(10);
-        font2.setBold(true);
-        font2.setWeight(75);
-        label_8->setFont(font2);
+        QFont font1;
+        font1.setFamily(QStringLiteral("Adobe Gothic Std B"));
+        font1.setPointSize(10);
+        font1.setBold(true);
+        font1.setWeight(75);
+        label_8->setFont(font1);
         label_8->setStyleSheet(QLatin1String("#label_8{\n"
 "background-color:transparent;\n"
 "color: #eb4444;\n"
@@ -242,16 +148,19 @@ public:
 
         listEquipments = new QTableWidget(Experiments);
         listEquipments->setObjectName(QStringLiteral("listEquipments"));
-        QFont font3;
-        font3.setFamily(QStringLiteral("Adobe Gothic Std B"));
-        font3.setPointSize(10);
-        listEquipments->setFont(font3);
+        QFont font2;
+        font2.setFamily(QStringLiteral("Adobe Gothic Std B"));
+        font2.setPointSize(10);
+        listEquipments->setFont(font2);
 
         verticalLayout_4->addWidget(listEquipments);
 
         searchEdit = new QLineEdit(Experiments);
         searchEdit->setObjectName(QStringLiteral("searchEdit"));
-        searchEdit->setFont(font1);
+        QFont font3;
+        font3.setFamily(QStringLiteral("Adobe Gothic Std B"));
+        font3.setPointSize(8);
+        searchEdit->setFont(font3);
         searchEdit->setStyleSheet(QLatin1String("#searchEdit{\n"
 "background-color:white;\n"
 "color: #eb4444;\n"
@@ -276,7 +185,7 @@ public:
         verticalLayout_5->setObjectName(QStringLiteral("verticalLayout_5"));
         leftToRight = new QPushButton(Experiments);
         leftToRight->setObjectName(QStringLiteral("leftToRight"));
-        leftToRight->setFont(font2);
+        leftToRight->setFont(font1);
         leftToRight->setStyleSheet(QLatin1String("#leftToRight{\n"
 "background-color: #eb4444;\n"
 "color: white;\n"
@@ -293,7 +202,7 @@ public:
 
         rightToLeft = new QPushButton(Experiments);
         rightToLeft->setObjectName(QStringLiteral("rightToLeft"));
-        rightToLeft->setFont(font2);
+        rightToLeft->setFont(font1);
         rightToLeft->setStyleSheet(QLatin1String("#rightToLeft{\n"
 "background-color: #eb4444;\n"
 "color: white;\n"
@@ -329,7 +238,7 @@ public:
 
         label_11 = new QLabel(Experiments);
         label_11->setObjectName(QStringLiteral("label_11"));
-        label_11->setFont(font);
+        label_11->setFont(font1);
         label_11->setStyleSheet(QLatin1String("#label_11{\n"
 "background-color:transparent;\n"
 "color: #eb4444;\n"
@@ -342,7 +251,7 @@ public:
 
         experimentEquipments = new QTableWidget(Experiments);
         experimentEquipments->setObjectName(QStringLiteral("experimentEquipments"));
-        experimentEquipments->setFont(font3);
+        experimentEquipments->setFont(font2);
 
         verticalLayout_3->addWidget(experimentEquipments);
 
@@ -354,66 +263,7 @@ public:
         horizontalLayout_4->addLayout(verticalLayout_3);
 
 
-        gridLayout_2->addLayout(horizontalLayout_4, 1, 0, 1, 3);
-
-        gridLayout = new QGridLayout();
-        gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        verticalLayout_2 = new QVBoxLayout();
-        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        horizontalLayout_3 = new QHBoxLayout();
-        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
-        label_4 = new QLabel(Experiments);
-        label_4->setObjectName(QStringLiteral("label_4"));
-        label_4->setFont(font);
-        label_4->setStyleSheet(QLatin1String("#label_4{\n"
-"background-color:transparent;\n"
-"color: #eb4444;\n"
-"background:none;\n"
-"border:none;\n"
-"}"));
-        label_4->setAlignment(Qt::AlignCenter);
-
-        horizontalLayout_3->addWidget(label_4);
-
-        subjectNameLabel = new QLabel(Experiments);
-        subjectNameLabel->setObjectName(QStringLiteral("subjectNameLabel"));
-        subjectNameLabel->setFont(font);
-        subjectNameLabel->setStyleSheet(QLatin1String("#subjectNameLabel{\n"
-"background-color:transparent;\n"
-"color: #eb4444;\n"
-"background:none;\n"
-"border:none;\n"
-"}"));
-
-        horizontalLayout_3->addWidget(subjectNameLabel);
-
-
-        verticalLayout_2->addLayout(horizontalLayout_3);
-
-        label_10 = new QLabel(Experiments);
-        label_10->setObjectName(QStringLiteral("label_10"));
-        label_10->setFont(font);
-        label_10->setStyleSheet(QLatin1String("#label_10{\n"
-"background-color:transparent;\n"
-"color: #eb4444;\n"
-"background:none;\n"
-"border:none;\n"
-"}"));
-        label_10->setAlignment(Qt::AlignCenter);
-
-        verticalLayout_2->addWidget(label_10);
-
-        experimentsTable = new QTableWidget(Experiments);
-        experimentsTable->setObjectName(QStringLiteral("experimentsTable"));
-        experimentsTable->setFont(font3);
-
-        verticalLayout_2->addWidget(experimentsTable);
-
-
-        gridLayout->addLayout(verticalLayout_2, 0, 2, 2, 1);
-
-
-        gridLayout_2->addLayout(gridLayout, 0, 1, 1, 2);
+        gridLayout_2->addLayout(horizontalLayout_4, 2, 0, 1, 3);
 
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
@@ -439,7 +289,140 @@ public:
         horizontalLayout_5->addItem(horizontalSpacer_2);
 
 
-        gridLayout_2->addLayout(horizontalLayout_5, 2, 0, 1, 3);
+        gridLayout_2->addLayout(horizontalLayout_5, 3, 0, 1, 3);
+
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        label_2 = new QLabel(Experiments);
+        label_2->setObjectName(QStringLiteral("label_2"));
+        label_2->setFont(font);
+        label_2->setStyleSheet(QLatin1String("#label_2{\n"
+"background-color:transparent;\n"
+"color: #eb4444;\n"
+"background:none;\n"
+"border:none;\n"
+"}"));
+
+        horizontalLayout->addWidget(label_2);
+
+        lineEdit = new QLineEdit(Experiments);
+        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+        lineEdit->setFont(font3);
+        lineEdit->setStyleSheet(QLatin1String("#lineEdit{\n"
+"background-color:white;\n"
+"color: #eb4444;\n"
+"border-style: outset;\n"
+"border-width: 1px;\n"
+"border-color: #eb4444;\n"
+"border-radius: 3px;\n"
+"}"));
+
+        horizontalLayout->addWidget(lineEdit);
+
+        horizontalSpacer_3 = new QSpacerItem(10, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_3);
+
+        addExperiment = new QPushButton(Experiments);
+        addExperiment->setObjectName(QStringLiteral("addExperiment"));
+        addExperiment->setFont(font);
+        addExperiment->setStyleSheet(QLatin1String("#addExperiment{\n"
+"background-color: #eb4444;\n"
+"color: white;\n"
+"border-style: outset;\n"
+"border-radius: 3px;\n"
+"padding: 3px;\n"
+"}"));
+
+        horizontalLayout->addWidget(addExperiment);
+
+        horizontalSpacer_4 = new QSpacerItem(10, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_4);
+
+        deleteExperiment = new QPushButton(Experiments);
+        deleteExperiment->setObjectName(QStringLiteral("deleteExperiment"));
+        deleteExperiment->setFont(font);
+        deleteExperiment->setStyleSheet(QLatin1String("#deleteExperiment{\n"
+"background-color: #eb4444;\n"
+"color: white;\n"
+"border-style: outset;\n"
+"border-radius: 3px;\n"
+"padding: 3px;\n"
+"}"));
+
+        horizontalLayout->addWidget(deleteExperiment);
+
+        horizontalSpacer_5 = new QSpacerItem(10, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_5);
+
+
+        verticalLayout->addLayout(horizontalLayout);
+
+
+        gridLayout_2->addLayout(verticalLayout, 0, 0, 1, 1);
+
+        gridLayout = new QGridLayout();
+        gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        verticalLayout_2 = new QVBoxLayout();
+        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
+        label_4 = new QLabel(Experiments);
+        label_4->setObjectName(QStringLiteral("label_4"));
+        label_4->setFont(font);
+        label_4->setStyleSheet(QLatin1String("#label_4{\n"
+"background-color:transparent;\n"
+"color: #eb4444;\n"
+"background:none;\n"
+"border:none;\n"
+"}"));
+        label_4->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        horizontalLayout_3->addWidget(label_4);
+
+        subjectNameLabel = new QLabel(Experiments);
+        subjectNameLabel->setObjectName(QStringLiteral("subjectNameLabel"));
+        subjectNameLabel->setFont(font);
+        subjectNameLabel->setStyleSheet(QLatin1String("#subjectNameLabel{\n"
+"background-color:transparent;\n"
+"color: #eb4444;\n"
+"background:none;\n"
+"border:none;\n"
+"}"));
+
+        horizontalLayout_3->addWidget(subjectNameLabel);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_3);
+
+        label_10 = new QLabel(Experiments);
+        label_10->setObjectName(QStringLiteral("label_10"));
+        label_10->setFont(font1);
+        label_10->setStyleSheet(QLatin1String("#label_10{\n"
+"background-color:transparent;\n"
+"color: #eb4444;\n"
+"background:none;\n"
+"border:none;\n"
+"}"));
+        label_10->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_2->addWidget(label_10);
+
+        experimentsTable = new QTableWidget(Experiments);
+        experimentsTable->setObjectName(QStringLiteral("experimentsTable"));
+        experimentsTable->setFont(font2);
+
+        verticalLayout_2->addWidget(experimentsTable);
+
+
+        gridLayout->addLayout(verticalLayout_2, 0, 2, 2, 1);
+
+
+        gridLayout_2->addLayout(gridLayout, 1, 0, 1, 1);
 
 
         retranslateUi(Experiments);
@@ -450,10 +433,6 @@ public:
     void retranslateUi(QWidget *Experiments)
     {
         Experiments->setWindowTitle(QApplication::translate("Experiments", "Form", Q_NULLPTR));
-        label_2->setText(QApplication::translate("Experiments", "Name:   ", Q_NULLPTR));
-        lineEdit->setPlaceholderText(QApplication::translate("Experiments", "Press ENTER to add experiment name", Q_NULLPTR));
-        addExperiment->setText(QApplication::translate("Experiments", "Add Experiment", Q_NULLPTR));
-        deleteExperiment->setText(QApplication::translate("Experiments", "Delete Experiment", Q_NULLPTR));
         label_7->setText(QApplication::translate("Experiments", "EXPERIMENT:", Q_NULLPTR));
         experimentName->setText(QString());
         label_8->setText(QApplication::translate("Experiments", "LIST OF EQUIPMENTS", Q_NULLPTR));
@@ -462,10 +441,14 @@ public:
         rightToLeft->setText(QApplication::translate("Experiments", "<<", Q_NULLPTR));
         label_9->setText(QString());
         label_11->setText(QApplication::translate("Experiments", "EXPERIMENT EQUIPMENTS", Q_NULLPTR));
+        Back->setText(QApplication::translate("Experiments", "BACK", Q_NULLPTR));
+        label_2->setText(QApplication::translate("Experiments", "Name:   ", Q_NULLPTR));
+        lineEdit->setPlaceholderText(QApplication::translate("Experiments", "Press ENTER to add experiment name", Q_NULLPTR));
+        addExperiment->setText(QApplication::translate("Experiments", "Add Experiment", Q_NULLPTR));
+        deleteExperiment->setText(QApplication::translate("Experiments", "Delete Experiment", Q_NULLPTR));
         label_4->setText(QApplication::translate("Experiments", "SUBJECT:", Q_NULLPTR));
         subjectNameLabel->setText(QString());
         label_10->setText(QApplication::translate("Experiments", "EXPERIMENTS", Q_NULLPTR));
-        Back->setText(QApplication::translate("Experiments", "BACK", Q_NULLPTR));
     } // retranslateUi
 
 };
