@@ -53,6 +53,7 @@ void Experiments::setSubjectName(const QString &value)
 
 void Experiments::display()
 {
+    ui->searchEdit->clear();
     ui->listEquipments->clearContents();
     ui->experimentEquipments->clearContents();
     ui->experimentsTable->clearContents();
@@ -109,13 +110,32 @@ void Experiments::showExperimentEquipments()
             ui->experimentEquipments->setItem(ui->experimentEquipments->rowCount() - 1, 0, equipmentNameItem);
         }
         else if (sameName == false) {
-            ui->listEquipments->setRowCount(ui->listEquipments->rowCount() + 1);
 
-            QTableWidgetItem *equipmentNameItem = new QTableWidgetItem(equipmentName);
-            equipmentNameItem->setTextAlignment(Qt::AlignCenter);
-            equipmentNameItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+            QString filter = ui->searchEdit->text();
+            if (filter != "") {
+                if (ifStringHasSubstring(equipmentName.toUpper().toStdString(), filter.toUpper().toStdString())) {
 
-            ui->listEquipments->setItem(ui->listEquipments->rowCount() - 1, 0, equipmentNameItem);
+                    ui->listEquipments->setRowCount(ui->listEquipments->rowCount() + 1);
+
+                    QTableWidgetItem *equipmentNameItem = new QTableWidgetItem(equipmentName);
+                    equipmentNameItem->setTextAlignment(Qt::AlignCenter);
+                    equipmentNameItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+
+                    ui->listEquipments->setItem(ui->listEquipments->rowCount() - 1, 0, equipmentNameItem);
+
+                }
+            }
+            else {
+
+                ui->listEquipments->setRowCount(ui->listEquipments->rowCount() + 1);
+
+                QTableWidgetItem *equipmentNameItem = new QTableWidgetItem(equipmentName);
+                equipmentNameItem->setTextAlignment(Qt::AlignCenter);
+                equipmentNameItem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
+
+                ui->listEquipments->setItem(ui->listEquipments->rowCount() - 1, 0, equipmentNameItem);
+
+            }
         }
     }
 }
@@ -296,5 +316,5 @@ bool Experiments::eventFilter(QObject *obj, QEvent *event)
 
 void Experiments::on_searchEdit_textChanged(const QString &text)
 {
-
+    showExperimentEquipments();
 }
