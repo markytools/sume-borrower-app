@@ -145,12 +145,7 @@ public:
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
         label_9 = new QLabel(Information);
         label_9->setObjectName(QStringLiteral("label_9"));
-        QFont font3;
-        font3.setFamily(QStringLiteral("Adobe Gothic Std B"));
-        font3.setPointSize(10);
-        font3.setBold(true);
-        font3.setWeight(75);
-        label_9->setFont(font3);
+        label_9->setFont(font1);
         label_9->setStyleSheet(QLatin1String("#label_9{\n"
 "background-color:transparent;\n"
 "color: #eb4444;\n"
@@ -399,11 +394,11 @@ public:
         information->setText(QApplication::translate("Information", "EQUIPMENT INFORMATION", Q_NULLPTR));
         label_10->setText(QApplication::translate("Information", "Name:                ", Q_NULLPTR));
         label_9->setText(QApplication::translate("Information", "Serial:                ", Q_NULLPTR));
-        label_8->setText(QApplication::translate("Information", "Equip_Prop:    ", Q_NULLPTR));
-        label_6->setText(QApplication::translate("Information", "Location:          ", Q_NULLPTR));
-        label_7->setText(QApplication::translate("Information", "Op_Status:       ", Q_NULLPTR));
-        label_5->setText(QApplication::translate("Information", "Remarks:          ", Q_NULLPTR));
-        label_4->setText(QApplication::translate("Information", "Quantity:          ", Q_NULLPTR));
+        label_8->setText(QApplication::translate("Information", "Equip_Prop:        ", Q_NULLPTR));
+        label_6->setText(QApplication::translate("Information", "Location:            ", Q_NULLPTR));
+        label_7->setText(QApplication::translate("Information", "Op_Status:         ", Q_NULLPTR));
+        label_5->setText(QApplication::translate("Information", "Remarks:           ", Q_NULLPTR));
+        label_4->setText(QApplication::translate("Information", "Quantity:            ", Q_NULLPTR));
         BackButton->setText(QApplication::translate("Information", "Back", Q_NULLPTR));
         OKButton->setText(QApplication::translate("Information", "OK", Q_NULLPTR));
     } // retranslateUi

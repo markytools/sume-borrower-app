@@ -82,7 +82,7 @@ void Infopopup::display(QString groupName, QString groupSubject, QString groupSe
     ui->borrowedEquipmentTable->setHorizontalHeaderItem(2, returnedHeader);
 
     ui->borrowedEquipmentTable->setColumnWidth(0, 200);
-    ui->borrowedEquipmentTable->setColumnWidth(1, 120);
+    ui->borrowedEquipmentTable->setColumnWidth(1, 150);
     ui->borrowedEquipmentTable->setColumnWidth(2, 120);
 
     ui->borrowedEquipmentTable->setSelectionBehavior(QAbstractItemView::SelectRows);

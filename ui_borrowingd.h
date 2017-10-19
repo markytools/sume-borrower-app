@@ -494,10 +494,10 @@ public:
         studentName->setPlaceholderText(QApplication::translate("BorrowingD", "Press ENTER to add the name", Q_NULLPTR));
         Add->setText(QApplication::translate("BorrowingD", "Add", Q_NULLPTR));
         Delete->setText(QApplication::translate("BorrowingD", "Delete", Q_NULLPTR));
-        label_9->setText(QApplication::translate("BorrowingD", "Group Name:", Q_NULLPTR));
+        label_9->setText(QApplication::translate("BorrowingD", "Group Name:  ", Q_NULLPTR));
         label_10->setText(QApplication::translate("BorrowingD", "Subject:          ", Q_NULLPTR));
         label_12->setText(QApplication::translate("BorrowingD", "Section:          ", Q_NULLPTR));
-        label_11->setText(QApplication::translate("BorrowingD", "Instructor:     ", Q_NULLPTR));
+        label_11->setText(QApplication::translate("BorrowingD", "Instructor:      ", Q_NULLPTR));
         label_8->setText(QApplication::translate("BorrowingD", "Start:", Q_NULLPTR));
         label_7->setText(QApplication::translate("BorrowingD", "End:", Q_NULLPTR));
         hasEndTime->setText(QApplication::translate("BorrowingD", "Has End Time", Q_NULLPTR));

@@ -57,9 +57,9 @@ public:
     {
         if (changePass->objectName().isEmpty())
             changePass->setObjectName(QStringLiteral("changePass"));
-        changePass->resize(327, 371);
-        changePass->setMinimumSize(QSize(327, 371));
-        changePass->setMaximumSize(QSize(327, 371));
+        changePass->resize(350, 450);
+        changePass->setMinimumSize(QSize(350, 450));
+        changePass->setMaximumSize(QSize(350, 450));
         changePass->setAutoFillBackground(false);
         gridLayout = new QGridLayout(changePass);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
@@ -297,7 +297,7 @@ public:
     void retranslateUi(QWidget *changePass)
     {
         changePass->setWindowTitle(QApplication::translate("changePass", "Form", Q_NULLPTR));
-        label_10->setText(QApplication::translate("changePass", "Username:             ", Q_NULLPTR));
+        label_10->setText(QApplication::translate("changePass", "Username:         ", Q_NULLPTR));
         label_11->setText(QApplication::translate("changePass", "Old Password:    ", Q_NULLPTR));
         label_12->setText(QApplication::translate("changePass", "New Password:  ", Q_NULLPTR));
         label->setText(QApplication::translate("changePass", "MECHANICAL ENGINEERING LABORATORY BORROWER", Q_NULLPTR));

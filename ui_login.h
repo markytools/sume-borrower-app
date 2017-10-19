@@ -54,14 +54,14 @@ public:
     {
         if (LogIn->objectName().isEmpty())
             LogIn->setObjectName(QStringLiteral("LogIn"));
-        LogIn->resize(327, 371);
+        LogIn->resize(350, 450);
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(LogIn->sizePolicy().hasHeightForWidth());
         LogIn->setSizePolicy(sizePolicy);
-        LogIn->setMinimumSize(QSize(327, 371));
-        LogIn->setMaximumSize(QSize(327, 371));
+        LogIn->setMinimumSize(QSize(350, 450));
+        LogIn->setMaximumSize(QSize(350, 450));
         LogIn->setAutoFillBackground(false);
         LogIn->setStyleSheet(QLatin1String("#LogIn{\n"
 "background-color:white;\n"

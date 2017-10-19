@@ -24,9 +24,9 @@ Borrowers::Borrowers(QWidget *parent) :
     ui->listEquipments->setHorizontalHeaderItem(1, nameHeader);
     ui->listEquipments->setHorizontalHeaderItem(0, borrowedHeader);
 
-    ui->listEquipments->setColumnWidth(2, 100);
-    ui->listEquipments->setColumnWidth(1, 180);
-    ui->listEquipments->setColumnWidth(0, 120);
+    ui->listEquipments->setColumnWidth(2, 150);
+    ui->listEquipments->setColumnWidth(1, 300);
+    ui->listEquipments->setColumnWidth(0, 150);
 
 
     ui->listEquipments->setSelectionBehavior(QAbstractItemView::SelectRows);

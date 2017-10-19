@@ -122,8 +122,8 @@ border-radius: 3px;
                 <font>
                  <family>Adobe Gothic Std B</family>
                  <pointsize>10</pointsize>
-                 <weight>75</weight>
-                 <bold>true</bold>
+                 <weight>50</weight>
+                 <bold>false</bold>
                 </font>
                </property>
                <property name="styleSheet">
@@ -182,7 +182,7 @@ border:none;
 }</string>
                </property>
                <property name="text">
-                <string>Equip_Prop:    </string>
+                <string>Equip_Prop:        </string>
                </property>
               </widget>
              </item>
@@ -229,7 +229,7 @@ border:none;
 }</string>
                </property>
                <property name="text">
-                <string>Location:          </string>
+                <string>Location:            </string>
                </property>
               </widget>
              </item>
@@ -276,7 +276,7 @@ border:none;
 }</string>
                </property>
                <property name="text">
-                <string>Op_Status:       </string>
+                <string>Op_Status:         </string>
                </property>
               </widget>
              </item>
@@ -323,7 +323,7 @@ border:none;
 }</string>
                </property>
                <property name="text">
-                <string>Remarks:          </string>
+                <string>Remarks:           </string>
                </property>
               </widget>
              </item>
@@ -372,7 +372,7 @@ border:none;
 }</string>
              </property>
              <property name="text">
-              <string>Quantity:          </string>
+              <string>Quantity:            </string>
              </property>
             </widget>
            </item>
