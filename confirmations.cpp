@@ -7,7 +7,7 @@ Confirmations::Confirmations(QWidget *parent) :
 {
     ui->setupUi(this);
 
-
+    //LOL
     QTableWidgetItem *quantityHeader = new QTableWidgetItem("QUANTITY");
     quantityHeader->setTextAlignment(Qt::AlignCenter);
     quantityHeader->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
