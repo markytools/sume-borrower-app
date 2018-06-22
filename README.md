@@ -13,7 +13,7 @@ User Authentication.<br/>
 
 <br/>
 
-Requirements:
+Requirements:<br/>
 You need to have the QtXlsxWriter plugin to be installed (https://github.com/VSRonin/QtXlsxWriter) as guided here:
 
 <strong>For more information, see the User Manual.</strong>
