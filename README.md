@@ -17,3 +17,9 @@ Requirements:<br/>
 You need to have the QtXlsxWriter plugin to be installed (https://github.com/VSRonin/QtXlsxWriter) as guided here:
 
 <strong>For more information, see the User Manual.</strong>
+
+Contributors:
+Mark Vincent Ty
+Angelo Carl Toledo
+Marc Angelo Coritico
+Mark Phillip Hinaut
