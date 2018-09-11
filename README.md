@@ -18,8 +18,8 @@ You need to have the QtXlsxWriter plugin to be installed (https://github.com/VSR
 
 <strong>For more information, see the User Manual.</strong>
 
-Contributors:
-Mark Vincent Ty
-Angelo Carl Toledo
-Marc Angelo Coritico
-Mark Phillip Hinaut
+Contributors:<br/>
+Mark Vincent Ty<br/>
+Angelo Carl Toledo<br/>
+Marc Angelo Coritico<br/>
+Mark Phillip Hinaut<br/>
